@@ -1,0 +1,1129 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 2.74, 
+          "text": "欢迎学习机器学习速成课程。", 
+          "start": 0.62
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "我叫Peter Norvig，于2001年加入Google时，", 
+          "start": 3.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "我的头衔是“机器学习总监”。", 
+          "start": 6.86
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "因为那时我就知道，\n机器学习会成为一个重要的工具，", 
+          "start": 9.5
+        }, 
+        {
+          "dur": 2.68, 
+          "text": "可以帮助Google及其他任何机构的工程师", 
+          "start": 12.8
+        }, 
+        {
+          "dur": 1.46, 
+          "text": "解读数据的潜在含义。", 
+          "start": 15.48
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "但当时我并没有预料到这些工具\n会在多广的范围内得到应用，", 
+          "start": 16.94
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "也没有设想对能够熟练使用\n这些工具的工程师的需求会有多大。", 
+          "start": 20.8
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "本课程可帮助您在成为本领域", 
+          "start": 25.04
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "娴熟从业者的道路上顺利前行。", 
+          "start": 28.44
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "借助从本课程中学到的知识，您作为一名软件工程师，\n可以将以下三件事做得更好。", 
+          "start": 31.18
+        }, 
+        {
+          "dur": 4.2, 
+          "text": "首先，它会为您提供一个\n可缩短编程时间的工具。", 
+          "start": 36.5
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "假设我想编写一个程序来纠正拼写错误。", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "我可以通过大量示例和经验法则\n（例如，I位于E之前，但出现在C之后时例外），", 
+          "start": 44.7
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "取得一定的进展，", 
+          "start": 48.16
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "然后经过数周的努力，编写出一个合理的程序。", 
+          "start": 50.54
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "或者，我也可以使用现成的机器学习工具，\n只需向其提供一些样本，", 
+          "start": 53.86
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "即可在很短的时间内获得一个更可靠的程序。", 
+          "start": 58.98
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "其次，借助机器学习，您可以自定义自己的产品，", 
+          "start": 62.68
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "使其更适合特定的用户群体。", 
+          "start": 66.28
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "假设我手动编写了一个英文拼写纠正程序，", 
+          "start": 68.92
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "这个程序很成功，因此我打算\n针对100种最常用语言提供相应的版本。", 
+          "start": 73.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "这样一来，每种语言版本几乎都需要从头开始，", 
+          "start": 78.88
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "这将需要付出数年的努力。", 
+          "start": 82.3
+        }, 
+        {
+          "dur": 5.6, 
+          "text": "但如果我使用机器学习技术构建该程序，\n然后迁移到其他语言，", 
+          "start": 84.04
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "基本上就相当于，我只需收集该特定语言的数据，\n并将这些数据提供给完全一样的机器学习模型即可。", 
+          "start": 89.64
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "第三，借助机器学习，\n您可以解决自己作为编程人员", 
+          "start": 96.4
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "不知道如何用人工方法解决的问题。", 
+          "start": 101.38
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "作为人类，我可以认出朋友的面孔，\n理解他们所说的话，", 
+          "start": 103.4
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "但所有这些都是在潜意识下完成的，\n如果让我编写一个程序来做这些事，", 
+          "start": 109.04
+        }, 
+        {
+          "dur": 1.82, 
+          "text": "我会完全不知所措。", 
+          "start": 113.82
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "但是，机器学习算法对此却很擅长；", 
+          "start": 115.64
+        }, 
+        {
+          "dur": 2.36, 
+          "text": "我不需要告诉算法应该怎么做，", 
+          "start": 119.06
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "只需向其展示大量样本，\n问题就可以迎刃而解。", 
+          "start": 121.42
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "除了上述三个实用原因之外，\n我们希望掌握机器学习技术", 
+          "start": 127.28
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "还有一个哲学方面的原因，\n即机器学习可以改变您思考问题的方式。", 
+          "start": 132.32
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "软件工程师接受过训练，\n学习如何以逻辑和数学思维思考问题；", 
+          "start": 137.56
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "我们通过断言来证明程序各属性的正确性。", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "对于机器学习，我们的关注点\n从数学科学转移到自然科学上，", 
+          "start": 146.22
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "我们观察不确定的未知世界，", 
+          "start": 152.04
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "开展实验，并使用统计信息\n而非逻辑来分析实验结果。", 
+          "start": 155.3
+        }, 
+        {
+          "dur": 2.46, 
+          "text": "像科学家一样思考的能力", 
+          "start": 161.74
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "可以扩展您的视野，为您打开没有这项能力\n便无法探索的新世界的大门。", 
+          "start": 164.2
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "所以，不妨享受这段旅程，\n愉快地探索其中的奥秘。", 
+          "start": 169.12
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.74, 
+          "text": "&gt;&gt; PETER: Welcome to the Machine Learning Crash Course.", 
+          "start": 0.62
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "My name is Peter Norvig, and when I joined Google in 2001,", 
+          "start": 3.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "my title was &quot;Director of Machine Learning,&quot;", 
+          "start": 6.86
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "because I knew then, that Machine Learning would be a valuable tool", 
+          "start": 9.5
+        }, 
+        {
+          "dur": 2.68, 
+          "text": "to help engineers, at Google and everywhere else,", 
+          "start": 12.8
+        }, 
+        {
+          "dur": 1.46, 
+          "text": "make sense of their data.", 
+          "start": 15.48
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "I didn&#39;t quite anticipate then how widespread the tools would become,", 
+          "start": 16.94
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "and how much demand there would be for engineers who are skilled at using them.", 
+          "start": 20.8
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "This course is designed to set you along the path", 
+          "start": 25.04
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "to becoming a skilled practitioner of the art.", 
+          "start": 28.44
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "What you learn here will allow you, as a software engineer, to do three things better.", 
+          "start": 31.18
+        }, 
+        {
+          "dur": 4.2, 
+          "text": "First, it gives you a tool to reduce the time you spend programming.", 
+          "start": 36.5
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Suppose I wanted to write a program to correct\nspelling errors.", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "I could make my way through lots of examples and rules of thumb", 
+          "start": 44.7
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "(like I before E except after C),", 
+          "start": 48.16
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "and after weeks of hard work come up with a reasonable program.", 
+          "start": 50.54
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "Or, I could use an off-the-shelf machine learning\ntool, feed it some examples,", 
+          "start": 53.86
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "and get a more reliable program in a small fraction of the time.", 
+          "start": 58.98
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "Second, it will allow you to customize your products,", 
+          "start": 62.68
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "making them better for specific groups of people.", 
+          "start": 66.28
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Suppose I produced my English spelling corrector by writing code by hand,", 
+          "start": 68.92
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "and it was so successful that I wanted to have versions in the 100 most popular languages.", 
+          "start": 73.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "I would have to start almost from scratch for each language,", 
+          "start": 78.88
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "and it would take years of effort.", 
+          "start": 82.3
+        }, 
+        {
+          "dur": 5.6, 
+          "text": "But if I built it using machine learning, then moving to another language, to a first approximation,", 
+          "start": 84.04
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "means just collecting data in that language and feeding it into the exact same machine learning model.", 
+          "start": 89.64
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "Third, machine learning lets you solve problems that you, as a programmer,", 
+          "start": 96.4
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "have no idea how to do by hand.", 
+          "start": 101.38
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "As a human being, I have the ability to recognize my friends&#39; faces and understand their speech,", 
+          "start": 103.4
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "but I do all of this subconsciously, so if you asked me to write down a program to do it,", 
+          "start": 109.04
+        }, 
+        {
+          "dur": 1.82, 
+          "text": "I&#39;d be completely baffled.", 
+          "start": 113.82
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "But these are tasks that machine learning\nalgorithms do very well;", 
+          "start": 115.64
+        }, 
+        {
+          "dur": 2.36, 
+          "text": "I don&#39;t need to tell the algorithm what to do,", 
+          "start": 119.06
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "I only need to show the algorithm lots of examples, and from that the task can be solved.", 
+          "start": 121.42
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "Now, besides these three practical reasons for mastering machine learning,", 
+          "start": 127.28
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "there&#39;s a philosophical reason: machine learning changes the way you think about a problem.", 
+          "start": 132.32
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "Software engineers are trained to think logically and mathematically;", 
+          "start": 137.56
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "we use assertions to prove properties of our program are correct.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "With machine learning, the focus shifts from a mathematical science to a natural science:", 
+          "start": 146.22
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "we&#39;re making observations about an uncertain world,", 
+          "start": 152.04
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "running experiments, and using statistics, not logic, to analyze the results of the experiment.", 
+          "start": 155.3
+        }, 
+        {
+          "dur": 2.46, 
+          "text": "The ability to think like a scientist", 
+          "start": 161.74
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "will expand your horizons and open up new areas that you couldn&#39;t explore without it.", 
+          "start": 164.2
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "So enjoy the journey, and happy exploring.", 
+          "start": 169.12
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.74, 
+          "text": "&gt;&gt; PETER : Bienvenue\nau cours d&#39;initiation au machine learning.", 
+          "start": 0.62
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "Je suis Peter Norvig.\nLorsque j&#39;ai rejoint Google en 2001,", 
+          "start": 3.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "j&#39;étais directeur du machine learning.", 
+          "start": 6.86
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "Je savais alors\nque le machine learning serait très utile", 
+          "start": 9.5
+        }, 
+        {
+          "dur": 2.68, 
+          "text": "aux ingénieurs de Google ou d&#39;ailleurs", 
+          "start": 12.8
+        }, 
+        {
+          "dur": 1.46, 
+          "text": "souhaitant donner du sens aux données.", 
+          "start": 15.48
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "Je n&#39;avais pas prévu à quel point\nce type d&#39;outils se généraliserait", 
+          "start": 16.94
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "ni dans quelle mesure les ingénieurs\ncapables de les utiliser s&#39;y intéresseraient.", 
+          "start": 20.8
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "Ce cours vise à vous donner les clés nécessaires", 
+          "start": 25.04
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "pour maîtriser parfaitement ce précieux outil.", 
+          "start": 28.44
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "En tant qu&#39;ingénieur logiciel,\nvous allez découvrir les trois atouts majeurs de cet outil.", 
+          "start": 31.18
+        }, 
+        {
+          "dur": 4.2, 
+          "text": "Dans un premier temps,\nil vous permet de programmer plus rapidement.", 
+          "start": 36.5
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Imaginons que je crée\nun programme de correction orthographique.", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "Après avoir testé un tas d&#39;exemples\net d&#39;autres règles générales", 
+          "start": 44.7
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "(comme I avant E, sauf après C),", 
+          "start": 48.16
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "mon programme serait acceptable\nau bout de plusieurs semaines,", 
+          "start": 50.54
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "alors qu&#39;en ajoutant des exemples\nà un outil de machine learning standard,", 
+          "start": 53.86
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "mon programme serait\nnettement plus fiable en un rien de temps.", 
+          "start": 58.98
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "Cet outil permet aussi de personnaliser vos produits,", 
+          "start": 62.68
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "en les adaptant à des utilisateurs spécifiques.", 
+          "start": 66.28
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Supposons que j&#39;aie écrit\nmanuellement le code de mon correcteur français,", 
+          "start": 68.92
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "et que le résultat probant m&#39;incite à créer\ndes versions pour 100 autres langues courantes.", 
+          "start": 73.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Je devrais alors partir\npresque de zéro pour chaque langue,", 
+          "start": 78.88
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "et cela me prendrait des années.", 
+          "start": 82.3
+        }, 
+        {
+          "dur": 5.6, 
+          "text": "Avec le machine learning, lorsque je passe\nà une autre langue, soit à une première approximation,", 
+          "start": 84.04
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "mon programme est alimenté en données\nde cette langue selon le même modèle de machine learning.", 
+          "start": 89.64
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "Enfin, cet outil permet de résoudre\ndes problèmes que vous, programmeur,", 
+          "start": 96.4
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "ne savez pas régler manuellement.", 
+          "start": 101.38
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "En tant qu&#39;être humain, je peux reconnaître\nle visage de mes amis et comprendre ce qu&#39;ils disent,", 
+          "start": 103.4
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "même si c&#39;est inconsciemment. Voilà pourquoi\nsi on me demande de programmer ces facultés,", 
+          "start": 109.04
+        }, 
+        {
+          "dur": 1.82, 
+          "text": "je serais très embarrassé.", 
+          "start": 113.82
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Ce n&#39;est pas le cas\ndes algorithmes de machine learning.", 
+          "start": 115.64
+        }, 
+        {
+          "dur": 2.36, 
+          "text": "Je n&#39;ai même pas besoin de leur dire quoi faire.", 
+          "start": 119.06
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Il me suffit de leur donner plein d&#39;exemples\ndont ils se servent pour régler le problème.", 
+          "start": 121.42
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "Outre ces trois raisons pratiques\nde maîtriser le machine learning,", 
+          "start": 127.28
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "il y a l&#39;aspect philosophique, car cet outil\nchange votre façon d&#39;appréhender un problème.", 
+          "start": 132.32
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "Les ingénieurs logiciels pensent,\nde manière logique et mathématique,", 
+          "start": 137.56
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "et utilisent des assertions\npour prouver l&#39;exactitude de leurs programmes.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "Le machine learning est plus axé\nsur une science naturelle que mathématique,", 
+          "start": 146.22
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "au travers d&#39;observations sur un monde incertain,", 
+          "start": 152.04
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "mais aussi de tests, de statistiques,\net non de la logique, pour analyser les résultats de test.", 
+          "start": 155.3
+        }, 
+        {
+          "dur": 2.46, 
+          "text": "En réfléchissant comme un scientifique,", 
+          "start": 161.74
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "vous élargirez des champs d&#39;application\nque vous ne pourriez explorer sans cet outil.", 
+          "start": 164.2
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "Alors, profitez-en et bonne exploration.", 
+          "start": 169.12
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.74, 
+          "text": "&gt;&gt; PETER: 머신러닝 단기집중과정에 참여하시게 된 것을 환영합니다.", 
+          "start": 0.62
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "저는 Peter Norvig입니다.\n2001년에 처음 Google에 입사했을 때", 
+          "start": 3.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "저는 &#39;머신러닝 책임자&#39;라는 직책을 맡았습니다.", 
+          "start": 6.86
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "그때 저는 머신러닝이 Google을 비롯한 여러 곳에서 엔지니어를 돕고", 
+          "start": 9.5
+        }, 
+        {
+          "dur": 2.68, 
+          "text": "데이터를 이해하는 데 가치 있는 도구가 될 거라는 사실을", 
+          "start": 12.8
+        }, 
+        {
+          "dur": 1.46, 
+          "text": "알고 있었습니다.", 
+          "start": 15.48
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "그때는 이 도구가 널리 사용되고 이 도구를 익숙하게 사용하는", 
+          "start": 16.94
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "엔지니어가 이렇게 많아질지는 몰랐습니다.", 
+          "start": 20.8
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "이 과정은 여러분을 숙련된 머신러닝 전문가가 되기 위한", 
+          "start": 25.04
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "길로 안내하기 위해 제작되었습니다.", 
+          "start": 28.44
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "여기에서 배운 내용을 활용하면 소프트웨어 엔지니어로서 세 가지를 더 잘할 수 있을 것입니다.", 
+          "start": 31.18
+        }, 
+        {
+          "dur": 4.2, 
+          "text": "먼저 프로그래밍 시간을 줄일 수 있는 도구를 얻게 됩니다.", 
+          "start": 36.5
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "맞춤법 오류를 수정하는\n프로그램을 설계한다고 가정해보겠습니다.", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "다양한 예시와 경험을 활용해서 방법을 찾을 수 있을 겁니다.", 
+          "start": 44.7
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "예를 들면 C 뒤에 있을 때를 제외하고 E 앞에 I가 오는 경우를 잡습니다.", 
+          "start": 48.16
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "그렇게 몇 주 동안 열심히 일하면 쓸만한 프로그램이 나올 겁니다.", 
+          "start": 50.54
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "아니면 바로 쓸 수 있는 머신러닝 도구를\n사용해서 몇 가지 예를 입력하면", 
+          "start": 53.86
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "짧은 시간에 더 안정적인 프로그램을 만들 수 있습니다.", 
+          "start": 58.98
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "두 번째로 제품을 맞춤설정하여 특정 집단의 사용자에게", 
+          "start": 62.68
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "더 잘 맞는 제품을 제공할 수 있습니다.", 
+          "start": 66.28
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "제가 직접 코드를 작성하여 영어 철자 교정 도구를 만들었다고 가정하겠습니다.", 
+          "start": 68.92
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "그리고 이 도구가 굉장히 성공해서 널리 쓰이는 100가지 언어로 버전을 만들게 되었다고 해보겠습니다.", 
+          "start": 73.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "그럼 각 언어마다 거의 처음부터 시작해야 할 겁니다.", 
+          "start": 78.88
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "그럼 이 작업에 몇 년이나 걸리겠죠.", 
+          "start": 82.3
+        }, 
+        {
+          "dur": 5.6, 
+          "text": "하지만 머신러닝을 사용하여 만든 다음 먼저 유사한 언어로 넘어가면", 
+          "start": 84.04
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "그 언어로 된 데이터를 수집해서 똑같은 머신러닝 모델에 넣기만 하면 됩니다.", 
+          "start": 89.64
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "세 번째로 머신러닝을 사용하면 프로그래머로서 수동으로 할 방법이 없어 보이는 문제를", 
+          "start": 96.4
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "해결할 수 있습니다.", 
+          "start": 101.38
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "인간인 저는 친구들의 얼굴을 인식하고 친구들이 하는 말을 이해할 수 있습니다.", 
+          "start": 103.4
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "하지만 이런 일은 무의식적으로 하는 것이기 때문에 이를 프로그램으로 만들라고 하면", 
+          "start": 109.04
+        }, 
+        {
+          "dur": 1.82, 
+          "text": "정말 당황스러울 것입니다.", 
+          "start": 113.82
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "하지만 이런 것은 머신러닝 알고리즘이\n아주 잘 할 수 있는 작업입니다.", 
+          "start": 115.64
+        }, 
+        {
+          "dur": 2.36, 
+          "text": "알고리즘에게 무엇을 하라고 명령할 필요 없이", 
+          "start": 119.06
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "알고리즘에게 수많은 예를 보여주기만 하면 문제가 해결됩니다.", 
+          "start": 121.42
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "이제 머신러닝을 숙지해야 하는 세 가지 실질적인 이유 외에", 
+          "start": 127.28
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "철학적인 이유도 있습니다. 머신러닝은 문제에 관해 생각하는 방법을 바꿉니다.", 
+          "start": 132.32
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "소프트웨어 엔지니어는 논리적이고 수학적으로 사고하도록 훈련을 받았습니다.", 
+          "start": 137.56
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "내 프로그램의 속성이 옳다는 것을 입증하기 위해 주장을 사용하죠.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "머신러닝이 있으면 수리과학에서 자연과학으로 초점이 바뀝니다.", 
+          "start": 146.22
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "불확실한 세계를 관찰하고 실험을 하고", 
+          "start": 152.04
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "논리가 아닌 통계를 사용하여 실험 결과를 분석합니다.", 
+          "start": 155.3
+        }, 
+        {
+          "dur": 2.46, 
+          "text": "과학자처럼 사고할 수 있는 능력을 갖추면", 
+          "start": 161.74
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "시야가 넓어지고 전에는 탐험할 수 없었던 새 영역이 펼쳐집니다.", 
+          "start": 164.2
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "그럼 그 여정을 즐기며 탐험하시기 바랍니다.", 
+          "start": 169.12
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.74, 
+          "text": "Bienvenido al Curso intensivo de aprendizaje automático.", 
+          "start": 0.62
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "Soy Peter Norvig. Cuando me sumé a Google en 2001,", 
+          "start": 3.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "mi cargo era &quot;director de aprendizaje automático&quot;", 
+          "start": 6.86
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "porque sabía que el aprendizaje automático\nsería una herramienta valiosa", 
+          "start": 9.5
+        }, 
+        {
+          "dur": 2.68, 
+          "text": "que ayudaría a los ingenieros, dentro y fuera de Google,", 
+          "start": 12.8
+        }, 
+        {
+          "dur": 1.46, 
+          "text": "a sacar provecho de sus datos.", 
+          "start": 15.48
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "No preví lo mucho que se extendería el uso de estas herramientas,", 
+          "start": 16.94
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "ni la enorme demanda de los ingenieros capaces de usarlas.", 
+          "start": 20.8
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "Este curso te allana el camino", 
+          "start": 25.04
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "para que puedas adoptar estas habilidades.", 
+          "start": 28.44
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "Como ingeniero de software, aprenderás a hacer tres cosas de mejor manera.", 
+          "start": 31.18
+        }, 
+        {
+          "dur": 4.2, 
+          "text": "Primero, tendrás una herramienta para reducir el tiempo de programación.", 
+          "start": 36.5
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Imagina que quiera escribir un programa\npara corregir errores ortográficos.", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "Podría incluir muchos ejemplos y reglas generales", 
+          "start": 44.7
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "(como M antes de B y N antes de V)", 
+          "start": 48.16
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "y, tras semanas de arduo trabajo,\nlograr un programa razonable.", 
+          "start": 50.54
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "O podría usar una herramienta de aprendizaje automático existente,\nintroducirle algunos ejemplos", 
+          "start": 53.86
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "y obtener un programa más confiable\nen una fracción menor de tiempo.", 
+          "start": 58.98
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "Segundo, permite personalizar los productos", 
+          "start": 62.68
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "para grupos específicos de personas.", 
+          "start": 66.28
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Imagina que haya creado mi corrector ortográfico\nescribiendo el código a mano,", 
+          "start": 68.92
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "y que, debido a su éxito, quiera tener\nversiones en los 100 idiomas más populares.", 
+          "start": 73.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Tendría que empezar desde cero para cada idioma,", 
+          "start": 78.88
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "lo que llevaría años de esfuerzo.", 
+          "start": 82.3
+        }, 
+        {
+          "dur": 5.6, 
+          "text": "Pero si lo creara con aprendizaje automático,\nrecrearlo para otro idioma", 
+          "start": 84.04
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "significaría recopilar datos en ese idioma y alimentar\nel mismo modelo de aprendizaje automático.", 
+          "start": 89.64
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "Tercero, el aprendizaje automático\nte permite resolver problemas", 
+          "start": 96.4
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "que no sabrías como hacerlo a mano.", 
+          "start": 101.38
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "Como ser humano, tengo la capacidad de reconocer\nlos rostros de mis amigos y entender su habla,", 
+          "start": 103.4
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "pero lo hago en mi subconsciente.\nSi tengo que escribir un programa para hacerlo,", 
+          "start": 109.04
+        }, 
+        {
+          "dur": 1.82, 
+          "text": "estaría desconcertado.", 
+          "start": 113.82
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Estas son tareas que los algoritmos\ndel aprendizaje automático hacen muy bien.", 
+          "start": 115.64
+        }, 
+        {
+          "dur": 2.36, 
+          "text": "No tengo que decirle al algoritmo qué hacer.", 
+          "start": 119.06
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Solo tengo que mostrarle muchos ejemplos\ny, a partir de estos, se completa la tarea.", 
+          "start": 121.42
+        }, 
+        {
+          "dur": 5.04, 
+          "text": "Además de estas tres razones prácticas\nque justifican dominar el aprendizaje automático,", 
+          "start": 127.28
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "existe una razón filosófica: el aprendizaje automático\ncambia la manera en la que piensas sobre un problema.", 
+          "start": 132.32
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "Los ingenieros de software están entrenados\npara pensar de forma lógica y matemática.", 
+          "start": 137.56
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "Usamos afirmaciones para probar\nsi las propiedades de nuestro programa son correctas.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "Con el aprendizaje automático, el enfoque cambia\nde la ciencia matemática a la natural:", 
+          "start": 146.22
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "Hacemos observaciones de un mundo incierto,", 
+          "start": 152.04
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "realizamos experimentos y usamos estadísticas,\nno la lógica, para analizar los resultados del experimento.", 
+          "start": 155.3
+        }, 
+        {
+          "dur": 2.46, 
+          "text": "La habilidad de pensar como un científico", 
+          "start": 161.74
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "expandirá tus horizontes y se te abrirán\nnuevas áreas que no habías explorado.", 
+          "start": 164.2
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "Disfruta del viaje y de la exploración.", 
+          "start": 169.12
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 8.3, 
+          "text": "我们在设计机器学习系统时，\n需要考虑的另一个重要设计因素是，\n我们是以离线还是在线的方式进行推理。", 
+          "start": 0.52
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "这里的推理当然是指做出预测。", 
+          "start": 8.82
+        }, 
+        {
+          "dur": 14.72, 
+          "text": "我们是要以离线方式做一次推理，并将此类预测记录到\n某个表格或某个静态位置以便日后读取，还是要借助\n存储在某个服务器中的模型，根据需要不断进行推理，\n并在出现新的请求时，对新数据进行预测？", 
+          "start": 11.82
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "再次说明，这两种方式各有利弊。", 
+          "start": 26.54
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "如果我们离线计算分数，\n就会有很好的机会进行预测后验证。", 
+          "start": 29.82
+        }, 
+        {
+          "dur": 6.78, 
+          "text": "我们记下所有分数，并且可以对其进行健全性检查，\n以便在据此预测现实世界的情况之前，\n确保这些分数是有意义的。", 
+          "start": 36.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "此外，我们也不必太过担心计算成本。", 
+          "start": 43.02
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "如果我们的模型代价很高，\n如果计算预测需要花费很高的成本，\n我们只需投入更多机器即可。", 
+          "start": 46.8
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "或许可以使用批量方法或某种大型的映射归纳架构，\n您无需担心太多。", 
+          "start": 54.04
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "离线计算分数的缺点是，\n我们需要在执行预测时准备好所有样本。", 
+          "start": 59.36
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "而某些领域可能存在长尾或极端分布，\n会由于我们而发生变化，在这种情况下\n我们可能没法准备好所有样本。", 
+          "start": 66.36
+        }, 
+        {
+          "dur": 12.74, 
+          "text": "但是，如果我们预先知道所有样本将会有哪些，\n或者，如果我们只关心频率最高的查询等之类的内容，\n那么就可以将所有这些样本纳入离线分数对照表中。", 
+          "start": 72.82
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "对于在线计算分数，请注意，我们会将模型放入一个服务器，\n然后根据需要查询该服务器。", 
+          "start": 85.56
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "现在看来这种方式不错，因为它意味着，\n对于长尾情况，出现的任何新样本都可能是极端的，\n但无论如何，我们仍然可以根据需要获得预测结果。", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "不过，我们需要考虑延迟问题。", 
+          "start": 99.88
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "很多情形都对延迟较为敏感，\n因此，我们做出预测所花的时间\n不能超过5毫秒、10毫秒或15毫秒。", 
+          "start": 103.0
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "也就是说，如果计算模型需要很高的费用，\n我们可能需要使用大量生产级资源进行预测工作，\n费用可能会很高，我们需要考虑到这部分预算。", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "另外一件需要考虑的事情是：\n我们可能需要在监控方面投入更多精力。", 
+          "start": 119.0
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "不仅需要监控数据提供工作本身，\n还需要监控预测的输出分布，\n以确保不会发生故障。", 
+          "start": 124.36
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "同样，在线提供服务也是既有优势也有劣势。", 
+          "start": 132.12
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 8.3, 
+          "text": "Another important design consideration when we&#39;re designing machine learning systems, is whether we do inference in an offline or an online fashion.", 
+          "start": 0.52
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "And by inference, of course, we mean making predictions.", 
+          "start": 8.82
+        }, 
+        {
+          "dur": 14.72, 
+          "text": "Are we gonna do this once offline and write those predictions out to some table or some static place that we can then read from, or are we gonna do it continuously on demand with our model stored in some server and predicting on new data as it comes in with new requests?", 
+          "start": 11.82
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Again these have different strengths and weaknesses.", 
+          "start": 26.54
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "If we&#39;re doing offline scoring then we get a really nice opportunity to do post-prediction validation.", 
+          "start": 29.82
+        }, 
+        {
+          "dur": 6.78, 
+          "text": "We write out all our scores and we can sanity check that these scores make sense before they are used to influence the real world.", 
+          "start": 36.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "We also don&#39;t have to worry quite so much about computational costs.", 
+          "start": 43.02
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "If our model is expensive, if it takes a lot of cost to compute our predictions, well we can just throw more machines at it.", 
+          "start": 46.8
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "Maybe using batch quota or some giant map produce, not have to worry about things too much.", 
+          "start": 54.04
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "The drawback to offline scoring is that we need to have all of our examples in hand at the time that we&#39;re doing those predictions.", 
+          "start": 59.36
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "So for areas where we might have a long tail or some crazy distribution that&#39;s changing on us, we might not be in such luck there.", 
+          "start": 66.36
+        }, 
+        {
+          "dur": 12.74, 
+          "text": "But if we know in advance what all of our examples are going to be or if we only care about head queries, something like that, then we can stick those all in a nice offline scoring lookup table.", 
+          "start": 72.82
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "For online scoring, remember that we&#39;re putting that model into a server and then querying that server on demand.", 
+          "start": 85.56
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Now this is great because it means that for long tail situations any new example that comes in could be crazy, whatever, we can still get a prediction for it on demand.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "However, the latency issues are something that we will need to think about.", 
+          "start": 99.88
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "A lot of situations are latency sensitive, so we can&#39;t take more than five or ten or fifteen milliseconds to make our predictions.", 
+          "start": 103.0
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "Which means that if our model is expensive to compute we might have to through a large amount of production level resources at our jobs, this can be expensive, we&#39;ll need to budget for that.", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "The other thing to think about is that we may need to increase our game in terms of monitoring.", 
+          "start": 119.0
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "Not only do we need to monitor the serving jobs themselves, but we also need to monitor the output distributions of our predictions to make sure that nothing is going haywire.", 
+          "start": 124.36
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "So again there&#39;s plusses and minuses to online serving.", 
+          "start": 132.12
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 8.3, 
+          "text": "Un autre aspect à déterminer lors de la conception d&#39;un système\nde machine learning est de décider si nous effectuons l&#39;inférence hors ligne ou en ligne.", 
+          "start": 0.52
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "Et par inférence, bien sûr,\nnous entendons faire des prédictions.", 
+          "start": 8.82
+        }, 
+        {
+          "dur": 14.72, 
+          "text": "Allons-nous effectuer une seule inférence hors ligne, et écrire ces prédictions dans un tableau ou un endroit statique d&#39;où elles seront lues,\nou procéder en continu à la demande avec notre modèle stocké sur un serveur, et prédire de nouvelles données lors de nouvelles demandes ?", 
+          "start": 11.82
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Encore une fois, ces deux méthodes\nont des avantages et des inconvénients.", 
+          "start": 26.54
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "Une notation hors ligne offre\nune très belle opportunité de validation post-prédiction.", 
+          "start": 29.82
+        }, 
+        {
+          "dur": 6.78, 
+          "text": "Nous écrivons tous nos résultats et nous pouvons vérifier\nque ces résultats ont un sens avant d&#39;être utilisés pour influencer le monde réel.", 
+          "start": 36.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "Nous n&#39;avons pas non plus\nà nous préoccuper des coûts de calcul.", 
+          "start": 43.02
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "Si notre modèle est cher et que le calcul de nos prédictions est onéreux,\nnous pouvons simplement y consacrer plus de machines.", 
+          "start": 46.8
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "Il est possible d&#39;utiliser des quotas de lots\nou des cartes géantes pour ne pas trop s&#39;en préoccuper.", 
+          "start": 54.04
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "L&#39;inconvénient de la notation hors ligne est que nous devons\navoir tous nos exemples en main au moment de faire ces prédictions.", 
+          "start": 59.36
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "Ainsi, dans les domaines susceptibles d&#39;impliquer une longue traîne\nou une distribution changeante, cette notation sera peut-être moins adaptée.", 
+          "start": 66.36
+        }, 
+        {
+          "dur": 12.74, 
+          "text": "Mais si nous savons d&#39;avance quels seront nos exemples ou si nous ne nous soucions que de certaines requêtes,\nnous pouvons les coller dans un tableau de conversion des résultats hors ligne.", 
+          "start": 72.82
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "Pour la notation en ligne, nous plaçons ce modèle dans un serveur\net nous interrogeons ce serveur à la demande.", 
+          "start": 85.56
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Cette méthode est particulièrement pratique, car en cas de longue traîne, quel que soit l&#39;exemple à arriver,\nnous pouvons avoir une prédiction pour ce dernier à la demande.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "Cependant, les problèmes\nde latence méritent réflexion.", 
+          "start": 99.88
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "Bon nombre de situations sont sensibles à la latence.\nNos prédictions doivent s&#39;effectuer en moins de cinq, dix ou quinze millisecondes.", 
+          "start": 103.0
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "Si notre modèle revient cher en calcul, nous devrons peut-être y consacrer beaucoup de ressources\nau niveau de la production, ce qui peut être onéreux. Il est nécessaire d&#39;établir un budget.", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "Il faut aussi réfléchir au fait\nque nous devrons probablement augmenter notre surveillance.", 
+          "start": 119.0
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "Nous devons surveiller les tâches de diffusion elles-mêmes, mais également surveiller\nles distributions de sortie de nos prédictions pour nous assurer que tout fonctionne correctement.", 
+          "start": 124.36
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "La diffusion en ligne présente\ndonc des avantages et des inconvénients.", 
+          "start": 132.12
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 8.3, 
+          "text": "머신러닝 시스템을 설계할 때 고려할 또 하나의 디자인 요소는\n추론을 오프라인 방식으로 할지 아니면 온라인 방식으로 할지입니다", 
+          "start": 0.52
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "여기서 추론이란 물론\n예측을 의미합니다", 
+          "start": 8.82
+        }, 
+        {
+          "dur": 14.72, 
+          "text": "오프라인으로 한 번 예측한 다음 나중에 읽어올 수 있는 테이블이나 정적 위치에 해당 예측을 쓸지\n아니면 일정한 서버에 저장된 모델을 사용하여 주문형으로 계속 예측한 다음\n새로운 요청이 전달되면 새로운 데이터를 예측할 것인지 결정해야 합니다", 
+          "start": 11.82
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "마찬가지로 여기에는\n저마다 장단점이 있습니다", 
+          "start": 26.54
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "오프라인 점수 산정을 하면 예측 후\n유효성을 검사할 수 있으므로 매우 유용합니다", 
+          "start": 29.82
+        }, 
+        {
+          "dur": 6.78, 
+          "text": "점수를 기록한 다음 실제로 적용하기 전에\n점수가 합당한지 정상성 체크를 할 수 있습니다", 
+          "start": 36.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "계산 비용을\n그다지 걱정할 필요도 없습니다", 
+          "start": 43.02
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "모델이 비싼 경우 계산 비용이 많이 들지만\n머신을 몇 개 더 사용하면 됩니다", 
+          "start": 46.8
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "배치 할당량 또는 초대형 맵 제품을 사용할 수도 있으니\n크게 걱정할 필요는 없습니다", 
+          "start": 54.04
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "다만 오프라인 점수 산정에서는 예측할 때\n모든 예제를 보유하고 있어야 한다는 단점이 있습니다", 
+          "start": 59.36
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "후속 내용이 많거나 엄청난 분포 때문에\n내용이 계속 변경되는 영역에서는 문제가 될 수 있습니다", 
+          "start": 66.36
+        }, 
+        {
+          "dur": 12.74, 
+          "text": "하지만 사전에 모든 예제를 입수할 수 있다거나 헤드 쿼리만 처리하면 된다면\n오프라인 점수 산정 참고표를 사용할 수 있습니다", 
+          "start": 72.82
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "온라인 점수 산정의 경우 모델을 서버에 둔 다음\n주문형으로 해당 서버를 쿼리한다는 점을 기억하세요", 
+          "start": 85.56
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "이제 후속 내용이 많아 새로운 예제가 엄청나게 입력되는 상황에서도\n여전히 주문형으로 예측을 얻을 수 있으므로 매우 유용합니다", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "하지만 지연 문제에 관해서는\n생각해 보아야 합니다", 
+          "start": 99.88
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "대부분의 경우 지연 문제에 민감하므로 예측을 얻는 데\n5밀리초, 10밀리초 또는 15밀리초 이상을 소비할 수 없습니다", 
+          "start": 103.0
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "즉, 모델의 계산 비용이 비쌀 경우 작업에서 상당량의 프로덕션 레벨 리소스가 필요할 수 있고\n비용이 많이 들어가므로 이에 대비하여 예산을 세워야 합니다", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "또 한 가지 고려할 점은 모니터링 면에서\n작업을 늘려야 할 수도 있다는 것입니다", 
+          "start": 119.0
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "서비스 작업 자체에 대한 모니터링 외에 예측 결과 배포를 모니터링하여\n모든 것이 정상적으로 작동되도록 해야 합니다", 
+          "start": 124.36
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "즉 온라인 서비스에도 장단점이 있습니다", 
+          "start": 132.12
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 8.3, 
+          "text": "Otro aspecto importante sobre el diseño de sistemas de aprendizaje automático\nes la capacidad de realizar inferencias con o sin conexión.", 
+          "start": 0.52
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "Por inferencia, quiero decir realizar predicciones.", 
+          "start": 8.82
+        }, 
+        {
+          "dur": 14.72, 
+          "text": "¿Lo haremos una vez sin conexión, con las predicciones en una tabla o lugar estático para consultarlas, o lo haremos de forma continua según demanda con el modelo en un servidor?", 
+          "start": 11.82
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Cada opción tiene sus ventajas y desventajas.", 
+          "start": 26.54
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "La clasificación sin conexión permite hacer una validación pospredicción.", 
+          "start": 29.82
+        }, 
+        {
+          "dur": 6.78, 
+          "text": "Anoto todas las puntuaciones y las controlo\nantes de usarlas en el mundo real.", 
+          "start": 36.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "Tampoco nos tenemos que preocupar por los costos de cálculo.", 
+          "start": 43.02
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "Si el modelo es costoso, si el cálculo de las predicciones es costoso,\nsimplemente usamos más máquinas.", 
+          "start": 46.8
+        }, 
+        {
+          "dur": 5.32, 
+          "text": "Si usamos cuotas de lote o una asignación gigante,\nno tenemos que preocuparnos por esto.", 
+          "start": 54.04
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "La desventaja de la clasificación sin conexión\nes que debemos contar con todos los ejemplos para las predicciones.", 
+          "start": 59.36
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "En las áreas con mucha cola o una distribución extraña que cambia,\ntal vez no tengamos esa suerte.", 
+          "start": 66.36
+        }, 
+        {
+          "dur": 12.74, 
+          "text": "Pero si conocemos los ejemplos o solo nos importan las consultas principales,\npodemos ubicarlas en una tabla de consulta de clasificación sin conexión.", 
+          "start": 72.82
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "En la clasificación en línea, el modelo está en un servidor,\ny realizamos consultas a ese servidor según demanda.", 
+          "start": 85.56
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Esto quiere decir que, en las colas largas, podemos obtener\nla predicción de cualquier ejemplo nuevo que pueda ser extraño según demanda.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "Sin embargo, hay que considerar el problema de la latencia.", 
+          "start": 99.88
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "Muchas situaciones dependen de la latencia, en las que no podemos tardar\nmás de cinco o diez milisegundos para realizar las predicciones.", 
+          "start": 103.0
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "Si el modelo es costoso de calcular, tal vez debamos usar\nmuchos recursos de producción, para lo que se necesita un presupuesto.", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "También debemos aumentar\nnuestra capacidad de supervisión.", 
+          "start": 119.0
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "Debemos supervisar los trabajos en proceso y las distribuciones de resultado\nde las predicciones para que todo salga bien.", 
+          "start": 124.36
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "Como dije antes, el trabajo en línea tiene sus ventajas y desventajas.", 
+          "start": 132.12
+        }
+      ], 
+      "lang": "es"
+    }
+  ]
+}

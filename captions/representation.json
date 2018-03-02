@@ -1,0 +1,1429 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 5.7, 
+          "text": "有趣的是，当我们处理现实世界中的数据时，\n数据并不会以格式规范的特征向量的形式呈现在我们面前。", 
+          "start": 0.96
+        }, 
+        {
+          "dur": 5.308, 
+          "text": "相反，呈现给我们的数据是数据库记录、\n协议缓冲区或其他任何形式。", 
+          "start": 6.66
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "我们必须从各种各样的数据源中提取数据，\n然后再根据这些数据创建特征向量。", 
+          "start": 11.96
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "现在，从原始数据中提取特征的过程称为特征工程。", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 7.36, 
+          "text": "实践中，机器学习从业人员将大约75%的时间花在特征工程方面了；\n特征就是我们要的东西。", 
+          "start": 24.52
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "接下来，我们来了解一下特征工程是如何发生的。", 
+          "start": 31.88
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "如果某个记录自然地表现为一个实值，例如房子的房间数量，\n我们就可以将这个实值直接复制到一个特征向量中，这个过程非常自然。", 
+          "start": 34.84
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "但是，如果我们面对的是一个字符串，\n比如“Main Street”，那么我们该怎么办呢？", 
+          "start": 44.16
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "如果见到的是字符串值，我们通常可以\n使用独热编码将其转化为特征向量。", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 8.44, 
+          "text": "现在，独热编码针对我们可能见到的每个字符串\n都提供了一个唯一的系数。", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "例如，如果有一个针对街道名称的独热编码，\n那么每一条可能出现的街道都有一个唯一的系数。", 
+          "start": 63.38
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "在见到我们拥有的街道时，例如“Main Street”，\n我们就在针对“Main Street”的系数中添加一个1，\n并在针对其他任何地点的系数中分别添加一个0。", 
+          "start": 71.8
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "别担心，我们可以采用精简的方式来表示这个独热编码。", 
+          "start": 79.18
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "我们可以将这个独热编码用作表示字符串的特征向量。", 
+          "start": 81.7
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "使用独热编码处理此类不常见的分类数据十分方便。", 
+          "start": 85.12
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "那么，什么样的特征才是好特征呢？", 
+          "start": 89.88
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "首先，一个特征应具有非零值，\n并在我们的数据集中出现至少几次或更多次。", 
+          "start": 93.48
+        }, 
+        {
+          "dur": 9.42, 
+          "text": "如果一个特征在具有非零值的情况下出现的次数十分少，\n或仅出现过一次，恐怕就不是一个值得使用的好特征，\n应该在预处理步骤中过滤掉。", 
+          "start": 100.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "特征应具有清晰明确的意义。", 
+          "start": 109.78
+        }, 
+        {
+          "dur": 6.092, 
+          "text": "这样一来，我们就可以进行有效的完善性检查，\n排除错误，确保各项特征得到妥善处理。", 
+          "start": 112.42
+        }, 
+        {
+          "dur": 7.944, 
+          "text": "例如，以年为单位来计算一座房子自Unix时间戳以来的房龄，\n难度远低于以秒为单位来计算。", 
+          "start": 118.52
+        }, 
+        {
+          "dur": 2.596, 
+          "text": "排除错误和进行推理的难度要低很多。", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "因此，特征不应采用魔数值。", 
+          "start": 129.06
+        }, 
+        {
+          "dur": 7.048, 
+          "text": "例如，如果我们定义一个特征，它的作用是告诉我们\n一座房子上市出售多少天了，这就是个馊主意。", 
+          "start": 132.68
+        }, 
+        {
+          "dur": 6.16, 
+          "text": "我们可以使用特殊值负1来表示这座房子从未上市出售过。", 
+          "start": 139.72
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "相反，更好的主意是定义一个指示型特征，让这个特征采用布尔值，\n以便表示是否已定义“上市出售天数”特征。", 
+          "start": 145.88
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "因此，我们可以使用布尔值、True/False、1-0来表示是否定义了这个特征。", 
+          "start": 155.9
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "借助这种方式，原特征“上市出售天数”可以保持0到n的自然单位。", 
+          "start": 160.18
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "第三，特征值不应随时间发生变化。", 
+          "start": 169.76
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "这一点回到了数据的平稳性这一概念。", 
+          "start": 175.32
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "那么，为什么特征值有可能随时间发生变化呢？", 
+          "start": 178.38
+        }, 
+        {
+          "dur": 4.632, 
+          "text": "这是因为，我们的特征可能是从某个上游模型传到我们这里来的，\n而这个上游模型可能会发生变化。", 
+          "start": 180.68
+        }, 
+        {
+          "dur": 13.332, 
+          "text": "我们会希望能够获取这个模型的版本信息并对这个模型有非常具体的了解，\n或者能够从这个模型中获取具有定义规范的恒定语义的值。", 
+          "start": 185.34
+        }, 
+        {
+          "dur": 4.18, 
+          "text": "最后，特征不应采用不理性的离群值。", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 15.088, 
+          "text": "例如，在加利福尼亚州的住房数据中，如果我们创建一个合成特征，\n例如人均房间数，即使用房间总数除以人口总数，那么对于大多数城市街区，\n我们都会得到介于每人0到3或4个房间的相对合理的值。", 
+          "start": 202.88
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "但是在某些城市街区，我们会得到高达50的值。", 
+          "start": 217.96
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "这样的值太不正常了，我是说，这些人都住在什么地方？\n像“酒店街区”这样的地方吗？", 
+          "start": 221.78
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "此时，我们或许可以为特征设置上限或转换特征，\n以便去掉这些不理性的离群值。", 
+          "start": 226.68
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "我们还可以考虑另一种技术，那就是分箱技术。", 
+          "start": 233.84
+        }, 
+        {
+          "dur": 13.14, 
+          "text": "如果要探讨纬度对加利福尼亚州住房价格的影响，\n我们发现并不存在由北向南的可直接映射到住房价格上的线性关系。", 
+          "start": 237.26
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "但是在任何特定纬度范围内，却往往存在很强的关联。", 
+          "start": 250.4
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "因此，我们能做的就是，将由北向南的纬度划分成一批小分箱。", 
+          "start": 255.32
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "这些小分箱每个都会变成一个布尔值特征，\n此时我们就可以使用独热编码。", 
+          "start": 263.56
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "现在，如果您位于映射到圣迭戈的特定分箱中，\n那么基本上我们会得到一个1。", 
+          "start": 267.88
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "或者，如果您位于映射到南湾地区的特定分箱中，则会得到一个1；\n而在其他任何地区，则会得到一个0。", 
+          "start": 276.68
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "借助这种方式，我们的模型可以利用一种成本低廉的方式\n将部分非线性关系映射到模型中，而不需要采用任何特殊技术。", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "接下来，我们来思考一下这方面有哪些好习惯。", 
+          "start": 291.36
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "了解数据是至关重要的。", 
+          "start": 293.6
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "将机器学习当做一个黑盒子，把数据丢进去，却不检查数据，\n就盼着能够获得好结果，这种做法并不妥当。", 
+          "start": 296.88
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "因为数据中会出现怪异的内容。", 
+          "start": 303.4
+        }, 
+        {
+          "dur": 8.3, 
+          "text": "因此，您能做的就是：使用直方图或散点图\n以及各种排名指标将数据直观地显示出来。", 
+          "start": 305.38
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "您可以进行各种数据错误排除检查，为此，在各种开发活动中，\n您需要消耗大量的时间来查找重复值、缺失值、任何看起来像离群值的内容。", 
+          "start": 313.68
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "任何可让您与数据互动的信息中心之类的功能都可能会非常有用。", 
+          "start": 324.52
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "最后，我们要监控一段时间内的数据。", 
+          "start": 328.94
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "数据源昨天情况很好，并不意味着明天情况也会很好。", 
+          "start": 331.56
+        }, 
+        {
+          "dur": 7.3, 
+          "text": "因此，我们为了加强监控特征在一段时间内的稳定性\n而能够采取的任何措施，都会增强系统的稳健性。", 
+          "start": 335.26
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.7, 
+          "text": "So what&#39;s interesting is that when we work with data in the real world, it doesn&#39;t come to us as nicely-formatted feature vectors.", 
+          "start": 0.96
+        }, 
+        {
+          "dur": 5.308, 
+          "text": "Instead it comes to us as database records, or protocol buffers, or whatever else.", 
+          "start": 6.66
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "We need to take that data from those heterogeneous data sources and create feature vectors from it.", 
+          "start": 11.96
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "Now the process of extracting features from raw data is called feature engineering.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 7.36, 
+          "text": "And it&#39;s what real life machine learning people spend something like 75% of their time doing; the features are the thing.", 
+          "start": 24.52
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "So let&#39;s take a look at how this might happen.", 
+          "start": 31.88
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "If we have a record that is naturally represented as a real value, like number of rooms in a house, we can just copy that over into a feature vector, and that&#39;s very natural.", 
+          "start": 34.84
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "But what if we get a string, like Main Street, what do we do then?", 
+          "start": 44.16
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "If we see a string value, we can often translate that into a feature vector.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 8.44, 
+          "text": "By using a one hot encoding; now the one hot encoding has a unique coefficient for each possible string we might see.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "So for example, if we have a one hot encoding for street names, we&#39;ll have a unique coefficient for each possible street.", 
+          "start": 63.38
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "And then when we see the street we have, say Main Street, we&#39;ll put a one in the coefficient for Main Street, and a zero everywhere else.", 
+          "start": 71.8
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "Don&#39;t worry we can represent that compactly.", 
+          "start": 79.18
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "And we&#39;ll use that as our feature vector for representing strings.", 
+          "start": 81.7
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "One hot encodings are extremely handy for this sort of sparse, categorical data.", 
+          "start": 85.12
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "Now what makes a feature a good feature?", 
+          "start": 89.88
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "Well the first thing is that a feature should occur with a non-zero value at least a handful of times or more in our data set.", 
+          "start": 93.48
+        }, 
+        {
+          "dur": 9.42, 
+          "text": "If a feature occurs with a non-zero value only extremely rarely, or maybe only once, it&#39;s probably not a great feature to use and should maybe be filtered out in a pre-processing step.", 
+          "start": 100.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "Our features should have a clear and obvious meaning", 
+          "start": 109.78
+        }, 
+        {
+          "dur": 6.092, 
+          "text": "This allows us to do good sanity checking and debugging to make sure that our features are being processed properly.", 
+          "start": 112.42
+        }, 
+        {
+          "dur": 7.944, 
+          "text": "For example, it&#39;s much easier to have a house age in units of years than a house age in seconds since Unix epoch.", 
+          "start": 118.52
+        }, 
+        {
+          "dur": 2.596, 
+          "text": "Much easier to debug and reason about.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "So features shouldn&#39;t take on magic values.", 
+          "start": 129.06
+        }, 
+        {
+          "dur": 7.048, 
+          "text": "So for example it would be a bad idea if we had a feature whose job it was to tell us how many days a house had been on the market.", 
+          "start": 132.68
+        }, 
+        {
+          "dur": 6.16, 
+          "text": "For us to use a special value of negative 1 to show that that house had never been on the market.", 
+          "start": 139.72
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Instead a better idea would be to have an indicator feature that would take on a boolean value, showing whether our days on the market feature was defined or not.", 
+          "start": 145.88
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "So we can have boolean, true/false, 1-0 to show is that other feature defined.", 
+          "start": 155.9
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "And this allows the original feature, days on the market, to maintain its natural units of 0 through n.", 
+          "start": 160.18
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "The third thing is that our feature values shouldn&#39;t change over time.", 
+          "start": 169.76
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "And this goes back to the idea of stationarity in our data.", 
+          "start": 175.32
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "Now why might a feature value change over time?", 
+          "start": 178.38
+        }, 
+        {
+          "dur": 4.632, 
+          "text": "Well maybe our features come to us from some upstream model that might change.", 
+          "start": 180.68
+        }, 
+        {
+          "dur": 13.332, 
+          "text": "We&#39;d like to be able to version that and have a very specific sense or to be able to get values out of that model that really do have well-defined constant semantics.", 
+          "start": 185.34
+        }, 
+        {
+          "dur": 4.18, 
+          "text": "Last thing is that a feature shouldn&#39;t have crazy outlier values.", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 15.088, 
+          "text": "So for example in our California housing data, if we create a synthetic feature, like rooms per person, where we take the total rooms and divide it by the total population, we get some reasonable values between 0 and 3 or 4 rooms per person for most city blocks.", 
+          "start": 202.88
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "But on some city blocks we&#39;ve got values as high as 50.", 
+          "start": 217.96
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Which is insane, I mean, like where are these people living, like on hotel blocks?", 
+          "start": 221.78
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "So a thing we can do there is maybe cap or transform our feature so that we get rid of those crazy outlier values.", 
+          "start": 226.68
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "One other trick to think about is the binning trick.", 
+          "start": 233.84
+        }, 
+        {
+          "dur": 13.14, 
+          "text": "So if we think about say the effect of latitude on the housing prices in California, there is no sort of linear relationship from North to South that maps directly to housing prices.", 
+          "start": 237.26
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "But within any particular latitude there often is a pretty strong correlation.", 
+          "start": 250.4
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "And so what we can do is we can take that North to South latitude and bucket it up into a bunch of little bins.", 
+          "start": 255.32
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "These each become boolean features, we can use a one hot encoding here.", 
+          "start": 263.56
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "And essentially what we get is a one now if you&#39;re in the particular bin that maps to San Diego.", 
+          "start": 267.88
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Or a one if you&#39;re in the particular bin that maps to the South Bay Area, and a zero everywhere else.", 
+          "start": 276.68
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "This allows our model a cheap way to map some of those non-linearities into our model without doing any special tricks.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "Let&#39;s think about some good habits here.", 
+          "start": 291.36
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "It&#39;s incredibly important to know your data.", 
+          "start": 293.6
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "It&#39;s not really a good practice to just sort of treat machine learning as a black box, throwing it data without inspecting the data and hoping to get good results.", 
+          "start": 296.88
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "Because there will be quirks in your data.", 
+          "start": 303.4
+        }, 
+        {
+          "dur": 8.3, 
+          "text": "So things you can do: you can visualize your data using histograms or scatter plots, various rank metrics.", 
+          "start": 305.38
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "You can do various data debugging, that ends up consuming a lot of time from all the development looking for duplicate values, missing values, anything that looks like an outlier.", 
+          "start": 313.68
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "Anything that looks like a dashboard that you can interact with your data can be incredibly helpful.", 
+          "start": 324.52
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "And finally we want to monitor our data over time.", 
+          "start": 328.94
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Just because our data sources were good yesterday does not mean that they&#39;re going to be good tomorrow.", 
+          "start": 331.56
+        }, 
+        {
+          "dur": 7.3, 
+          "text": "And so anything we can do to add monitoring to the stability of our features over time, will increase the robustness of our systems.", 
+          "start": 335.26
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.7, 
+          "text": "Lorsque l&#39;on utilise des données réelles, celles-ci ne se présentent pas\nsous forme de vecteurs de caractéristiques prêts à l&#39;emploi.", 
+          "start": 0.96
+        }, 
+        {
+          "dur": 5.308, 
+          "text": "Il s&#39;agit plutôt d&#39;enregistrements de base de données, de Protocol Buffers, etc.", 
+          "start": 6.66
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "C&#39;est à nous de créer des vecteurs de caractéristiques\nà partir de ces données de sources hétérogènes.", 
+          "start": 11.96
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "Ce processus appliqué aux données brutes se nomme l&#39;extraction de caractéristiques.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 7.36, 
+          "text": "Les spécialistes en machine learning consacrent\nenviron 75 % de leur temps à l&#39;extraction des caractéristiques.", 
+          "start": 24.52
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "Voyons comment les choses peuvent se passer.", 
+          "start": 31.88
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "Si l&#39;enregistrement est naturellement représenté par une valeur réelle\ncomme le nombre de pièces d&#39;une maison, il suffit de copier celle-ci dans un vecteur de caractéristiques.", 
+          "start": 34.84
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Mais que faire s&#39;il s&#39;agit d&#39;une chaîne, par exemple &quot;rue Lecourbe&quot; ?", 
+          "start": 44.16
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "Une valeur de chaîne peut souvent être convertie en vecteur de caractéristiques.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 8.44, 
+          "text": "Nous pouvons utiliser l&#39;encodage one-hot, qui consiste\nà associer un coefficient unique à chaque chaîne possible.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "Par exemple, en appliquant un encodage one-hot aux noms de rue,\nnous associons un coefficient unique à chaque rue possible.", 
+          "start": 63.38
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "Si la rue rencontrée est la rue Lecourbe, nous insérons &quot;1&quot;\npour le coefficient de la rue Lecourbe et &quot;0&quot; pour tous les autres coefficients.", 
+          "start": 71.8
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "Rassurez-vous, la représentation reste compacte.", 
+          "start": 79.18
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Nous obtenons un vecteur de caractéristiques représentant les chaînes.", 
+          "start": 81.7
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "L&#39;encodage one-hot est très pratique pour les données catégorielles creuses.", 
+          "start": 85.12
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "Quelle est la caractéristique idéale ?", 
+          "start": 89.88
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "Premièrement, la caractéristique doit figurer plusieurs fois\navec une valeur différente de zéro dans l&#39;ensemble de données.", 
+          "start": 93.48
+        }, 
+        {
+          "dur": 9.42, 
+          "text": "Si sa valeur diffère de zéro très rarement, voire une seule fois, cette caractéristique\nne convient probablement pas et elle doit être exclue à l&#39;aide d&#39;un filtre de prétraitement.", 
+          "start": 100.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "La signification des caractéristiques doit être claire.", 
+          "start": 109.78
+        }, 
+        {
+          "dur": 6.092, 
+          "text": "Cela facilite l&#39;évaluation de l&#39;intégrité et le débogage\nen vue du traitement efficace de ces caractéristiques.", 
+          "start": 112.42
+        }, 
+        {
+          "dur": 7.944, 
+          "text": "Par exemple, mieux vaut exprimer l&#39;âge d&#39;une maison\nen années plutôt qu&#39;en nombre de secondes depuis l&#39;epoch Unix.", 
+          "start": 118.52
+        }, 
+        {
+          "dur": 2.596, 
+          "text": "C&#39;est plus facile à déboguer et à traiter.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "Il ne doit pas y avoir de valeurs magiques.", 
+          "start": 129.06
+        }, 
+        {
+          "dur": 7.048, 
+          "text": "Par exemple, il serait peu judicieux d&#39;utiliser une caractéristique\npour indiquer depuis combien de jours une maison est sur le marché", 
+          "start": 132.68
+        }, 
+        {
+          "dur": 6.16, 
+          "text": "en appliquant une valeur &quot;-1&quot; spéciale\npour indiquer que cette maison n&#39;a jamais été en vente.", 
+          "start": 139.72
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Mieux vaut utiliser un indicateur avec une valeur booléenne signalant\nsi la caractéristique correspondant au nombre de jours sur le marché est définie ou non.", 
+          "start": 145.88
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "La valeur 1-0 ou &quot;vrai/faux&quot; indique si cette autre caractéristique est définie.", 
+          "start": 155.9
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "La caractéristique d&#39;origine, &quot;nombre de jours sur le marché&quot;,\nconserve ses valeurs naturelles de 0 à n.", 
+          "start": 160.18
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "Troisièmement, les valeurs ne doivent pas changer au fil du temps.", 
+          "start": 169.76
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "Cela nous renvoie à la notion de stationnarité des données.", 
+          "start": 175.32
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "Pourquoi changeraient-elles au fil du temps ?", 
+          "start": 178.38
+        }, 
+        {
+          "dur": 4.632, 
+          "text": "Les caractéristiques peuvent provenir d&#39;un modèle en amont susceptible d&#39;évoluer.", 
+          "start": 180.68
+        }, 
+        {
+          "dur": 13.332, 
+          "text": "Dans ce cas, il faut identifier les versions avec une grande précision ou être en mesure\nd&#39;extraire de ce modèle des valeurs ayant une sémantique constante bien définie.", 
+          "start": 185.34
+        }, 
+        {
+          "dur": 4.18, 
+          "text": "Enfin, la caractéristique ne doit pas présenter d&#39;anomalies.", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 15.088, 
+          "text": "Pour les données sur le logement en Californie, une caractéristique synthétique comme le nombre de pièces par personne,\noù l&#39;on divise le nombre total de pièces par la population totale, produit le plus souvent des valeurs raisonnables, soit entre 0 et 3 ou 4 pièces par personne.", 
+          "start": 202.88
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "Mais pour certains îlots urbains, la valeur atteint 50.", 
+          "start": 217.96
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "C&#39;est une valeur aberrante qui signifierait que tout le monde vit dans des hôtels.", 
+          "start": 221.78
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Nous pouvons peut-être plafonner ou transformer la caractéristique\npour nous débarrasser de telles anomalies.", 
+          "start": 226.68
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "La méthode du binning est une autre solution possible.", 
+          "start": 233.84
+        }, 
+        {
+          "dur": 13.14, 
+          "text": "Si nous étudions l&#39;incidence de la latitude nord-sud sur le prix des logements en Californie,\nil n&#39;existe aucune relation linéaire établissant une correspondance directe entre les deux.", 
+          "start": 237.26
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Mais il existe souvent une corrélation assez forte au sein de chaque latitude.", 
+          "start": 250.4
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "La solution peut donc consister à répartir\nces latitudes nord-sud en plusieurs classes de petite taille,", 
+          "start": 255.32
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "qui deviennent des caractéristiques booléennes avec un encodage one-hot.", 
+          "start": 263.56
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "On insère donc la valeur &quot;1&quot; si l&#39;on se trouve\ndans la classe qui correspond à San Diego.", 
+          "start": 267.88
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Ou, pour la région de South Bay, on insère &quot;1&quot;\ndans la classe correspondante et &quot;0&quot; partout ailleurs.", 
+          "start": 276.68
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "Nous pouvons ainsi mettre en correspondance\ncertaines non-linéarités dans notre modèle, sans techniques complexes.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "Voyons maintenant quelques bonnes pratiques.", 
+          "start": 291.36
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Il est capital de bien connaître les données.", 
+          "start": 293.6
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "Le machine learning n&#39;est pas une boîte noire où l&#39;on jette toutes les données\nsans inspecter celles-ci au préalable, en espérant obtenir de bons résultats.", 
+          "start": 296.88
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "Les données présentent toujours des bizarreries.", 
+          "start": 303.4
+        }, 
+        {
+          "dur": 8.3, 
+          "text": "Vous pouvez les visualiser à l&#39;aide d&#39;histogrammes,\nde nuages de points ou de statistiques de classement.", 
+          "start": 305.38
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "Vous pouvez déboguer les données, sachant que le développement finit par prendre\nbeaucoup de temps s&#39;il faut rechercher les valeurs en double ou manquantes, ainsi que les anomalies.", 
+          "start": 313.68
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "Tout type de tableau de bord qui permet\nd&#39;interagir avec les données est extrêmement pratique.", 
+          "start": 324.52
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "Enfin, il faut surveiller les données au fil du temps.", 
+          "start": 328.94
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Les sources de données qui étaient de bonne qualité hier\nne le seront pas nécessairement demain.", 
+          "start": 331.56
+        }, 
+        {
+          "dur": 7.3, 
+          "text": "Tout ce que nous pouvons faire pour mieux surveiller\nla stabilité des caractéristiques au fil du temps renforce nos systèmes.", 
+          "start": 335.26
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.7, 
+          "text": "우리가 실제로 작업하게 될 데이터는\n형식이 잘 정리된 특성 벡터가 아닙니다.", 
+          "start": 0.96
+        }, 
+        {
+          "dur": 5.308, 
+          "text": "데이터베이스의 기록이나 프로토콜 버퍼 같은 것들이죠.", 
+          "start": 6.66
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "우리는 이렇게 다양한 성질을 가진 데이터 소스에서\n데이터를 가져와 특성 벡터를 만들어야 합니다.", 
+          "start": 11.96
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "원시 데이터에서 특성을 추출하는 과정을\n특성 추출이라고 합니다.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 7.36, 
+          "text": "머신러닝 개발자는 개발 시간 중 75% 정도를\n특성을 추출하는 데 사용할 정도로 특성은 중요한 부분입니다.", 
+          "start": 24.52
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "이제 특성을 어떻게 추출하는지 살펴봅시다.", 
+          "start": 31.88
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "집에 있는 방의 개수와 같이 실제 값으로 표현할 수 있는 기록은\n특성 벡터로 사용할 수 있습니다. 아주 자연스럽죠.", 
+          "start": 34.84
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "하지만 &#39;메인 스트리트&#39;처럼 문자열이 있다면 어떻게 해야 할까요?", 
+          "start": 44.16
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "문자열 값이 있는 경우, 원-핫 인코딩을 사용해\n특성 벡터로 바꾸는 경우가 많습니다.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 8.44, 
+          "text": "원-핫 인코딩에서는 모든 문자열마다\n각각 고유한 계수를 가집니다.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "거리 이름에 원-핫 인코딩을 사용하면\n각 거리마다 고유 계수가 생기죠.", 
+          "start": 63.38
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "&#39;메인 스트리트&#39;와 같은 거리가 있으면\n이 거리 이름에는 1을, 다른 모든 항목에는 0을 줍니다.", 
+          "start": 71.8
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "걱정하지 마세요. 간단하게 표현할 수 있으니까요.", 
+          "start": 79.18
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "이걸 문자열을 표현할 특성 벡터로 사용할 겁니다.", 
+          "start": 81.7
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "원-핫 인코딩은 이렇게 분산되어 있는 분류 데이터에 적합합니다.", 
+          "start": 85.12
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "그렇다면 좋은 특성이란 어떤 것일까요?", 
+          "start": 89.88
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "우선, 특성은 데이터 세트에서 0이 아닌 값으로\n최소 몇 차례 이상 나타나야 합니다.", 
+          "start": 93.48
+        }, 
+        {
+          "dur": 9.42, 
+          "text": "어떤 특성이 0이 아닌 값을 가지지만 매우 드물거나 딱 한 번만 나타난다면\n이것은 좋은 특성이 아닙니다. 사전 처리 단계에서 빼는 게 좋죠.", 
+          "start": 100.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "또한 특성은 분명하고 명확한 의미를 가져야 합니다.", 
+          "start": 109.78
+        }, 
+        {
+          "dur": 6.092, 
+          "text": "그래야 정상 여부 검사 및 디버깅을 통해\n특성이 제대로 처리되고 있는지 확인할 수 있죠.", 
+          "start": 112.42
+        }, 
+        {
+          "dur": 7.944, 
+          "text": "예를 들어 주택 수명의 경우 유닉스 에포크 형식을 사용해\n초 단위로 표시하는 것보다 년 단위로 표시하는 것이 훨씬 쉽습니다.", 
+          "start": 118.52
+        }, 
+        {
+          "dur": 2.596, 
+          "text": "디버그하기도 쉽고 이해하기도 쉽죠.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "특성은 특이한 값을 가져서는 안 됩니다.", 
+          "start": 129.06
+        }, 
+        {
+          "dur": 7.048, 
+          "text": "어떤 집이 며칠 동안이나 시장에 매물로 나와 있었는지\n표시해주는 특성은 좋은 특성이 아닙니다.", 
+          "start": 132.68
+        }, 
+        {
+          "dur": 6.16, 
+          "text": "어떤 집이 매물로 나온 적이 없음을 표시하려면\n-1이라는 특수한 값을 써야 하죠.", 
+          "start": 139.72
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "이럴 땐 부울 값을 갖는 지표 특성을 사용하는 것이 좋습니다.\n매물 기간을 표시하는 특성이 정의되었는지 아닌지를 표시하는 특성이죠.", 
+          "start": 145.88
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "부울, 참/거짓, 1-0이라는 형식을 통해\n다른 특성이 정의되었는지 여부를 표시할 수 있습니다.", 
+          "start": 155.9
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "그리고 이로써 원래 특성인 매물 기간이\n0에서 n 사이의 값으로 유지될 수 있습니다.", 
+          "start": 160.18
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "셋째로, 시간이 지남에 따라 특성 값이 변해서는 안 됩니다.", 
+          "start": 169.76
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "데이터의 정상성이라는 개념과도 연관이 있습니다.", 
+          "start": 175.32
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "시간이 지남에 따라 특성값이 변할 수도 있는 이유는 무엇일까요?", 
+          "start": 178.38
+        }, 
+        {
+          "dur": 4.632, 
+          "text": "변화가 일어날 수 있는 업스트림 모델에서 온 특성일 수도 있습니다.", 
+          "start": 180.68
+        }, 
+        {
+          "dur": 13.332, 
+          "text": "이 경우 하나의 버전으로 만들어 특별하게 간주하거나\n잘 정의된 상수 의미론이 사용된 모델에서 값을 가져오는 것이 좋습니다.", 
+          "start": 185.34
+        }, 
+        {
+          "dur": 4.18, 
+          "text": "마지막으로, 특성은 이상점 값을 가져서는 안 됩니다.", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 15.088, 
+          "text": "캘리포니아 주택 데이터에서 총 객실 개수를 총 인구수로 나눠\n1인당 방 개수와 같은 합성 특성을 만들어 봅시다. 그러면 대부분 도시의 한 블록에\n1인당 0에서 3, 4개 정도의 방이 해당한다는 적당한 값이 나올 겁니다.", 
+          "start": 202.88
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "하지만 몇몇 블록의 경우 1인당 50개라는 높은 값이 나왔습니다.", 
+          "start": 217.96
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "이건 말도 안 되죠. 이 사람들은 호텔에 몰려 있는 걸까요?", 
+          "start": 221.78
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "이럴 때는 특성을 제한하거나 변환하여 이상점 값을 제거해야 합니다.", 
+          "start": 226.68
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "비닝(binning)이라는 방법도 생각해 볼 수 있습니다.", 
+          "start": 233.84
+        }, 
+        {
+          "dur": 13.14, 
+          "text": "캘리포니아 주택 가격에 위도가 미치는 영향을 생각해 볼까요.\n위도가 바뀌어도 주택 가격에 직접적인 영향을 주는 선형 관계는 없습니다.", 
+          "start": 237.26
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "하지만 특정 위도 내에서는 강한 상관관계가 있는 경우가 많습니다.", 
+          "start": 250.4
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "따라서 위도를 몇 개의 작은 빈(bin)으로 나눌 수 있죠.", 
+          "start": 255.32
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "각 빈은 부울 특성이 되며, 여기에 원-핫 인코딩을 사용할 수 있습니다.", 
+          "start": 263.56
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "그러면 지도상에서 샌디에이고를 나타내는 빈이 1을 나타내게 되죠.", 
+          "start": 267.88
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "또는 사우스베이 지역에 있는 빈이 1, 그 외의 모든 지역은 0을 나타냅니다.", 
+          "start": 276.68
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "이를 통해 특수한 방법을 사용하지 않고도\n간단하게 비선형성을 모델에 매핑할 수 있게 됩니다.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "이때 필요한 몇 가지 좋은 습관이 있습니다.", 
+          "start": 291.36
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "데이터를 제대로 아는 것은 매우 중요합니다.", 
+          "start": 293.6
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "머신러닝을 블랙박스와 같이 취급하는 것은 좋은 습관이 아닙니다.\n데이터를 제대로 살펴보지도 않고 집어넣은 다음 좋은 결과를 기대할 수는 없습니다.", 
+          "start": 296.88
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "데이터에 특이한 사항이 있을 수 있기 때문입니다.", 
+          "start": 303.4
+        }, 
+        {
+          "dur": 8.3, 
+          "text": "히스토그램이나 분산형 플롯, 여러 가지 순위 측정항목 등을\n사용하여 데이터를 시각화해 보세요.", 
+          "start": 305.38
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "다양한 방법으로 데이터 디버깅을 시도할 수도 있지만\n중복값, 누락값, 이상점 등을 찾다가 많은 시간을 보내게 됩니다.", 
+          "start": 313.68
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "데이터 상호작용형 대시보드와 같은 것이 큰 도움이 됩니다.", 
+          "start": 324.52
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "마지막으로, 시간의 경과에 따라 데이터를 모니터링하는 것이 좋습니다.", 
+          "start": 328.94
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "데이터 소스가 어제 좋았다고 해서 내일도 좋을 것이라는 보장은 없거든요.", 
+          "start": 331.56
+        }, 
+        {
+          "dur": 7.3, 
+          "text": "시간 경과에 따른 특성의 안정성을 추가로 모니터링하면\n시스템을 더욱 견고하게 만들 수 있습니다.", 
+          "start": 335.26
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.7, 
+          "text": "Cuando trabajamos con datos en el mundo real,\nno los recibimos como vectores de atributos con buen formato.", 
+          "start": 0.96
+        }, 
+        {
+          "dur": 5.308, 
+          "text": "Los recibimos como registros de bases de datos,\nbúferes de protocolo, etc.", 
+          "start": 6.66
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "Tomamos los datos de esas fuentes heterogéneas\ny creamos vectores de atributos.", 
+          "start": 11.96
+        }, 
+        {
+          "dur": 5.36, 
+          "text": "A la extracción de atributos a partir de datos sin procesar\nla llamamos ingeniería de atributos.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 7.36, 
+          "text": "Las personas dedicadas al aprendizaje automático\nen el mundo real invierten el 75% de su tiempo en los atributos.", 
+          "start": 24.52
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "Observemos cómo podría funcionar.", 
+          "start": 31.88
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "Copiamos en un vector de atributos un registro representado\ncomo un valor real, como la cantidad de habitaciones en una casa.", 
+          "start": 34.84
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "¿Pero qué hacemos si tenemos\nuna string como &quot;Calle Principal&quot;?", 
+          "start": 44.16
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "Podemos traducir los valores de strings\nen un vector de atributos.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 8.44, 
+          "text": "Al usar una codificación de un solo 1,\nnotamos que tiene un coeficiente único para cada string posible.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "Por ejemplo, con una codificación de un solo 1 para los nombres de calles,\ntendremos un coeficiente único para cada calle posible.", 
+          "start": 63.38
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "En este caso, pondremos un 1 en el coeficiente\npara Calle Principal y un 0 para todo lo demás.", 
+          "start": 71.8
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "Podemos representarlo de forma compacta.", 
+          "start": 79.18
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Lo usaremos como vector de atributos\npara representar strings.", 
+          "start": 81.7
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "Las codificaciones de un solo 1 son útiles\npara este tipo de categorías dispersas.", 
+          "start": 85.12
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "¿Qué debe tener un atributo para ser útil?", 
+          "start": 89.88
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "Un atributo debe tener un valor que no sea cero\nal menos varias veces en nuestro conjunto de datos.", 
+          "start": 93.48
+        }, 
+        {
+          "dur": 9.42, 
+          "text": "Si el atributo tiene un valor que no sea cero pocas veces o solo una,\nes probable que no sea útil y deba quitarse antes del procesamiento.", 
+          "start": 100.36
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "Nuestros atributos deben tener un significado claro y evidente.", 
+          "start": 109.78
+        }, 
+        {
+          "dur": 6.092, 
+          "text": "Esto nos permite hacer comprobaciones y depuraciones correctas\npara procesar los atributos de forma adecuada.", 
+          "start": 112.42
+        }, 
+        {
+          "dur": 7.944, 
+          "text": "Por ejemplo, es más fácil que la antigüedad de una casa\nse exprese en unidades de años que en segundos en repeticiones UNIX.", 
+          "start": 118.52
+        }, 
+        {
+          "dur": 2.596, 
+          "text": "Es más fácil de depurar y entender.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "Los atributos no deben basarse en valores mágicos.", 
+          "start": 129.06
+        }, 
+        {
+          "dur": 7.048, 
+          "text": "No sería útil tener un atributo que exprese\nla cantidad de días que una casa estuvo en el mercado.", 
+          "start": 132.68
+        }, 
+        {
+          "dur": 6.16, 
+          "text": "Tampoco tener un valor especial de -1\npara mostrar que la casa nunca estuvo en el mercado.", 
+          "start": 139.72
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Sería mejor tener un atributo de indicadores con un valor booleano\nque muestre si el atributo de días en el mercado se definió o no.", 
+          "start": 145.88
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "Un valor booleano, verdadero/falso, 1-0,\npara mostrar si se definió esa otro atributo.", 
+          "start": 155.9
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Esto permite que el atributo original, días en el mercado,\nmantenga sus unidades naturales de 0 a 1.", 
+          "start": 160.18
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "Tercero, los valores del atributo\nno deben cambiar en el tiempo.", 
+          "start": 169.76
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "Volvemos al concepto\nde estacionariedad en nuestros datos.", 
+          "start": 175.32
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "¿Por qué puede cambiar un atributo en el tiempo?", 
+          "start": 178.38
+        }, 
+        {
+          "dur": 4.632, 
+          "text": "Tal vez, los atributos vienen\nde un modelo superior que puede cambiar.", 
+          "start": 180.68
+        }, 
+        {
+          "dur": 13.332, 
+          "text": "Queremos definir un objetivo específico u obtener valores\na partir de un modelo que tenga una semántica constante bien definida.", 
+          "start": 185.34
+        }, 
+        {
+          "dur": 4.18, 
+          "text": "Por último, un atributo no debe tener valores atípicos.", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 15.088, 
+          "text": "Por ejemplo, en los datos de viviendas de California, si creamos un atributo sintético\npara calcular habitaciones por persona, los valores serán de 0 a 4 para cada manzana.", 
+          "start": 202.88
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "Pero en algunas manzanas obtenemos valores de hasta 50.", 
+          "start": 217.96
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Es ilógico. ¿Acaso estas personas viven en hoteles?", 
+          "start": 221.78
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Podemos limitar o transformar el atributo\npara eliminar esos valores atípicos.", 
+          "start": 226.68
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "También podemos aplicar la discretización.", 
+          "start": 233.84
+        }, 
+        {
+          "dur": 13.14, 
+          "text": "Si pensamos en el efecto de la latitud\nen los precios de las viviendas en California, no notamos una relación lineal.", 
+          "start": 237.26
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Pero, en latitudes específicas, existen correlaciones claras.", 
+          "start": 250.4
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "Entonces, tomamos los valores de latitud\ny los disponemos en pequeños grupos de discretización.", 
+          "start": 255.32
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Cada uno se convierte en atributos booleanos.\nPodemos usar una codificación de un solo 1.", 
+          "start": 263.56
+        }, 
+        {
+          "dur": 8.8, 
+          "text": "Obtenemos un 1 si estamos\nen un grupo especifico en San Diego.", 
+          "start": 267.88
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "O un 1 si estamos en un grupo específico en South Bay\ny un 0 en el resto de las zonas.", 
+          "start": 276.68
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "Esta es una manera económica de representar\nalgunas de estas no linealidades en el modelo sin hacer nada raro.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "Pensemos en algunos hábitos positivos.", 
+          "start": 291.36
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Es muy importante que conozcas tus datos.", 
+          "start": 293.6
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "No es bueno tratar al aprendizaje automático como una caja negra\nque alimentamos con datos desconocidos y esperar buenos resultados.", 
+          "start": 296.88
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "Porque tus datos tendrán algunas particularidades.", 
+          "start": 303.4
+        }, 
+        {
+          "dur": 8.3, 
+          "text": "Puedes visualizar tus datos mediante histogramas,\ndiagramas de puntos o métricas de rango.", 
+          "start": 305.38
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "Podemos depurar datos, una tarea que consume mucho tiempo\ncuando buscamos valores duplicados, faltantes o atípicos.", 
+          "start": 313.68
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "Contar con un panel de control\npara interactuar con los datos puede ser muy útil.", 
+          "start": 324.52
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "Queremos supervisar nuestros datos en el tiempo.", 
+          "start": 328.94
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Que nuestras fuentes de datos hayan sido confiables\nen el pasado no significa que lo sean en el futuro.", 
+          "start": 331.56
+        }, 
+        {
+          "dur": 7.3, 
+          "text": "Todo lo que hagamos para supervisar la estabilidad de los atributos\nen el tiempo mejorará la capacidad de nuestros sistemas.", 
+          "start": 335.26
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

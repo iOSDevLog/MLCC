@@ -1,0 +1,2654 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 7.36, 
+          "text": "大家好！我叫Sally Goldman，\n是Google的一名科研人员，\n我的主要工作职责之一是构建推荐系统。", 
+          "start": 0.68
+        }, 
+        {
+          "dur": 6.68, 
+          "text": "推荐系统最基本的方面是嵌入，\n这也是我今天要讨论的内容。", 
+          "start": 8.04
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "举个有激励作用的例子，\n我将要讨论协同过滤的问题。", 
+          "start": 14.72
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "假设我有一百万部电影和五十万用户，\n而且我知道每个用户观看过的电影。", 
+          "start": 18.66
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "任务很简单：我要向用户推荐电影。", 
+          "start": 26.44
+        }, 
+        {
+          "dur": 12.0, 
+          "text": "要解决此问题，我必须要了解某种结构，\n使我能够判断这些电影是相似的，\n如果您观看了这3部电影，\n那么这也是一部值得推荐的好电影。", 
+          "start": 30.18
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "首先，我们先试着沿着一个一维嵌入行放入这些电影。", 
+          "start": 42.18
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "比如说，我可能会在左侧放入动画片，\n在右侧放入更加适合成人的电影。", 
+          "start": 49.3
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "这样就开始出现不错的效果。", 
+          "start": 57.08
+        }, 
+        {
+          "dur": 7.72, 
+          "text": "《怪物史莱克》和《超人总动员》都是儿童动画片，\n如果您看过其中一部，那么另外一部值得推荐。", 
+          "start": 59.24
+        }, 
+        {
+          "dur": 10.22, 
+          "text": "但《疯狂约会美丽都》也是动画片，\n而《哈利波特》虽然不是动画片，\n但我认为它跟《超人总动员》颇为相似。", 
+          "start": 66.96
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "《疯狂约会美丽都》不算特别适合儿童，\n也不是那种很多人会去看的卖座电影。", 
+          "start": 77.18
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "另一方面，比如说我认为可能比较适合向\n看过《蓝》或《记忆碎片》的用户相互推荐另一部，\n而《蝙蝠侠：黑暗骑士崛起》则不适合\n推荐给看过这两部电影中任一部的用户。", 
+          "start": 86.2
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "由于只有一行直线，就算我再努力观察和分析，\n也很难捕获电影中令用户偏爱的所有错综复杂之处。", 
+          "start": 94.1
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "如果我们再添加一个维度，\n有两个维度的话会怎样呢？", 
+          "start": 104.04
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "如果我将卖座电影放在靠近顶部的位置，\n并将偏艺术类的电影放在靠近底部的位置，会怎样呢？", 
+          "start": 107.84
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "这样就实现了我想要实现的一些目标。", 
+          "start": 114.36
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "我将《怪物史莱克》、《超人总动员》\n和《哈利波特》放在相互邻近的位置，\n它们都是非常类似的电影，\n而将《蓝》和《记忆碎片》放在右下方。", 
+          "start": 116.38
+        }, 
+        {
+          "dur": 6.3, 
+          "text": "可以想象您可能还需要捕获很多其他方面，\n您需要更多的维度，事实上我们就是这样做的。", 
+          "start": 125.4
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "实际上，我们可以想象需要20、50，\n甚至100个维度来进行嵌入。", 
+          "start": 131.7
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "但我们还是继续讨论二维，\n因为我可以将二维模型画出来。", 
+          "start": 138.3
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "我们再向这个模型添加一些电影，\n我接着添加一些轴。", 
+          "start": 141.56
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "X轴的左侧是比较适合儿童的电影，\n右侧则是比较适合成人的电影。", 
+          "start": 146.28
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "Y轴的顶部是比较卖座的电影，\n底部则是偏艺术类的电影。", 
+          "start": 152.86
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "在这里，您会看到大量实用的结构，\n您可以看到位置相邻的电影比较类似，\n而这正是我们想要实现的目标。", 
+          "start": 158.94
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "现在我会用几何图形来绘制此模型，\n但我想要确保每个人都了解，\n有非常简单的方法来表示这些嵌入，\n当我在深度神经网络中学习这些嵌入时，\n使用的就是这种非常简单的方法。", 
+          "start": 169.44
+        }, 
+        {
+          "dur": 12.78, 
+          "text": "以《怪物史莱克》和《蓝》为例，\n这两部电影在这个二维空间中都只是单个点，\n我们使用X轴上的一个值和Y轴上的一个值来表示这些点。", 
+          "start": 180.84
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "例如，《怪物史莱克》是点（-1，0.95），\n或者《蓝》是点（0.65，-0.2）。", 
+          "start": 193.62
+        }, 
+        {
+          "dur": 10.12, 
+          "text": "此处的每部电影都可以仅由两个值组成的集表示，\n而且我们现在可通过这些点之间的距离\n来了解电影之间的相似性。", 
+          "start": 202.92
+        }, 
+        {
+          "dur": 9.68, 
+          "text": "尽管我只打算绘制两个维度，但实际上，\n您需要在D维空间中建模，二维不足以捕获一切内容。", 
+          "start": 213.04
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "实际上，如果思考下正在执行的操作，就会发现，\n其实是在假设D维可以捕获用户对于电影的兴趣。", 
+          "start": 222.72
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "我要选择D个不同的方面，\n然后我可以在D个方面中单独移动电影，\n并使用这种方法将类似电影放在相互邻近的位置。", 
+          "start": 230.54
+        }, 
+        {
+          "dur": 17.26, 
+          "text": "现在，每部电影都只是D维中的一个点，\n我能够以D维实值的形式记下每部电影，\n最棒的是，我们实际上可以通过数据学习这些嵌入，\n我们可以使用深度神经网络进行嵌入，\n而不用向您已看到的内容添加大量新内容。", 
+          "start": 242.58
+        }, 
+        {
+          "dur": 13.96, 
+          "text": "无需单独的训练过程，\n我们只是像之前一样使用反向传播，\n而且嵌入层只是一个隐藏层，\n我们会针对每个您想要放入嵌入层的维度提供一个单元。", 
+          "start": 259.84
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "受监督的信息允许我们\n针对要进行的任何任务量身打造这些嵌入。", 
+          "start": 273.8
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "如果您想要推荐电影，\n那么我们需要调整这些嵌入，使其适合电影推荐。", 
+          "start": 280.66
+        }, 
+        {
+          "dur": 16.82, 
+          "text": "我们会需要某种训练信号，而且我们会查看一些具体示例。\n但在本例中，如果用户观看了一些电影，\n那么这些电影在某种程度上类似，应该放在相互邻近的位置，\n当然，我们会通过大量数据将其汇总在一起。", 
+          "start": 286.24
+        }, 
+        {
+          "dur": 11.8, 
+          "text": "直观地来讲，这些隐藏单元会学习如何整理数据，\n才能对我们决定当做网络最终目标的指标进行优化。", 
+          "start": 303.06
+        }, 
+        {
+          "dur": 5.92, 
+          "text": "现在，我们回过头看看\n如何将这种方法运用到神经网络中。", 
+          "start": 314.86
+        }, 
+        {
+          "dur": 5.52, 
+          "text": "我在右侧展示的矩阵在某种程度上是\n我们考虑协同过滤输入的典型方式。", 
+          "start": 320.78
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "我用一行表示一个用户，一列表示一部电影，\n并在这个简单的示例中打一个勾表示用户看过这部电影。", 
+          "start": 326.3
+        }, 
+        {
+          "dur": 3.76, 
+          "text": "现在，我们来想一想\n如何在TenserFlow内完成这项操作。", 
+          "start": 337.28
+        }, 
+        {
+          "dur": 7.54, 
+          "text": "每个样本其实只是此矩阵中的一行，\n所以，我们来重点关注一下我用黄色突出显示的底行。", 
+          "start": 341.04
+        }, 
+        {
+          "dur": 8.62, 
+          "text": "如果有五十万部电影，\n我可不想列出您没有看过的所有电影，\n所以，只是记下您看过的电影会更高效。", 
+          "start": 348.58
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "当我进行反向传播时，\n我会计算点积，也会计算所花费的时间，\n这只取决于您看过的电影。", 
+          "start": 357.2
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "为实现这一目标，我们将使用以下输入表示法，\n为此，我们需要分两个阶段进行。", 
+          "start": 365.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "第一个阶段是预处理阶段。\n在这个阶段，我们将构建名为字典的数据库。", 
+          "start": 373.14
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "字典就是从各个特征（在本例中指的是每部电影）\n到相应整数（从 0 到电影数量减 1）的映射。", 
+          "start": 376.92
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "因此，我只需按照它们在列中的显示顺序完成此操作即可。", 
+          "start": 385.58
+        }, 
+        {
+          "dur": 9.24, 
+          "text": "所以，我会将第0列命名为第0个电影，\n将第1列命名为第1个电影，以此类推，\n这是我们在预处理阶段执行的一项一次性操作。", 
+          "start": 388.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "现在，我可以高效地将那个底部样本仅表示为\n用户确实看过的3个电影，而不用去管所有其他电影。", 
+          "start": 397.48
+        }, 
+        {
+          "dur": 13.32, 
+          "text": "我将其当作类似图形视图的东西来处理，\n但实际上这只是3个整数 - 1、3、999999，\n因为这些数字表示用户看过的3个电影的索引。", 
+          "start": 406.34
+        }, 
+        {
+          "dur": 8.96, 
+          "text": "现在有了输入表示法，\n我们就可以了解如何将其运用到整个网络，\n我将列举3个不同的示例来对其进行说明。", 
+          "start": 419.66
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "在第1个示例中，我想研究一下预测房屋售价的问题。", 
+          "start": 428.62
+        }, 
+        {
+          "dur": 2.78, 
+          "text": "这种问题一直以来都是作为回归问题来处理的。", 
+          "start": 433.68
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "我想优化预测价格与实际售价之间的平方损失。", 
+          "start": 436.46
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "因此，在这里，我最想为之制作嵌入层的对象\n是销售材料（即房屋描述广告）中的字词。", 
+          "start": 444.06
+        }, 
+        {
+          "dur": 13.02, 
+          "text": "尽管房屋描述广告中有一些字词，\n但我其实需要了解在确定房屋规模方面有哪些相似的字词，\n比如，我可能会说这个房子很宽敞或空间很大。", 
+          "start": 452.1
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "这些字词表达的意思是相同的，\n所以我想开始了解房地产代理在广告中使用这些字词\n可以如何帮助我们了解有关该房屋的信息。", 
+          "start": 465.12
+        }, 
+        {
+          "dur": 13.86, 
+          "text": "这样，我们可能会在广告中使用大量字词，\n任何一条广告都大概有100个字词，\n因此我们需要使用之前讨论的稀疏嵌入，\n但这里我的词汇是关于广告字词的，而非电影。", 
+          "start": 477.48
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "我将在这个小型示例中学习三维嵌入，\n这样我就可以绘制相应的模型。\n再次说明，现实中您可能要用到的维度远不止3个。", 
+          "start": 491.34
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "在这些示例中，我会一律将嵌入层绘制为绿色，\n它其实是隐藏层，在这个示例中有3个单元，\n因为我需要采用是三维嵌入形式。", 
+          "start": 498.98
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "我可能还会有其他输入数据，例如纬度、经度、房间数量，\n您可以添加所有这些数据，这里我只以添加纬度和经度为例。", 
+          "start": 508.3
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "粉色部分表示我们可以添加其他任何想要添加的隐藏层，\n这些只是标准隐藏层，您可以添加任意数量的隐藏层。", 
+          "start": 517.88
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "您可以决定单元的数量，最后这些单元会合并成一个单元[听不清楚]，\n而回归问题会为我们提供一个实值并使用销售价格优化L2损失。", 
+          "start": 525.54
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "在进行反向传播的过程中，\n就像您看到的那样，系统会学习嵌入层。", 
+          "start": 537.9
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "再举一个例子，假设我要学习如何对手写数字进行分类。", 
+          "start": 543.94
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "我有一些0-9的数字，还有一些训练数据，\n每个数字都有正确的标签。", 
+          "start": 548.54
+        }, 
+        {
+          "dur": 11.2, 
+          "text": "这里我要创建嵌入的稀疏数据是图片的原始位图，\n例如白色或黑色部分，用0或1表示。", 
+          "start": 555.12
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "我可以根据具体需求引入任何其他特征，跟之前一样，\n我有一个嵌入层，我仍会在该层继续使用三维结构，\n并在其中放入数字表示法。", 
+          "start": 566.32
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "粉色部分表示我们可以有任意数量的隐藏层，\n在这种情况下，我们会有一个[听不清楚]层。", 
+          "start": 576.26
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "我们将有10个数字，基本上我们会得到一个数字概率分布，\n显示我们认为这是每个数字的可能性。", 
+          "start": 583.32
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "我可以根据已知正确答案得出独热目标概率分布，\n并优化softmax损失。", 
+          "start": 592.26
+        }, 
+        {
+          "dur": 8.84, 
+          "text": "在执行这项操作的过程中，通过反向传播进行训练时，\n我会学习如何嵌入图片。", 
+          "start": 601.0
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "现在我们来看看一直研究的协同过滤示例，\n也就是电影推荐问题。", 
+          "start": 609.84
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "这个问题其实很有趣，它引出了我们还没有看到的一个方面，\n也就是，我的训练数据在哪里，对吧？", 
+          "start": 616.34
+        }, 
+        {
+          "dur": 7.92, 
+          "text": "我只知道每个用户都看过一些电影，\n但我怎样才能知道哪些电影适合推荐？我要使用什么作为标签？", 
+          "start": 623.06
+        }, 
+        {
+          "dur": 4.54, 
+          "text": "我们要做的是，假设用户看过10部电影，\n在这种情况下，我们可以使用一个简单的技巧。", 
+          "start": 630.98
+        }, 
+        {
+          "dur": 13.6, 
+          "text": "我们会随机挑选3部电影，把这些电影放在一边，\n这些就是标签，这些是我要推荐的电影，\n它们都是不错的推荐，因为您已经看过这些电影了，\n至于另外7部电影，我会将其用作训练数据。", 
+          "start": 635.52
+        }, 
+        {
+          "dur": 4.78, 
+          "text": "这样一来，这就与我们刚才讨论的字符识别非常类似了。", 
+          "start": 649.12
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "我会将这7部电影用作我的训练数据，\n我们知道如何获得获取稀疏表示法，并会将其引入到嵌入层。", 
+          "start": 653.9
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "我们可以根据具体需求添加任何其他特征，可以是类型，也可以是导演，\n还可以是任何其他有关电影或用户的特征，\n然后，我们可以将这些特征添加到额外的隐藏层，这样我们就有了一个对数层。", 
+          "start": 662.84
+        }, 
+        {
+          "dur": 11.98, 
+          "text": "请注意，这个对数层很大，\n如果我有五十万部电影，则会有五十万个节点。\n而并不是像数字预测示例中的10个不同节点那样。", 
+          "start": 676.96
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "这会导致一些问题，但不在我们本次讨论的范围内。", 
+          "start": 688.94
+        }, 
+        {
+          "dur": 11.96, 
+          "text": "但通过这五十万部电影，\n我们可以获得我们认为您会喜欢的电影的概率分布，\n然后根据选出的电影（也就是我们认为您的确会喜欢的电影）\n来对softmax损失进行优化。", 
+          "start": 692.46
+        }, 
+        {
+          "dur": 8.9, 
+          "text": "这样一来，我们就可以在反向传播和标准训练中\n学习如何嵌入电影，就像我们之前讨论的那样。", 
+          "start": 704.42
+        }, 
+        {
+          "dur": 8.38, 
+          "text": "现在，我们一起回顾一下，确保您能听懂\n我们在深度神经网络中学习的内容\n如何与我刚开始提供的几何视图联系在一起。", 
+          "start": 713.32
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "我们来看看左侧的深度网络，并选出其中一部电影。", 
+          "start": 721.7
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "对，如果您思考一下输入层，底部的每个节点都可表示为\n五十万部电影的其中一部，我已挑选其中一部并使其显示为黑色。", 
+          "start": 725.64
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "在此示例中，我说过我有3个隐藏单元，\n所以我打算使用三维嵌入方式。", 
+          "start": 734.98
+        }, 
+        {
+          "dur": 10.64, 
+          "text": "这样，该黑色节点的边缘会连接到上述每个单元；\n我使用红色显示第1个单元，\n使用洋红色显示第2个单元，使用棕色显示第3个单元。", 
+          "start": 741.64
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "完成神经网络训练后，这些边缘会表示权重，\n每个边缘对应一个与其相关联的实值，这就是我的嵌入方式。", 
+          "start": 752.28
+        }, 
+        {
+          "dur": 5.14, 
+          "text": "红色表示X值，洋红色表示Y值，棕色表示Z值。", 
+          "start": 760.12
+        }, 
+        {
+          "dur": 11.34, 
+          "text": "所以，这部电影就会嵌入到三维空间内（0.9，0.2，0.4）。", 
+          "start": 765.26
+        }, 
+        {
+          "dur": 11.24, 
+          "text": "与任何深度神经网络一样，\n此网络也有超参数，嵌入层中的其中一个超参数指的是\n您想在该层中添加的嵌入维度数量，隐藏单元数量。", 
+          "start": 776.6
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "维度越多越好，因为这样就能够梳理更多的差别，\n从而了解相互之间更细致的关系。", 
+          "start": 787.84
+        }, 
+        {
+          "dur": 10.14, 
+          "text": "但多重维度也存在缺陷，那就是当我增加维度的数量时，\n还有可能出现过拟合，从而导致训练进程变慢且需要更多数据。", 
+          "start": 796.42
+        }, 
+        {
+          "dur": 10.44, 
+          "text": "因此，最好的经验法则是维度数量约为\n词汇量（即潜在值的数量）的四次方根。", 
+          "start": 806.56
+        }, 
+        {
+          "dur": 12.08, 
+          "text": "但这只是经验之谈，\n对于所有超参数，您真正需要做的是使用验证数据，\n根据您自己的具体问题多多尝试，\n然后确定哪项参数能获得最佳效果。", 
+          "start": 817.0
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "您也可以仅将嵌入视为工具。", 
+          "start": 829.08
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "通过这些嵌入，我们可以执行的其中一项操作是\n将电影、文字（如房屋描述中的字词）等\n各项内容映射到这些低维实向量，并将相似的项放在一起。", 
+          "start": 832.48
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "通过嵌入，我们可以针对没有任何结构的这些项创建结构，\n实际上，具体结构面向的是您使用此结构尝试进行的任务。", 
+          "start": 846.6
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "我们还可以将嵌入应用到密集数据，\n例如，如果我查看音频或音轨的表示方式，\n则会发现它们采用的是密集方式。", 
+          "start": 855.02
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "但我们没有任何有意义的指标，\n我不知道该如何表示此音频与另一个音频类似。", 
+          "start": 863.2
+        }, 
+        {
+          "dur": 15.128, 
+          "text": "因此，我们可以在已经密集的数据中仅使用嵌入来学习相似性指标，\n我们甚至可以进一步同时嵌入各种类型的数据 - 文字、图片、音频，\n并通过这些类型的数据学习相似性指标。", 
+          "start": 867.56
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 7.36, 
+          "text": "Hi I&#39;m Sally Goldman and I&#39;m a research scientist at Google and one of the main things I work on is recommendation systems.", 
+          "start": 0.68
+        }, 
+        {
+          "dur": 6.68, 
+          "text": "And one thing really fundamental to doing these recommendation systems is embeddings and I&#39;m going to talk about those today.", 
+          "start": 8.04
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "As a motivating example I&#39;m going to look at the problem of collaborative filtering.", 
+          "start": 14.72
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "So let&#39;s say I have a million movies and I have a half million users, and for each user I know which movies that user has watched.", 
+          "start": 18.66
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "The task is simple: I&#39;d like to recommend movies to users.", 
+          "start": 26.44
+        }, 
+        {
+          "dur": 12.0, 
+          "text": "To solve this problem I&#39;m really going to have to learn some structure, something that let&#39;s me say these movies are similar to each other, so if you&#39;ve watched these 3 movies then this is a good movie to recommend.", 
+          "start": 30.18
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "So as a simple starting point, let&#39;s try to take these movies and just put them along a line of one dimensional embedding.", 
+          "start": 42.18
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "So I will say I have maybe to the left I&#39;ll put animated movies and as I move to the right, I&#39;ll have more adult-like movies.", 
+          "start": 49.3
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "This starts to do nice things.", 
+          "start": 57.08
+        }, 
+        {
+          "dur": 7.72, 
+          "text": "I have Shrek and The Incredibles, those are both animated movies for kids and if you watch one the other one is a good recommendation.", 
+          "start": 59.24
+        }, 
+        {
+          "dur": 10.22, 
+          "text": "But then I have the The Triplets of Belleville which is an animated movie but really Harry Potter, though not an animated movie, I think is really a much closer movie to The Incredibles.", 
+          "start": 66.96
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "The Triplets of Belleville is not really oriented for kids as much, it&#39;s not sort of a blockbuster movie that a lot of people go to see.", 
+          "start": 77.18
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "And on the other side for example I&#39;d say Blue and Memento are probably better recommendations for each other than The Dark Knight Rises.", 
+          "start": 86.2
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "So just having a single line, as much as I try, it&#39;s going to be really hard to capture all the intricacies in movies that make people like one versus another.", 
+          "start": 94.1
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "So what if we add another dimension and now I have 2 dimensions?", 
+          "start": 104.04
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "So what if I bring the blockbuster movies up towards the top and the more art house movies down?", 
+          "start": 107.84
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "Now I&#39;ve achieved some of the things I&#39;ve wanted.", 
+          "start": 114.36
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "I&#39;ve got Shrek and The Incredibles and Harry Potter kinda nearby and they&#39;re all pretty similar movies and in the bottom right I have Blue and Memento.", 
+          "start": 116.38
+        }, 
+        {
+          "dur": 6.3, 
+          "text": "And you can imagine that there&#39;s a lot of other aspects you&#39;d want to capture and you&#39;d want more than 2 dimensions, and we would.", 
+          "start": 125.4
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "In reality we could imagine 20, 50, even 100 dimensions to sort of do these embeddings.", 
+          "start": 131.7
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "But let&#39;s stick with 2 dimensions because I can draw it.", 
+          "start": 138.3
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "So let&#39;s add a few more movies to this and I went ahead and added some axis.", 
+          "start": 141.56
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "I have the X axis which is sort of more children oriented movies to the left and more adult movies to the right.", 
+          "start": 146.28
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "And the Y axis, more blockbuster movies to the top and more art house films on the bottom.", 
+          "start": 152.86
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "And you can see a lot of nice structure here and you can see that movies nearby each other are kind of similar and that&#39;s really the goal of what we want.", 
+          "start": 158.94
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "Now I&#39;m drawing this geometrically but I do want to make sure everyone understands that there&#39;s a very simple way to represent these embeddings and that&#39;s what&#39;s going to happen when I learn them in a deep neural network.", 
+          "start": 169.44
+        }, 
+        {
+          "dur": 12.78, 
+          "text": "So just using Shrek and Blue as an example, each of these is just a single point in this two dimensional space and the way we write down a point is just a value on the X axis and a value on the Y axis.", 
+          "start": 180.84
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "So for example Shrek is just the point minus 10.95 or Blue is 0.65 minus 0.2.", 
+          "start": 193.62
+        }, 
+        {
+          "dur": 10.12, 
+          "text": "So each movie here can just be represented as two reels and the similarity between movies is now captured by how close these points are.", 
+          "start": 202.92
+        }, 
+        {
+          "dur": 9.68, 
+          "text": "And although I&#39;m only going to draw 2 dimensions, in reality you do want to do this in D dimensions, 2 isn&#39;t going to be enough to capture everything.", 
+          "start": 213.04
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "Implicitly as you think about what you&#39;re doing, this is really assuming that interest in movies can be captured by D dimensions.", 
+          "start": 222.72
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "I&#39;m allowing D different aspects to be selected and then I can move the movies independently among these D aspects and use that to now bring similar movies nearby to each other.", 
+          "start": 230.54
+        }, 
+        {
+          "dur": 17.26, 
+          "text": "Each movie now is just a D dimensional point, I can write it down as D real values and the cool thing is we can actually learn these embeddings from data and we can do this with a deep neural network without adding a lot of new things to what you&#39;ve already seen.", 
+          "start": 242.58
+        }, 
+        {
+          "dur": 13.96, 
+          "text": "There&#39;s no separate training process needed, we&#39;re just going to use back propagation exactly as before and the embedding layer is just a hidden layer and we&#39;ll have one unit for every dimension you want in your embedding.", 
+          "start": 259.84
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "Supervised information is going to allow us to tailor these embeddings for whatever task you&#39;re after.", 
+          "start": 273.8
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "If you want to do movie recommendation, then we want these embeddings to be geared towards recommending movies.", 
+          "start": 280.66
+        }, 
+        {
+          "dur": 16.82, 
+          "text": "We will need some sort of training signal, we&#39;ll look at some concrete examples but in this example if a user has watched a set of movies then to some extent those movies are similar to each other and should be nearby and we&#39;ll aggregate this of course over lots of data.", 
+          "start": 286.24
+        }, 
+        {
+          "dur": 11.8, 
+          "text": "Intuitively these hidden units are learning how to organize the data in a way to optimize whatever metric we&#39;ve decided to put as the final objective of the network.", 
+          "start": 303.06
+        }, 
+        {
+          "dur": 5.92, 
+          "text": "So now let&#39;s go back and look at how would this actually be input to the neural network.", 
+          "start": 314.86
+        }, 
+        {
+          "dur": 5.52, 
+          "text": "The matrix I show on the right is sort of the classic way we think of collaborative filtering input.", 
+          "start": 320.78
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "I have one row for every user and one column for every movie and a check in this simple case indicates the user has watched the movie.", 
+          "start": 326.3
+        }, 
+        {
+          "dur": 3.76, 
+          "text": "So now let&#39;s think about how we do this within TenserFlow.", 
+          "start": 337.28
+        }, 
+        {
+          "dur": 7.54, 
+          "text": "Each example is really just going to be one row of this matrix, so let&#39;s focus on the bottom row that I&#39;ve highlighted in yellow.", 
+          "start": 341.04
+        }, 
+        {
+          "dur": 8.62, 
+          "text": "If there&#39;s a half million movies I don&#39;t really want to list all the movies you haven&#39;t watched, it&#39;s so much more efficient to just write down the movies you have watched.", 
+          "start": 348.58
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "And when I do back propagation I&#39;ll be computing dot products and I&#39;d like that also, the time, just to depend on the movies you have watched.", 
+          "start": 357.2
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "So to achieve this we&#39;re going to use the following input representation and to do this we&#39;re going to have 2 phases.", 
+          "start": 365.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "The first pre-processing phase we&#39;re going to build what we call a dictionary.", 
+          "start": 373.14
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "A dictionary is just a mapping from each feature, in this case each movie, to an integer from 0 to the number of movies -1.", 
+          "start": 376.92
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "So I&#39;ll just do this in the order I&#39;ve shown them in the columns.", 
+          "start": 385.58
+        }, 
+        {
+          "dur": 9.24, 
+          "text": "So column 0 I&#39;ll call movie 0, column 1 movie 1 and so on, and this is a one time thing we do as pre-processing.", 
+          "start": 388.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "Now I can efficiently represent that bottom example as just the 3 movies that user did watch, I don&#39;t need to worry about all the other ones.", 
+          "start": 397.48
+        }, 
+        {
+          "dur": 13.32, 
+          "text": "I do it kind of as a pictorial view but in reality it&#39;s just 3 integers - 1, 3, 999,999 - because those are the indices for the 3 movies that user has watched.", 
+          "start": 406.34
+        }, 
+        {
+          "dur": 8.96, 
+          "text": "Okay so now that we have the input representation we can now look at how this fits into the full network and I&#39;m going to use 3 different examples to help illustrate it.", 
+          "start": 419.66
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "The first example I want to look at is the problem of predicting a home sales price.", 
+          "start": 428.62
+        }, 
+        {
+          "dur": 2.78, 
+          "text": "So this would traditionally be done as a regression problem.", 
+          "start": 433.68
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "I&#39;d like to optimize the square loss between the predicted price and the true sale price.", 
+          "start": 436.46
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "So the thing that I really would like to create an embedding layer for here are the words in the sale, the house description ad.", 
+          "start": 444.06
+        }, 
+        {
+          "dur": 13.02, 
+          "text": "Because although there are a set of words, I really need to understand what words are similar in terms of figuring out the size of the house so I may say this is a spacious house or I may say it&#39;s roomy.", 
+          "start": 452.1
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "Those are words that are used that kind of capture the same thing and so I want to begin understanding how these words that real estate agents put in ads helps us understand something about the home.", 
+          "start": 465.12
+        }, 
+        {
+          "dur": 13.86, 
+          "text": "So we have lots and lots of words that might be in an ad, and any given ad has 100 words or so, and so again we really do want the sparse embedding just like we talked about but my vocabulary is over words versus movies.", 
+          "start": 477.48
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "I&#39;m going to learn a 3 dimensional embedding in this little toy example just so I can draw it, again in reality you&#39;d probably want a lot more than 3 dimensions.", 
+          "start": 491.34
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "And I&#39;m always in these examples going to draw my embedding layer as green, it&#39;s really a hidden layer, in this case 3 units because I want a 3 dimensional embedding.", 
+          "start": 498.98
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "I also may have other input data like the latitude, longitude, number of rooms and you can add all that, I just used latitude and longitude as an example.", 
+          "start": 508.3
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "And then in pink I&#39;m showing the fact that we can have whatever other hidden layers we want, these are just your standard hidden layers, you can have as many as you want.", 
+          "start": 517.88
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "You can decide how many units and then at the end they&#39;ll go into a single unit that [unintelligible] the regression problem will give us a real value and will optimize the L2 loss with the sale price.", 
+          "start": 525.54
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "In the process of doing back propagation just like you&#39;ve seen, the embedding layer will be learned.", 
+          "start": 537.9
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "As another example, suppose I want to learn to classify handwritten digits.", 
+          "start": 543.94
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "So I have the digits 0 to 9 and I have some training data where there&#39;s actually a label of the correct digit.", 
+          "start": 548.54
+        }, 
+        {
+          "dur": 11.2, 
+          "text": "So here this sparse thing I want to create an embedding of is just the raw bitmap of the drawing, whether there&#39;s a white or black, so 0 or 1.", 
+          "start": 555.12
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "I can introduce whatever other features I&#39;d like and again I have an embedding layer which I&#39;ll stick with keeping them 3 dimensions, so the representation of the digital will go into that.", 
+          "start": 566.32
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "In pink I show we can have whatever additional hidden layers and in this case we&#39;ll have a [unintelligible] layer.", 
+          "start": 576.26
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "We&#39;re gonna have the 10 digits and basically learn a probability distribution over the digits of how probable we think it is that this is each of the digits.", 
+          "start": 583.32
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "I can take the one hot target probability distribution from what I know the right answer is and optimize a soft max loss.", 
+          "start": 592.26
+        }, 
+        {
+          "dur": 8.84, 
+          "text": "In the process of doing this, in training with back propagation, I will learn to embed the images.", 
+          "start": 601.0
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "And now let&#39;s look at the example we&#39;ve been studying of collaborative filtering, the movie recommendation problem.", 
+          "start": 609.84
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "This is actually interesting, it brings up an aspect we haven&#39;t seen yet which is where is my training data here, right?", 
+          "start": 616.34
+        }, 
+        {
+          "dur": 7.92, 
+          "text": "I just know for each user there is a set of movies, so how do I know what the right movie to recommend is? What am I going to use as the label?", 
+          "start": 623.06
+        }, 
+        {
+          "dur": 4.54, 
+          "text": "What we do is, suppose the users watch 10 movies, we use a simple trick.", 
+          "start": 630.98
+        }, 
+        {
+          "dur": 13.6, 
+          "text": "We&#39;ll randomly pick 3 movies and hold those out, take them away and those are the labels, so those are the movies I&#39;d like to recommend, they&#39;re good recommendations because you watched them, and I&#39;ll take the other 7 movies and use them as my training data.", 
+          "start": 635.52
+        }, 
+        {
+          "dur": 4.78, 
+          "text": "Once I&#39;ve done that, this is very similar to what we just talked about with the character recognition.", 
+          "start": 649.12
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "I&#39;ll take the 7 movies that are my training data and we know how we can get the sparse representation, we&#39;ll bring them into the embedding layer.", 
+          "start": 653.9
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "We can take whatever other features we want, maybe the genre, maybe the director, whatever else we want to take about the movie or the user and then we can bring those into additional hidden layers and we&#39;ll have a logit layer.", 
+          "start": 662.84
+        }, 
+        {
+          "dur": 11.98, 
+          "text": "And note this logit layer is big, instead of 10 different nodes like in the digit prediction, if I had a half million movies there&#39;s gonna be a half million of these.", 
+          "start": 676.96
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "There&#39;s issues with that, it&#39;s out of the scope of this discussion.", 
+          "start": 688.94
+        }, 
+        {
+          "dur": 11.96, 
+          "text": "But we will get a distribution over those half million movies of what movies we think you&#39;d like, we will then optimize the soft and max loss with the held out movies that we know you do like.", 
+          "start": 692.46
+        }, 
+        {
+          "dur": 8.9, 
+          "text": "And in doing this in the back propagation and just the standard training, we will learn the embeddings of the movies like we talked about.", 
+          "start": 704.42
+        }, 
+        {
+          "dur": 8.38, 
+          "text": "So I do want to come back now and just make sure it&#39;s clear how what we learned in the deep neural network ties to the geometric view I gave at the beginning.", 
+          "start": 713.32
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "Let&#39;s look at the deep network on the left and let&#39;s take a single movie.", 
+          "start": 721.7
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "Right if you think of the input layer, each of those nodes at the bottom represent as one of these half million movies, I&#39;ve picked one movie and just made it black.", 
+          "start": 725.64
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "In this example I said I had 3 hidden units so I was going with 3 dimensional embedding.", 
+          "start": 734.98
+        }, 
+        {
+          "dur": 10.64, 
+          "text": "So that black node will have an edge connecting it to each of those units; I used red for the first one, magenta for the second and brown for the third one.", 
+          "start": 741.64
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "When you&#39;re done training your neural network, those edges are weights, each edge has a real value associated with it, that&#39;s my embedding.", 
+          "start": 752.28
+        }, 
+        {
+          "dur": 5.14, 
+          "text": "The red is my X value, the magenta is my Y value and the brown is the Z.", 
+          "start": 760.12
+        }, 
+        {
+          "dur": 11.34, 
+          "text": "So this particular movie would be embedded in a 3 dimensional space as 0.9, 0.2 and 0.4.", 
+          "start": 765.26
+        }, 
+        {
+          "dur": 11.24, 
+          "text": "As with any deep neural network there are hyperparamaters and one of the hyperparameters we have in the embedding layer is how many embedding dimensions, how many hidden units do you want in that layer?", 
+          "start": 776.6
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "Higher dimensions are good because it allows us to tease apart more distinctions and therefore we can learn better relationships.", 
+          "start": 787.84
+        }, 
+        {
+          "dur": 10.14, 
+          "text": "On the downside, as I increase the number of dimensions there is also a chance of overfitting and it&#39;s going to lead to slower training and the need for more data.", 
+          "start": 796.42
+        }, 
+        {
+          "dur": 10.44, 
+          "text": "So a good empirical rule of thumb is the number of dimensions to be roughly the fourth root of the size of my vocabulary, the number of possible values.", 
+          "start": 806.56
+        }, 
+        {
+          "dur": 12.08, 
+          "text": "But this is just a rule of thumb and with all hyperparameters you really need to go use validation data and try it out for your problem and see what gives the best results.", 
+          "start": 817.0
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "An embedding can also just be thought of as a tool.", 
+          "start": 829.08
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "One of the things we get from these embeddings is we map items - movies, texts for example the words in the housing description - to these low dimensional real vectors in a way that similar items are nearby.", 
+          "start": 832.48
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "It creates structure into these items that really we didn&#39;t have any structure and the structure is in fact geared towards what you&#39;re trying to do with it.", 
+          "start": 846.6
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "We can also apply embeddings to dense data, for example if I look at the way audio or soundtracks are represnted, it&#39;s already dense.", 
+          "start": 855.02
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "But we don&#39;t have any meaningful metric, I don&#39;t know how to say this audio is similar to that.", 
+          "start": 863.2
+        }, 
+        {
+          "dur": 15.128, 
+          "text": "And so we can use embeddings just to learn a similarity metric among already dense data, and even further we can embed diverse types of data - texts, images, audio - jointly and learn a similarity metric across them.", 
+          "start": 867.56
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 7.36, 
+          "text": "Bonjour. Je m&#39;appelle Sally Goldman, chercheuse chez Google,\net je travaille principalement sur les systèmes de recommandation.", 
+          "start": 0.68
+        }, 
+        {
+          "dur": 6.68, 
+          "text": "Je vais vous parler aujourd&#39;hui des représentations vectorielles continues,\nl&#39;un des aspects fondamentaux des systèmes de recommandation.", 
+          "start": 8.04
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "Nous allons prendre comme exemple\nla question intéressante du filtrage collaboratif.", 
+          "start": 14.72
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "Supposons que j&#39;aie un million de films et un demi-million d&#39;utilisateurs.\nPour chaque utilisateur, je sais les films qu&#39;il a regardés.", 
+          "start": 18.66
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "L&#39;objectif est simple :\nrecommander des films aux utilisateurs.", 
+          "start": 26.44
+        }, 
+        {
+          "dur": 12.0, 
+          "text": "Pour résoudre ce problème, je vais devoir apprendre une structure qui me permettra de dire\nque si certains films sont similaires et si un utilisateur a vu 3 de ces films, il pourrait aimer un film similaire.", 
+          "start": 30.18
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "Pour commencer, plaçons ces films\nle long d&#39;une ligne de représentation vectorielle continue à une dimension.", 
+          "start": 42.18
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "À gauche se trouvent les films d&#39;animation,\net plus je me déplace vers la droite, plus les films sont destinés aux adultes.", 
+          "start": 49.3
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "Les premiers résultats sont intéressants.", 
+          "start": 57.08
+        }, 
+        {
+          "dur": 7.72, 
+          "text": "J&#39;ai &quot;Shrek&quot; et &quot;Les indestructibles&quot;, deux films d&#39;animation\npour enfant, et si vous regardez l&#39;un, l&#39;autre est une bonne recommandation.", 
+          "start": 59.24
+        }, 
+        {
+          "dur": 10.22, 
+          "text": "J&#39;ai ensuite &quot;Les triplettes de Belleville&quot;, film d&#39;animation, mais je pense que &quot;Harry Potter&quot;\nse rapproche davantage des &quot;Indestructibles&quot;, bien que ça ne soit pas un film d&#39;animation.", 
+          "start": 66.96
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "&quot;Les triplettes de Belleville&quot; n&#39;est pas vraiment destiné aux enfants,\nce n&#39;est pas vraiment un blockbuster que tout le monde veut voir.", 
+          "start": 77.18
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "De même, il est par exemple préférable de recommander\n&quot;Blue&quot; avec &quot;Memento&quot; plutôt qu&#39;avec &quot;The Dark Knight Rises&quot;.", 
+          "start": 86.2
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "Il est donc très difficile de capturer avec une seule ligne\ntoutes les subtilités des films qui font que les utilisateurs préfèrent un film à un autre.", 
+          "start": 94.1
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "Que se passe-t-il si j&#39;ajoute\nà présent une deuxième dimension ?", 
+          "start": 104.04
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "Que se passe-t-il si je place les blockbusters\nvers le haut et les films d&#39;art et d&#39;essai vers le bas ?", 
+          "start": 107.84
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "J&#39;ai atteint certains de mes objectifs.", 
+          "start": 114.36
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "J&#39;ai &quot;Shrek&quot;, &quot;Les indestructibles&quot; et &quot;Harry Potter&quot; proches les uns des autres,\ncar ce sont des films similaires, et en bas à droite, j&#39;ai &quot;Blue&quot; et &quot;Memento&quot;.", 
+          "start": 116.38
+        }, 
+        {
+          "dur": 6.3, 
+          "text": "Comme vous vous en doutez, il y a de nombreux autres aspects à capturer,\net 2 dimensions ne suffisent pas. Et c&#39;est ce que nous allons voir.", 
+          "start": 125.4
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "On peut utiliser 20, 50 voire 100 dimensions\npour réaliser ces représentations vectorielles continues.", 
+          "start": 131.7
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "Mais contentons-nous de 2,\ncar c&#39;est facile à tracer.", 
+          "start": 138.3
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Ajoutons quelques films. J&#39;ai pris\nde l&#39;avance et j&#39;ai déjà ajouté des axes.", 
+          "start": 141.56
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "J&#39;ai l&#39;axe des X, avec les films plutôt\npour enfants à gauche, et plutôt pour adultes à droite.", 
+          "start": 146.28
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "Et j&#39;ai l&#39;axe des Y, avec les blockbusters\nen haut et les films d&#39;art et d&#39;essai en bas.", 
+          "start": 152.86
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "De nombreuses structures se dégagent, et l&#39;on peut constater\nque les films proches sont similaires, et c&#39;est le comportement que nous recherchons.", 
+          "start": 158.94
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "À présent, je trace cela géométriquement. Je tiens à insister sur le fait qu&#39;il existe une méthode très simple\npour tracer ces représentations vectorielles continues, et c&#39;est d&#39;utiliser un réseau neuronal profond.", 
+          "start": 169.44
+        }, 
+        {
+          "dur": 12.78, 
+          "text": "Utilisons Shrek et Blue comme exemple. Chacun de ces films est un point unique\ndans cet espace à deux dimensions, et un point est représenté par une valeur sur l&#39;axe des X et sur l&#39;axe des Y.", 
+          "start": 180.84
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "Par exemple, &quot;Shrek&quot; est le point\nà moins 10,95, et &quot;Blue&quot; est 0,65 moins 0,2.", 
+          "start": 193.62
+        }, 
+        {
+          "dur": 10.12, 
+          "text": "Chaque film peut donc être représenté par deux réels,\net la similitude entre les films est capturée par la proximité entre les points.", 
+          "start": 202.92
+        }, 
+        {
+          "dur": 9.68, 
+          "text": "Bien que je ne dessine que 2 dimensions,\nvous devez utiliser D dimensions. Deux dimensions ne suffisent pas pour tout capturer.", 
+          "start": 213.04
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "Implicitement, si vous y réfléchissez, vous supposez\nen réalité que l&#39;intérêt pour les films peut être capturé par D dimensions.", 
+          "start": 222.72
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "J&#39;autorise la sélection de D aspects différents, puis je peux déplacer les films\nindépendamment parmi ces D aspects, et utiliser cela pour rapprocher des films similaires.", 
+          "start": 230.54
+        }, 
+        {
+          "dur": 17.26, 
+          "text": "Chaque film est à présent un simple point à D dimensions, que je peux écrire avec D valeurs réelles.\nCes représentations vectorielles continues peuvent être apprises à partir de données grâce à un réseau neuronal profond, sans ajouter des tas de choses à ce que vous avez déjà vu.", 
+          "start": 242.58
+        }, 
+        {
+          "dur": 13.96, 
+          "text": "Aucun processus d&#39;apprentissage distinct n&#39;est nécessaire. Nous allons utiliser la rétropropagation comme avant,\nla couche de représentation vectorielle continue est une simple couche cachée et nous avons une unité pour chaque dimension voulue.", 
+          "start": 259.84
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "Les informations supervisées vont nous permettre\nd&#39;adapter ces représentations vectorielles continues à votre tâche.", 
+          "start": 273.8
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "Si vous souhaitez recommander des films,\nces représentations doivent être axées sur la recommandation de films.", 
+          "start": 280.66
+        }, 
+        {
+          "dur": 16.82, 
+          "text": "Nous avons besoin d&#39;un signal d&#39;apprentissage. Nous examinerons des exemples concrets, mais ici, si un utilisateur a regardé certains films,\nalors ceux-ci sont relativement similaires et doivent se trouver à proximité. Cette agrégation repose bien sûr sur un grand nombre de données.", 
+          "start": 286.24
+        }, 
+        {
+          "dur": 11.8, 
+          "text": "Intuitivement, ces unités cachées apprennent à organiser les données\nafin d&#39;optimiser les statistiques que nous avons choisies comme objectif final du réseau.", 
+          "start": 303.06
+        }, 
+        {
+          "dur": 5.92, 
+          "text": "Revenons en arrière et voyons\ncomment cela pourrait alimenter un réseau de neurones.", 
+          "start": 314.86
+        }, 
+        {
+          "dur": 5.52, 
+          "text": "La matrice à droite est la manière classique\nde représenter une entrée de filtrage collaboratif.", 
+          "start": 320.78
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "J&#39;ai une ligne par utilisateur et une colonne par film,\net une coche indique, dans ce cas simple, que l&#39;utilisateur a vu le film.", 
+          "start": 326.3
+        }, 
+        {
+          "dur": 3.76, 
+          "text": "Voyons à présent\ncomment procéder dans TenserFlow.", 
+          "start": 337.28
+        }, 
+        {
+          "dur": 7.54, 
+          "text": "Chaque exemple étant en fait simplement une ligne de cette matrice,\nconcentrons-nous sur la ligne du bas, surlignée en jaune.", 
+          "start": 341.04
+        }, 
+        {
+          "dur": 8.62, 
+          "text": "S&#39;il y a un demi-million de films, vous ne souhaitez pas établir\nla liste de tous les films que vous n&#39;avez pas vus. Il est plus efficace de marquer ceux que vous avez vus.", 
+          "start": 348.58
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "Lorsque j&#39;exécute une rétropropagation, je calcule des produits scalaires.\net j&#39;aimerais que le temps dépende des films que vous avez regardés.", 
+          "start": 357.2
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "Pour cela, nous allons utiliser la représentation\nd&#39;entrée suivante. Nous allons procéder en 2 étapes.", 
+          "start": 365.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "Dans la première étape de prétraitement,\nnous allons créer un dictionnaire.", 
+          "start": 373.14
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "Un dictionnaire est un simple mappage des caractéristiques,\nici les films, à un entier compris entre 0 et le nombre de films -1.", 
+          "start": 376.92
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "J&#39;effectue cela dans l&#39;ordre\noù ils apparaissent dans les colonnes.", 
+          "start": 385.58
+        }, 
+        {
+          "dur": 9.24, 
+          "text": "Dans la colonne 0, j&#39;ai le film 0, dans la colonne 1, le film 1, etc.\nCe prétraitement n&#39;est réalisé qu&#39;une seule fois.", 
+          "start": 388.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "Je peux à présent représenter efficacement l&#39;exemple du bas,\nles 3 films que cet utilisateur a regardés, sans me soucier de tous les autres.", 
+          "start": 397.48
+        }, 
+        {
+          "dur": 13.32, 
+          "text": "J&#39;utilise une vue illustrée, mais en réalité ce sont simplement 3 entiers,\n1, 3 et 999 999, qui correspondent aux indices des 3 films vus par l&#39;utilisateur.", 
+          "start": 406.34
+        }, 
+        {
+          "dur": 8.96, 
+          "text": "Maintenant que nous avons la représentation d&#39;entrée,\nnous pouvons nous pencher sur son intégration dans le réseau complet. Je vais illustrer cela par 3 exemples.", 
+          "start": 419.66
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "Le premier exemple est un problème\nde prédiction du prix de vente d&#39;un logement.", 
+          "start": 428.62
+        }, 
+        {
+          "dur": 2.78, 
+          "text": "Ce problème est généralement traité\ncomme un problème de régression.", 
+          "start": 433.68
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "J&#39;aimerais optimiser la perte quadratique\nentre le prix prédit et le prix de vente réel.", 
+          "start": 436.46
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "Il est ici nécessaire de créer une couche de représentation\nvectorielle continue pour les termes de l&#39;annonce décrivant le logement.", 
+          "start": 444.06
+        }, 
+        {
+          "dur": 13.02, 
+          "text": "Malgré cet ensemble de mots, il est crucial de comprendre les mots similaires pour décrire,\npar exemple, la taille du logement. Je peux aussi bien le qualifier de spacieux que de vaste.", 
+          "start": 452.1
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "Ces mots recouvrent des concepts proches, c&#39;est pourquoi il est nécessaire de comprendre\ncomment les mots que les agents immobiliers utilisent dans leurs annonces nous aident à en savoir plus sur le logement.", 
+          "start": 465.12
+        }, 
+        {
+          "dur": 13.86, 
+          "text": "De très nombreux mots peuvent être utilisés dans une annonce, mais chaque annonce n&#39;en contient qu&#39;une centaine.\nUtilisons la représentation vectorielle continue creuse dont nous avons parlé. Ici, toutefois, il s&#39;agit de mots, et non pas de films.", 
+          "start": 477.48
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "Dans cet exemple, je vais apprendre une représentation vectorielle continue à 3 dimensions,\npour pouvoir le tracer. Dans la réalité, vous allez utiliser davantage de dimensions.", 
+          "start": 491.34
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "Dans ces exemples, la couche de représentation vectorielle continue est toujours tracée en vert.\nC&#39;est une couche cachée, ici à 3 unités, car la représentation a 3 dimensions.", 
+          "start": 498.98
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Vous pouvez avoir d&#39;autres données d&#39;entrée, comme la latitude, la longitude,\nle nombre de pièces, etc. Ici, je ne vais utiliser que la latitude et la longitude.", 
+          "start": 508.3
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "En rose est représenté le fait que nous pouvons avoir d&#39;autres couches cachées.\nIl s&#39;agit de couches cachées standards, et vous pouvez en avoir autant que vous voulez.", 
+          "start": 517.88
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "Vous pouvez choisir le nombre d&#39;unités, qui seront regroupées dans une seule unité qui [inaudible].\nLe problème de régression fournira une valeur réelle et optimisera le coût L2 avec le prix de vente.", 
+          "start": 525.54
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "Dans le processus de rétropropagation,\nla couche de représentation vectorielle continue est apprise.", 
+          "start": 537.9
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Supposons à présent que je souhaite\napprendre à classer des chiffres écrits à la main.", 
+          "start": 543.94
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "J&#39;ai les chiffres de 0 à 9, et je dispose\nde données d&#39;apprentissage, où chaque chiffre est étiqueté correctement.", 
+          "start": 548.54
+        }, 
+        {
+          "dur": 11.2, 
+          "text": "La structure creuse dont je souhaite créer\nune représentation vectorielle continue est le bitmap brut du dessin en noir et blanc, donc 0 ou 1.", 
+          "start": 555.12
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "Je peux introduire d&#39;autres caractéristiques. Je vais garder ma couche\nde représentation vectorielle continue à 3 dimensions, dans laquelle je vais introduire la représentation des chiffres.", 
+          "start": 566.32
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "Les couches cachées supplémentaires éventuelles\nsont représentées en rose. Ici, nous avons une couche [inaudible].", 
+          "start": 576.26
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "Nous avons ces 10 chiffres, et nous allons apprendre\nune distribution de probabilité représentant la probabilité qu&#39;il s&#39;agisse du bon chiffre.", 
+          "start": 583.32
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "Je peux prendre la distribution de probabilité cible one-hot\npour les bonnes réponses, et optimiser un coût softmax.", 
+          "start": 592.26
+        }, 
+        {
+          "dur": 8.84, 
+          "text": "Dans ce processus d&#39;apprentissage\navec rétropropagation, j&#39;apprends à représenter les images.", 
+          "start": 601.0
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "Revenons à l&#39;exemple de filtrage collaboratif\nque nous avons étudié, le problème de recommandation de films.", 
+          "start": 609.84
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "C&#39;est très intéressant, cela révèle un aspect que nous n&#39;avions encore pas vu,\nà savoir l&#39;emplacement des données d&#39;apprentissage.", 
+          "start": 616.34
+        }, 
+        {
+          "dur": 7.92, 
+          "text": "Je sais seulement qu&#39;il y a un ensemble de films\npour chaque utilisateur, donc comment savoir quel film recommander ? Qu&#39;utiliser comme étiquette ?", 
+          "start": 623.06
+        }, 
+        {
+          "dur": 4.54, 
+          "text": "Supposons que les utilisateurs regardent 10 films.\nNous utilisons une astuce simple.", 
+          "start": 630.98
+        }, 
+        {
+          "dur": 13.6, 
+          "text": "Nous sélectionnons aléatoirement 3 films et nous les retirons. Ces films sont les étiquettes, ce sont ceux que je souhaite recommander.\nCe sont de bonnes recommandations, car vous les avez vus. Ensuite, j&#39;utilise les 7 films restant comme données d&#39;apprentissage.", 
+          "start": 635.52
+        }, 
+        {
+          "dur": 4.78, 
+          "text": "Une fois cela fait, le processus est très proche de celui\ndont nous avons parlé pour la reconnaissance de caractères.", 
+          "start": 649.12
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "Pour obtenir la représentation creuse, il suffit d&#39;insérer les 7 films,\nqui constituent les données d&#39;apprentissage, dans la couche de représentation vectorielle continue.", 
+          "start": 653.9
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "Nous pouvons utiliser d&#39;autres caractéristiques, comme le genre, le réalisateur ou d&#39;autres caractéristiques\nsur le film ou l&#39;utilisateur, et les insérer dans les couches cachées supplémentaires, pour créer une couche logistique.", 
+          "start": 662.84
+        }, 
+        {
+          "dur": 11.98, 
+          "text": "Notez que cette couche logistique est volumineuse. Au lieu de 10 nœuds\ncomme dans la prédiction de chiffres, avec un demi-million de films, j&#39;ai un demi-million de nœuds.", 
+          "start": 676.96
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "Cela pose certains problèmes,\nqui sortent du cadre de notre discussion.", 
+          "start": 688.94
+        }, 
+        {
+          "dur": 11.96, 
+          "text": "Nous obtenons une distribution sur ce demi-million de recommandations de films,\npuis nous optimisons les coûts softmax avec les films retirés que l&#39;utilisateur aime.", 
+          "start": 692.46
+        }, 
+        {
+          "dur": 8.9, 
+          "text": "En faisant cela dans la rétropropagation et juste un apprentissage standard,\nnous apprenons les représentations vectorielles continues des films.", 
+          "start": 704.42
+        }, 
+        {
+          "dur": 8.38, 
+          "text": "Je souhaiterais m&#39;assurer que le lien entre ce que nous avons appris\ndans le réseau neuronal profond et la vue géométrique que j&#39;ai présentée au début est clair.", 
+          "start": 713.32
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "Regardons le réseau profond\nà gauche, et prenons un seul film.", 
+          "start": 721.7
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "Pour la couche d&#39;entrée, chacun de ces nœuds en bas représente\nl&#39;un de ces 500 000 films. J&#39;ai choisi un film et je l&#39;ai simplement représenté en noir.", 
+          "start": 725.64
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Dans cet exemple, j&#39;ai 3 unités cachées,\ndonc une représentation vectorielle continue à 3 dimensions.", 
+          "start": 734.98
+        }, 
+        {
+          "dur": 10.64, 
+          "text": "Un bord de ce nœud noir est connecté à chacune de ces unités.\nJ&#39;ai représenté la première en rouge, la deuxième en magenta et la troisième en marron.", 
+          "start": 741.64
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "Une fois l&#39;apprentissage du réseau de neurones terminé, ces bords sont pondérés,\net une valeur réelle est associée à chacun d&#39;entre eux. C&#39;est ma représentation vectorielle continue.", 
+          "start": 752.28
+        }, 
+        {
+          "dur": 5.14, 
+          "text": "Le rouge est ma valeur X,\nle magenta ma valeur Y et le marron ma valeur Z.", 
+          "start": 760.12
+        }, 
+        {
+          "dur": 11.34, 
+          "text": "Ce film serait intégré dans un espace\nà 3 dimensions avec les coordonnées 0,9, 0,2 et 0,4.", 
+          "start": 765.26
+        }, 
+        {
+          "dur": 11.24, 
+          "text": "Nous avons des hyperparamètres, comme pour tout réseau neuronal profond.\nL&#39;un d&#39;entre eux est le nombre de dimensions de la représentation vectorielle, c&#39;est-à-dire le nombre d&#39;unités cachées requises dans cette couche.", 
+          "start": 776.6
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "Un nombre élevé de dimensions est intéressant,\ncar cela permet d&#39;éliminer plus de distinctions et ainsi d&#39;apprendre de meilleures relations.", 
+          "start": 787.84
+        }, 
+        {
+          "dur": 10.14, 
+          "text": "En revanche, plus le nombre de dimensions est élevé, plus le risque\nde surapprentissage est important, et donc plus l&#39;apprentissage est lent et plus il faut de données.", 
+          "start": 796.42
+        }, 
+        {
+          "dur": 10.44, 
+          "text": "Une règle simple est que le nombre de dimensions doit être environ égal\nà la racine quatrième de la taille de mon vocabulaire, c&#39;est-à-dire du nombre de valeurs possibles.", 
+          "start": 806.56
+        }, 
+        {
+          "dur": 12.08, 
+          "text": "Mais ce n&#39;est qu&#39;une indication, et vu tous les hyperparamètres, il est important que vous utilisiez\ndes données de validation pour chercher la valeur donnant les meilleurs résultats pour votre cas.", 
+          "start": 817.0
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "Une représentation vectorielle continue\npeut être vue comme un outil.", 
+          "start": 829.08
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "Ces représentations vectorielles permettent de mapper des éléments, des films, du texte,\npar exemple les termes d&#39;une annonce immobilière, à des vecteurs réels de faible dimension pour que les éléments similaires soient placés à proximité.", 
+          "start": 832.48
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "Cela crée une structure qui manquait pour ces éléments,\net cette structure est adaptée précisément au problème que vous essayez de résoudre.", 
+          "start": 846.6
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "Nous pouvons aussi appliquer les représentations vectorielles continues\nà des données denses, par exemple à des pistes audio ou à des bandes-son.", 
+          "start": 855.02
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Mais nous ne disposons pas de statistiques intéressantes.\nJe ne sais pas comment comparer des pistes audio.", 
+          "start": 863.2
+        }, 
+        {
+          "dur": 15.128, 
+          "text": "Les représentations vectorielles continues peuvent permettre d&#39;apprendre une statistique de similitude\nentre des données déjà denses, même si des types de données différents (texte, images ou son) sont intégrés.", 
+          "start": 867.56
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 7.36, 
+          "text": "안녕하세요, 저는 Google에서 연구원으로 일하고 있는 Sally Goldman이라고 합니다.\n저는 주로 추천 시스템을 연구하고 있습니다.", 
+          "start": 0.68
+        }, 
+        {
+          "dur": 6.68, 
+          "text": "추천 시스템 연구의 가장 기본적인 사항은 임베딩인데요,\n오늘은 임베딩에 관해 이야기해 보겠습니다.", 
+          "start": 8.04
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "흥미로운 예로, 협업 필터링의 문제를 살펴보려고 합니다.", 
+          "start": 14.72
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "100만 편의 영화와 50만 명의 사용자가 있으며,\n각 사용자가 어떤 영화를 봤는지 제가 안다고 가정해 보겠습니다.", 
+          "start": 18.66
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "해야 할 일은 간단합니다.\n사용자에게 영화를 추천하고 싶은거죠.", 
+          "start": 26.44
+        }, 
+        {
+          "dur": 12.0, 
+          "text": "이 문제를 해결하려면 여러 영화 간의 유사성을 알 수 있는 어떤 구조를 배워야 합니다.\n그래야 이 세 편의 영화를 본 사람에게 추천하기 좋은 영화는 저 영화라는 걸 알 수 있습니다.", 
+          "start": 30.18
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "이제 영화를 1차원 임베딩 라인을 따라\n배치해 보는 걸로 간단히 시작해 봅시다.", 
+          "start": 42.18
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "라인 왼쪽에 애니메이션 영화를 두고\n오른쪽으로 갈수록 성인물에 더 가까운 영화를 두겠습니다.", 
+          "start": 49.3
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "이제 영화가 정렬됩니다.", 
+          "start": 57.08
+        }, 
+        {
+          "dur": 7.72, 
+          "text": "슈렉과 인크레더블은 모두 어린이용 애니메이션 영화입니다.\n이 중 한 영화를 본 사용자에게 나머지 영화를 추천하는 것이 좋은 선택이 되겠죠.", 
+          "start": 59.24
+        }, 
+        {
+          "dur": 10.22, 
+          "text": "벨리빌의 세 쌍둥이도 애니메이션 영화이지만\n해리 포터가 인크레더블과 더 유사한 영화일 것입니다.", 
+          "start": 66.96
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "벨리빌의 세 쌍둥이는 어린이용으로 제작된 영화가 아니며,\n많은 영화 관객이 찾는 블록버스터 영화도 아닙니다.", 
+          "start": 77.18
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "오른쪽의 성인영화로는 블루와 메멘토가\n다크 나이트 라이즈보다 서로 추천할 만한 영화라고 할 수 있습니다.", 
+          "start": 86.2
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "이와 같이 영화를 한 라인에만 배열하면 사람들이 어떤 영화를\n상대적으로 더 좋아하게 만드는 복잡한 요소를 모두 파악하기가 매우 어렵습니다.", 
+          "start": 94.1
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "그렇다면 차원을 하나 추가하여\n2차원으로 만들면 어떨까요?", 
+          "start": 104.04
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "블록버스터 영화를 위에 배치하고\n예술영화를 아래에 배치해보면 어떨까요?", 
+          "start": 107.84
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "이제 원하는 모양으로\n영화가 정렬되었습니다.", 
+          "start": 114.36
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "슈렉, 인크레더블, 해리 포터는 모두 비슷한 영화이므로\n서로 가까이 정렬되고 오른쪽 아래에는 블루와 메멘토가 배치됩니다.", 
+          "start": 116.38
+        }, 
+        {
+          "dur": 6.3, 
+          "text": "파악하고 싶은 다른 요소가 아주 많으므로 2차원 이상을 원하게 됩니다.", 
+          "start": 125.4
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "실제로는 임베딩 작업을 위해 20차원, 50차원,\n심지어는 100차원을 생각해볼 수 있습니다.", 
+          "start": 131.7
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "하지만 지금은 제가 그릴 수 있는\n2차원을 계속 사용하겠습니다.", 
+          "start": 138.3
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "이미 축을 추가해 놓았는데,\n여기에 영화 몇 편을 추가해 보겠습니다.", 
+          "start": 141.56
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "X축은 왼쪽으로 갈수록 어린이용 영화가 배치되고\n오른쪽으로 갈수록 성인물에 가까운 영화가 배치됩니다.", 
+          "start": 146.28
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "Y축 위쪽에는 블록버스터 영화가 배치되고\n아래쪽에는 예술영화가 배치되어 있습니다.", 
+          "start": 152.86
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "이제 여러 구조가 체계적으로 표시되며 근처에 있는 영화는 서로 비슷한 류라는 것을 알 수 있습니다. 이것이 바로 우리가 달성하려는 목표입니다.", 
+          "start": 158.94
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "이제 이 그림을 기하학적으로 그려 보겠습니다. 하지만 이 임베딩을 표현할 수 있는 아주 쉬운 방식이 있고, 심층신경망에서의 임베딩을 배우고 나면 간단하게 할 수 있는 일입니다.", 
+          "start": 169.44
+        }, 
+        {
+          "dur": 12.78, 
+          "text": "이제 슈렉과 블루를 예로 들어 보겠습니다. 이 영화들은 각각 2차원 평면의 한 점이 됩니다. 이 점을 각각 X축과 Y축의 한 값으로 적어보겠습니다.", 
+          "start": 180.84
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "예를 들어 슈렉은 점 (-1.0, 0.95)이고 블루는 점 (0.65, -0.2)입니다.", 
+          "start": 193.62
+        }, 
+        {
+          "dur": 10.12, 
+          "text": "따라서 여기서 각 영화는 두 개의 점으로 나타내며\n두 영화의 유사성은 이 점들이 얼마나 서로 가까이 있는지로 파악됩니다.", 
+          "start": 202.92
+        }, 
+        {
+          "dur": 9.68, 
+          "text": "저는 2차원만 그리지만, 실제로는 D차원으로 그려보고 싶을 겁니다.\n2차원만으로는 모든 요소를 파악할 수 없습니다.", 
+          "start": 213.04
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "여러분이 하고 있는 작업을 생각해 보시면 영화에 대한 관심은\nD차원으로 파악할 수 있다고 은연 중에 가정하고 있을 것입니다.", 
+          "start": 222.72
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "D개의 서로 다른 요소를 선택한 다음 개별 영화를 이 D개의\n요소 사이로 이동시켜 비슷한 영화들끼리 근처에 모아 둘 수 있습니다.", 
+          "start": 230.54
+        }, 
+        {
+          "dur": 17.26, 
+          "text": "이제 각 영화는 D차원 점으로 표시되므로 D 실제 값으로 기록할 수 있습니다.\n여기서 좋은 점은 데이터를 통해 이 임베딩을 실제로 배울 수 있으며,\n지금까지 본 내용에 새로운 것을 추가하지 않고도 심층신경망을 통해 이를 수행할 수 있다는 것입니다.", 
+          "start": 242.58
+        }, 
+        {
+          "dur": 13.96, 
+          "text": "이 작업에는 별도의 학습 프로세스가 필요하지 않으므로 이전처럼 똑같이 역전파를 사용하게 됩니다. 임베딩 레이어는 히든 레이어일 뿐이며 임베딩에 포함하는 차원마다 하나의 유닛을 가지게 됩니다.", 
+          "start": 259.84
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "감독되는 정보를 통해 수행하려는\n모든 작업에 맞게 이 임베딩을 조정할 수 있습니다.", 
+          "start": 273.8
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "영화를 추천하려는 경우 이러한 임베딩을\n영화 추천에 맞게 활용할 수 있습니다.", 
+          "start": 280.66
+        }, 
+        {
+          "dur": 16.82, 
+          "text": "일종의 학습 신호가 필요하므로 몇 가지 구체적인 예를 살펴보겠지만, 이 예에서는 사용자가 일련의 영화를 봤다면, 해당 영화들은 어느 정도 유사성이 있으므로 근처에 배치됩니다. 물론 많은 데이터를 통해 이 유사성을 집계할 것입니다.", 
+          "start": 286.24
+        }, 
+        {
+          "dur": 11.8, 
+          "text": "이러한 히든 유닛은 우리가 신경망의 최종 목표로 결정한 측정항목을\n최적화하도록 데이터를 구성하는 방법을 직관적으로 학습합니다.", 
+          "start": 303.06
+        }, 
+        {
+          "dur": 5.92, 
+          "text": "이제 이 내용이 실제로 신경망에\n입력되는 방식을 살펴보겠습니다.", 
+          "start": 314.86
+        }, 
+        {
+          "dur": 5.52, 
+          "text": "오른쪽에 표시된 행렬은\n일반적으로 생각하는 협업 필터링 입력을 나타냅니다.", 
+          "start": 320.78
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "사용자마다 한 개의 행이 있으며 영화마다 한 개의 열이 있습니다.\n이 간단한 예에서 체크표시는 사용자가 그 영화를 봤다는 의미입니다.", 
+          "start": 326.3
+        }, 
+        {
+          "dur": 3.76, 
+          "text": "이제 TenserFlow에서 이 작업을\n수행하는 방식을 살펴보겠습니다.", 
+          "start": 337.28
+        }, 
+        {
+          "dur": 7.54, 
+          "text": "각 예는 이 행렬의 한 행이 될 것이므로 노란색으로\n강조표시한 맨 아래 행에 초점을 맞추어 보겠습니다.", 
+          "start": 341.04
+        }, 
+        {
+          "dur": 8.62, 
+          "text": "50만 편의 영화가 있고 보지 않은 영화까지 모두 나열하기를 원하지 않는다면\n여러분이 본 영화만 기록하는 것이 훨씬 효율적입니다.", 
+          "start": 348.58
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "그리고 역전파를 할 때 내적을 계산하고\n시간도 여러분이 본 영화로만 한정할 것입니다.", 
+          "start": 357.2
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "따라서 이 작업을 수행하기 위해 다음 입력 표시를\n사용할 것이며, 이 작업은 두 단계로 구성됩니다.", 
+          "start": 365.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "첫 번째 사전 처리 단계에서는\n사전이라는 것을 구축합니다.", 
+          "start": 373.14
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "사전은 각 특징의 매핑입니다. 이 예에서는 각 영화를\n0부터 영화 수에서 1을 뺀 값까지의 정수로 매핑합니다.", 
+          "start": 376.92
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "따라서 열에 영화가 표시된\n순서대로 매핑하겠습니다.", 
+          "start": 385.58
+        }, 
+        {
+          "dur": 9.24, 
+          "text": "열 0은 영화 0이고, 열 1은 영화 1 등의 식으로 부르며,\n이 작업은 사전 처리 작업으로 한 번 수행합니다.", 
+          "start": 388.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "이제 맨 아래 예를 사용자가 본 3편의 영화만으로 효율적으로 표시할 수 있습니다.\n다른 영화는 신경 쓰지 않아도 됩니다.", 
+          "start": 397.48
+        }, 
+        {
+          "dur": 13.32, 
+          "text": "여기에서는 그림으로 표시했지만, 실제로는 사용자가 본\n세 영화의 색인이므로 3개의 정수인 1, 3, 999,999입니다.", 
+          "start": 406.34
+        }, 
+        {
+          "dur": 8.96, 
+          "text": "이제 입력 표시가 있으므로, 이 입력이 전체 네트워크에 어떻게 적용되는지 보고,\n이해를 돕기 위해 3개의 서로 다른 예를 사용하겠습니다.", 
+          "start": 419.66
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "첫 번째로 살펴볼 예는\n주택 판매 가격을 예상하는 문제입니다.", 
+          "start": 428.62
+        }, 
+        {
+          "dur": 2.78, 
+          "text": "이 문제는 일반적으로\n회귀 문제로 처리됩니다.", 
+          "start": 433.68
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "예상 가격과 실제 판매 가격 사이의\n제곱 손실(square loss)을 최적화하고자 합니다.", 
+          "start": 436.46
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "따라서 여기에서 임베딩 레이어를 작성할 대상은 판매,\n즉 주택 설명 광고에서 사용하는 단어입니다.", 
+          "start": 444.06
+        }, 
+        {
+          "dur": 13.02, 
+          "text": "흔히 사용하는 단어들이 있지만, 주택의 크기를 알아내기 위해 비슷하게 사용되는 단어를 이해해야 합니다. 예를 들어 넓은 주택이라고 하거나 집이 널찍하다고 할 수 있습니다.", 
+          "start": 452.1
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "이러한 단어는 동일한 사항을 파악하는 데 사용되므로, 부동산 중개인이 이러한 단어를\n광고에서 어떻게 사용하는지 파악하면 주택에 대해 파악하는 데 도움이 됩니다.", 
+          "start": 465.12
+        }, 
+        {
+          "dur": 13.86, 
+          "text": "광고에 수많은 단어가 사용될 수 있고, 어떤 광고에는 100단어 이상이 포함될 수 있지만\n앞에서 설명했듯이 희소 임베딩을 원하므로 몇 개만 삽입하려고 합니다. 하지만 여기에서는 영화 대신 단어를 사용합니다.", 
+          "start": 477.48
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "이 예에서는 간단히 그릴 수 있게 3차원 임베딩에 대해서만 알아볼 예정이지만\n실제로는 3차원 보다 훨씬 많은 차원이 필요할 것입니다.", 
+          "start": 491.34
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "이 예에서는 임베딩 레이어를 항상 녹색으로 그리겠습니다. 이 레이어는 실제로는 히든 레이어이며, 3차원 임베딩을 원하므로 이 경우 3개의 유닛이 있습니다.", 
+          "start": 498.98
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "또한 위도, 경도, 방 수와 같은 기타 입력 데이터가 있을 수 있고,\n여러분은 이 모두를 추가할 수 있지만, 저는 위도와 경도만 예로 사용했습니다.", 
+          "start": 508.3
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "그리고 분홍색은 다른 히든 레이어를 원하는 만큼 사용할 수 있다는 표시입니다.\n이 레이어는 표준 히든 레이어이며 원하는 만큼 사용할 수 있습니다.", 
+          "start": 517.88
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "유닛 수를 결정할 수 있고, 이 유닛들은 마지막에는 단일 유닛으로 모이게 됩니다.\n회귀 문제가 실제 값을 제공하며 판매 가격을 사용하여 L2 손실을 최적화하게 됩니다.", 
+          "start": 525.54
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "이미 확인한 바와 같이 역전파를\n수행하는 동안 임베딩 레이어가 학습됩니다.", 
+          "start": 537.9
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "또 다른 예로, 손글씨로 쓴 숫자를\n분류하는 방법을 배우려 한다고 가정해 봅시다.", 
+          "start": 543.94
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "0부터 9까지의 숫자가 있고,\n실제로 올바른 숫자 라벨이 있는 학습 데이터가 있습니다.", 
+          "start": 548.54
+        }, 
+        {
+          "dur": 11.2, 
+          "text": "여기서 임베딩을 만들려는 대상은 그림의 원시 비트맵입니다.\n이 비트맵은 흰색 또는 검은색, 즉 0 또는 1입니다.", 
+          "start": 555.12
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "다른 특징도 모두 소개해 드릴 수 있지만, 여기 임베딩 레이어가 있으므로\n3차원을 그대로 사용하고, 숫자 표시만 여기에 들어가게 됩니다.", 
+          "start": 566.32
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "분홍색은 추가 히든 레이어를 보여주며,\n이 예에서는 로지트 레이어입니다.", 
+          "start": 576.26
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "10개의 숫자가 있으며, 기본적으로 각 숫자가\n해당 숫자일 확률을 계산하는 확률 분포에 대해 배웁니다.", 
+          "start": 583.32
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "정답을 알고 있는 원 핫 대상 확률 분포를 하나 사용하여\n소프트 맥스 손실(soft max loss)을 최적화할 수 있습니다.", 
+          "start": 592.26
+        }, 
+        {
+          "dur": 8.84, 
+          "text": "이 작업을 수행하는 중에 역전파에 대해\n학습하면서 이미지를 삽입하는 방법을 배웁니다.", 
+          "start": 601.0
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "이제 협업 필터링을 학습한 예제인\n영화 추천 문제를 살펴보겠습니다.", 
+          "start": 609.84
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "흥미롭게도 여기서는 아직 살펴보지 못한 측면이 부각됩니다.\n즉, 내 학습 데이터는 어디에 있는가 하는 문제입니다.", 
+          "start": 616.34
+        }, 
+        {
+          "dur": 7.92, 
+          "text": "각 사용자에 대해 일련의 영화가 있다는 점만 알고 있는데, 어떤 영화를 추천하는 것이 맞는지 어떻게 알 수 있을까요? 레이블로 무엇을 사용해야 할까요?", 
+          "start": 623.06
+        }, 
+        {
+          "dur": 4.54, 
+          "text": "사용자가 10편의 영화를 본다고 가정할 때\n우리가 할 일은 간단합니다.", 
+          "start": 630.98
+        }, 
+        {
+          "dur": 13.6, 
+          "text": "무작위로 3개의 영화를 선택하여 분리해 놓은 다음 추천할 영화로 레이블을 지정합니다. 이 영화들은 여러분이 본 영화이므로 좋은 추천 영화가 될 것입니다. 그런 다음 나머지 7개의 영화를 학습 데이터로 사용합니다.", 
+          "start": 635.52
+        }, 
+        {
+          "dur": 4.78, 
+          "text": "일단 해 보면, 방금 이야기한 문자 인식과 매우 유사합니다.", 
+          "start": 649.12
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "희소성 표현(sparse representation)을 얻는 방법을 알고 있으므로\n내 학습 데이터인 7개의 영화를 임베딩 레이어로 가져오겠습니다.", 
+          "start": 653.9
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "장르, 감독, 사용자 등 영화에 대한 모든 특징을 사용할 수 있고,\n추가 히든 레이어로 가져올 수 있습니다. 그리고 로지트 레이어가 있습니다.", 
+          "start": 662.84
+        }, 
+        {
+          "dur": 11.98, 
+          "text": "이 로지트 레이어는 매우 크다는 점에 유의하세요. 숫자 예측에서처럼 10개의 노드가 있는 것이 아니라, 50만 편의 영화가 있으면 50만 개의 로지트 레이어가 생깁니다.", 
+          "start": 676.96
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "여기에 문제가 있지만,\n이 문제는 오늘 설명하는 주제 범위를 벗어납니다.", 
+          "start": 688.94
+        }, 
+        {
+          "dur": 11.96, 
+          "text": "하지만 50만 편의 영화 중에 여러분이 좋아할 것으로 생각되는 영화의 분포를 얻게 되며, 여러분이 좋아한다고 생각하여 분류한 영화에서 소프트 및 맥스 손실을 최적화합니다.", 
+          "start": 692.46
+        }, 
+        {
+          "dur": 8.9, 
+          "text": "역전파와 표준 학습에서 이 작업을 할 때\n앞서 설명한 영화 임베딩에 대해 배울 것입니다.", 
+          "start": 704.42
+        }, 
+        {
+          "dur": 8.38, 
+          "text": "이제 다시 앞으로 돌아가 심층신경망에서 배운 내용이 앞에서 보여준\n기하학적 보기와 연결되는 방식을 명확히 파악했는지 확인해 보겠습니다.", 
+          "start": 713.32
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "왼쪽에 있는 심층신경망에서 영화를 한 편 선택해 봅시다.", 
+          "start": 721.7
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "입력 레이어를 생각해 보면, 아래에 있는 각 노드는 50만편의 영화 중 하나를 나타냅니다. 이제 영화 하나를 선택하여 검은색으로 만들었습니다.", 
+          "start": 725.64
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "이 예에서는 3개의 히든 유닛이 있다고 했고,\n따라서 3차원 임베딩을 사용합니다.", 
+          "start": 734.98
+        }, 
+        {
+          "dur": 10.64, 
+          "text": "이 검은색 노드는 각 유닛에 연결하는 엣지를 가집니다.\n첫 번째 유닛에는 빨간색, 두 번째에는 자홍색, 세 번째에는 갈색을 사용했습니다.", 
+          "start": 741.64
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "신경망 학습을 완료하고 나면 이들 엣지는 가중치가 되며\n각 엣지에는 실제 값이 연결됩니다. 이것이 임베딩입니다.", 
+          "start": 752.28
+        }, 
+        {
+          "dur": 5.14, 
+          "text": "빨간색이 X 값이고, 자홍색이 Y 값이며, 갈색이 Z 값입니다.", 
+          "start": 760.12
+        }, 
+        {
+          "dur": 11.34, 
+          "text": "이 특정 영화는 3차원 공간에 0.9, 0.2 및 0.4로 삽입됩니다.", 
+          "start": 765.26
+        }, 
+        {
+          "dur": 11.24, 
+          "text": "심층신경망에는 초매개변수가 있으며, 임베딩 레이어에 있는 초매개변수 중 하나는\n임베딩 차원의 수, 즉 해당 레이어에 포함시킬 히든 유닛 수입니다.", 
+          "start": 776.6
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "차원이 높을수록 좋습니다. 왜냐하면 더 세밀하게\n구별할 수 있으므로 관계를 더욱 잘 파악할 수 있기 때문입니다.", 
+          "start": 787.84
+        }, 
+        {
+          "dur": 10.14, 
+          "text": "반면 차원 수를 높이면 과적합의 가능성이 있으며\n학습 속도가 느려지고 더 많은 데이터가 필요하게 되는 단점이 있습니다.", 
+          "start": 796.42
+        }, 
+        {
+          "dur": 10.44, 
+          "text": "따라서 경험적으로 보았을 때 차원 수는 대략적으로 제 어휘 목록 크기,즉 가능한 값의 수의 네제곱근입니다.", 
+          "start": 806.56
+        }, 
+        {
+          "dur": 12.08, 
+          "text": "하지만 이것은 경험에 의한 것일 뿐이며, 모든 초매개변수에 대해\n유효성 검사 데이터를 사용하여 문제점에 사용해 보고 최선의 결과를 제공하는 매개변수를 찾아야 합니다.", 
+          "start": 817.0
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "임베딩을 단순히 도구로 생각할 수도 있습니다.", 
+          "start": 829.08
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "이러한 임베딩을 통해 얻을 수 있는 것 중 하나는 비슷한 항목이 서로 근접하도록\n영화와 텍스트, 즉 주택 설명에서 사용된 단어와 같은 항목을 저차원 실제 벡터로 매핑하는 것입니다.", 
+          "start": 832.48
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "그러면 실제로 구조가 없는 항목에 구조가 생성되며,\n이 구조는 수행하려는 작업에 맞춰 실제로 조정됩니다.", 
+          "start": 846.6
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "임베딩을 밀도가 높은 데이터에도 적용할 수 있습니다. 예를 들어 오디오나 사운드트랙이 표시되는 방법을 보면 이미 밀도가 높음을 알 수 있습니다.", 
+          "start": 855.02
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "하지만 유용한 측정항목이 없으므로\n이 오디오가 다른 오디오와 비슷한지 알 수 없습니다.", 
+          "start": 863.2
+        }, 
+        {
+          "dur": 15.128, 
+          "text": "임베딩을 이미 밀도가 높은 데이터의 유사성 측정항목을 배우는 데 사용할 수 있으며, 더 나아가 텍스트, 이미지, 오디오와 같은 다양한 유형을 함께 삽입하여 이들 간의 유사성 측정항목을 배울 수 있습니다.", 
+          "start": 867.56
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 7.36, 
+          "text": "Soy Sally Goldman, investigadora de Google,\ny trabajo con sistemas de recomendaciones.", 
+          "start": 0.68
+        }, 
+        {
+          "dur": 6.68, 
+          "text": "Algo fundamental para crear esos sistemas recomendados\nson las incorporaciones que explicaré hoy.", 
+          "start": 8.04
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "Como ejemplo,\nexploraré el problema de filtrado colaborativo.", 
+          "start": 14.72
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "Tengo un millón de películas y medio millón de usuarios,\ny sé qué películas miró cada uno.", 
+          "start": 18.66
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "La tarea es simple:\nquiero recomendarles películas a los usuarios.", 
+          "start": 26.44
+        }, 
+        {
+          "dur": 12.0, 
+          "text": "Para resolver el problema, debo tener una estructura, algo que me indique qué películas son similares; entonces, si miraste estas 3, esta película es una buena recomendación.", 
+          "start": 30.18
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "Para comenzar, pongamos estas películas\nen una línea incorporación unidimensional.", 
+          "start": 42.18
+        }, 
+        {
+          "dur": 7.78, 
+          "text": "A la izquierda, tendré películas animadas,\na la derecha, películas más adecuadas para adultos.", 
+          "start": 49.3
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "Esto comienza a funcionar.", 
+          "start": 57.08
+        }, 
+        {
+          "dur": 7.72, 
+          "text": "Tengo Shrek y Los increíbles entre las películas animadas para niños;\nsi miras una, la otra es una buena recomendación.", 
+          "start": 59.24
+        }, 
+        {
+          "dur": 10.22, 
+          "text": "Tengo a Las trillizas de Belleville, que es animada. Y Harry Potter\nno es animada, pero coincide más con Los increíbles.", 
+          "start": 66.96
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "En realidad, Las trillizas de Belleville\nno está orientada a los niños, ni es un éxito de taquilla.", 
+          "start": 77.18
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "En el otro lado, Bleu y Memento\nson mejores recomendaciones entre sí que Batman.", 
+          "start": 86.2
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "Como hay una sola línea, es muy difícil reflejar por qué las personas\neligen una u otra película.", 
+          "start": 94.1
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "¿Y si agregamos otra dimensión y pasamos a tener dos?", 
+          "start": 104.04
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "¿Qué pasa si subo las películas taquilleras\ny bajo las independientes?", 
+          "start": 107.84
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "Logré algunos de los resultados que quería.", 
+          "start": 114.36
+        }, 
+        {
+          "dur": 9.02, 
+          "text": "Tengo Shrek, Los increíbles y Harry Potter cerca, que son\ntodas películas similares; abajo, tengo Bleu y Memento.", 
+          "start": 116.38
+        }, 
+        {
+          "dur": 6.3, 
+          "text": "Pero hay muchos otros aspectos para capturar\ny queremos más de 2 dimensiones.", 
+          "start": 125.4
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "Podemos imaginar 20, 50, 100 dimensiones\npara estas incorporaciones.", 
+          "start": 131.7
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "Usaremos 2 dimensiones,\npara poder representarlas.", 
+          "start": 138.3
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Agreguemos algunas películas más.\nYa agregué los ejes.", 
+          "start": 141.56
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "En el eje X, hay películas para niños a la izquierda,\ny películas para adultos a la derecha.", 
+          "start": 146.28
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "En el eje Y, hay películas más taquilleras arriba,\ny películas independientes abajo.", 
+          "start": 152.86
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "Esta es una buena estructura: las películas cercanas\nson similares entre sí, y ese es nuestro objetivo.", 
+          "start": 158.94
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "Lo dibujo geométricamente, pero quiero que todos comprendan que la representación de las incorporaciones es muy simple; así será en el aprendizaje en una red neuronal profunda.", 
+          "start": 169.44
+        }, 
+        {
+          "dur": 12.78, 
+          "text": "Shrek y Bleu son cada una un solo punto en el espacio bidimensional,\nUn punto se indica con un valor en el eje X y otro en el eje Y.", 
+          "start": 180.84
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "Así, Shrek es el punto menos 10.95,\nBleu es 0.65 menos 0.2.", 
+          "start": 193.62
+        }, 
+        {
+          "dur": 10.12, 
+          "text": "Cada película se puede representar como dos carretes y la similitud entre las películas se indica con la proximidad entre dos puntos.", 
+          "start": 202.92
+        }, 
+        {
+          "dur": 9.68, 
+          "text": "Aunque lo dibujaré de 2 dimensiones, en realidad, es mejor\nhacerlo en D dimensiones, ya que 2 no alcanzarán.", 
+          "start": 213.04
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "Cuando piensas en lo que haces, se supone que el interés en las películas\nse puede capturar con D dimensiones.", 
+          "start": 222.72
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "Puedes seleccionar D aspectos y mover las películas\nentre estos aspectos para acercar las películas similares entre sí.", 
+          "start": 230.54
+        }, 
+        {
+          "dur": 17.26, 
+          "text": "Cada película es un punto de D dimensiones y se escribe como D valores reales.\nLo bueno es que podemos aprender estas incorporaciones de los datos y hacer que una red neuronal profunda aprenda estas incorporaciones sin agregar nada.", 
+          "start": 242.58
+        }, 
+        {
+          "dur": 13.96, 
+          "text": "No hace falta un proceso de capacitación por separado. Se usa la propagación como antes; la capa de incorporaciones estará oculta y habrá una unidad para cada dimensión.", 
+          "start": 259.84
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "Con la información supervisada, podemos adaptar\nestas incorporaciones para la tarea deseada.", 
+          "start": 273.8
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "Para hacer recomendaciones de películas,\nlas incorporaciones deben orientarse para esa tarea.", 
+          "start": 280.66
+        }, 
+        {
+          "dur": 16.82, 
+          "text": "Necesitamos una señal de entrenamiento; en este caso, si un usuario\nmiró un conjunto de películas, estarán relacionadas y deberán estar cerca. Y agregaremos esto muchos datos.", 
+          "start": 286.24
+        }, 
+        {
+          "dur": 11.8, 
+          "text": "De forma intuitiva, estas unidades ocultas aprenden a organizar los datos\npara optimizar la métrica que sea el objetivo para la red.", 
+          "start": 303.06
+        }, 
+        {
+          "dur": 5.92, 
+          "text": "Veamos cómo sería la entrada para la red neuronal.", 
+          "start": 314.86
+        }, 
+        {
+          "dur": 5.52, 
+          "text": "La matriz a la derecha es la forma clásica\npara la entrada de filtrado colaborativo.", 
+          "start": 320.78
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "Hay una fila para cada usuario y una columna para cada película.\nUna marca indica que el usuario miró la película.", 
+          "start": 326.3
+        }, 
+        {
+          "dur": 3.76, 
+          "text": "Pensemos en cómo se hace esto con TenserFlow.", 
+          "start": 337.28
+        }, 
+        {
+          "dur": 7.54, 
+          "text": "Cada ejemplo será una fila de esta matriz;\nveamos la fila inferior resaltada en amarillo.", 
+          "start": 341.04
+        }, 
+        {
+          "dur": 8.62, 
+          "text": "Si hay medio millón de películas, no quiero incluir\ntodas las que no viste; es mejor escribir las que sí viste.", 
+          "start": 348.58
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "Cuando hago la propagación inversa, calculo los productos de puntos.\nEl momento y la forma en la que se hace dependerá de las películas que miraste.", 
+          "start": 357.2
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "Para lograrlo, uso la siguiente representación de entrada,\ny para eso uso 2 fases.", 
+          "start": 365.24
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "En la primera fase de procesamiento previo,\ngenero lo que se denomina un &quot;diccionario&quot;.", 
+          "start": 373.14
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "Un diccionario es una asignación de cada atributo,\no de cada película, a un entero de 0 al número de películas -1.", 
+          "start": 376.92
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "Haré esto en el orden que las mostré en las columnas.", 
+          "start": 385.58
+        }, 
+        {
+          "dur": 9.24, 
+          "text": "La columna 0 se llamará película 0, la columna 1, película 1,\ny así. Lo haremos una vez como procesamiento previo.", 
+          "start": 388.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "El ejemplo inferior representa las 3 películas que el usuario miró;\nno me preocupo por todas las otras.", 
+          "start": 397.48
+        }, 
+        {
+          "dur": 13.32, 
+          "text": "Es una vista representativa, pero son solo 3 enteros: 1, 3, 999,999,\nson los índices de las 3 películas que el usuario miró.", 
+          "start": 406.34
+        }, 
+        {
+          "dur": 8.96, 
+          "text": "Con la representación de entrada que tenemos, puedo ver cómo se ajusta\na toda la red; lo ilustraré con 3 ejemplos.", 
+          "start": 419.66
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "El primer ejemplo es la predicción\ndel precio de venta de una casa.", 
+          "start": 428.62
+        }, 
+        {
+          "dur": 2.78, 
+          "text": "Por lo general, se haría como un problema de regresión.", 
+          "start": 433.68
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "Quiero optimizar la pérdida al cuadrado\nentre el precio predicho y el precio de venta real.", 
+          "start": 436.46
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "Quiero crear una capa de incorporaciones\npara las palabras en el anuncio con la descripción de la casa.", 
+          "start": 444.06
+        }, 
+        {
+          "dur": 13.02, 
+          "text": "Como hay varias palabras, debo notar cuáles son similares\npara saber el tamaño de la casa; entonces puedo decir que es una casa espaciosa o con espacio.", 
+          "start": 452.1
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "Son palabras que se usan en los anuncios con el mismo significado,\nque permiten entender las características de la casa que usan los agentes inmobiliarios.", 
+          "start": 465.12
+        }, 
+        {
+          "dur": 13.86, 
+          "text": "Tenemos muchísimas palabras en un anuncio; cualquier anuncio tiene unas 100 palabras; queremos la incorporación dispersa, pero mi vocabulario es de palabras frente a películas.", 
+          "start": 477.48
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "En este pequeño ejemplo, aprenderé una incorporación de 3 dimensiones,\npero en la práctica conviene usar muchas más.", 
+          "start": 491.34
+        }, 
+        {
+          "dur": 9.32, 
+          "text": "La capa de incorporación siempre es de color verde;\nes una capa oculta con 3 unidades porque es de 3 dimensiones.", 
+          "start": 498.98
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Se pueden agregar otros datos, como latitud, longitud, cantidad de habitaciones,\nyo usé latitud y longitud como ejemplo.", 
+          "start": 508.3
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "El color rosa indica que podemos tener tantas capas ocultas\ncomo queramos; estas son solo las estándar.", 
+          "start": 517.88
+        }, 
+        {
+          "dur": 12.36, 
+          "text": "Las unidades deseadas forman una sola unidad; el problema de regresión\nnos da un valor real y optimiza la pérdida de L2 con el precio de venta.", 
+          "start": 525.54
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "La capa de incorporación se aprenderá\nen la propagación inversa.", 
+          "start": 537.9
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Supongamos que quiero aprender\na clasificar dígitos escritos a mano.", 
+          "start": 543.94
+        }, 
+        {
+          "dur": 6.58, 
+          "text": "Tengo los dígitos 0 a 9 y algunos datos de entrenamiento\ncon una etiqueta del dígito correcto.", 
+          "start": 548.54
+        }, 
+        {
+          "dur": 11.2, 
+          "text": "Esta dispersión de la que quiero crear una incorporación\nes el mapa de bits del dibujo, ya sea blanco o negro, o 0 o 1.", 
+          "start": 555.12
+        }, 
+        {
+          "dur": 9.94, 
+          "text": "Puedo incorporar otras funciones, con una capa de incorporación\nde 3 dimensiones, para la representación de los dígitos.", 
+          "start": 566.32
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "En rosa, se muestra que puede haber otras capas ocultas,\ny, en este caso, tengo una capa logit.", 
+          "start": 576.26
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "Con los 10 dígitos, se aprende una distribución de qué probabilidad\nhay de que sean cada uno de los dígitos.", 
+          "start": 583.32
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "Puedo tomar la distribución de probabilidad objetivo de la respuesta correcta y optimizar una pérdida de softmax.", 
+          "start": 592.26
+        }, 
+        {
+          "dur": 8.84, 
+          "text": "Así, aprenderé a incorporar las imágenes.\nal entrenar con la propagación inversa.", 
+          "start": 601.0
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "Ahora veamos un ejemplo de filtrado colaborativo,\nel problema de recomendación de películas.", 
+          "start": 609.84
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "Surge una duda interesante:\n¿dónde están mis datos de entrenamiento en este caso?", 
+          "start": 616.34
+        }, 
+        {
+          "dur": 7.92, 
+          "text": "Para cada usuario hay un conjunto de películas,\npero ¿cuál es la película adecuada para recomendar? ¿Qué usaré como etiqueta?", 
+          "start": 623.06
+        }, 
+        {
+          "dur": 4.54, 
+          "text": "Si los usuarios miran 10 películas,\nuso un truco simple.", 
+          "start": 630.98
+        }, 
+        {
+          "dur": 13.6, 
+          "text": "Elijo 3 películas al azar, las extraigo como etiquetas; esas son las películas que quiero recomendar; son buenas porque las miré; y uso las otras 7 películas como datos de entrenamiento.", 
+          "start": 635.52
+        }, 
+        {
+          "dur": 4.78, 
+          "text": "Esto es muy similar a lo que hablamos recién\nsobre el reconocimiento de caracteres.", 
+          "start": 649.12
+        }, 
+        {
+          "dur": 8.94, 
+          "text": "Tomo las 7 películas que son mis datos de entrenamiento,\ny los llevo a la capa de incorporación.", 
+          "start": 653.9
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "Puedo tomar otras funciones, el género o tal vez el director, otros datos de la película\no del usuario, las pongo en capas ocultas adicionales y obtengo una capa logit.", 
+          "start": 662.84
+        }, 
+        {
+          "dur": 11.98, 
+          "text": "Esta capa logit es grande; en lugar de 10 nodos diferentes como en la predicción de dígitos, si tengo medio millón de películas, habrá medio millón de estas.", 
+          "start": 676.96
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "Hay algunos problemas con eso,\npero no los abarcaremos en este análisis.", 
+          "start": 688.94
+        }, 
+        {
+          "dur": 11.96, 
+          "text": "Obtendré una distribución de medio millón de películas, con las que tal vez\nte gustan, y luego optimizaré la pérdida softmax con las que sí te gustan.", 
+          "start": 692.46
+        }, 
+        {
+          "dur": 8.9, 
+          "text": "Este trabajo en la propagación inversa y en el entrenamiento estándar,\naprenderemos las incorporaciones de las películas.", 
+          "start": 704.42
+        }, 
+        {
+          "dur": 8.38, 
+          "text": "Espero que quede claro el vínculo entre el aprendizaje en la red neuronal profunda\ny la vista geométrica del comienzo.", 
+          "start": 713.32
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "Veamos la red profunda a la izquierda\ny tomemos una sola película.", 
+          "start": 721.7
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "En la capa de entrada, cada nodo de la parte inferior representa una película;\ntomé uno y le asigné el color negro.", 
+          "start": 725.64
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "En este ejemplo dije que tenía 3 unidades ocultas,\nes decir, una incorporación de 3 dimensiones.", 
+          "start": 734.98
+        }, 
+        {
+          "dur": 10.64, 
+          "text": "Ese nodo negro tendrá una conexión que lo conecta con esas unidades;\nla primera es roja, la segunda, magenta y la tercera, marrón.", 
+          "start": 741.64
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "Al terminar de entrenar la red neuronal, esas conexiones serán ponderaciones\ncon valores reales asociados; esa es la incorporación.", 
+          "start": 752.28
+        }, 
+        {
+          "dur": 5.14, 
+          "text": "El rojo es el valor de X, el magenta, el de Y y el marrón, el de Z.", 
+          "start": 760.12
+        }, 
+        {
+          "dur": 11.34, 
+          "text": "Esta película en particular estaría incorporada\nen un espacio de 3 dimensiones, como 0.9, 0.2 y 0.4.", 
+          "start": 765.26
+        }, 
+        {
+          "dur": 11.24, 
+          "text": "Al igual que en cualquier red neuronal profunda, en la capa de incorporación, hay hiperparámetros, como las dimensiones de incorporación y las unidades ocultas en esa capa.", 
+          "start": 776.6
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "Las dimensiones altas permiten separar más distinciones,\ny así podemos aprender mejores relaciones.", 
+          "start": 787.84
+        }, 
+        {
+          "dur": 10.14, 
+          "text": "Pero, si aumenta la cantidad de dimensiones, puede haber sobreajuste,\nun entrenamiento más lento y necesidad de más datos.", 
+          "start": 796.42
+        }, 
+        {
+          "dur": 10.44, 
+          "text": "Lo ideal es que la cantidad de dimensiones\nsea la raíz cuarta del tamaño de mi vocabulario, la cantidad de valores posibles.", 
+          "start": 806.56
+        }, 
+        {
+          "dur": 12.08, 
+          "text": "Pero es solo una regla general y, con todos los hiperparámetros,\ndebes usar datos de validación y probar los que den los mejores resultados.", 
+          "start": 817.0
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "Una incorporación también es una herramienta.", 
+          "start": 829.08
+        }, 
+        {
+          "dur": 14.12, 
+          "text": "Con estas incorporaciones se asignan elementos, como películas o palabras,\na los vectores reales para que los elementos similares estén cerca.", 
+          "start": 832.48
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "Se crea una estructura que no teníamos,\ny esta se orienta hacia lo que intentas lograr.", 
+          "start": 846.6
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "También se pueden aplicar incorporaciones a los datos densos;\nsi observo cómo se representan las pistas o el audio, eso ya es denso.", 
+          "start": 855.02
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Pero no tenemos una métrica significativa;\nno sé cómo determinar si este audio es similar a otro.", 
+          "start": 863.2
+        }, 
+        {
+          "dur": 15.128, 
+          "text": "Así, uso incorporaciones para aprender una métrica de similitud en datos densos,\nincorporar tipos de datos diversos y aprender una métrica entre ellos.", 
+          "start": 867.56
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

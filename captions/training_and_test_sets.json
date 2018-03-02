@@ -1,0 +1,479 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 5.86, 
+          "text": "现在我们来详细介绍一下这种测试集和训练集方法。", 
+          "start": 0.58
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "如果我们只有一个数据集，该怎么办？", 
+          "start": 6.44
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "例如我们从隐藏式分布中获得了一个庞大的数据集。", 
+          "start": 10.6
+        }, 
+        {
+          "dur": 7.8, 
+          "text": "我们可以将这个大型数据集分成两个小数据集：\n一个用于训练，一个用于测试。", 
+          "start": 13.82
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "这两个数据集需要相互独立。", 
+          "start": 21.62
+        }, 
+        {
+          "dur": 11.52, 
+          "text": "另外，我们可能需要确保先进行随机化，再拆分数据。\n这样才能避免发生诸如意外将全部冬季数据归入训练数据集，\n而将全部夏季数据归入测试数据集之类的糟糕情况。", 
+          "start": 23.36
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "那么我们该拆分成多大规模的数据集呢？", 
+          "start": 34.88
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "有两点需要注意：", 
+          "start": 37.7
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "训练集规模越大，模型的学习效果就越好。", 
+          "start": 39.5
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "测试集规模越大，我们对于评估指标的信心越充足，\n置信区间就越窄。", 
+          "start": 44.48
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "如果我们的数据集规模非常大，这是好事。", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "如果我们有十亿样本，\n我们可以使用其中的10-15%进行测试，置信区间依然会很窄。", 
+          "start": 57.64
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "如果数据集规模很小，我们可能需要\n执行诸如交叉验证之类较为复杂的操作。", 
+          "start": 65.3
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "有一个需要引起注意的典型陷阱，\n就是绝对不要对测试数据进行训练。", 
+          "start": 71.64
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "这会让您对模型质量的优劣产生不合实际的强烈观点。", 
+          "start": 81.18
+        }, 
+        {
+          "dur": 11.94, 
+          "text": "尤其是，如果您在某个神奇的一天发现测试数据的准确度达到100%，\n请反复检查自己有没有犯错而意外地对测试数据进行了训练。", 
+          "start": 86.52
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "每个人都可能在某个时候出现这种情况。", 
+          "start": 98.46
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "因此在举行宴会庆祝之前，请再三检查您的数据。", 
+          "start": 101.26
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.86, 
+          "text": "Okay, let&#39;s talk a little bit more about that test set training set methodology.", 
+          "start": 0.58
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "Now what will happen if we only have one data set to work with?", 
+          "start": 6.44
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "For example we&#39;ve got one big draw from our hidden distribution.", 
+          "start": 10.6
+        }, 
+        {
+          "dur": 7.8, 
+          "text": "Well one thing we can do is we can divide that large data set into two smaller sets, and use one for training and one for test.", 
+          "start": 13.82
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "We need to keep them separate.", 
+          "start": 21.62
+        }, 
+        {
+          "dur": 11.52, 
+          "text": "It&#39;s also probably important to make sure that we do randomization before we do that splitting, so that we don&#39;t say by accident end up with all of the winter data in our training data, and all of our summer data in our test data; that would be bad.", 
+          "start": 23.36
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "Now how large do we make our different splits?", 
+          "start": 34.88
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Well these are two things in tension.", 
+          "start": 37.7
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "The larger we make our training set, the better model we&#39;re going to be able to learn.", 
+          "start": 39.5
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "The larger we make our test set, the better we&#39;ll be able to have confidence in our evaluation metrics, we&#39;ll have tighter confidence intervals.", 
+          "start": 44.48
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "If we have a very large data set, things are good.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "If we&#39;ve got a billion examples we might be able to still hold out 10-15% for tests and have strong confidence intervals there.", 
+          "start": 57.64
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "If we have a very small data set, then we might need to do something a little bit more sophisticated like cross-validation.", 
+          "start": 65.3
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "Now there is one classic gotcha that&#39;s worth bringing up, and this is that you do not ever want to train on your test data.", 
+          "start": 71.64
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "This will give you unrealistically strong opinions about how good your model is.", 
+          "start": 81.18
+        }, 
+        {
+          "dur": 11.94, 
+          "text": "In particular, if you ever find yourself on that magic day when you have 100% accuracy on your test data, double check that you have not made a mistake and have accidentally trained on your test data.", 
+          "start": 86.52
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "This can happen, it happens to everybody at one point or another.", 
+          "start": 98.46
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "So before you celebrate and throw a party, double check your data.", 
+          "start": 101.26
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.86, 
+          "text": "Abordons plus en détail la méthodologie\ndes ensembles d&#39;évaluation et d&#39;apprentissage.", 
+          "start": 0.58
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "Que se passe si nous n&#39;utilisons\nqu&#39;un ensemble de données ?", 
+          "start": 6.44
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "Par exemple, nous avons obtenu énormément\nde données suite à notre distribution cachée.", 
+          "start": 10.6
+        }, 
+        {
+          "dur": 7.8, 
+          "text": "Nous pouvons diviser le grand ensemble de données en deux plus petits,\npuis en utiliser un pour l&#39;apprentissage et l&#39;autre pour l&#39;évaluation.", 
+          "start": 13.82
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "Ils doivent rester séparés.", 
+          "start": 21.62
+        }, 
+        {
+          "dur": 11.52, 
+          "text": "Il est également important de nous assurer que nous procédons de manière aléatoire avant de diviser l&#39;ensemble, afin de ne pas nous retrouver accidentellement\navec toutes les données de l&#39;hiver d&#39;un côté pour l&#39;apprentissage et toutes les données de l&#39;été de l&#39;autre pour l&#39;évaluation, car cela fausserait les résultats.", 
+          "start": 23.36
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "Alors, quelle doit être la taille\nde nos différents groupes ?", 
+          "start": 34.88
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Deux aspects se trouvent en tension.", 
+          "start": 37.7
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "Plus l&#39;ensemble d&#39;apprentissage sera grand,\nmeilleur sera le modèle que nous allons pouvoir former.", 
+          "start": 39.5
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "Plus notre ensemble d&#39;évaluation sera grand, plus nos statistiques d&#39;évaluation\nseront fiables et plus nos intervalles de confiance seront courts.", 
+          "start": 44.48
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "Si notre ensemble de données\nest conséquent, tout va bien.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Si nous disposons d&#39;un milliard d&#39;exemples, nous pouvons peut-être en conserver\nentre 10 % et 15 % pour l&#39;évaluation et obtenir des intervalles de confiance fiables.", 
+          "start": 57.64
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Si nous utilisons un très petit ensemble de données, nous devrons éventuellement\nappliquer une méthode un peu plus complexe comme la validation croisée.", 
+          "start": 65.3
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "Il faut évoquer un piège classique :\nn&#39;effectuez jamais l&#39;apprentissage sur vos données d&#39;évaluation.", 
+          "start": 71.64
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "Vous seriez convaincu à tort\nde la pertinence de votre modèle.", 
+          "start": 81.18
+        }, 
+        {
+          "dur": 11.94, 
+          "text": "Vérifiez bien que vous n&#39;avez pas commis d&#39;erreur ni effectué accidentellement l&#39;apprentissage sur vos données d&#39;évaluation,\nsurtout si un jour vous obtenez 100 % d&#39;exactitude pour vos données d&#39;évaluation.", 
+          "start": 86.52
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "Cela peut arriver.\nCela arrive à tout le monde.", 
+          "start": 98.46
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Alors avant de crier victoire,\nvérifiez bien vos données.", 
+          "start": 101.26
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.86, 
+          "text": "테스트 세트와 학습 세트\n방식에 관해 알아보겠습니다.", 
+          "start": 0.58
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "사용할 수 있는 데이터 세트가\n하나밖에 없다면 어떻게 될까요?", 
+          "start": 6.44
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "숨겨진 분포에서 큰 데이터 세트를\n추출해냈다고 해보겠습니다.", 
+          "start": 10.6
+        }, 
+        {
+          "dur": 7.8, 
+          "text": "이 큰 데이터 세트를 작은 세트 2개로 나눈 다음\n각각 학습 및 테스트용으로 쓸 수 있겠죠.", 
+          "start": 13.82
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "이 둘은 별도로 관리해야 합니다.", 
+          "start": 21.62
+        }, 
+        {
+          "dur": 11.52, 
+          "text": "데이터 세트를 나누기 전에 한쪽은 여름, 한쪽은 겨울과 같이\n편중되지 않도록 임의로 데이터를 추출하는 것도 중요합니다.", 
+          "start": 23.36
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "그러면 두 데이터 세트의 크기를\n어떻게 맞춰야 할까요?", 
+          "start": 34.88
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "하나가 커지면 다른 하나가 작아지는데요.", 
+          "start": 37.7
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "학습 세트가 커지면\n학습 모델이 우수해지죠.", 
+          "start": 39.5
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "테스트 세트가 커지면 평가 측정항목의 신뢰도가\n높아지고 신뢰 구간의 간격도 좁아집니다.", 
+          "start": 44.48
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "데이터 세트가 크면 좋습니다.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "표본이 10억 개 정도 있으면 그중 10~15%만\n테스트에 사용해도 확실한 신뢰 구간을 얻을 수 있으니까요.", 
+          "start": 57.64
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "데이터 세트가 아주 작으면 교차 검증처럼\n더욱 정교한 방법을 써야 합니다.", 
+          "start": 65.3
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "테스트 데이터를 학습에 사용해서는\n안 된다는 점을 꼭 기억하세요.", 
+          "start": 71.64
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "자신의 모델이 너무 뛰어나다고\n믿어버리게 되니까요.", 
+          "start": 81.18
+        }, 
+        {
+          "dur": 11.94, 
+          "text": "테스트 데이터의 정확성이 100%라고 나왔다면\n테스트 데이터로 학습시킨 것은 아닌지 확인하세요.", 
+          "start": 86.52
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "누구나 한 번쯤은 하는 실수입니다.", 
+          "start": 98.46
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "모델을 잘 만들었다고 자축하기 전에\n데이터를 한번 더 확인하세요.", 
+          "start": 101.26
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.86, 
+          "text": "Veamos la metodología de conjunto\nde entrenamiento y conjunto de prueba.", 
+          "start": 0.58
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "¿Qué sucede\nsi solo tenemos un conjunto de datos?", 
+          "start": 6.44
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "Por ejemplo, extraemos muchos datos\nde la distribución oculta.", 
+          "start": 10.6
+        }, 
+        {
+          "dur": 7.8, 
+          "text": "Dividimos el conjunto grande en dos pequeños:\nuno para entrenamiento y otro para pruebas.", 
+          "start": 13.82
+        }, 
+        {
+          "dur": 1.74, 
+          "text": "Debemos mantenerlos separados.", 
+          "start": 21.62
+        }, 
+        {
+          "dur": 11.52, 
+          "text": "También hacemos una selección aleatoria\npara que datos del mismo tipo queden juntos.", 
+          "start": 23.36
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "¿Qué tan grandes deben ser las divisiones?", 
+          "start": 34.88
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Estos dos aspectos están en conflicto.", 
+          "start": 37.7
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "A conjunto de entrenamiento más grande,\nmejor la capacidad de aprendizaje del modelo.", 
+          "start": 39.5
+        }, 
+        {
+          "dur": 8.04, 
+          "text": "A mayor conjunto de prueba,\nmás precisos los intervalos de confianza.", 
+          "start": 44.48
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "Es bueno tener\nun conjunto de datos muy grande.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Con miles de millones de ejemplos, el 15% va\na pruebas para intervalos de confianza.", 
+          "start": 57.64
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Con un conjunto de datos más pequeño,\ndebemos usar una validación combinada.", 
+          "start": 65.3
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "Vale la pena mencionar que no debe entrenarse\nel modelo con los datos de prueba,", 
+          "start": 71.64
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "ya que brindarán pronósticos irreales\nsobre la eficacia del modelo.", 
+          "start": 81.18
+        }, 
+        {
+          "dur": 11.94, 
+          "text": "Si los datos de prueba son 100% exactos,\nseguro se usaron esos datos por error.", 
+          "start": 86.52
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "Es un error muy frecuente.", 
+          "start": 98.46
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Antes de celebrar,\nes necesario verificar los datos.", 
+          "start": 101.26
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

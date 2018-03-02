@@ -1,0 +1,1129 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 6.68, 
+          "text": "我们之前曾提到过，\n仅仅拟合训练数据并不足以进行机器学习。", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.024, 
+          "text": "对于机器学习，其实我们感兴趣的是泛化。", 
+          "start": 6.68
+        }, 
+        {
+          "dur": 2.604, 
+          "text": "我们来深入探讨一下这个主题。", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "现在我们有一个数据集，左边是一些垃圾邮件样本，\n右边是一些非垃圾邮件样本。", 
+          "start": 12.3
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "我可以尝试拟合一个线性模型，对垃圾邮件样本和\n非垃圾邮件样本进行某种程度的区分。", 
+          "start": 18.64
+        }, 
+        {
+          "dur": 10.505, 
+          "text": "但这里我要尝试拟合的任何一种线性模型最终\n都会出点错，可能会将这个或那个样本误分类，\n放在线的错误一侧。", 
+          "start": 25.12
+        }, 
+        {
+          "dur": 9.07, 
+          "text": "我可能会决定尝试一种更聪明的方法，\n以针对训练数据获得完全准确的结果，具体方法是\n绘制一条更为复杂的线，可能是像这样的一条线。", 
+          "start": 35.62
+        }, 
+        {
+          "dur": 5.87, 
+          "text": "我要确保我的模型超级聪明，\n可以实现百分之百的准确率。", 
+          "start": 44.69
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "现在，我的所有训练样本都已完全正确分类。", 
+          "start": 50.56
+        }, 
+        {
+          "dur": 3.307, 
+          "text": "这时候会有什么问题呢？", 
+          "start": 56.666
+        }, 
+        {
+          "dur": 4.536, 
+          "text": "问题就是：如果加入新的样本，会怎么样？", 
+          "start": 59.97
+        }, 
+        {
+          "dur": 11.07, 
+          "text": "我最终可能会遇到一些新样本，\n对于这些样本，模型无法很好地进行预测。", 
+          "start": 64.5
+        }, 
+        {
+          "dur": 10.518, 
+          "text": "从某种意义上讲，这个模型最初可能过拟合了训练数据，\n而无法很好地对之前未出现的新数据进行分类。", 
+          "start": 75.57
+        }, 
+        {
+          "dur": 5.475, 
+          "text": "我们已经看到，如果模型过于复杂，\n那么过拟合真的会成为问题。", 
+          "start": 86.08
+        }, 
+        {
+          "dur": 3.405, 
+          "text": "如何才能确保在实践中模型不会过拟合呢？", 
+          "start": 91.55
+        }, 
+        {
+          "dur": 4.561, 
+          "text": "让我们回过头来，从整体上看看在机器学习中，\n我们究竟在尝试做些什么。", 
+          "start": 94.95
+        }, 
+        {
+          "dur": 6.445, 
+          "text": "在非常抽象的层面上，\n我们可以想象有某种隐藏的流程在为我们提供数据。", 
+          "start": 99.51
+        }, 
+        {
+          "dur": 9.156, 
+          "text": "这个隐藏的流程可能就像这样：\n生成垃圾电子邮件或非垃圾电子邮件，\n然后人们会根据自己的看法标记这些邮件。", 
+          "start": 105.955
+        }, 
+        {
+          "dur": 6.756, 
+          "text": "或者是这样的流程：生成小狗照片，\n然后人们将这些照片标记为可爱或不可爱。", 
+          "start": 115.11
+        }, 
+        {
+          "dur": 6.562, 
+          "text": "这个流程可以是任何为我们提供数据的流程，\n而一般情况下，我们无法了解这个流程的完整详情。", 
+          "start": 121.86
+        }, 
+        {
+          "dur": 6.29, 
+          "text": "我们唯一会了解的，\n就是我们从这个流程中采集的具体样本。", 
+          "start": 128.42
+        }, 
+        {
+          "dur": 5.4, 
+          "text": "也就是具体的电子邮件或垃圾邮件，\n或者具体的小狗照片。", 
+          "start": 134.71
+        }, 
+        {
+          "dur": 3.801, 
+          "text": "我们将这些样本称为数据样本。", 
+          "start": 140.11
+        }, 
+        {
+          "dur": 11.223, 
+          "text": "现在，在理想情况下我们希望能够对数据样本\n进行训练，然后知道这个模型会很好地预测\n从该隐藏分布中抽取的新样本。", 
+          "start": 143.91
+        }, 
+        {
+          "dur": 1.936, 
+          "text": "我们如何才能相信模型能做到这一点呢？", 
+          "start": 155.13
+        }, 
+        {
+          "dur": 16.384, 
+          "text": "我们可以追溯到远至14世纪的奥卡姆的威廉，\n使用他提出的一些很好的概念，他是史上第一位\n机器学习理论家，提出了“奥卡姆剃刀”这一概念，\n大意是说模型应尽可能简单。", 
+          "start": 157.06
+        }, 
+        {
+          "dur": 2.555, 
+          "text": "围绕这一概念诞生了一个称为“泛化理论”的完整领域。", 
+          "start": 174.711
+        }, 
+        {
+          "dur": 4.451, 
+          "text": "这是个非常吸引人的领域，但本课程不会过多涉猎。", 
+          "start": 177.26
+        }, 
+        {
+          "dur": 5.912, 
+          "text": "因为我们不需要运用理论，\n实际上我们利用的是经验。", 
+          "start": 181.71
+        }, 
+        {
+          "dur": 6.735, 
+          "text": "我们可以使用的经验策略是，\n从该分布另外取样，然后看看模型效果如何。", 
+          "start": 187.62
+        }, 
+        {
+          "dur": 3.761, 
+          "text": "这种方式称为使用测试集方法。", 
+          "start": 194.35
+        }, 
+        {
+          "dur": 5.074, 
+          "text": "我们从该分布抽取一批数据，\n对这些数据进行训练，这就是训练集。", 
+          "start": 198.11
+        }, 
+        {
+          "dur": 18.456, 
+          "text": "我们再从该分布另外抽取一批数据，称之为测试集，\n如果预测效果好，即预测测试集和预测训练集的效果\n一样好，那么我们就可以满意地确定，\n我们的模型可以很好地泛化到之前未出现的新数据。", 
+          "start": 203.184
+        }, 
+        {
+          "dur": 3.826, 
+          "text": "这里有些注意事项，也就是机器学习的一些细则。", 
+          "start": 221.64
+        }, 
+        {
+          "dur": 7.273, 
+          "text": "第一，我们要以独立且一致的方式从该分布抽取样本。", 
+          "start": 225.46
+        }, 
+        {
+          "dur": 2.692, 
+          "text": "我们不以任何方式主动产生偏差。", 
+          "start": 232.73
+        }, 
+        {
+          "dur": 4.491, 
+          "text": "第二，分布是平稳的，不会随时间发生变化。", 
+          "start": 235.42
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "第三，这里也暗示了，我们始终从同一个分布提取样本，\n不会突然开始从其他分布提取样本。", 
+          "start": 239.91
+        }, 
+        {
+          "dur": 7.03, 
+          "text": "以上是非常关键的假设，我们在监督式机器学习中\n所做的许多工作都是以这些假设为基础。", 
+          "start": 246.57
+        }, 
+        {
+          "dur": 3.111, 
+          "text": "但是在实践中，我们有时会违反这些假设。", 
+          "start": 253.6
+        }, 
+        {
+          "dur": 11.09, 
+          "text": "我们有时可能会违反平稳性假设，\n例如用户的购物行为在节假日或夏季是不同的。", 
+          "start": 256.71
+        }, 
+        {
+          "dur": 7.555, 
+          "text": "如果人们突然认为，其他品种的小狗就像他们\n之前看到小狗一样可爱，\n这时从相同分布抽取样本的行为就可能会改变。", 
+          "start": 267.8
+        }, 
+        {
+          "dur": 1.995, 
+          "text": "潮流不是一成不变的。", 
+          "start": 275.355
+        }, 
+        {
+          "dur": 9.361, 
+          "text": "因此，我们必须知道这些假设，密切关注各项指标，\n这样在违反了这些假设时就能立即知晓。", 
+          "start": 277.35
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.68, 
+          "text": "So we mentioned before that just fitting our training data was not enough to be doing machine learning.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.024, 
+          "text": "Machine learning we&#39;re really interested in generalization.", 
+          "start": 6.68
+        }, 
+        {
+          "dur": 2.604, 
+          "text": "Let&#39;s dive into that topic a little bit more.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "So here we&#39;ve got a data set where I&#39;ve got some spam examples here on the left and some not spam examples over on the right.", 
+          "start": 12.3
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "If I wanted to I could try and fit a linear model to sort of disambiguate the spam from the not spam.", 
+          "start": 18.64
+        }, 
+        {
+          "dur": 10.505, 
+          "text": "But any sort of linear model that I would try and fit here would end up making a little bit of error, maybe this guy would be miss-classified or that guy would be miss-classified just being on the wrong side of the line.", 
+          "start": 25.12
+        }, 
+        {
+          "dur": 9.07, 
+          "text": "And I might decide to try and be clever and get a hundred percent accuracy on my training data by drawing a more complicated line, maybe it would look like something like this.", 
+          "start": 35.62
+        }, 
+        {
+          "dur": 5.87, 
+          "text": "I&#39;m gonna go and make sure that my model&#39;s going to be super clever and get a hundred percent accuracy.", 
+          "start": 44.69
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "All of my training examples are now completely correctly classified.", 
+          "start": 50.56
+        }, 
+        {
+          "dur": 3.307, 
+          "text": "What&#39;s the issue here?", 
+          "start": 56.666
+        }, 
+        {
+          "dur": 4.536, 
+          "text": "Well the issue is: what if new examples are coming in?", 
+          "start": 59.97
+        }, 
+        {
+          "dur": 11.07, 
+          "text": "I might end up with some new examples that the model is just not really well suited to doing a good job on.", 
+          "start": 64.5
+        }, 
+        {
+          "dur": 10.518, 
+          "text": "So in a sense, this model has maybe over-fit our training data, you know, originally and it doesn&#39;t do a good job of classifying new previously unseen data.", 
+          "start": 75.57
+        }, 
+        {
+          "dur": 5.475, 
+          "text": "Okay, so we&#39;ve seen that if our models are too complicated that over-fitting is a real problem.", 
+          "start": 86.08
+        }, 
+        {
+          "dur": 3.405, 
+          "text": "How can we make sure that our models are not over-fit in practice?", 
+          "start": 91.55
+        }, 
+        {
+          "dur": 4.561, 
+          "text": "Well let&#39;s step back and take a look at the big picture of what it is that we are trying to do in machine learning.", 
+          "start": 94.95
+        }, 
+        {
+          "dur": 6.445, 
+          "text": "At a very abstract level, we can imagine that there is some hidden process that is giving us data.", 
+          "start": 99.51
+        }, 
+        {
+          "dur": 9.156, 
+          "text": "And that hidden process might be something like the process by which emails are generated as either spam or not spam and people label them as such through their perceptions.", 
+          "start": 105.955
+        }, 
+        {
+          "dur": 6.756, 
+          "text": "Or the process by which pictures of puppies are generated and people label them as cute or non cute.", 
+          "start": 115.11
+        }, 
+        {
+          "dur": 6.562, 
+          "text": "The process can be anything that gives us data and in general, we are not going to know the full details of that process.", 
+          "start": 121.86
+        }, 
+        {
+          "dur": 6.29, 
+          "text": "The only thing we&#39;re gonna know, is the concrete examples that we get to sample from that process.", 
+          "start": 128.42
+        }, 
+        {
+          "dur": 5.4, 
+          "text": "So specific pieces of email or spam, specific pictures of puppies.", 
+          "start": 134.71
+        }, 
+        {
+          "dur": 3.801, 
+          "text": "We call those samples our data samples.", 
+          "start": 140.11
+        }, 
+        {
+          "dur": 11.223, 
+          "text": "Now ideally, we would like to be able to train on a data sample and then know that it&#39;s going to do well on new draws from that hidden distribution.", 
+          "start": 143.91
+        }, 
+        {
+          "dur": 1.936, 
+          "text": "How will we able to trust that?", 
+          "start": 155.13
+        }, 
+        {
+          "dur": 16.384, 
+          "text": "Well one thing that we could do, is we could use some nice ideas that go back as far as William of Ockham from the 14th century, our first machine learning theoretician, who developed the idea of Ockham&#39;s Razor, basically saying that a model should be as simple as possible.", 
+          "start": 157.06
+        }, 
+        {
+          "dur": 2.555, 
+          "text": "There&#39;s a whole field around this called generalization theory.", 
+          "start": 174.711
+        }, 
+        {
+          "dur": 4.451, 
+          "text": "And it&#39;s a fascinating field, we&#39;re not going to get into that too much in this course.", 
+          "start": 177.26
+        }, 
+        {
+          "dur": 5.912, 
+          "text": "Because we don&#39;t have to use theory, we can in fact use empirical stuff.", 
+          "start": 181.71
+        }, 
+        {
+          "dur": 6.735, 
+          "text": "And the empirical strategy we can use is too take another draw from that distribution and see how well we do.", 
+          "start": 187.62
+        }, 
+        {
+          "dur": 3.761, 
+          "text": "This is called using a test set methodology.", 
+          "start": 194.35
+        }, 
+        {
+          "dur": 5.074, 
+          "text": "So we pull one draw of data from that distribution, we train on that, that&#39;s our training set.", 
+          "start": 198.11
+        }, 
+        {
+          "dur": 18.456, 
+          "text": "We take another draw of data from that distribution, we call it our test set, and if we do a good job, about as well at predicting on our test set as we do on our training set, then we&#39;ve got a pretty good feeling that our models are going to be able to generalize well onto new, previously unseen data.", 
+          "start": 203.184
+        }, 
+        {
+          "dur": 3.826, 
+          "text": "Now there&#39;s a couple of caveats here - this is sort of the fine print of machine learning.", 
+          "start": 221.64
+        }, 
+        {
+          "dur": 7.273, 
+          "text": "The first is that we are drawing independently and identically from that distribution.", 
+          "start": 225.46
+        }, 
+        {
+          "dur": 2.692, 
+          "text": "We are not biasing ourselves in any way.", 
+          "start": 232.73
+        }, 
+        {
+          "dur": 4.491, 
+          "text": "The second is that distribution is stationary, it doesn&#39;t change over time.", 
+          "start": 235.42
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "And the third, you know, kind of implied here, is that we are always pulling from the same distribution, we don&#39;t suddenly start pulling from a different one.", 
+          "start": 239.91
+        }, 
+        {
+          "dur": 7.03, 
+          "text": "Now those are critical assumptions and they sort of form the bedrock of a lot of what we do in supervised machine-learning.", 
+          "start": 246.57
+        }, 
+        {
+          "dur": 3.111, 
+          "text": "But in practice sometimes we do violate them.", 
+          "start": 253.6
+        }, 
+        {
+          "dur": 11.09, 
+          "text": "The stationarity assumption might be violated if say user behavior on shopping, changes over the holiday season versus in the summer.", 
+          "start": 256.71
+        }, 
+        {
+          "dur": 7.555, 
+          "text": "And the pulling from the same distribution might change if people suddenly decide that a different breed of puppies is as cute as they saw before.", 
+          "start": 267.8
+        }, 
+        {
+          "dur": 1.995, 
+          "text": "Fashions do change.", 
+          "start": 275.355
+        }, 
+        {
+          "dur": 9.361, 
+          "text": "So it&#39;s important for us to be aware of these assumptions and also to pay careful attention to our metrics, any time we know that these assumptions might be violated.", 
+          "start": 277.35
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.68, 
+          "text": "Nous savons que le machine learning\nne consiste pas seulement à ajuster les données d&#39;apprentissage.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.024, 
+          "text": "Ce qui nous intéresse vraiment, c&#39;est la généralisation.", 
+          "start": 6.68
+        }, 
+        {
+          "dur": 2.604, 
+          "text": "Examinons ce sujet un peu plus en détail.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Voici un ensemble de données qui contient des exemples de spam\nici à gauche et des exemples d&#39;e-mails légitimes à droite.", 
+          "start": 12.3
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "Je pourrais essayer de mettre en place un modèle linéaire\npour distinguer le spam des e-mails légitimes.", 
+          "start": 18.64
+        }, 
+        {
+          "dur": 10.505, 
+          "text": "Mais quel que soit le modèle linéaire que j&#39;essaie d&#39;appliquer, il comportera quelques erreurs.\nPeut-être que cet élément-ci sera classé dans la mauvaise catégorie ou que celui-là sera placé du mauvais côté de la ligne.", 
+          "start": 25.12
+        }, 
+        {
+          "dur": 9.07, 
+          "text": "Je pourrais essayer de viser un taux d&#39;exactitude de 100 % pour mes données d&#39;apprentissage\nen traçant une ligne plus complexe, qui ressemblerait peut-être un peu à celle-ci.", 
+          "start": 35.62
+        }, 
+        {
+          "dur": 5.87, 
+          "text": "Je veux être sûr de créer un modèle très intelligent\net d&#39;obtenir un taux d&#39;exactitude de 100 %.", 
+          "start": 44.69
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "À présent, tous mes exemples d&#39;apprentissage sont correctement classés.", 
+          "start": 50.56
+        }, 
+        {
+          "dur": 3.307, 
+          "text": "Quel est le problème ici ?", 
+          "start": 56.666
+        }, 
+        {
+          "dur": 4.536, 
+          "text": "Que se passera-t-il si de nouveaux exemples se présentent ?", 
+          "start": 59.97
+        }, 
+        {
+          "dur": 11.07, 
+          "text": "Il s&#39;agira peut-être d&#39;exemples auxquels le modèle\nn&#39;est pas bien adapté et qu&#39;il ne traitera pas correctement.", 
+          "start": 64.5
+        }, 
+        {
+          "dur": 10.518, 
+          "text": "Ce modèle a peut-être surappris les données d&#39;apprentissage et il ne classera pas\ncorrectement les nouvelles données qui n&#39;étaient pas visibles précédemment.", 
+          "start": 75.57
+        }, 
+        {
+          "dur": 5.475, 
+          "text": "Nous voyons donc que des modèles trop complexes\nprésentent un risque élevé de surapprentissage.", 
+          "start": 86.08
+        }, 
+        {
+          "dur": 3.405, 
+          "text": "Dans la pratique, comment pouvons-nous éviter le surapprentissage ?", 
+          "start": 91.55
+        }, 
+        {
+          "dur": 4.561, 
+          "text": "Nous devons prendre du recul et avoir une vue d&#39;ensemble\nde ce que le machine learning tente de réaliser.", 
+          "start": 94.95
+        }, 
+        {
+          "dur": 6.445, 
+          "text": "À un niveau très abstrait, nous pouvons imaginer\nun processus caché qui nous fournit des données.", 
+          "start": 99.51
+        }, 
+        {
+          "dur": 9.156, 
+          "text": "Il peut s&#39;agir du processus qui génère des e-mails de spam ou légitimes,\nauxquels les utilisateurs attribuent l&#39;une ou l&#39;autre de ces étiquettes selon leur propre perception.", 
+          "start": 105.955
+        }, 
+        {
+          "dur": 6.756, 
+          "text": "Ou du processus qui génère des images de chiots\nque les utilisateurs étiquettent comme mignonnes ou non.", 
+          "start": 115.11
+        }, 
+        {
+          "dur": 6.562, 
+          "text": "Il s&#39;agit de n&#39;importe quel processus qui nous fournit des données\net en général, nous ne savons pas tout à son sujet.", 
+          "start": 121.86
+        }, 
+        {
+          "dur": 6.29, 
+          "text": "Nous disposons seulement d&#39;exemples concrets\nque nous avons échantillonnés à partir de ce processus.", 
+          "start": 128.42
+        }, 
+        {
+          "dur": 5.4, 
+          "text": "Du spam ou des e-mails particuliers, certaines images de chiots.", 
+          "start": 134.71
+        }, 
+        {
+          "dur": 3.801, 
+          "text": "Ce sont nos échantillons de données.", 
+          "start": 140.11
+        }, 
+        {
+          "dur": 11.223, 
+          "text": "Nous souhaitons que l&#39;échantillon serve à l&#39;apprentissage,\npuis que les nouvelles données extraites de la distribution cachée soient correctement traitées.", 
+          "start": 143.91
+        }, 
+        {
+          "dur": 1.936, 
+          "text": "Comment garantir un tel résultat ?", 
+          "start": 155.13
+        }, 
+        {
+          "dur": 16.384, 
+          "text": "Premièrement, nous pouvons nous inspirer des bonnes idées de Guillaume d&#39;Ockham, premier théoricien du machine learning\nayant vécu au XIVe siècle, qui a inventé le principe du rasoir d&#39;Ockham selon lequel un modèle doit être aussi simple que possible.", 
+          "start": 157.06
+        }, 
+        {
+          "dur": 2.555, 
+          "text": "Cette idée est à l&#39;origine de la théorie de la généralisation.", 
+          "start": 174.711
+        }, 
+        {
+          "dur": 4.451, 
+          "text": "C&#39;est un sujet passionnant, mais nous n&#39;allons pas\nle traiter en profondeur dans ce cours.", 
+          "start": 177.26
+        }, 
+        {
+          "dur": 5.912, 
+          "text": "Au lieu de la théorie, nous pouvons utiliser des données empiriques.", 
+          "start": 181.71
+        }, 
+        {
+          "dur": 6.735, 
+          "text": "La stratégie empirique consiste à extraire\nd&#39;autres données de la distribution et à voir ce qu&#39;elles donnent.", 
+          "start": 187.62
+        }, 
+        {
+          "dur": 3.761, 
+          "text": "On appelle cela un ensemble d&#39;évaluation.", 
+          "start": 194.35
+        }, 
+        {
+          "dur": 5.074, 
+          "text": "Nous effectuons donc une première extraction,\nqui correspond à l&#39;ensemble d&#39;apprentissage.", 
+          "start": 198.11
+        }, 
+        {
+          "dur": 18.456, 
+          "text": "Nous extrayons ensuite d&#39;autres données de la distribution pour créer un ensemble d&#39;évaluation, et si la prédiction est aussi exacte\npour cet ensemble que pour l&#39;ensemble d&#39;apprentissage, il est probable que nos modèles sauront la généraliser à de nouvelles données qui n&#39;étaient pas visibles précédemment.", 
+          "start": 203.184
+        }, 
+        {
+          "dur": 3.826, 
+          "text": "Il existe quelques limites qui font partie\ndes subtilités du machine learning.", 
+          "start": 221.64
+        }, 
+        {
+          "dur": 7.273, 
+          "text": "Premièrement, les extractions à partir de la distribution\nsont indépendantes et identiques.", 
+          "start": 225.46
+        }, 
+        {
+          "dur": 2.692, 
+          "text": "Nous n&#39;introduisons aucun biais.", 
+          "start": 232.73
+        }, 
+        {
+          "dur": 4.491, 
+          "text": "Deuxièmement, la distribution est stationnaire et ne change pas au fil du temps.", 
+          "start": 235.42
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Troisièmement, et c&#39;est implicite, l&#39;extraction s&#39;effectue toujours\nà partir de la même distribution : nous n&#39;en changeons pas soudainement en cours de route.", 
+          "start": 239.91
+        }, 
+        {
+          "dur": 7.03, 
+          "text": "Il s&#39;agit de principes essentiels qui sont à la base\nde la plupart des activités de machine learning supervisé.", 
+          "start": 246.57
+        }, 
+        {
+          "dur": 3.111, 
+          "text": "Dans la pratique, il nous arrive d&#39;y déroger.", 
+          "start": 253.6
+        }, 
+        {
+          "dur": 11.09, 
+          "text": "Nous renonçons à la stationnarité si, par exemple, le comportement d&#39;achat\ndes clients n&#39;est pas le même en été que pendant les fêtes.", 
+          "start": 256.71
+        }, 
+        {
+          "dur": 7.555, 
+          "text": "Nous pouvons changer de distribution si les utilisateurs décident soudain\nqu&#39;une autre race de chiots est aussi mignonne que celles vues auparavant.", 
+          "start": 267.8
+        }, 
+        {
+          "dur": 1.995, 
+          "text": "La mode évolue.", 
+          "start": 275.355
+        }, 
+        {
+          "dur": 9.361, 
+          "text": "Il est donc important de connaître ces principes et de faire très attention à nos statistiques\nchaque fois que nous savons qu&#39;ils risquent de ne pas être applicables.", 
+          "start": 277.35
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.68, 
+          "text": "머신러닝을 하려면 학습 데이터를 모델에 맞추는 것만으로는\n충분치 않다고 말씀드렸습니다.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.024, 
+          "text": "머신러닝에서는 일반화가 정말 중요합니다.", 
+          "start": 6.68
+        }, 
+        {
+          "dur": 2.604, 
+          "text": "이 주제를 좀 더 살펴보도록 하죠.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "데이터 세트 왼쪽에는 스팸 사례가,\n오른쪽에는 스팸이 아닌 사례가 있습니다.", 
+          "start": 12.3
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "이렇게 스팸 여부를 구분하는 선형 모델을 그릴 수 있습니다.", 
+          "start": 18.64
+        }, 
+        {
+          "dur": 10.505, 
+          "text": "하지만 선형 모델을 어떻게 그어보아도 결국 약간의 오류가 생깁니다.\n이 항목도, 이 항목도 분류가 잘못되어 버리죠.", 
+          "start": 25.12
+        }, 
+        {
+          "dur": 9.07, 
+          "text": "정확성이 100%인 학습 데이터를 얻기 위해\n조금 더 복잡한 선을 그으면 이렇게 됩니다.", 
+          "start": 35.62
+        }, 
+        {
+          "dur": 5.87, 
+          "text": "모델 성능이 매우 뛰어나서 100% 정확성을 보이도록 말입니다.", 
+          "start": 44.69
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "이제 모든 학습 사례가 정확하게 분류됐습니다.", 
+          "start": 50.56
+        }, 
+        {
+          "dur": 3.307, 
+          "text": "여기서 문제는 무엇일까요?", 
+          "start": 56.666
+        }, 
+        {
+          "dur": 4.536, 
+          "text": "문제는 새로운 사례가 들어올 경우입니다.", 
+          "start": 59.97
+        }, 
+        {
+          "dur": 11.07, 
+          "text": "새로운 사례가 들어오면 모델이 잘 들어맞지 않고\n결과도 좋지 않을 수 있습니다.", 
+          "start": 64.5
+        }, 
+        {
+          "dur": 10.518, 
+          "text": "이런 면에서 보자면, 이 모델은 학습 데이터에 과적합되어 있고\n이전에는 나타나지 않았던 새로운 데이터를 분류하는 데 적합하지 않습니다.", 
+          "start": 75.57
+        }, 
+        {
+          "dur": 5.475, 
+          "text": "이렇듯 모델이 지나치게 복잡한 것,\n즉 과적합은 문제가 됩니다.", 
+          "start": 86.08
+        }, 
+        {
+          "dur": 3.405, 
+          "text": "모델 과적합이 발생하지 않게 하려면 어떻게 해야 할까요?", 
+          "start": 91.55
+        }, 
+        {
+          "dur": 4.561, 
+          "text": "한 걸음 물러서서 우리가 머신러닝으로\n무엇을 하려고 하는지 생각해 봅시다.", 
+          "start": 94.95
+        }, 
+        {
+          "dur": 6.445, 
+          "text": "추상적으로, 우리에게 데이터를 제공하는\n어떤 숨겨진 프로세스가 있다고 볼 수 있죠.", 
+          "start": 99.51
+        }, 
+        {
+          "dur": 9.156, 
+          "text": "이메일이 스팸 또는 스팸이 아닌 것으로 지정되고\n사람들이 이를 인식하여 분류하는 과정이 바로 이러한 숨겨진 프로세스일 겁니다.", 
+          "start": 105.955
+        }, 
+        {
+          "dur": 6.756, 
+          "text": "또는 강아지 사진이 만들어지고 난 다음 사람들이\n이를 귀여움, 귀엽지 않음으로 분류하는 프로세스일 수도 있죠.", 
+          "start": 115.11
+        }, 
+        {
+          "dur": 6.562, 
+          "text": "데이터가 생성되는 모든 과정이 이러한 프로세스가 될 수 있습니다.\n우리가 이 프로세스를 완전히 알게 되지는 않습니다.", 
+          "start": 121.86
+        }, 
+        {
+          "dur": 6.29, 
+          "text": "우리가 알게 되는 것은 그러한 프로세스에서\n추출한 구체적인 사례들뿐입니다.", 
+          "start": 128.42
+        }, 
+        {
+          "dur": 5.4, 
+          "text": "이메일의 특정 부분이나 스팸, 특정 강아지 사진과 같은 것들이죠.", 
+          "start": 134.71
+        }, 
+        {
+          "dur": 3.801, 
+          "text": "이걸 데이터 샘플이라고 합니다.", 
+          "start": 140.11
+        }, 
+        {
+          "dur": 11.223, 
+          "text": "데이터 샘플로 모델을 학습시킨 다음 숨겨진 데이터 분포에서\n새로운 사례를 가져왔을 때 좋은 결과를 낼 수 있으면 가장 좋겠죠.", 
+          "start": 143.91
+        }, 
+        {
+          "dur": 1.936, 
+          "text": "그 결과를 어떻게 신뢰할 수 있을까요?", 
+          "start": 155.13
+        }, 
+        {
+          "dur": 16.384, 
+          "text": "오컴의 윌리엄이 살았던 14세기까지 돌아가 봅시다. 최초의 머신러닝 이론가라고 할 수 있는 그는 &#39;모델은 가능한 한 단순해야 한다&#39;는 &#39;오컴의 면도날&#39; 원리를 발전시켰습니다.", 
+          "start": 157.06
+        }, 
+        {
+          "dur": 2.555, 
+          "text": "이 원리를 기반으로 한 것이 일반화 이론입니다.", 
+          "start": 174.711
+        }, 
+        {
+          "dur": 4.451, 
+          "text": "일반화는 매력적인 이론이지만\n오늘 강의에서는 자세히 다루지 않겠습니다.", 
+          "start": 177.26
+        }, 
+        {
+          "dur": 5.912, 
+          "text": "실제로는 경험적인 접근방식을 사용하기 때문에\n이론을 사용할 필요가 없거든요.", 
+          "start": 181.71
+        }, 
+        {
+          "dur": 6.735, 
+          "text": "즉, 데이터 분포에서 새로운 사례를 뽑아 모델을 시험해 보는 겁니다.", 
+          "start": 187.62
+        }, 
+        {
+          "dur": 3.761, 
+          "text": "이를 테스트 세트 방법이라고 합니다.", 
+          "start": 194.35
+        }, 
+        {
+          "dur": 5.074, 
+          "text": "데이터 분포에서 하나의 데이터 사례를 추출하여 모델을 학습시킵니다.\n이게 학습 세트가 되죠.", 
+          "start": 198.11
+        }, 
+        {
+          "dur": 18.456, 
+          "text": "그런 다음 사례를 하나 더 추출하여 테스트 세트로 만듭니다.\n학습 세트에서만큼 테스트 세트에서도 좋은 예측값을 얻으면\n이전에 보지 못했던 새로운 데이터도 제대로 일반화할 수 있을 겁니다.", 
+          "start": 203.184
+        }, 
+        {
+          "dur": 3.826, 
+          "text": "이제 몇 가지 주의해야 할 점이 있습니다.", 
+          "start": 221.64
+        }, 
+        {
+          "dur": 7.273, 
+          "text": "첫째는 데이터 분포에서 사례를 추출할 때\n독립적, 개별적으로 추출해야 한다는 점입니다.", 
+          "start": 225.46
+        }, 
+        {
+          "dur": 2.692, 
+          "text": "어떤 식으로든 편향되어서는 안 됩니다.", 
+          "start": 232.73
+        }, 
+        {
+          "dur": 4.491, 
+          "text": "둘째는 이 분포가 정상성을 보이며\n시간이 지나도 변하지 않아야 한다는 점입니다.", 
+          "start": 235.42
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "셋째는 여기에서도 나타났지만 항상 동일한 데이터 분포를 사용해야 하며\n갑자기 새로운 분포에서 사례를 추출하면 안 된다는 겁니다.", 
+          "start": 239.91
+        }, 
+        {
+          "dur": 7.03, 
+          "text": "이러한 가정들은 매우 중요하며 지도 머신러닝의 기초가 됩니다.", 
+          "start": 246.57
+        }, 
+        {
+          "dur": 3.111, 
+          "text": "하지만 실제로는 이러한 가정이 지켜지지 않을 때도 있습니다.", 
+          "start": 253.6
+        }, 
+        {
+          "dur": 11.09, 
+          "text": "휴가 시즌과 여름 시즌에 변화를 보이는 사용자 쇼핑 행동과 같은 경우\n정상성 가정이 지켜지지 않을 수도 있습니다.", 
+          "start": 256.71
+        }, 
+        {
+          "dur": 7.555, 
+          "text": "사람들이 갑자기 다른 종류의 강아지도 이전에 본 강아지만큼 귀엽다고 생각하면\n동일한 데이터 분포에서 추출한다는 가정도 바뀔 수 있습니다.", 
+          "start": 267.8
+        }, 
+        {
+          "dur": 1.995, 
+          "text": "유행은 변하기 마련이니까요.", 
+          "start": 275.355
+        }, 
+        {
+          "dur": 9.361, 
+          "text": "따라서 이러한 가정을 염두에 두고 측정항목에 특히 주의해야 합니다.\n언제든지 가정은 바뀔 수도 있으니까요.", 
+          "start": 277.35
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.68, 
+          "text": "Ajustar los datos de entrenamiento\nno es suficiente para el aprendizaje automático.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.024, 
+          "text": "En el aprendizaje automático,\nnos interesa la generalización.", 
+          "start": 6.68
+        }, 
+        {
+          "dur": 2.604, 
+          "text": "Hablemos sobre ese tema.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "En este conjunto de datos, tenemos\nejemplos de &quot;es spam&quot; a la izquierda y de &quot;no es spam&quot; a la derecha.", 
+          "start": 12.3
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "Puedo intentar ajustar un modelo lineal\npara discriminar el grupo de &quot;es spam&quot; del de &quot;no es spam&quot;.", 
+          "start": 18.64
+        }, 
+        {
+          "dur": 10.505, 
+          "text": "Pero este modelo tendría un pequeño error:\nalgunos elementos estarían clasificados incorrectamente.", 
+          "start": 25.12
+        }, 
+        {
+          "dur": 9.07, 
+          "text": "Si intento tener una exactitud del 100% en los datos de entrenamiento\ncon una línea más compleja, se vería así.", 
+          "start": 35.62
+        }, 
+        {
+          "dur": 5.87, 
+          "text": "Me aseguro de que mi modelo tendrá una exactitud del 100%.", 
+          "start": 44.69
+        }, 
+        {
+          "dur": 6.08, 
+          "text": "Todos mis ejemplos de entrenamiento\nestán clasificados correctamente.", 
+          "start": 50.56
+        }, 
+        {
+          "dur": 3.307, 
+          "text": "¿Cuál es el problema aquí?", 
+          "start": 56.666
+        }, 
+        {
+          "dur": 4.536, 
+          "text": "¿Qué sucede si hay ejemplos nuevos?", 
+          "start": 59.97
+        }, 
+        {
+          "dur": 11.07, 
+          "text": "El modelo no estaría adaptado\npara algunos de esos ejemplos nuevos.", 
+          "start": 64.5
+        }, 
+        {
+          "dur": 10.518, 
+          "text": "Tal vez, el modelo sobreajuste los datos de entrenamiento\ny no se adapte correctamente a datos nuevos.", 
+          "start": 75.57
+        }, 
+        {
+          "dur": 5.475, 
+          "text": "Vimos que, si nuestros modelos son demasiado complejos,\nel sobreajuste es un problema real.", 
+          "start": 86.08
+        }, 
+        {
+          "dur": 3.405, 
+          "text": "¿Cómo nos aseguramos de que no estamos sobreajustando?", 
+          "start": 91.55
+        }, 
+        {
+          "dur": 4.561, 
+          "text": "Veamos el panorama completo\nde lo que intentamos hacer con el aprendizaje automático.", 
+          "start": 94.95
+        }, 
+        {
+          "dur": 6.445, 
+          "text": "En un nivel muy abstracto, podemos imaginar\nun proceso oculto que nos proporciona datos.", 
+          "start": 99.51
+        }, 
+        {
+          "dur": 9.156, 
+          "text": "Puede ser similar a la categorización de correos spam,\ny que las personas etiquetan como tales según sus percepciones.", 
+          "start": 105.955
+        }, 
+        {
+          "dur": 6.756, 
+          "text": "O el proceso mediante el cual se generan\nfotos de cachorros, y que las personas las etiquetan como tiernos o no.", 
+          "start": 115.11
+        }, 
+        {
+          "dur": 6.562, 
+          "text": "El proceso puede ser cualquiera que nos proporcione datos y,\nnormalmente, no conocemos los detalles específicos de este proceso.", 
+          "start": 121.86
+        }, 
+        {
+          "dur": 6.29, 
+          "text": "Solo conocemos los ejemplos concretos\nde los que obtenemos muestras.", 
+          "start": 128.42
+        }, 
+        {
+          "dur": 5.4, 
+          "text": "Spam, correos o fotos específicas de cachorros.", 
+          "start": 134.71
+        }, 
+        {
+          "dur": 3.801, 
+          "text": "Esas muestras las llamamos muestras de datos.", 
+          "start": 140.11
+        }, 
+        {
+          "dur": 11.223, 
+          "text": "Idealmente, quisiéramos entrenar una muestra de datos y, luego,\nsaber si servirán en extracciones nuevas de esa distribución oculta.", 
+          "start": 143.91
+        }, 
+        {
+          "dur": 1.936, 
+          "text": "¿Cómo obtenemos resultados confiables?", 
+          "start": 155.13
+        }, 
+        {
+          "dur": 16.384, 
+          "text": "Podemos recurrir a Guillermo de Ockham, del siglo XIV que fue el primer teórico del aprendizaje automático y su Navaja de Ockham, idea que afirma que un modelo debe ser lo más simple posible.", 
+          "start": 157.06
+        }, 
+        {
+          "dur": 2.555, 
+          "text": "Hay un campo completo\nque estudia esta teoría de generalización.", 
+          "start": 174.711
+        }, 
+        {
+          "dur": 4.451, 
+          "text": "Y es fascinante,\npero no profundizaremos demasiado en este curso.", 
+          "start": 177.26
+        }, 
+        {
+          "dur": 5.912, 
+          "text": "Como no usamos teoría,\npodemos emplear una estrategia empírica.", 
+          "start": 181.71
+        }, 
+        {
+          "dur": 6.735, 
+          "text": "Como estrategia empírica, podemos tomar\notra extracción de esa distribución y ver cómo se desempeña.", 
+          "start": 187.62
+        }, 
+        {
+          "dur": 3.761, 
+          "text": "Usamos la metodología de un conjunto de prueba.", 
+          "start": 194.35
+        }, 
+        {
+          "dur": 5.074, 
+          "text": "Extraemos datos de esa distribución,\nlos entrenamos y obtenemos el conjunto de entrenamiento.", 
+          "start": 198.11
+        }, 
+        {
+          "dur": 18.456, 
+          "text": "Extraemos más datos que usamos como conjunto de prueba; si las predicciones\nson acertadas, obtenemos generalizaciones correctas sobre datos nuevos.", 
+          "start": 203.184
+        }, 
+        {
+          "dur": 3.826, 
+          "text": "Hay algunas consideraciones:\nEsta es la letra pequeña del aprendizaje automático.", 
+          "start": 221.64
+        }, 
+        {
+          "dur": 7.273, 
+          "text": "La primera es que hacemos extracciones de esa distribución\nde forma independiente y sin discriminaciones.", 
+          "start": 225.46
+        }, 
+        {
+          "dur": 2.692, 
+          "text": "No manipulamos los resultados de ninguna manera.", 
+          "start": 232.73
+        }, 
+        {
+          "dur": 4.491, 
+          "text": "La segunda es que la distribución es estacionaria:\nno cambia con el tiempo.", 
+          "start": 235.42
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Y la tercera es que siempre extraemos datos de la misma distribución.\nNo cambiamos.", 
+          "start": 239.91
+        }, 
+        {
+          "dur": 7.03, 
+          "text": "Estas premisas fundamentales conforman las bases\ndel aprendizaje automático supervisado.", 
+          "start": 246.57
+        }, 
+        {
+          "dur": 3.111, 
+          "text": "Pero a veces, en la práctica, las incumplimos.", 
+          "start": 253.6
+        }, 
+        {
+          "dur": 11.09, 
+          "text": "Las incumplimos si, por ejemplo,\nel usuario cambia su comportamiento de compras en las vacaciones.", 
+          "start": 256.71
+        }, 
+        {
+          "dur": 7.555, 
+          "text": "La extracción de la misma distribución puede cambiar si las personas\ndeciden que otra raza de cachorros es tan adorable como otros.", 
+          "start": 267.8
+        }, 
+        {
+          "dur": 1.995, 
+          "text": "Las modas cambian.", 
+          "start": 275.355
+        }, 
+        {
+          "dur": 9.361, 
+          "text": "Debemos estar atentos a estas premisas y a nuestras métricas\nsi creemos que pueden incumplirse las premisas.", 
+          "start": 277.35
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

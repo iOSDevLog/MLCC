@@ -1,0 +1,779 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 4.74, 
+          "text": "到目前为止，我们已经讨论了二元类别问题的分类。", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "属于垃圾邮件还是非垃圾邮件？\n小狗可爱还是不可爱？", 
+          "start": 5.28
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "设有分类阈值的逻辑回归就非常适合用来处理这类二元类别分类问题。", 
+          "start": 9.44
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "但是在现实世界中，我们通常不仅仅是在两个类别之间做出选择，\n有时我们需要从一系列类别中的某个类别内选择一个标签。", 
+          "start": 16.64
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "比方说，这个对象是动物、蔬菜、矿物质还是人造物体？", 
+          "start": 23.96
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "那个颜色是红色、橙色、绿色、蓝色、靛蓝色还是紫色？", 
+          "start": 28.64
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "照片中拍的是苹果、汽车、香蕉、小狗还是别的什么。", 
+          "start": 32.34
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "在许多领域中，如果能做好多类别分类是非常有益的。", 
+          "start": 36.68
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "有趣的是，我们现在能够借助二元类别分类开发出一些我们已经掌握的技术。", 
+          "start": 43.14
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "要做到这一点，一个典型的方式就是通过一对多的多类别分类。", 
+          "start": 49.12
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "我们所做的基本上就是将模型中的一个逻辑回归输出节点用于每个可能的类别。", 
+          "start": 55.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "因此，一个节点可能会识别“这是苹果吗？”，是/不是。\n另一个节点可能会识别“这是熊的照片吗？”，是/不是。", 
+          "start": 61.68
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "第三个节点可能会识别“这是糖果吗？”，是或不是。\n我们将一个输出节点用于我们所观察的每个可能的类别。", 
+          "start": 68.24
+        }, 
+        {
+          "dur": 13.3, 
+          "text": "我们只需让模型的开头具有不同的输出节点，并通过模型的其余部分\n共享内部表示法，进而通过合理高效的方式同时对这些节点进行训练，\n便可以在深度网络中做到这一点。", 
+          "start": 75.4
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "在某些问题中，我们知道示例一次只属于一个类别。", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "例如，一种指定的水果要么是香蕉，要么是梨，要么是苹果。", 
+          "start": 94.74
+        }, 
+        {
+          "dur": 12.68, 
+          "text": "在这种情况下，我们希望所有小输出节点的概率总和正好是1；\n要实现这一点，我们可以使用一种名为Softmax的函数。", 
+          "start": 100.4
+        }, 
+        {
+          "dur": 10.66, 
+          "text": "Softmax本质上就是对我们所使用的这种逻辑回归的泛化，\n只不过泛化成了多个类别。", 
+          "start": 113.08
+        }, 
+        {
+          "dur": 6.36, 
+          "text": "在遇到单一标签的多类别分类问题时，我们使用会Softmax。", 
+          "start": 123.74
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "这样能够将一些对问题有用的结构进行编码，\n并能让我们将这些输出用作经过良好校准的概率。", 
+          "start": 130.1
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "在其他情况下，我们可能会遇到多标签分类问题。", 
+          "start": 138.34
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "例如，图片中可能同时出现了苹果和香蕉。", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "或者，图片中可能出现了3条不同的狗，亦或是出现了1条狗和1个人，\n而我们希望能够在同一示例中识别上述所有不同的标签。", 
+          "start": 147.02
+        }, 
+        {
+          "dur": 12.76, 
+          "text": "在这种情况下，我们确实需要使用一对多分类策略；\n此时，系统会单独计算每个输出，并且输出的总和不一定都是1。", 
+          "start": 154.02
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "在训练多类别分类时，我们有几个选项可以选择。", 
+          "start": 166.78
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "我们可以在“开箱即用”的情况下使用完整Softmax，\n此时训练成本相对昂贵。", 
+          "start": 171.84
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "您可以想象一下，如果您有一百万个类别，\n那么您基本上需要为每个示例分别训练一百万个输出节点。", 
+          "start": 178.12
+        }, 
+        {
+          "dur": 11.26, 
+          "text": "现在，如果您正在尝试区分某条狗是拉布拉多犬还是贵宾犬，\n那么判断狗不是烤面包机实际上就已经非常容易了。", 
+          "start": 185.5
+        }, 
+        {
+          "dur": 14.42, 
+          "text": "我们可以通过进行“候选采样”来提高一点效率。\n此时，我们要针对输出节点所属的类别来训练输出节点，\n然后对负分类进行采样，并且只更新输出节点的采样。", 
+          "start": 196.76
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "这种方式在训练时效率更高一些，而且在许多情况下\n似乎都不会对效果产生很大影响；但显而易见的是，\n我们在推理时仍然需要评估每一个输出节点。", 
+          "start": 211.18
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.74, 
+          "text": "So up until now, we&#39;ve talked about classification for binary class problems.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "Is something spam or not spam? Is the puppy cute or not cute?", 
+          "start": 5.28
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "And logistic regression, with a classification threshold, is very well-suited to these sorts of binary class classification problems.", 
+          "start": 9.44
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "But in the real world, we&#39;re often not choosing just between two classes, sometimes we need to pick a label out of one of a range of classes.", 
+          "start": 16.64
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "For example, is the object animal, vegetable, mineral or man made object?", 
+          "start": 23.96
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Is the color red, orange, green, blue, indigo or violet?", 
+          "start": 28.64
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "Do we have a picture of an apple, a car, a banana, a dog, blah blah blah.", 
+          "start": 32.34
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "There&#39;s lots of areas where being able to do good multi-class classification is a useful thing.", 
+          "start": 36.68
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "Now, interestingly enough, we can build off of some of the technology that we already have with binary class classification.", 
+          "start": 43.14
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "One classic way of doing this is through the one versus all multi-class classification.", 
+          "start": 49.12
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "So essentially what we do is we have one logistic regression output node in our model for every possible class.", 
+          "start": 55.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "So one node might identify &quot;is this an apple?&quot; Yes/No. Another might say &quot;is this a picture of a bear?&quot; Yes/No.", 
+          "start": 61.68
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "A third might say &quot;is this candy?&quot;, yes or no. And we have one output node for every possible class that we&#39;re looking at.", 
+          "start": 68.24
+        }, 
+        {
+          "dur": 13.3, 
+          "text": "We can do this in a deep network by having different output nodes at the outset of the model and share the internal representation through the rest of the model so these can be trained reasonably efficiently together.", 
+          "start": 75.4
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "In some problems we know that an example will belong to only one class at a time.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "For example, a given fruit is either a banana or a pear or an apple.", 
+          "start": 94.74
+        }, 
+        {
+          "dur": 12.68, 
+          "text": "In this case, we&#39;d like the sum of the probabilities of all of our little output nodes to sum to exactly one and this can be achieved by using something called Softmax.", 
+          "start": 100.4
+        }, 
+        {
+          "dur": 10.66, 
+          "text": "Softmax is essentially a generalization of the same logistic regression that we used, but generalized to more than one class.", 
+          "start": 113.08
+        }, 
+        {
+          "dur": 6.36, 
+          "text": "When we have a single label, multi-class classification problem we use Softmax.", 
+          "start": 123.74
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "This encodes some helpful structure to the problem and allows us to use those outputs as well-calibrated probabilities.", 
+          "start": 130.1
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "In other cases we might have a multi-label classification problem.", 
+          "start": 138.34
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "For example, an image might contain both an apple and a banana in it.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "Or it might contain three different dogs, or a dog and a person and we&#39;d want to be able to identify all of those different labels in the same example.", 
+          "start": 147.02
+        }, 
+        {
+          "dur": 12.76, 
+          "text": "And in that case we do need to use a one versus all classification strategy, where each output is computed independently and the outputs do not all necessarily sum to one.", 
+          "start": 154.02
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "When we&#39;re training a multi-class classification, we&#39;ve got a couple of options here.", 
+          "start": 166.78
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "We can use full Softmax, just straight out of the box and this is relatively expensive to train.", 
+          "start": 171.84
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "You can think if you have a million classes then you essentially needed to train a million output nodes for every single example.", 
+          "start": 178.12
+        }, 
+        {
+          "dur": 11.26, 
+          "text": "Now it&#39;s possible that if you&#39;re trying to disambiguate between the dog being a labrador and a poodle, that knowing that it&#39;s not a toaster is actually quite an easy thing.", 
+          "start": 185.5
+        }, 
+        {
+          "dur": 14.42, 
+          "text": "And so we can a little bit more efficient there by doing something called candidate sampling, where we train the output nodes for the class that it belongs to and then we take a sample of the negative classes and only update a sample of the output nodes.", 
+          "start": 196.76
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "This is quite a bit more efficient at training time, it doesn&#39;t seem to hurt performance very much in a lot of cases; obviously at inference time we still need to evaluate every single output node.", 
+          "start": 211.18
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.74, 
+          "text": "Jusqu&#39;à présent, nous avons parlé des problèmes de classification binaire.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "Est-ce un e-mail de spam ou non ? Le chiot est-il mignon ou non ?", 
+          "start": 5.28
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "La régression logistique avec un seuil de classification\nconvient parfaitement aux problèmes de classification binaire de ce genre.", 
+          "start": 9.44
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "Dans la pratique, il arrive souvent qu&#39;au lieu de choisir entre deux classes,\nil faille sélectionner une étiquette dans une plage de classes.", 
+          "start": 16.64
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "Par exemple, est-ce un objet animal, végétal, minéral ou artificiel ?", 
+          "start": 23.96
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Est-ce la couleur rouge, orange, verte, bleue, indigo ou violette ?", 
+          "start": 28.64
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "Est-ce l&#39;image d&#39;une pomme, d&#39;une voiture, d&#39;une banane, d&#39;un chien, etc.", 
+          "start": 32.34
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "Il existe de nombreux domaines\noù une classification efficace implique des classes multiples.", 
+          "start": 36.68
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "Heureusement, nous pouvons nous appuyer sur une partie\nde la technologie déjà en place pour la classification binaire.", 
+          "start": 43.14
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "L&#39;approche un contre tous est une méthode courante\nde classification à classes multiples.", 
+          "start": 49.12
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "Elle consiste à doter le modèle de régression logistique\nd&#39;un nœud de sortie pour chaque classe possible.", 
+          "start": 55.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Un nœud répond oui ou non à la question &quot;Est-ce une pomme ?&quot;,\nun autre à la question &quot;Est-ce l&#39;image d&#39;un ours ?&quot;.", 
+          "start": 61.68
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Un autre à la question &quot;Est-ce une friandise ?&quot;, oui ou non.\nÀ chacune des classes possibles correspond un nœud de sortie.", 
+          "start": 68.24
+        }, 
+        {
+          "dur": 13.3, 
+          "text": "Nous pouvons utiliser un réseau profond avec différents nœuds de sortie au début du modèle,\npuis partager la représentation interne avec le reste du modèle pour que l&#39;ensemble bénéficie d&#39;un apprentissage efficace.", 
+          "start": 75.4
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "Parfois, nous savons qu&#39;un exemple ne peut appartenir qu&#39;à une classe à la fois.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "Un fruit donné est soit une banane, soit une poire, soit une pomme.", 
+          "start": 94.74
+        }, 
+        {
+          "dur": 12.68, 
+          "text": "Dans ce cas, la somme des probabilités de tous ces nœuds de sortie doit être exactement égale à un.\nNous pouvons obtenir ce résultat à l&#39;aide de la fonctionnalité Softmax.", 
+          "start": 100.4
+        }, 
+        {
+          "dur": 10.66, 
+          "text": "Softmax est une généralisation de la même régression logistique\nque nous avons utilisée, mais appliquée à plus d&#39;une classe.", 
+          "start": 113.08
+        }, 
+        {
+          "dur": 6.36, 
+          "text": "Softmax s&#39;utilise pour la classification à étiquette unique et à classes multiples.", 
+          "start": 123.74
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "Une structure est encodée pour nous permettre d&#39;utiliser ces sorties\nsous forme de probabilités précisément calibrées.", 
+          "start": 130.1
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "Parfois, la classification implique des étiquettes multiples.", 
+          "start": 138.34
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "Par exemple, une image peut contenir à la fois une pomme et une banane.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "Ou bien trois chiens différents ou un chien et une personne, et nous souhaitons\nêtre en mesure d&#39;identifier toutes ces étiquettes dans un même exemple.", 
+          "start": 147.02
+        }, 
+        {
+          "dur": 12.76, 
+          "text": "Nous devons utiliser une stratégie de classification un contre tous où chaque sortie\nest calculée séparément et où la somme des sorties n&#39;est pas nécessairement égale à un.", 
+          "start": 154.02
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "Il existe deux options d&#39;apprentissage avec une classification à classes multiples.", 
+          "start": 166.78
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "Vous pouvez utiliser Softmax directement,\nauquel cas l&#39;apprentissage est relativement coûteux.", 
+          "start": 171.84
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "Par exemple, si vous avez un million de classes, vous devez entraîner\nun million de nœuds de sortie pour chacun des exemples.", 
+          "start": 178.12
+        }, 
+        {
+          "dur": 11.26, 
+          "text": "Lorsque vous essayez de déterminer si un chien est un labrador ou un caniche,\nle fait de savoir que ce n&#39;est pas un grille-pain ne présente peut-être aucune difficulté.", 
+          "start": 185.5
+        }, 
+        {
+          "dur": 14.42, 
+          "text": "Vous pouvez gagner en efficacité grâce à l&#39;échantillonnage de candidats, qui consiste à entraîner les nœuds de sortie pour la classe positive,\npuis à prélever un échantillon de classes négatives pour ne mettre à jour qu&#39;un échantillon de nœuds de sortie.", 
+          "start": 196.76
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "L&#39;apprentissage est sensiblement plus efficace et les performances n&#39;en semblent généralement que peu affectées,\nmais il faudra bien entendu évaluer tous les nœuds de sortie lors de l&#39;inférence.", 
+          "start": 211.18
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.74, 
+          "text": "지금까지 바이너리 클래스 문제를 분류하는 방법을 살펴봤습니다.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "이메일이 스팸인지 아닌지 또는 강아지가 귀여운지 아닌지 등의", 
+          "start": 5.28
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "바이너리 클래스 분류 문제에는\n분류 임계값이 있는 로지스틱 회귀 방식이 적합합니다.", 
+          "start": 9.44
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "하지만 현실에서는 양자택일의 상황만 있진 않습니다.\n다양한 클래스 중 하나에서 라벨을 선택해야 할 때도 있죠.", 
+          "start": 16.64
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "예를 들어, 이 물체는 동물, 식물, 광물, 공예품 중 무엇일까요?", 
+          "start": 23.96
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "이 색은 빨강, 주황, 초록, 파랑, 남색, 보라색 중 무엇일까요?", 
+          "start": 28.64
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "이 사진에 찍힌 건 사과, 자동차, 바나나, 개 중 무엇일까요?", 
+          "start": 32.34
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "다중 클래스 분류를 유용하게 사용할 수 있는 분야는 상당히 많습니다.", 
+          "start": 36.68
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "재미있게도, 바이너리 클래스 분류에서 이미 사용하고 있는\n기술로 다중 클래스 분류 기술을 개발할 수 있습니다.", 
+          "start": 43.14
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "일반적인 방법 중 하나는 일대다\n다중 클래스 분류를 사용하는 것입니다.", 
+          "start": 49.12
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "모델 내의 가능한 클래스마다 하나의\n로지스틱 회귀 출력 노드를 사용하는 거죠.", 
+          "start": 55.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "어떤 노드에서는 &#39;사과인가요?&#39;라고 묻고 예/아니요로 대답하고\n다른 노드에서는 &#39;곰 사진인가요?&#39;라고 예/아니요로 대답합니다.", 
+          "start": 61.68
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "또 다른 노드에서는 &#39;사탕인가요?&#39;라고 묻고 예/아니요로 대답할 수 있습니다.\n즉, 확인하고자 하는 가능한 클래스마다 출력 노드가 하나씩 있습니다.", 
+          "start": 68.24
+        }, 
+        {
+          "dur": 13.3, 
+          "text": "심층 네트워크 모델의 경우 초반에 여러 가지 출력 노드를 사용하고\n이후에는 내부 표현을 공유하면 합리적이고 효율적으로 학습할 수 있습니다.", 
+          "start": 75.4
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "어떤 문제에서는 특정 사례가 한 번에 하나의 클래스에만 속합니다.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "예를 들어 과일은 바나나거나, 배거나, 사과인 경우죠.", 
+          "start": 94.74
+        }, 
+        {
+          "dur": 12.68, 
+          "text": "이 경우 모든 출력 노드의 확률을 더하면 정확히 1이 되어야 합니다.\n이때 소프트맥스라는 함수를 사용합니다.", 
+          "start": 100.4
+        }, 
+        {
+          "dur": 10.66, 
+          "text": "소프트맥스란 기본적으로 로지스틱 회귀를\n여러 클래스로 일반화하는 것입니다.", 
+          "start": 113.08
+        }, 
+        {
+          "dur": 6.36, 
+          "text": "소프트맥스는 라벨이 1개인 다중 클래스\n분류 문제가 있을 때 사용합니다.", 
+          "start": 123.74
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "소프트맥스를 사용하면 문제가 구조화되며\n출력값을 잘 보정된 형태의 확률로 사용할 수 있습니다.", 
+          "start": 130.1
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "반면 라벨이 여러 개인 분류 문제도 있습니다.", 
+          "start": 138.34
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "예를 들어, 어떤 이미지에 사과와 바나나가\n둘 다 포함되어 있는 경우도 있죠.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "서로 견종이 다른 개 세 마리가 있거나, 개 한 마리와 사람 한 명이\n찍혀 있을 때도 있습니다. 즉, 하나의 사례에서 서로 다른 라벨을 구분해 내야 합니다.", 
+          "start": 147.02
+        }, 
+        {
+          "dur": 12.76, 
+          "text": "이 경우 각 출력값이 개별적으로 계산되며 출력값의 합이\n반드시 1일 필요가 없는 일대다 분류 전략을 사용해야 합니다.", 
+          "start": 154.02
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "다중 클래스 분류를 학습할 때 사용할 수 있는 옵션이 몇 가지 있습니다.", 
+          "start": 166.78
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "곧바로 전체 소프트맥스를 사용할 수도 있지만,\n학습에 들어가는 비용이 상대적으로 높습니다.", 
+          "start": 171.84
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "클래스가 백만 개 있으면 모든 사례마다\n백만 개의 출력 노드를 학습시켜야 하거든요.", 
+          "start": 178.12
+        }, 
+        {
+          "dur": 11.26, 
+          "text": "어떤 개가 래브라도인지 푸들인지 구별하려고 할 때,\n토스터는 아니라는 건 쉽게 알 수 있습니다.", 
+          "start": 185.5
+        }, 
+        {
+          "dur": 14.42, 
+          "text": "이 경우 후보 샘플링을 사용하면 효율을 약간 높일 수 있습니다.\n이 방법은 출력 노드를 속한 클래스에 맞게 학습시키고 네거티브 클래스에서\n샘플을 가져오고, 출력 노드의 샘플만 업데이트하는 것입니다.", 
+          "start": 196.76
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "이 방법은 학습 효율을 좀 더 높여주며 대부분의 사례에서 성능을 크게 해치지 않습니다. 하지만 추론 단계가 되면 여전히 모든 출력 노드를 일일이 평가해야 합니다.", 
+          "start": 211.18
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.74, 
+          "text": "Hasta ahora, hablamos\nsobre la clasificación de problemas de clase binaria.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 4.16, 
+          "text": "¿Es spam o no?\n¿El cachorro es lindo o no?", 
+          "start": 5.28
+        }, 
+        {
+          "dur": 7.2, 
+          "text": "La regresión logística, con un umbral de clasificación,\nes adecuada para estos problemas de clasificación de clase binaria.", 
+          "start": 9.44
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "Pero en el mundo real, a veces necesitamos elegir\nuna etiqueta de una variedad de clases.", 
+          "start": 16.64
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "Por ejemplo, ¿el objeto es animal, vegetal, mineral\no hecho por el hombre?", 
+          "start": 23.96
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "¿Es rojo, naranja, verde, azul, índigo o violeta?", 
+          "start": 28.64
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "¿Es una manzana, automóvil, banana, perro, etc.?", 
+          "start": 32.34
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "Hay muchas áreas\nen las que conviene tener clases múltiples.", 
+          "start": 36.68
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "Con la tecnología que tenemos,\npodemos crear una clasificación de clase binaria.", 
+          "start": 43.14
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "Una forma convencional\nes mediante la clasificación uno frente a todos.", 
+          "start": 49.12
+        }, 
+        {
+          "dur": 6.42, 
+          "text": "Básicamente, tenemos un nodo de resultado\nde regresión logística para cada clase posible.", 
+          "start": 55.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Un nodo puede identificar si es una manzana o no.\nOtro, si es una imagen de un oso o no.", 
+          "start": 61.68
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Otro, si es un dulce o no. Y tenemos\nun nodo de resultado para cada clase posible.", 
+          "start": 68.24
+        }, 
+        {
+          "dur": 13.3, 
+          "text": "En una red profunda, ubicamos los nodos de resultado al principio del modelo\ny la representación interna con el resto, para entrenarlos juntos de forma eficiente.", 
+          "start": 75.4
+        }, 
+        {
+          "dur": 6.04, 
+          "text": "En algunos problemas, un ejemplo\npertenece a una sola clase a la vez.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "Por ejemplo, una fruta puede ser\nuna banana, una pera o una manzana.", 
+          "start": 94.74
+        }, 
+        {
+          "dur": 12.68, 
+          "text": "Sumamos las probabilidades de los nodos de resultado para alcanzar 1.\nSe puede lograr mediante softmax.", 
+          "start": 100.4
+        }, 
+        {
+          "dur": 10.66, 
+          "text": "Softmax es la generalización en más de una clase\nde la misma regresión logística que usamos.", 
+          "start": 113.08
+        }, 
+        {
+          "dur": 6.36, 
+          "text": "Usamos softmax para los problemas de clasificación de clases múltiples\ncon una sola etiqueta.", 
+          "start": 123.74
+        }, 
+        {
+          "dur": 8.24, 
+          "text": "Codifica una estructura útil para solucionar el problema\ny nos permite usar esos resultados como probabilidades calibradas.", 
+          "start": 130.1
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "En otros casos, tenemos un problema de clasificación\ncon etiquetas múltiples.", 
+          "start": 138.34
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "Por ejemplo, una imagen\npuede incluir una manzana y una banana.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 7.0, 
+          "text": "O tres perros diferentes, o un perro y una persona,\ny quisiéramos identificar todas esas etiquetas en el mismo ejemplo.", 
+          "start": 147.02
+        }, 
+        {
+          "dur": 12.76, 
+          "text": "Aquí, usamos la clasificación de uno frente a todos, donde cada resultado\nse computa de forma independiente y la suma de todos no dan uno.", 
+          "start": 154.02
+        }, 
+        {
+          "dur": 5.06, 
+          "text": "Cuando entrenamos una clasificación de clases múltiples,\ntenemos un par de opciones.", 
+          "start": 166.78
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "Podemos usar softmax completo, sin modificaciones;\neste es un sistema costoso de entrenar.", 
+          "start": 171.84
+        }, 
+        {
+          "dur": 7.38, 
+          "text": "Imagina un millón de clases para las que tengas que entrenar\nun millón de nodos de resultado para cada ejemplo.", 
+          "start": 178.12
+        }, 
+        {
+          "dur": 11.26, 
+          "text": "Quizás trates de diferenciar\nun labrador de un caniche, lo que es una tarea sencilla.", 
+          "start": 185.5
+        }, 
+        {
+          "dur": 14.42, 
+          "text": "Con un muestreo de candidatos, entreno nodos de resultado para su clase.\nTomo una muestra de las clases negativas y actualizo una muestra de los nodos de resultado.", 
+          "start": 196.76
+        }, 
+        {
+          "dur": 10.98, 
+          "text": "Es más eficiente en el entrenamiento y no afecta mucho el rendimiento.\nPor supuesto, durante la inferencia, debemos evaluar cada nodo de resultado.", 
+          "start": 211.18
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

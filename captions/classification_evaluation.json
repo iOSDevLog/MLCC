@@ -1,0 +1,1754 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "\u6211\u4eec\u5df2\u7ecf\u4ecb\u7ecd\u4e86\u5f88\u591a\u5173\u4e8e\u56de\u5f52\u7684\u5185\u5bb9\u3002", 
+          "start": 0.64
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "\u4f46\u6709\u65f6\u6211\u4eec\u60f3\u5229\u7528\u673a\u5668\u5b66\u4e60\u6a21\u578b\u8fdb\u884c\u5206\u7c7b\u3002", 
+          "start": 3.2
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "\u5b83\u662f\u4e0d\u662fA\uff1f\u90ae\u4ef6\u662f\u4e0d\u662f\u5783\u573e\u90ae\u4ef6\uff1f\n\u5c0f\u72d7\u662f\u4e0d\u662f\u5f88\u53ef\u7231\uff1f", 
+          "start": 7.3
+        }, 
+        {
+          "dur": 8.4, 
+          "text": "\u73b0\u5728\uff0c\u6211\u4eec\u53ef\u4ee5\u5c06\u903b\u8f91\u56de\u5f52\u7528\u4f5c\u5206\u7c7b\u7684\u57fa\u7840\uff0c\n\u5177\u4f53\u65b9\u6cd5\u662f\u5229\u7528\u6982\u7387\u8f93\u51fa\u5e76\u4e3a\u5176\u5e94\u7528\u56fa\u5b9a\u9608\u503c\u3002", 
+          "start": 12.92
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "\u4f8b\u5982\uff0c\u5982\u679c\u90ae\u4ef6\u4e3a\u5783\u573e\u90ae\u4ef6\u7684\u6982\u7387\u8d85\u8fc70.8\uff0c\n\u6211\u4eec\u53ef\u80fd\u5c31\u4f1a\u5c06\u5176\u6807\u8bb0\u4e3a\u5783\u573e\u90ae\u4ef6\u3002", 
+          "start": 21.32
+        }, 
+        {
+          "dur": 3.68, 
+          "text": "0.8\u5c31\u662f\u5206\u7c7b\u9608\u503c\u3002", 
+          "start": 27.22
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "\u9009\u5b9a\u5206\u7c7b\u9608\u503c\u4e4b\u540e\uff0c\n\u5982\u4f55\u8bc4\u4f30\u76f8\u5e94\u6a21\u578b\u7684\u8d28\u91cf\u5462\uff1f", 
+          "start": 30.9
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "\u6211\u4eec\u9700\u8981\u4e00\u4e9b\u65b0\u6307\u6807\uff0c\u56de\u5f52\u6307\u6807\u5e76\u4e0d\u591f\u7528\u3002", 
+          "start": 37.56
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "\u8bc4\u4f30\u5206\u7c7b\u6548\u679c\u7684\u4e00\u79cd\u4f20\u7edf\u65b9\u5f0f\u662f\u4f7f\u7528\u51c6\u786e\u7387\u3002", 
+          "start": 40.94
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "\u6211\u4eec\u6240\u8bf4\u7684\u51c6\u786e\u7387\u6307\u7684\u662f\u6b63\u786e\u7ed3\u679c\u6570\u9664\u4ee5\u603b\u6570\u3002", 
+          "start": 47.4
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "\u6839\u672c\u4e0a\u8bb2\uff0c\u5c31\u662f\u6b63\u786e\u7ed3\u679c\u6240\u5360\u7684\u767e\u5206\u6bd4\u3002", 
+          "start": 53.34
+        }, 
+        {
+          "dur": 7.48, 
+          "text": "\u503c\u5f97\u6ce8\u610f\u7684\u662f\uff0c\u867d\u7136\u51c6\u786e\u7387\u662f\u4e00\u79cd\u975e\u5e38\u76f4\u89c2\n\u4e14\u5e7f\u6cdb\u4f7f\u7528\u7684\u6307\u6807\uff0c\u4f46\u5b83\u4e5f\u6709\u4e00\u4e9b\u91cd\u5927\u7f3a\u9677\u3002", 
+          "start": 57.98
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "\u7279\u522b\u662f\uff0c\u5982\u679c\u95ee\u9898\u4e2d\u5b58\u5728\u7c7b\u522b\u4e0d\u5e73\u8861\u7684\u60c5\u51b5\uff0c\n\u90a3\u4e48\u51c6\u786e\u7387\u6307\u6807\u7684\u6548\u679c\u5c31\u4f1a\u5927\u6253\u6298\u6263\u3002", 
+          "start": 65.46
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "\u5047\u8bbe\u6709\u4e00\u4e2a\u7528\u4e8e\u9884\u6d4b\u5c55\u793a\u5e7f\u544a\u7684\u5e7f\u544a\u70b9\u51fb\u7387\u7684\u6a21\u578b\uff0c\n\u6211\u4eec\u8981\u5c1d\u8bd5\u4f7f\u7528\u51c6\u786e\u7387\u6307\u6807\u6765\u8bc4\u4f30\u6b64\u6a21\u578b\u7684\u8d28\u91cf\u3002", 
+          "start": 71.12
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "\u5bf9\u4e8e\u5c55\u793a\u5e7f\u544a\uff0c\u70b9\u51fb\u7387\u901a\u5e38\u4e3a\n\u5343\u5206\u4e4b\u4e00\u3001\u4e07\u5206\u4e4b\u4e00\uff0c\u751a\u81f3\u66f4\u4f4e\u3002", 
+          "start": 79.4
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "\u56e0\u6b64\uff0c\u53ef\u80fd\u5b58\u5728\u8fd9\u6837\u4e00\u4e2a\u6a21\u578b\uff0c\n\u8fd9\u4e2a\u6a21\u578b\u53ea\u6709\u4e00\u4e2a\u59cb\u7ec8\u9884\u6d4b\u201c\u5047\u201d\u7684\u504f\u5dee\u7279\u5f81\u3002", 
+          "start": 85.3
+        }, 
+        {
+          "dur": 9.1, 
+          "text": "\u8fd9\u4e2a\u59cb\u7ec8\u9884\u6d4b\u201c\u5047\u201d\u7684\u6a21\u578b\u9884\u6d4b\u51fa\n\u5c55\u793a\u5e7f\u544a\u7684\u51c6\u786e\u7387\u4e3a99.999%\uff0c\u4f46\u8fd9\u6beb\u65e0\u610f\u4e49\u3002", 
+          "start": 95.16
+        }, 
+        {
+          "dur": 3.96, 
+          "text": "\u663e\u7136\uff0c\u51c6\u786e\u7387\u5e76\u4e0d\u9002\u7528\u4e8e\u8fd9\u79cd\u60c5\u51b5\u3002", 
+          "start": 104.26
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "\u4e3a\u4e86\u5904\u7406\u7c7b\u522b\u4e0d\u5e73\u8861\u95ee\u9898\uff0c\n\u6211\u4eec\u9700\u8981\u91c7\u7528\u66f4\u7cbe\u7ec6\u7684\u65b9\u6cd5\u6765\u89c2\u5bdf\n\u6a21\u578b\u5982\u4f55\u9884\u6d4b\u6b63\u7c7b\u522b\u3001\u8d1f\u7c7b\u522b\u6216\u4e0d\u540c\u7c7b\u522b\u3002", 
+          "start": 108.22
+        }, 
+        {
+          "dur": 12.8, 
+          "text": "\u6211\u4eec\u53ef\u4ee5\u8003\u8651\u5c06\u8fd9\u4e9b\u4e0d\u540c\u7c7b\u578b\u7684\u6210\u529f\u548c\u5931\u8d25\u7ed3\u679c\u653e\u51652x2\u7f51\u683c\u4e2d\uff0c\n\u5176\u4e2d\u5305\u62ec\u771f\u6b63\u4f8b\u3001\u5047\u6b63\u4f8b\u3001\u5047\u8d1f\u4f8b\u548c\u771f\u8d1f\u4f8b\u3002", 
+          "start": 117.78
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "\u4e3a\u4e86\u5e2e\u52a9\u5927\u5bb6\u7406\u89e3\uff0c\u6211\u4eec\u60f3\u60f3\u201c\u72fc\u6765\u4e86\u201d\u8fd9\u5219\u6545\u4e8b\u3002", 
+          "start": 130.58
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "\u8fd9\u4e2a\u5c0f\u7537\u5b69\u662f\u4e00\u4e2a\u7267\u7ae5\uff0c\u72fc\u6765\u5230\u9547\u4e0a\uff0c\n\u5982\u679c\u4ed6\u6b63\u786e\u5730\u6307\u51fa\u6765\uff0c\u8fd9\u5c31\u662f\u771f\u6b63\u4f8b\u3002", 
+          "start": 135.28
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "\u4ed6\u770b\u5230\u4e86\u72fc\u5e76\u8bf4\u201c\u72fc\u6765\u4e86\u201d\u3002\n\u771f\u6b63\u4f8b\u5bf9\u5e94\u7684\u7ed3\u679c\u662f\u5c0f\u9547\u5f97\u6551\uff0c\u8fd9\u5f88\u597d\u3002", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "\u5047\u6b63\u4f8b\u5219\u662f\u5c0f\u7537\u5b69\u8bf4\u201c\u72fc\u6765\u4e86\u201d\uff0c\u4f46\u5176\u5b9e\u5e76\u6ca1\u6709\u72fc\u3002", 
+          "start": 146.62
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "\u8fd9\u5c31\u662f\u5047\u6b63\u4f8b\uff0c\u4f1a\u4ee4\u6240\u6709\u4eba\u975e\u5e38\u607c\u706b\u3002", 
+          "start": 152.36
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "\u5047\u8d1f\u4f8b\u7684\u540e\u679c\u53ef\u80fd\u66f4\u4e25\u91cd\u3002", 
+          "start": 155.96
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "\u5047\u8d1f\u4f8b\u5bf9\u5e94\u7684\u60c5\u5f62\u662f\uff0c\u72fc\u6765\u4e86\u800c\u5c0f\u7537\u5b69\u7761\u7740\u4e86\u6216\u6ca1\u770b\u5230\uff0c\n\u72fc\u8fdb\u5165\u9547\u5b50\u5e76\u5403\u6389\u4e86\u6240\u6709\u7684\u9e21\u3002", 
+          "start": 158.56
+        }, 
+        {
+          "dur": 1.84, 
+          "text": "\u8fd9\u53ef\u771f\u7684\u592a\u60e8\u4e86\u3002", 
+          "start": 165.28
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "\u771f\u8d1f\u4f8b\u5bf9\u5e94\u7684\u60c5\u5f62\u662f\u5c0f\u7537\u5b69\u6ca1\u558a\u201c\u72fc\u6765\u4e86\u201d\uff0c\n\u72fc\u4e5f\u786e\u5b9e\u6ca1\u51fa\u73b0\uff0c\u4e00\u5207\u5b89\u597d\u3002", 
+          "start": 167.12
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "\u6211\u4eec\u53ef\u4ee5\u5c06\u8fd9\u4e9b\u9884\u671f\u60c5\u51b5\u7ec4\u5408\u6210\u51e0\u4e2a\u4e0d\u540c\u7684\u6307\u6807\u3002", 
+          "start": 175.4
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "\u5176\u4e2d\u4e00\u4e2a\u5c31\u662f\u7cbe\u786e\u7387\uff0c\u4e5f\u5c31\u662f\uff0c\n\u5728\u5c0f\u7537\u5b69\u8bf4\u201c\u72fc\u6765\u4e86\u201d\u7684\u60c5\u51b5\u4e2d\uff0c\u6709\u591a\u5c11\u6b21\u662f\u5bf9\u7684\uff1f", 
+          "start": 179.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "\u4ed6\u8bf4\u201c\u72fc\u6765\u4e86\u201d\u7684\u7cbe\u786e\u7387\u5982\u4f55\uff1f", 
+          "start": 186.06
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "\u53e6\u4e00\u65b9\u9762\uff0c\u53ec\u56de\u7387\u6307\u6807\u5219\u662f\u6307\uff1a\n\u5728\u6240\u6709\u8bd5\u56fe\u8fdb\u5165\u6751\u5e84\u7684\u72fc\u4e2d\uff0c\u6211\u4eec\u53d1\u73b0\u4e86\u591a\u5c11\u5934\uff1f", 
+          "start": 190.82
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "\u503c\u5f97\u6ce8\u610f\u7684\u662f\uff0c\u8fd9\u4e9b\u6307\u6807\u5f80\u5f80\u5904\u4e8e\u6b64\u6d88\u5f7c\u957f\u7684\u72b6\u6001\u3002", 
+          "start": 198.9
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "\u8fd9\u662f\u56e0\u4e3a\uff0c\u5982\u679c\u60a8\u5e0c\u671b\u5728\u53ec\u56de\u7387\u65b9\u9762\u505a\u5f97\u66f4\u597d\uff0c\n\u90a3\u4e48\u5373\u4f7f\u53ea\u662f\u542c\u5230\u704c\u6728\u4e1b\u4e2d\u4f20\u51fa\u7684\u4e00\u70b9\u70b9\u58f0\u54cd\uff0c\n\u4e5f\u8981\u65e9\u4e9b\u6307\u51fa\u201c\u72fc\u6765\u4e86\u201d\u3002", 
+          "start": 202.38
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "\u6211\u4eec\u8ba4\u4e3a\u8fd9\u79cd\u505a\u6cd5\u4f1a\u964d\u4f4e\u5206\u7c7b\u9608\u503c\u3002", 
+          "start": 212.62
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "\u4f46\u662f\uff0c\u5982\u679c\u6211\u4eec\u5e0c\u671b\u975e\u5e38\u7cbe\u786e\uff0c\n\u90a3\u4e48\u6b63\u786e\u7684\u505a\u6cd5\u662f\u53ea\u5728\u6211\u4eec\u5b8c\u5168\u786e\u5b9a\u65f6\u624d\u8bf4\u201c\u72fc\u6765\u4e86\u201d\uff0c\n\u6211\u4eec\u8ba4\u4e3a\u8fd9\u6837\u4f1a\u63d0\u9ad8\u5206\u7c7b\u9608\u503c\u3002", 
+          "start": 216.5
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "\u8fd9\u4e24\u4e2a\u6307\u6807\u5f80\u5f80\u5904\u4e8e\u6b64\u6d88\u5f7c\u957f\u7684\u72b6\u6001\uff0c\n\u800c\u5728\u8fd9\u4e24\u4e2a\u65b9\u9762\u90fd\u505a\u597d\u975e\u5e38\u91cd\u8981\u3002", 
+          "start": 225.24
+        }, 
+        {
+          "dur": 9.88, 
+          "text": "\u8fd9\u4e5f\u610f\u5473\u7740\uff0c\u6bcf\u5f53\u6709\u4eba\u544a\u8bc9\u60a8\u7cbe\u786e\u7387\u503c\u662f\u591a\u5c11\u65f6\uff0c\n\u60a8\u8fd8\u9700\u8981\u95ee\u53ec\u56de\u7387\u503c\u662f\u591a\u5c11\uff0c\u7136\u540e\u624d\u80fd\u8bc4\u4ef7\u6a21\u578b\u7684\u4f18\u52a3\u3002", 
+          "start": 229.86
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "\u6211\u4eec\u9009\u62e9\u7279\u5b9a\u7684\u5206\u7c7b\u9608\u503c\u540e\uff0c\n\u7cbe\u786e\u7387\u548c\u53ec\u56de\u7387\u503c\u4fbf\u90fd\u53ef\u4ee5\u786e\u5b9a\u3002", 
+          "start": 239.74
+        }, 
+        {
+          "dur": 7.96, 
+          "text": "\u4f46\u6211\u4eec\u53ef\u80fd\u65e0\u6cd5\u4e8b\u5148\u5f97\u77e5\u6700\u5408\u9002\u7684\u5206\u7c7b\u9608\u503c\uff0c\n\u800c\u6211\u4eec\u4ecd\u7136\u60f3\u77e5\u9053\u6211\u4eec\u7684\u6a21\u578b\u8d28\u91cf\u5982\u4f55\u3002", 
+          "start": 246.12
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "\u5408\u7406\u7684\u505a\u6cd5\u662f\u5c1d\u8bd5\u4f7f\u7528\n\u8bb8\u591a\u4e0d\u540c\u7684\u5206\u7c7b\u9608\u503c\u6765\u8bc4\u4f30\u6211\u4eec\u7684\u6a21\u578b\u3002", 
+          "start": 254.08
+        }, 
+        {
+          "dur": 8.32, 
+          "text": "\u4e8b\u5b9e\u4e0a\uff0c\u6211\u4eec\u6709\u4e00\u4e2a\u6307\u6807\u53ef\u8861\u91cf\n\u6a21\u578b\u5728\u6240\u6709\u53ef\u80fd\u7684\u5206\u7c7b\u9608\u503c\u4e0b\u7684\u6548\u679c\u3002", 
+          "start": 260.64
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "\u8be5\u6307\u6807\u79f0\u4e3aROC\u66f2\u7ebf\uff0c\u5373\u63a5\u6536\u8005\u64cd\u4f5c\u7279\u5f81\u66f2\u7ebf\u3002", 
+          "start": 268.96
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "\u5177\u4f53\u6982\u5ff5\u662f\uff1a\u6211\u4eec\u5bf9\u6bcf\u4e2a\u53ef\u80fd\u7684\u5206\u7c7b\u9608\u503c\u8fdb\u884c\u8bc4\u4f30\uff0c\n\u5e76\u89c2\u5bdf\u76f8\u5e94\u9608\u503c\u4e0b\u7684\u771f\u6b63\u4f8b\u7387\u548c\u5047\u6b63\u4f8b\u7387\u3002", 
+          "start": 272.96
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "\u7136\u540e\u7ed8\u5236\u4e00\u6761\u66f2\u7ebf\u5c06\u8fd9\u4e9b\u70b9\u8fde\u63a5\u8d77\u6765\uff0c\n\u501f\u52a9\u66f2\u7ebf\u4e0b\u9762\u79ef\uff0c\u6211\u4eec\u53ef\u4ee5\u6709\u6548\u89e3\u8bfb\u6982\u7387\u3002", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 1.38, 
+          "text": "\u4e3e\u4f8b\u89e3\u91ca\u4e00\u4e0b\uff1a", 
+          "start": 289.44
+        }, 
+        {
+          "dur": 15.5, 
+          "text": "\u5982\u679c\u6211\u8981\u62ff\u4e00\u4e2a\u968f\u673a\u6b63\u5206\u7c7b\u6837\u672c\uff0c\n\u6211\u95ed\u4e0a\u773c\u775b\u4ece\u5206\u5e03\u533a\u57df\u4e2d\u62ff\u8d77\u4e00\u4e2a\uff0c\n\u7136\u540e\u518d\u62ff\u8d77\u4e00\u4e2a\u968f\u673a\u8d1f\u5206\u7c7b\u6837\u672c\uff0c\n\u5219\u6a21\u578b\u6b63\u786e\u5730\u5c06\u8f83\u9ad8\u5206\u6570\u5206\u914d\u7ed9\u6b63\u5206\u7c7b\u6837\u672c\n\u800c\u975e\u8d1f\u5206\u7c7b\u6837\u672c\u7684\u6982\u7387\u662f\u591a\u5c11\uff1f", 
+          "start": 290.82
+        }, 
+        {
+          "dur": 3.84, 
+          "text": "\u5728\u67d0\u79cd\u610f\u4e49\u4e0a\uff0c\u51fa\u73b0\u914d\u5bf9\u987a\u5e8f\u4e0d\u6b63\u786e\u7684\u6982\u7387\u662f\u591a\u5c11\uff1f", 
+          "start": 306.32
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "\u7ed3\u679c\u8868\u660e\uff0c\u8fd9\u4e2a\u6982\u7387\u6b63\u597d\u7b49\u4e8eROC\u66f2\u7ebf\u4e0b\u9762\u79ef\u4ee3\u8868\u7684\u6982\u7387\u503c\u3002", 
+          "start": 310.16
+        }, 
+        {
+          "dur": 8.64, 
+          "text": "\u56e0\u6b64\uff0c\u5982\u679c\u6211\u770b\u5230ROC\u66f2\u7ebf\u4e0b\u9762\u79ef\u7684\u503c\u662f0.9\uff0c\n\u90a3\u4e48\u8fd9\u5c31\u662f\u5f97\u51fa\u6b63\u786e\u7684\u914d\u5bf9\u6bd4\u8f83\u7ed3\u679c\u7684\u6982\u7387\u3002", 
+          "start": 316.02
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "\u9700\u8981\u8003\u8651\u7684\u6700\u540e\u4e00\u4e2a\u56e0\u7d20\u662f\u9884\u6d4b\u504f\u5dee\u3002", 
+          "start": 324.66
+        }, 
+        {
+          "dur": 10.48, 
+          "text": "\u9884\u6d4b\u504f\u5dee\u662f\u901a\u8fc7\u5c06\u6211\u4eec\u9884\u6d4b\u7684\u6240\u6709\u9879\u7684\u603b\u548c\n\u4e0e\u89c2\u5bdf\u5230\u7684\u6240\u6709\u9879\u7684\u603b\u548c\u8fdb\u884c\u6bd4\u8f83\u6765\u5b9a\u4e49\u7684\u3002", 
+          "start": 329.26
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "\u603b\u7684\u6765\u8bf4\uff0c\u6211\u4eec\u5e0c\u671b\u9884\u6d4b\u7684\u9884\u671f\u503c\u4e0e\u89c2\u5bdf\u5230\u7684\u503c\u76f8\u7b49\u3002", 
+          "start": 339.74
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "\u5982\u679c\u4e0d\u76f8\u7b49\uff0c\u6211\u4eec\u5219\u79f0\u6a21\u578b\u5b58\u5728\u4e00\u5b9a\u7684\u504f\u5dee\u3002", 
+          "start": 344.06
+        }, 
+        {
+          "dur": 5.7, 
+          "text": "\u504f\u5dee\u4e3a0\u8868\u793a\u9884\u6d4b\u503c\u7684\u603b\u548c\u4e0e\u89c2\u5bdf\u503c\u7684\u603b\u548c\u76f8\u7b49\u3002", 
+          "start": 347.14
+        }, 
+        {
+          "dur": 5.46, 
+          "text": "\u504f\u5dee\u662f\u4e00\u4e2a\u8fc7\u4e8e\u7b80\u5355\u7684\u6307\u6807\uff0c\u5f88\u5bb9\u6613\u5f15\u8d77\u8bef\u5bfc\u3002", 
+          "start": 352.84
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "\u6211\u4eec\u53ef\u4ee5\u521b\u5efa\u4e00\u4e2a\u672c\u8eab\u51e0\u4e4e\u6ca1\u6709\u4efb\u4f55\u4ef7\u503c\u7684\u6a21\u578b\uff0c\n\u8be5\u6a21\u578b\u4ec5\u9884\u6d4b\u6240\u6709\u7c7b\u522b\u6982\u7387\u7684\u5e73\u5747\u503c\uff0c\n\u8fd9\u6837\u5c31\u4ea7\u751f\u4e00\u4e2a\u504f\u5dee\u4e3a\u96f6\u7684\u6a21\u578b\u3002", 
+          "start": 358.3
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "\u4e0d\u8fc7\uff0c\u9884\u6d4b\u504f\u5dee\u53ef\u4ee5\u8d77\u5230\u6709\u6548\u7684\u6307\u793a\u4f5c\u7528\u3002", 
+          "start": 367.9
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "\u8fd9\u662f\u56e0\u4e3a\uff0c\u5982\u679c\u67d0\u4e2a\u66f4\u590d\u6742\u7684\u6a21\u578b\u504f\u5dee\u4e0d\u4e3a\u96f6\uff0c\n\u5219\u610f\u5473\u7740\u53ef\u80fd\u5b58\u5728\u95ee\u9898\u3002", 
+          "start": 369.86
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "\u5b83\u544a\u77e5\u6211\u4eec\u9700\u8981\u63a2\u7a76\u67d0\u4e9b\u65b9\u9762\u6765\u8c03\u8bd5\u6a21\u578b\u3002", 
+          "start": 375.72
+        }, 
+        {
+          "dur": 12.44, 
+          "text": "\u5982\u679c\u6a21\u578b\u7684\u504f\u5dee\u4e0d\u4e3a\u96f6\uff0c\u90a3\u4e48\u80af\u5b9a\u503c\u5f97\u5173\u6ce8\u3002\n\u6211\u4eec\u53ef\u4ee5\u5bf9\u6570\u636e\u8fdb\u884c\u5212\u5206\uff0c\u4e86\u89e3\u6a21\u578b\n\u5728\u54ea\u4e9b\u65b9\u9762\u6548\u679c\u6b20\u4f73\uff0c\u51fa\u73b0\u975e\u96f6\u504f\u5dee\u3002", 
+          "start": 379.96
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "\u4e0d\u8fc7\uff0c\u4ec5\u4ec5\u504f\u5dee\u4e3a\u96f6\u672c\u8eab\u5e76\u4e0d\u80fd\u8bf4\u660e\u6a21\u578b\u5b8c\u7f8e\u65e0\u7f3a\uff0c\n\u6211\u4eec\u8fd8\u9700\u8981\u7ee7\u7eed\u89c2\u5bdf\u5176\u4ed6\u6307\u6807\u3002", 
+          "start": 392.4
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "\u6211\u4eec\u53ef\u4ee5\u901a\u8fc7\u89c2\u5bdf\u6821\u51c6\u66f2\u7ebf\u6765\u8003\u8651\u66f4\u7cbe\u7ec6\u7684\u504f\u5dee\u7528\u6cd5\u3002", 
+          "start": 400.28
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "\u5bf9\u4e8e\u6821\u51c6\u66f2\u7ebf\uff0c\u6211\u4eec\u53ef\u4ee5\u91c7\u96c6\u591a\u7ec4\u6570\u636e\uff0c\n\u5c06\u6570\u636e\u5206\u6876\u5904\u7406\uff0c\u7136\u540e\u6bd4\u8f83\u76f8\u5e94\u6876\u4e2d\n\u5404\u9879\u6570\u636e\u7684\u5e73\u5747\u9884\u6d4b\u503c\u4e0e\u5e73\u5747\u89c2\u5bdf\u503c\u3002", 
+          "start": 405.18
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "\u663e\u7136\uff0c\u6211\u4eec\u9700\u8981\u5927\u91cf\u5206\u6876\u6570\u636e\u624d\u80fd\u4f7f\u6821\u51c6\u6709\u610f\u4e49\u3002", 
+          "start": 415.04
+        }, 
+        {
+          "dur": 10.76, 
+          "text": "\u4f8b\u5982\uff0c\u5bf9\u4e8e\u629b\u786c\u5e01\uff0c\u7ed3\u679c\u8981\u4e48\u662f\u6b63\u9762\uff0c\n\u8981\u4e48\u662f\u53cd\u9762\uff0c\u6839\u672c\u4e0a\u4e0d\u662f1\u5c31\u662f0\u3002", 
+          "start": 419.5
+        }, 
+        {
+          "dur": 6.74, 
+          "text": "\u4f46\u662f\u6211\u9884\u6d4b\u7684\u6982\u7387\u5c06\u662f0.5\u62160.3\uff0c\n\u6216\u80050\u52301\u4e4b\u95f4\u7684\u5176\u4ed6\u503c\u3002", 
+          "start": 430.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "\u56e0\u6b64\uff0c\u6c47\u96c6\u5927\u91cf\u6570\u636e\u6765\u6bd4\u8f83\n\u8fd9\u4e9b\u5e73\u5747\u9884\u6d4b\u503c\u4e0e\u5e73\u5747\u89c2\u5bdf\u503c\u624d\u6709\u610f\u4e49\u3002", 
+          "start": 437.0
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "So we&#39;ve talked a lot about regression.", 
+          "start": 0.64
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "But sometimes what we want to do with a machine learning model is make a classification.", 
+          "start": 3.2
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "Is it A or not A, is it spam or not spam, is the puppy cute or not cute?", 
+          "start": 7.3
+        }, 
+        {
+          "dur": 8.4, 
+          "text": "Now we can use logistic regression as a foundation for classification, by taking our probability outputs and applying a fixed threshold to them.", 
+          "start": 12.92
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "For example, we might decide to mark something as spam if it exceeds a spam probability of 0.8.", 
+          "start": 21.32
+        }, 
+        {
+          "dur": 3.68, 
+          "text": "That 0.8 is our classification threshold.", 
+          "start": 27.22
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Now once we&#39;ve chosen to make a classification threshold, how are we going to evaluate the quality of that model?", 
+          "start": 30.9
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "We need some new metrics, our regression metrics aren&#39;t sufficient.", 
+          "start": 37.56
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "One classic way of evaluating classification performance is to use accuracy.", 
+          "start": 40.94
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "And by accuracy we mean count all the things you got right and divide it by all the things that there were.", 
+          "start": 47.4
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "Basically what percentage of the things did you get correct.", 
+          "start": 53.34
+        }, 
+        {
+          "dur": 7.48, 
+          "text": "Interestingly enough, even though accuracy is a very intuitive and widely used metric, it has some key flaws.", 
+          "start": 57.98
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "In particular, accuracy breaks down when we have class imbalance in our problems.", 
+          "start": 65.46
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "Imagine if we were to try and use accuracy to assess the quality of a model that is predicting ad click-through rates for display ads.", 
+          "start": 71.12
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "In display ads, our click-through rates are often 1 in 1,000, 1 in 10,000 or even lower.", 
+          "start": 79.4
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "So I might have a model that has absolutely no features in it except for a bias feature that tells it to predict false, always.", 
+          "start": 85.3
+        }, 
+        {
+          "dur": 9.1, 
+          "text": "this predict false always model would have an accuracy of 99.999% in display ads predictions, but would add absolutely no value.", 
+          "start": 95.16
+        }, 
+        {
+          "dur": 3.96, 
+          "text": "Clearly accuracy is doing something wrong here.", 
+          "start": 104.26
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "So to deal with class imbalance problems, we need a more fine grained way of looking at the way that our models predict onto positives and negatives or different classes.", 
+          "start": 108.22
+        }, 
+        {
+          "dur": 12.8, 
+          "text": "So we can think about these different kinds of successes and different kinds of failures along a 2x2 grid that has true positives, false positives, false negatives and true negatives.", 
+          "start": 117.78
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "To help us understand these, let&#39;s remember the story of the little boy who cried wolf.", 
+          "start": 130.58
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "Now this little boy is a shepherd, a wolf comes to town, if he correctly spots the wolf that&#39;s a true positive.", 
+          "start": 135.28
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "He sees the wolf, he says &quot;wolf&quot;, true positive saves the town, good job.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "Now a false positive is when that little boy says &quot;wolf&quot; but there really wasn&#39;t a wolf.", 
+          "start": 146.62
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "That is a false positive, it makes everybody annoyed.", 
+          "start": 152.36
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "A false negative may be even worse.", 
+          "start": 155.96
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "A false negative - there was a wolf coming along and the little boy was asleep or didn&#39;t see it and the wolf went in and ate all the chickens.", 
+          "start": 158.56
+        }, 
+        {
+          "dur": 1.84, 
+          "text": "That&#39;s really no good at all.", 
+          "start": 165.28
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "A true negative is when the boy did not cry wolf and indeed there was no wolf, everything&#39;s fine.", 
+          "start": 167.12
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "So we can combine these ideas into a couple of different metrics.", 
+          "start": 175.4
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "One of them is precision which is when the little boy said &quot;wolf&quot;, how many times was he right?", 
+          "start": 179.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "How precisely was he able to say &quot;wolf&quot;?", 
+          "start": 186.06
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "Recall on the other hand is of all of the wolves that tried to come into the village, how many did we get?", 
+          "start": 190.82
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "Now what&#39;s interesting is that these things are often in a little bit of tension.", 
+          "start": 198.9
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "Because if you imagine that you want to do a better job at recall, the right thing to do is to be more and more aggressive about saying &quot;wolf&quot; even when you just hear a little noise off in the bushes.", 
+          "start": 202.38
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "So we can think of that as lowering our classification threshold.", 
+          "start": 212.62
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "But if we want to be really precise, the right thing to do is to only say &quot;wolf&quot; when we&#39;re absolutely sure so we might think of that as raising our classification threshold.", 
+          "start": 216.5
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "So these two metrics are often in tension and doing well at both of them is important.", 
+          "start": 225.24
+        }, 
+        {
+          "dur": 9.88, 
+          "text": "It also means that whenever someone tells you what the precision value is, you need to also ask about the recall value before you can say anything about how good the model is.", 
+          "start": 229.86
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "Now precision and recall are both well defined when there is one specific classification threshold that we&#39;ve chosen.", 
+          "start": 239.74
+        }, 
+        {
+          "dur": 7.96, 
+          "text": "But we might not know in advance what the best classification threshold is going to be and we still want to know if our model is doing a good job.", 
+          "start": 246.12
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Well, a reasonable thing we could do would be to try and evaluate our model across many different possible classification thresholds.", 
+          "start": 254.08
+        }, 
+        {
+          "dur": 8.32, 
+          "text": "And in fact we have a metric that looks at the performance of our model across all possible classification thresholds.", 
+          "start": 260.64
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "And this is called an ROC curve, Receiver Operating Characteristics curve.", 
+          "start": 268.96
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "And the idea is that we evaluate every possible classification threshold and look at the true positive and false positive rates at that threshold.", 
+          "start": 272.96
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "We then draw a little curve that connects those dots and the area under that curve has an interesting probabilistic interpretation.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 1.38, 
+          "text": "It goes like this:", 
+          "start": 289.44
+        }, 
+        {
+          "dur": 15.5, 
+          "text": "If I were to pick a random positive example, closing my eyes I pick one out of our distribution, and I pick a random negative example, what is the probability that my model will correctly assign a higher score to the positive than it does to the negative?", 
+          "start": 290.82
+        }, 
+        {
+          "dur": 3.84, 
+          "text": "In a sense, what&#39;s the probability it gets that little pairwise order incorrect?", 
+          "start": 306.32
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Turns out that that probability is exactly equal to the probability value of the area under the ROC curve.", 
+          "start": 310.16
+        }, 
+        {
+          "dur": 8.64, 
+          "text": "So if I see a value of 0.9 area under ROC, that&#39;s the probability that I&#39;ll get that pairwise comparison correct.", 
+          "start": 316.02
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "One last measure to think about is prediction bias.", 
+          "start": 324.66
+        }, 
+        {
+          "dur": 10.48, 
+          "text": "Now prediction bias is defined by taking the sum of all of the things that we predict and comparing them to the sum of all the things we observe.", 
+          "start": 329.26
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Basically we would like the expected values that we predict to be equal to the observed values.", 
+          "start": 339.74
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "If they&#39;re not, we say that the model has some bias.", 
+          "start": 344.06
+        }, 
+        {
+          "dur": 5.7, 
+          "text": "A bias of 0 would show that the sum of the predictions equals the sum of the observations.", 
+          "start": 347.14
+        }, 
+        {
+          "dur": 5.46, 
+          "text": "Now bias is a very simplistic metric in that it&#39;s easy to fool.", 
+          "start": 352.84
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "We could have a model that has almost no value to it, it just predicts the mean of all the class probabilities to create a zero bias model.", 
+          "start": 358.3
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "However, it&#39;s a useful canary.", 
+          "start": 367.9
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Because if one of our more complicated models does not have zero bias, it means that something is going on.", 
+          "start": 369.86
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "It gives us something to dig into as a way to debug our models.", 
+          "start": 375.72
+        }, 
+        {
+          "dur": 12.44, 
+          "text": "So if our model does not have zero bias it&#39;s definitely cause for concern and allows us to maybe slice the data and see what areas the model is not doing a good job of having zero bias on.", 
+          "start": 379.96
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "However just having zero bias by itself is not an indicator that the model is perfect, we need to keep looking at other metrics for that.", 
+          "start": 392.4
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "We can look at more fine grained use of bias by looking at a calibration plot.", 
+          "start": 400.28
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "With the calibration plot, what we do is we take groups of data, we bucket them up and look at the mean prediction versus the mean observation for things in that bucket.", 
+          "start": 405.18
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "Obviously we do need to have buckets of data to make calibration be meaningful.", 
+          "start": 415.04
+        }, 
+        {
+          "dur": 10.76, 
+          "text": "For example if I&#39;m looking at flipping a coin, any given coin flip will either come up exactly heads or exactly tails, basically exactly 1 or exactly 0.", 
+          "start": 419.5
+        }, 
+        {
+          "dur": 6.74, 
+          "text": "But my probabilistic predictions will be 0.5 or 0.3 or some value in between 0 and 1.", 
+          "start": 430.26
+        }, 
+        {
+          "dur": 8.056, 
+          "text": "So it only makes sense to compare those mean predictions to mean observations if I aggregate across a sufficiently large number of them.", 
+          "start": 437.0
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "Nous avons beaucoup parl\u00e9 de r\u00e9gression.", 
+          "start": 0.64
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Parfois, nous voulons r\u00e9aliser une classification\n\u00e0 l&#39;aide d&#39;un mod\u00e8le de machine learning.", 
+          "start": 3.2
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "Est-ce que c&#39;est A ou pas\u00a0? Du spam ou non\u00a0?\nLe chiot est-il mignon ou non\u00a0?", 
+          "start": 7.3
+        }, 
+        {
+          "dur": 8.4, 
+          "text": "La r\u00e9gression logistique peut servir de base \u00e0 la classification\nen appliquant un seuil fixe aux r\u00e9sultats de probabilit\u00e9.", 
+          "start": 12.92
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "Par exemple, nous pouvons d\u00e9cider de classer un message comme spam si la probabilit\u00e9 est de 0,8.", 
+          "start": 21.32
+        }, 
+        {
+          "dur": 3.68, 
+          "text": "Cette valeur de 0,8\nest notre seuil de classification.", 
+          "start": 27.22
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Une fois le seuil de classification choisi,\ncomment \u00e9valuer la qualit\u00e9 de ce mod\u00e8le\u00a0?", 
+          "start": 30.9
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "Les statistiques de r\u00e9gression\nne suffisent pas. D&#39;autres sont n\u00e9cessaires.", 
+          "start": 37.56
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "La justesse est couramment utilis\u00e9e pour\n\u00e9valuer les performances d&#39;une classification.", 
+          "start": 40.94
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Il s&#39;agit du nombre de r\u00e9sultats corrects\ndivis\u00e9 par le nombre total de r\u00e9sultats.", 
+          "start": 47.4
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "Autrement dit,\nc&#39;est le pourcentage de r\u00e9sultats corrects.", 
+          "start": 53.34
+        }, 
+        {
+          "dur": 7.48, 
+          "text": "Bien que la justesse soit tr\u00e8s intuitive et\nlargement utilis\u00e9e, elle pr\u00e9sente quelques d\u00e9fauts.", 
+          "start": 57.98
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "En particulier, elle ne convient pas\nen cas de d\u00e9s\u00e9quilibre des classes.", 
+          "start": 65.46
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "Supposons que nous voulions \u00e9valuer un mod\u00e8le de pr\u00e9diction\ndes taux de clics d&#39;annonces graphiques \u00e0 l&#39;aide de la justesse.", 
+          "start": 71.12
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "Pour ce type d&#39;annonce, le taux de clics est souvent\nde 1 sur 1\u00a0000 ou 10\u00a0000, voire moins.", 
+          "start": 79.4
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "Je peux donc avoir un mod\u00e8le sans aucune caract\u00e9ristique,\nsi ce n&#39;est un biais indiquant de toujours pr\u00e9dire des r\u00e9sultats faux.", 
+          "start": 85.3
+        }, 
+        {
+          "dur": 9.1, 
+          "text": "La justesse de ce mod\u00e8le de pr\u00e9diction pour les annonces graphiques est certes de 99,999\u00a0%,\nmais il n&#39;apporte aucune valeur.", 
+          "start": 95.16
+        }, 
+        {
+          "dur": 3.96, 
+          "text": "La justesse n&#39;est clairement pas utile ici.", 
+          "start": 104.26
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "Pour r\u00e9gler ces probl\u00e8mes de d\u00e9s\u00e9quilibre, nous devons affiner la mani\u00e8re dont nos mod\u00e8les\neffectuent des pr\u00e9dictions concernant les positifs, les n\u00e9gatifs et les classes diff\u00e9rentes.", 
+          "start": 108.22
+        }, 
+        {
+          "dur": 12.8, 
+          "text": "Pour cela, nous pouvons utiliser une matrice\u00a02x2 avec des vrais positifs,\ndes faux positifs, des faux n\u00e9gatifs et des vrais n\u00e9gatifs.", 
+          "start": 117.78
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "Pour mieux comprendre, pensons \u00e0 l&#39;histoire\ndu petit gar\u00e7on qui criait &quot;Au loup\u00a0!&quot;.", 
+          "start": 130.58
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "Le petit gar\u00e7on est un berger. Un loup arrive dans le village.\nS&#39;il l&#39;identifie comme un loup, c&#39;est un vrai positif.", 
+          "start": 135.28
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "Il le voit et crie &quot;Au loup&quot;.\nLe vrai positif sauve le village.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "S&#39;il crie &quot;Au loup\u00a0!&quot; alors qu&#39;il n&#39;y a\npas de loup, c&#39;est un faux positif.", 
+          "start": 146.62
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "C&#39;est un faux positif,\net tout le village est agac\u00e9.", 
+          "start": 152.36
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "Un faux n\u00e9gatif est pire. Un loup arrive\npendant que le gar\u00e7on dort,", 
+          "start": 155.96
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "ou il ne le voit pas venir,\net le loup d\u00e9vore toutes les poules.", 
+          "start": 158.56
+        }, 
+        {
+          "dur": 1.84, 
+          "text": "C&#39;est le pire des sc\u00e9narios.", 
+          "start": 165.28
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "Un vrai n\u00e9gatif, c&#39;est si le gar\u00e7on ne crie pas &quot;Au loup\u00a0!&quot;\net qu&#39;il n&#39;y a effectivement pas de loup.", 
+          "start": 167.12
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "Nous pouvons combiner ces id\u00e9es\ndans diff\u00e9rentes statistiques.", 
+          "start": 175.4
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "L&#39;une d&#39;entre elles est la pr\u00e9cision,\nqui correspond au nombre de fois o\u00f9 il avait raison de crier &quot;Au loup\u00a0!&quot;.", 
+          "start": 179.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "Combien de fois\na-t-il cri\u00e9 &quot;Au loup\u00a0!&quot; \u00e0 raison\u00a0?", 
+          "start": 186.06
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "Le rappel, quant \u00e0 lui, correspond au nombre de loups intercept\u00e9s\nsur tous ceux qui essayaient d&#39;entrer dans le village.", 
+          "start": 190.82
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "Ce qui est int\u00e9ressant,\nc&#39;est que tout cela est un peu en tension.", 
+          "start": 198.9
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "Am\u00e9liorer le rappel revient \u00e0 crier\n&quot;Au loup\u00a0!&quot; d\u00e8s le moindre bruit.", 
+          "start": 202.38
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "Cela \u00e9quivaut \u00e0 abaisser\nle seuil de classification.", 
+          "start": 212.62
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "Augmenter la pr\u00e9cision revient \u00e0 crier &quot;Au loup\u00a0!&quot; uniquement lorsque l&#39;on est absolument certain,\nc&#39;est-\u00e0-dire \u00e0 relever le seuil de classification.", 
+          "start": 216.5
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Ces deux statistiques sont souvent en tension,\net il est important d&#39;avoir un bon score dans les deux.", 
+          "start": 225.24
+        }, 
+        {
+          "dur": 9.88, 
+          "text": "Pour \u00e9valuer correctement un mod\u00e8le,\nil faut donc conna\u00eetre la pr\u00e9cision et le rappel.", 
+          "start": 229.86
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "Ces statistiques sont bien d\u00e9finies\nsi un seuil de classification pr\u00e9cis a \u00e9t\u00e9 choisi.", 
+          "start": 239.74
+        }, 
+        {
+          "dur": 7.96, 
+          "text": "Mais nous ne connaissons pas forc\u00e9ment \u00e0 l&#39;avance le seuil optimal,\net nous voulons quand m\u00eame savoir si le mod\u00e8le est performant.", 
+          "start": 246.12
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Nous pourrions \u00e9valuer le mod\u00e8le\navec de nombreux seuils de classification possibles.", 
+          "start": 254.08
+        }, 
+        {
+          "dur": 8.32, 
+          "text": "Il existe une mesure qui \u00e9value les performances\ndu mod\u00e8le pour tous les seuils de classification possibles.", 
+          "start": 260.64
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "C&#39;est la courbe ROC\n(Recever Operating Characteristics).", 
+          "start": 268.96
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Il s&#39;agit d&#39;\u00e9valuer tous les seuils de classification possibles\net de regarder les taux de vrais positifs et faux positifs pour chaque seuil.", 
+          "start": 272.96
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "Ensuite, il faut tracer une courbe reliant tous ces points.\nL&#39;aire sous la courbe pr\u00e9sente une interpr\u00e9tation probabiliste int\u00e9ressante.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 1.38, 
+          "text": "La voici\u00a0:", 
+          "start": 289.44
+        }, 
+        {
+          "dur": 15.5, 
+          "text": "Si je choisis al\u00e9atoirement dans la distribution un exemple positif et un exemple n\u00e9gatif, quelle est la probabilit\u00e9\nque mon mod\u00e8le attribue correctement au positif un score sup\u00e9rieur \u00e0 celui de l&#39;exemple n\u00e9gatif\u00a0?", 
+          "start": 290.82
+        }, 
+        {
+          "dur": 3.84, 
+          "text": "Autrement dit, quelle est la probabilit\u00e9\nqu&#39;il se trompe sur l&#39;ordre de cette paire\u00a0?", 
+          "start": 306.32
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "En fait, la probabilit\u00e9 est \u00e9gale \u00e0\nla valeur de l&#39;aire sous la courbe ROC.", 
+          "start": 310.16
+        }, 
+        {
+          "dur": 8.64, 
+          "text": "Si la valeur de l&#39;aire sous la courbe ROC est de 0,9,\nla probabilit\u00e9 que la comparaison soit correcte est de 0,9.", 
+          "start": 316.02
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Une derni\u00e8re mesure \u00e0 consid\u00e9rer\nest le biais de pr\u00e9diction.", 
+          "start": 324.66
+        }, 
+        {
+          "dur": 10.48, 
+          "text": "Le biais de pr\u00e9diction correspond \u00e0 la comparaison\nentre la somme de toutes les pr\u00e9dictions et la somme de toutes les observations.", 
+          "start": 329.26
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Nous aimerions que les valeurs pr\u00e9dites\nsoient \u00e9gales aux valeurs observ\u00e9es.", 
+          "start": 339.74
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Si ce n&#39;est pas le cas,\non dit que le mod\u00e8le pr\u00e9sente un biais.", 
+          "start": 344.06
+        }, 
+        {
+          "dur": 5.7, 
+          "text": "Un biais de 0 indique que les sommes\ndes pr\u00e9dictions et des observations sont \u00e9gales.", 
+          "start": 347.14
+        }, 
+        {
+          "dur": 5.46, 
+          "text": "Le biais est une mesure tr\u00e8s simpliste,\nfacile \u00e0 manipuler.", 
+          "start": 352.84
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "On peut imaginer un mod\u00e8le \u00e0 faible valeur, qui pr\u00e9dit juste\nla moyenne de toutes les probabilit\u00e9s de classe, pour pr\u00e9senter un biais nul.", 
+          "start": 358.3
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "C&#39;est toutefois un indicateur utile.", 
+          "start": 367.9
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "En effet, si le biais de l&#39;un de nos mod\u00e8les\nplus complexes n&#39;est pas nul, il y a un probl\u00e8me.", 
+          "start": 369.86
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "Cela nous indique o\u00f9 creuser\npour d\u00e9boguer nos mod\u00e8les.", 
+          "start": 375.72
+        }, 
+        {
+          "dur": 12.44, 
+          "text": "Si le biais du mod\u00e8le n&#39;est pas nul, nous devons creuser les donn\u00e9es\net rechercher les points o\u00f9 le mod\u00e8le ne parvient pas \u00e0 avoir un biais nul.", 
+          "start": 379.96
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "Cependant, un biais nul ne suffit pas pour conclure que le mod\u00e8le est parfait.\nIl faut \u00e9galement regarder d&#39;autres statistiques.", 
+          "start": 392.4
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "Nous pouvons affiner l&#39;utilisation du biais\nen regardant le trac\u00e9 de calibrage.", 
+          "start": 400.28
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "Le trac\u00e9 de calibrage consiste \u00e0 grouper les donn\u00e9es par classes\net \u00e0 comparer la pr\u00e9diction et l&#39;observation moyennes pour ces \u00e9l\u00e9ments.", 
+          "start": 405.18
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "Bien s\u00fbr, le calibrage n&#39;est pertinent que\nsi les donn\u00e9es sont group\u00e9es par classes.", 
+          "start": 415.04
+        }, 
+        {
+          "dur": 10.76, 
+          "text": "Par exemple, \u00e0 pile ou face, chaque lancer se conclut\npar pile ou par face, c&#39;est-\u00e0-dire 0 ou 1.", 
+          "start": 419.5
+        }, 
+        {
+          "dur": 6.74, 
+          "text": "Mais mes pr\u00e9visions probabilistes me donnent\n0,5 ou 0,3, ou une autre valeur entre 0 et 1.", 
+          "start": 430.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Il n&#39;est donc logique de comparer ces pr\u00e9visions moyennes\naux observations moyennes que pour un tr\u00e8s grand nombre de valeurs.", 
+          "start": 437.0
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "\uc9c0\uae08\uae4c\uc9c0 \ud68c\uadc0\uc5d0 \uad00\ud574\n\ub9ce\uc740 \uc774\uc57c\uae30\ub97c \ub098\ub234\uc2b5\ub2c8\ub2e4.", 
+          "start": 0.64
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "\ud558\uc9c0\ub9cc \uba38\uc2e0\ub7ec\ub2dd \ubaa8\ub378\uc744 \ubd84\ub958\uc5d0\n\uc0ac\uc6a9\ud558\uace0 \uc2f6\uc740 \uacbd\uc6b0\ub3c4 \uc788\uaca0\uc8e0.", 
+          "start": 3.2
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "A\uc778\uc9c0 \uc544\ub2cc\uc9c0, \uc2a4\ud338\uc778\uc9c0 \uc544\ub2cc\uc9c0 \ud639\uc740\n\uac15\uc544\uc9c0\uac00 \uadc0\uc5ec\uc6b4\uc9c0 \uc544\ub2cc\uc9c0 \uac19\uc774 \ub9d0\uc774\uc8e0.", 
+          "start": 7.3
+        }, 
+        {
+          "dur": 8.4, 
+          "text": "\uc774\uc81c \ud655\ub960 \uacb0\uacfc\uc5d0 \uace0\uc815 \uc784\uacc4\uac12\uc744 \uc801\uc6a9\ud558\uc5ec\n\ub85c\uc9c0\uc2a4\ud2f1 \ud68c\uadc0\ub97c \ubd84\ub958 \uae30\uc900\uc73c\ub85c \ud65c\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 12.92
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "\uc608\ub97c \ub4e4\uc5b4 \uc2a4\ud338 \ud655\ub960 0.8\uc744 \ucd08\uacfc\ud558\ub294\n\ud56d\ubaa9\uc744 \uc2a4\ud338\uc73c\ub85c \ud45c\uc2dc\ud558\uae30\ub85c \ud588\ub2e4\uba74", 
+          "start": 21.32
+        }, 
+        {
+          "dur": 3.68, 
+          "text": "\uc774 0.8\uc774 \ubd84\ub958 \uc784\uacc4\uac12\uc774 \ub429\ub2c8\ub2e4.", 
+          "start": 27.22
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "\ubd84\ub958 \uc784\uacc4\uac12\uc744 \uc124\uc815\ud558\uae30\ub85c \ud588\ub2e4\uba74\n\uc774 \ubaa8\ub378\uc758 \ud488\uc9c8\uc744 \uc5b4\ub5bb\uac8c \ud3c9\uac00\ud560 \uc218 \uc788\uc744\uae4c\uc694?", 
+          "start": 30.9
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "\uae30\uc874 \ud68c\uadc0 \uce21\uc815\ud56d\ubaa9\uc73c\ub85c\ub294 \ucda9\ubd84\uce58 \uc54a\uc73c\ub2c8\n\uc0c8\ub85c\uc6b4 \uce21\uc815\ud56d\ubaa9\uc774 \ud544\uc694\ud569\ub2c8\ub2e4.", 
+          "start": 37.56
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "\ub300\ud45c\uc801\uc778 \ubd84\ub958 \uc131\ub2a5 \ud3c9\uac00 \ubc29\ubc95\uc740\n\uc815\ud655\uc131\uc744 \uc774\uc6a9\ud558\ub294 \uac83\uc778\ub370\uc694.", 
+          "start": 40.94
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "\uc62c\ubc14\ub978 \uacb0\uacfc\ub97c \ubaa8\ub450 \uacc4\uc0b0\ud55c \ub2e4\uc74c\n\uc874\uc7ac\ud558\ub294 \ubaa8\ub4e0 \uacb0\uacfc\ub85c \ub098\ub204\ub294 \ubc29\ubc95\uc774\uc8e0.", 
+          "start": 47.4
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "\uae30\ubcf8\uc801\uc73c\ub85c \uc633\uc740 \uacb0\uacfc\uc758\n\ud655\ub960\uc744 \ub9d0\ud558\ub294 \uac81\ub2c8\ub2e4.", 
+          "start": 53.34
+        }, 
+        {
+          "dur": 7.48, 
+          "text": "\uc815\ud655\uc131\uc740 \uc544\uc8fc \uc9c1\uad00\uc801\uc774\uace0 \ub110\ub9ac \uc0ac\uc6a9\ub418\ub294\n\uce21\uc815\ud56d\ubaa9\uc774\uc9c0\ub9cc \uba87 \uac00\uc9c0 \uc911\ub300\ud55c \uacb0\ud568\uc774 \uc788\uc8e0.", 
+          "start": 57.98
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "\ud2b9\ud788 \ubb38\uc81c\uc5d0 \ud074\ub798\uc2a4 \ubd88\uade0\ud615\uc774\n\uc874\uc7ac\ud560 \ub54c \uc624\ub958\uac00 \ubc1c\uc0dd\ud569\ub2c8\ub2e4.", 
+          "start": 65.46
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "\uc815\ud655\uc131\uc744 \ud65c\uc6a9\ud558\uc5ec \ub514\uc2a4\ud50c\ub808\uc774 \uad11\uace0\uc758 \ud074\ub9ad\ub960\uc744\n\uc608\uce21\ud558\ub294 \ubaa8\ub378\uc758 \ud488\uc9c8\uc744 \ud3c9\uac00\ud55c\ub2e4\uace0 \ud574 \ubcf4\uc8e0.", 
+          "start": 71.12
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "\ub514\uc2a4\ud50c\ub808\uc774 \uad11\uace0\uc5d0\uc11c \ud074\ub9ad\ub960\uc740 \ubcf4\ud1b5\n1/1,000 \ub610\ub294 1/10,000 \uc774\ud558\uc785\ub2c8\ub2e4.", 
+          "start": 79.4
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "\ub530\ub77c\uc11c \ud56d\uc0c1 \uac70\uc9d3\uc744 \uc608\uce21\ud558\ub294 \ud3b8\ud5a5 \ud2b9\uc131\uc744 \ube7c\uba74\n\ubaa8\ub378\uc5d0 \uc544\ubb34 \ud2b9\uc131\ub3c4 \uc5c6\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 85.3
+        }, 
+        {
+          "dur": 9.1, 
+          "text": "\ud56d\uc0c1 \uac70\uc9d3\uc744 \uc608\uce21\ud558\ub294 \uc774 \ubaa8\ub378\uc740 \ub514\uc2a4\ud50c\ub808\uc774 \uad11\uace0 \uc608\uce21\uc5d0\uc11c\n\uc815\ud655\uc131\uc774 99.999%\uc774\uc9c0\ub9cc \uc544\ubb34\ub7f0 \uac00\uce58\uac00 \uc5c6\uaca0\uc8e0.", 
+          "start": 95.16
+        }, 
+        {
+          "dur": 3.96, 
+          "text": "\uc815\ud655\uc131\uc740 \uc774 \ubd80\ubd84\uc5d0\n\ubd84\uba85 \ubb38\uc81c\uac00 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 104.26
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "\ud074\ub798\uc2a4 \ubd88\uade0\ud615 \ubb38\uc81c\ub97c \ud574\uacb0\ud558\ub824\uba74 \ubaa8\ub378\uc774 \uc591\uc131/\uc74c\uc131\uc774\ub098\n\ub2e4\ub978 \ud074\ub798\uc2a4\ub97c \uc608\uce21\ud558\ub294 \ubc29\ubc95\uc744 \uc138\ubd84\ud654\ud574\uc57c \ud569\ub2c8\ub2e4.", 
+          "start": 108.22
+        }, 
+        {
+          "dur": 12.8, 
+          "text": "\ub530\ub77c\uc11c TP, FP, FN, TN\uc744 \uac16\ucd98 2x2 \uadf8\ub9ac\ub4dc\ub85c\n\uc5ec\ub7ec \uc885\ub958\uc758 \uc131\uacf5\uacfc \uc2e4\ud328\ub97c \uc0dd\uac01\ud574\ubcfc \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 117.78
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "\uc774\ud574\ub97c \ub3d5\uae30 \uc704\ud574\n\uc591\uce58\uae30 \uc18c\ub144 \uc774\uc57c\uae30\ub97c \ub5a0\uc62c\ub824\ubcf4\uc8e0.", 
+          "start": 130.58
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "\uc591\uce58\uae30 \uc18c\ub144\uc774 \ub291\ub300\uac00 \ub9c8\uc744\uc5d0 \ub0b4\ub824\uc654\uc744 \ub54c\n\ub291\ub300\ub97c \ubc1c\uacac\ud558\uba74 \uc774\ub294 TP\uc785\ub2c8\ub2e4.", 
+          "start": 135.28
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "\ub291\ub300\ub97c \ubcf4\uace0 &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0 \uc678\uce58\uba74\nTP \ub355\ubd84\uc5d0 \ub9c8\uc744\uc744 \uc9c0\ucf1c\ub0b4\ub294 \uac70\uc8e0.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "\uc591\uce58\uae30 \uc18c\ub144\uc774 &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0 \uc678\ucce4\uc9c0\ub9cc\n\uc2e4\uc81c\ub85c\ub294 \ub291\ub300\uac00 \uc5c6\uc73c\uba74 \uc774\ub294 FP\uc785\ub2c8\ub2e4.", 
+          "start": 146.62
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "\uc774 FP\ub85c \uc778\ud574 \ub9c8\uc744 \uc0ac\ub78c\ub4e4\uc740\n\ubaa8\ub450 \ud654\uac00 \ub0a9\ub2c8\ub2e4.", 
+          "start": 152.36
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "FN\uc740 \ub354 \uc548 \uc88b\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 155.96
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "\ub291\ub300\uac00 \ub0b4\ub824\uc624\uc9c0\ub9cc \uc18c\ub144\uc774 \uc7a0\ub4e4\uc5c8\uac70\ub098 \ub291\ub300\ub97c \ubcf4\uc9c0 \ubabb\ud574\uc11c\n\ub291\ub300\uac00 \ub9c8\uc744\ub85c \ub0b4\ub824\uac00 \ub2ed\uc744 \ubaa8\ub450 \uc7a1\uc544\uba39\ub294 \uac83\uc774 FN\uc785\ub2c8\ub2e4.", 
+          "start": 158.56
+        }, 
+        {
+          "dur": 1.84, 
+          "text": "\uac00\uc7a5 \uc548 \uc88b\uc740 \uc0c1\ud669\uc774\uc8e0.", 
+          "start": 165.28
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "TN\uc740 \uc18c\ub144\uc774 &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0 \uc678\uce58\uc9c0 \uc54a\uc558\uace0\n\uc2e4\uc81c\ub85c \ub291\ub300\ub3c4 \uc5c6\ub294 \uacbd\uc6b0\ub85c \uc544\ubb34 \ubb38\uc81c\ub3c4 \uc5c6\uc2b5\ub2c8\ub2e4.", 
+          "start": 167.12
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "\uc774\uc81c \uc774 \uc0dd\uac01\uc744 \uba87 \uac00\uc9c0\n\uce21\uc815\ud56d\ubaa9\uc73c\ub85c \uacb0\ud569\ud574\ubcf4\uc8e0.", 
+          "start": 175.4
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "\ud55c \uac00\uc9c0\ub294 \uc815\ubc00\ub3c4\uc778\ub370\uc694, \uc18c\ub144\uc774 &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0 \uc678\ucce4\uc744 \ub54c\n\uc815\ub9d0 \ub291\ub300\uac00 \ub098\ud0c0\ub09c \uacbd\uc6b0\ub294 \uba87 \ubc88\uc774\uc5c8\uc744\uae4c\uc694?", 
+          "start": 179.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "\uc5bc\ub9c8\ub098 \uc815\ud655\ud558\uac8c &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0\n\uc678\uce60 \uc218 \uc788\uc5c8\uc744\uae4c\uc694?", 
+          "start": 186.06
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "\ub2e4\ub978 \ud55c \uac00\uc9c0\ub294 \uc7ac\ud604\uc728\ub85c, \ub9c8\uc744\ub85c \ub0b4\ub824\uc624\ub824\ub294\n\ubaa8\ub4e0 \ub291\ub300 \uac00\uc6b4\ub370 \uc5bc\ub9c8\ub098 \ub9ce\uc740 \ub291\ub300\uac00 \uc131\uacf5\ud588\uc744\uae4c\uc694?", 
+          "start": 190.82
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "\ud765\ubbf8\ub85c\uc6b4 \uc810\uc740 \ub450 \uac00\uc9c0 \uc0ac\uc774\uc5d0\n\uc57d\uac04\uc758 \uac08\ub4f1\uc774 \uc788\ub2e4\ub294 \uac83\uc785\ub2c8\ub2e4.", 
+          "start": 198.9
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "\uc7ac\ud604\uc728\uc744 \ub192\uc774\uace0 \uc2f6\ub2e4\uba74 \uc218\ud480 \uc18d\uc5d0\uc11c \ubc14\uc2a4\ub77d\uac70\ub9ac\ub294\n\uc18c\ub9ac\ub9cc \ub4e4\ub824\ub3c4 &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0 \uc678\uccd0\uc57c \ud569\ub2c8\ub2e4.", 
+          "start": 202.38
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "\uc774\ub294 \ubd84\ub958 \uc784\uacc4\uac12\uc744\n\ub0ae\ucd94\ub294 \uac83\uc73c\ub85c \ubcfc \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 212.62
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "\ud558\uc9c0\ub9cc \uc815\ubc00\ub3c4\ub97c \ub192\uc774\ub824\uba74 \ud655\uc2e4\ud560 \ub54c\ub9cc &#39;\ub291\ub300\ub2e4!&#39;\ub77c\uace0\n\ub9d0\ud574\uc57c \ud558\uace0, \uc774\ub294 \ubd84\ub958 \uc784\uacc4\uac12\uc744 \ub192\uc774\ub294 \uac83\uc73c\ub85c \ubcfc \uc218 \uc788\uc8e0.", 
+          "start": 216.5
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "\ub530\ub77c\uc11c \uc774 \ub450 \uac00\uc9c0 \uce21\uc815\ud56d\ubaa9\uc740 \uac08\ub4f1 \uad00\uacc4\uc5d0 \uc788\uc9c0\ub9cc\n\ub450 \uac00\uc9c0\ub97c \ubaa8\ub450 \uc7a1\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4.", 
+          "start": 225.24
+        }, 
+        {
+          "dur": 9.88, 
+          "text": "\uc815\ubc00\ub3c4\uc640 \ud568\uaed8 \uc7ac\ud604\uc728\ub3c4 \uc54c\uc544\uc57c\n\ubaa8\ub378\uc758 \uc131\ub2a5\uc744 \ub17c\ud560 \uc218 \uc788\ub294 \uac70\uc8e0.", 
+          "start": 229.86
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "\uc815\ubc00\ub3c4\uc640 \uc7ac\ud604\uc728\uc740 \ubaa8\ub450 \uad6c\uccb4\uc801\uc778 \ubd84\ub958 \uc784\uacc4\uac12\uc744\n\ud558\ub098 \uc120\ud0dd\ud588\uc744 \ub54c\ub9cc \uc81c\ub300\ub85c \uc815\uc758\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 239.74
+        }, 
+        {
+          "dur": 7.96, 
+          "text": "\ud558\uc9c0\ub9cc \ucd5c\uace0\uc758 \ubd84\ub958 \uc784\uacc4\uac12\uc744 \ubbf8\ub9ac \uc54c \uc218 \uc5c6\ub294\ub370\n\ubaa8\ub378\uc758 \uc131\ub2a5\uc774 \uc5b4\ub5a4\uc9c0 \ud30c\uc545\ud574\uc57c \ud560 \ub54c\uac00 \uc788\uc8e0.", 
+          "start": 246.12
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "\uc774\ub54c\ub294 \uac00\ub2a5\ud55c \uc5ec\ub7ec \ubd84\ub958 \uc784\uacc4\uac12\uc5d0\uc11c\n\ubaa8\ub378\uc744 \uc801\uc6a9\ud558\uace0 \ud3c9\uac00\ud558\ub294 \uac83\uc774 \ud569\ub9ac\uc801\uc785\ub2c8\ub2e4.", 
+          "start": 254.08
+        }, 
+        {
+          "dur": 8.32, 
+          "text": "\uac00\ub2a5\ud55c \ubaa8\ub4e0 \ubd84\ub958 \uc784\uacc4\uac12\uc5d0\uc11c\n\ubaa8\ub378\uc758 \uc131\ub2a5\uc744 \ud655\uc778\ud558\ub294 \uce21\uc815\ud56d\ubaa9\uc774 \uc788\ub294\ub370\uc694,", 
+          "start": 260.64
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "\uc774\ub97c ROC \uace1\uc120 \ub610\ub294\n\uc218\uc2e0\uc790 \uc870\uc791 \ud2b9\uc131 \uace1\uc120\uc774\ub77c\uace0 \ud569\ub2c8\ub2e4.", 
+          "start": 268.96
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "\uba3c\uc800 \ubaa8\ub4e0 \ubd84\ub958 \uc784\uacc4\uac12\uc744 \ud3c9\uac00\ud558\uace0\n\uadf8 \uc784\uacc4\uac12\uc758 TP\uc728\uacfc FP\uc728\uc744 \ud655\uc778\ud569\ub2c8\ub2e4.", 
+          "start": 272.96
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "\uc774 \uc810\ub4e4\uc744 \uc5f0\uacb0\ud558\ub294 \uc791\uc740 \uace1\uc120\uc744 \uadf8\ub9ac\uba74\n\uace1\uc120 \uc544\ub798 \uc601\uc5ed\uc5d0 \ud765\ubbf8\ub85c\uc6b4 \ud655\ub960\uc801 \ud574\uc11d\uc774 \ub3c4\ucd9c\ub418\uc8e0.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 1.38, 
+          "text": "\uc608\ub97c \ub4e4\uba74 \ub2e4\uc74c\uacfc \uac19\uc2b5\ub2c8\ub2e4.", 
+          "start": 289.44
+        }, 
+        {
+          "dur": 15.5, 
+          "text": "\ub208\uc744 \uac10\uace0 \ubd84\ud3ec\uc5d0\uc11c \uc784\uc758\uc758 \uc591\uc131 \uc608\ub97c \ud558\ub098\ub97c \uc120\ud0dd\ud558\uace0 \uc784\uc758\uc758 \uc74c\uc131 \uc608\ub97c\n\uc120\ud0dd\ud558\uba74 \ubaa8\ub378\uc774 \uc74c\uc131\ubcf4\ub2e4 \uc591\uc131\uc5d0 \ub354 \ub192\uc740 \uc810\uc218\ub97c \ud560\ub2f9\ud560 \ud655\ub960\uc740 \uc5bc\ub9c8\ub098 \ub420\uae4c\uc694?", 
+          "start": 290.82
+        }, 
+        {
+          "dur": 3.84, 
+          "text": "\ub2e4\uc2dc \ub9d0\ud558\uc790\uba74 \uc30d\uc758 \uc21c\uc11c\uac00\n\uc798\ubabb\ub420 \ud655\ub960\uc740 \uc5bc\ub9c8\ub098 \ub420\uae4c\uc694?", 
+          "start": 306.32
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "\uc774 \ud655\ub960\uc740 AUC(ROC \uace1\uc120 \uc544\ub798 \uc601\uc5ed)\uc758\n\ud655\ub960\uac12\uacfc \uc815\ud655\ud788 \uc77c\uce58\ud569\ub2c8\ub2e4.", 
+          "start": 310.16
+        }, 
+        {
+          "dur": 8.64, 
+          "text": "ROC \uace1\uc120 \uc544\ub798 \uc601\uc5ed\uc758 \uac12\uc774 0.9\ub77c\uba74\n\uc30d \ube44\uad50\uac00 \uc815\ud655\ud560 \ud655\ub960\ub3c4 0.9\uc778 \uac70\uc8e0.", 
+          "start": 316.02
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "\uc0dd\uac01\ud574\ubcfc \ub9c8\uc9c0\ub9c9 \ubc29\ubc95\uc740 \uc608\uce21 \ud3b8\ud5a5\uc785\ub2c8\ub2e4.", 
+          "start": 324.66
+        }, 
+        {
+          "dur": 10.48, 
+          "text": "\uc608\uce21 \ud3b8\ud5a5\uc740 \ubaa8\ub4e0 \uc608\uce21\uac12\uc758 \ud569\uc744\n\ubaa8\ub4e0 \uad00\ucc30\uac12\uc758 \ud569\uacfc \ube44\uad50\ud558\uc5ec \uc815\uc758\ud569\ub2c8\ub2e4.", 
+          "start": 329.26
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "\uc6b0\ub9ac\ub294 \uae30\ub300 \uc608\uce21\uac12\uc774\n\uad00\ucc30\uac12\uacfc \ub3d9\uc77c\ud558\uae30\ub97c \ubc14\ub77c\uc8e0.", 
+          "start": 339.74
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "\uadf8\ub807\uc9c0 \uc54a\uc73c\uba74 \ubaa8\ub378\uc5d0\n\ud3b8\ud5a5\uc774 \uc874\uc7ac\ud558\ub294 \uac83\uc785\ub2c8\ub2e4.", 
+          "start": 344.06
+        }, 
+        {
+          "dur": 5.7, 
+          "text": "\ud3b8\ud5a5\uc774 0\uc774\uba74 \uc608\uce21\uac12\uc758 \ud569\uc774\n\uad00\ucc30\uac12\uc758 \ud569\uacfc \ub3d9\uc77c\ud55c \uac70\uc8e0.", 
+          "start": 347.14
+        }, 
+        {
+          "dur": 5.46, 
+          "text": "\ud3b8\ud5a5\uc740 \ub108\ubb34 \ub2e8\uc21c\ud55c \uce21\uc815\ud56d\ubaa9\uc774\ub77c\n\uc798\ubabb \uc0b0\ucd9c\ud558\uae30\ub3c4 \uc27d\uc2b5\ub2c8\ub2e4.", 
+          "start": 352.84
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "\uac70\uc758 \uc544\ubb34\ub7f0 \uac12\ub3c4 \uc5c6\ub294 \ubaa8\ub378\ub3c4 \uc788\uc744 \uc218 \uc788\ub294\ub370, \uc774\ub7f0 \ubaa8\ub378\uc740\n\ubaa8\ub4e0 \ud074\ub798\uc2a4 \ud655\ub960\uc758 \ud3c9\uade0\uc744 \uc608\uce21\ud558\uc5ec \ubb34\ud3b8\ud5a5 \ubaa8\ub378\uc744 \ub9cc\ub4e4\uc5b4\ub0c5\ub2c8\ub2e4.", 
+          "start": 358.3
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "\ud558\uc9c0\ub9cc \uc774\ub294 \uc758\ubbf8\uc788\ub294 \uc2e0\ud638\uac00\n\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 367.9
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "\ub354 \ubcf5\uc7a1\ud55c \ubaa8\ub378\uc5d0 \ubb34\ud3b8\ud5a5\uc774 \uc5c6\ub294 \uacbd\uc6b0\n\ubb38\uc81c\uac00 \uc788\ub2e4\ub294 \uc758\ubbf8\uc774\uae30 \ub54c\ubb38\uc785\ub2c8\ub2e4.", 
+          "start": 369.86
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "\ubaa8\ub378\uc744 \ub514\ubc84\uadf8\ud560 \ub54c\n\uc870\uc0ac\ud560 \uac70\ub9ac\ub97c \uc81c\uc2dc\ud558\ub294 \uac70\uc8e0.", 
+          "start": 375.72
+        }, 
+        {
+          "dur": 12.44, 
+          "text": "\ub530\ub77c\uc11c \ubaa8\ub378\uc5d0 \ubb34\ud3b8\ud5a5\uc774 \uc5c6\uc73c\uba74 \ub370\uc774\ud130\ub97c \uc870\uac01\ub0b4\uc11c\n\ubaa8\ub378\uc774 \uc5b4\ub5a4 \uc601\uc5ed\uc5d0\uc11c \ubb34\ud3b8\ud5a5\uc774 \uc5c6\ub294\uc9c0 \uc0b4\ud3b4\ubd10\uc57c \ud569\ub2c8\ub2e4.", 
+          "start": 379.96
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "\ud558\uc9c0\ub9cc \ubb34\ud3b8\ud5a5\uc774\ub77c\uace0 \ubaa8\ub378\uc774 \uc644\ubcbd\ud558\ub2e4\ub294 \uac83\uc740 \uc544\ub2c8\ub2c8\n\ub2e4\ub978 \uce21\uc815\ud56d\ubaa9\uc744 \uacc4\uc18d \uc0b4\ud3b4\ubd10\uc57c \ud569\ub2c8\ub2e4.", 
+          "start": 392.4
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "\ubcf4\uc815 \ud50c\ub86f\uc744 \uc0b4\ud3b4\ubcf4\uba74 \ud3b8\ud5a5\uc774\n\uc5b4\ub5bb\uac8c \ud65c\uc6a9\ub418\ub294\uc9c0 \uc790\uc138\ud788 \uc0b4\ud3b4\ubcfc \uc218 \uc788\uc2b5\ub2c8\ub2e4", 
+          "start": 400.28
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "\ubcf4\uc815 \ud50c\ub86f\uc73c\ub85c \ub370\uc774\ud130 \uadf8\ub8f9\uc744 \ubc84\ucf00\ud305\ud55c \ud6c4\n\uc774 \ubc84\ud0b7\uc758 \ud3c9\uade0 \uc608\uce21\uac12\uacfc \ud3c9\uade0 \uad00\ucc30\uac12\uc744 \ube44\uad50\ud569\ub2c8\ub2e4.", 
+          "start": 405.18
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "\ubb3c\ub860 \ubcf4\uc815\uc774 \uc720\uc758\ubbf8\ud558\ub824\uba74\n\ub2e4\ub7c9\uc758 \ub370\uc774\ud130\uac00 \ud544\uc694\ud558\uc8e0.", 
+          "start": 415.04
+        }, 
+        {
+          "dur": 10.76, 
+          "text": "\uc608\ub97c \ub4e4\uc5b4 \ub3d9\uc804\uc744 \ub4a4\uc9d1\uc73c\uba74 \uc55e\uc774\ub098 \ub4a4\uac00 \ub098\uc624\ub2c8\n\uc815\ud655\ud788 1\uc774\ub098 0\uc774 \ub098\uc628\ub2e4\uace0 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 419.5
+        }, 
+        {
+          "dur": 6.74, 
+          "text": "\ud558\uc9c0\ub9cc \ud655\ub960 \uc608\uce21\uc740 0.5, 0.3 \ub610\ub294\n0\uacfc 1 \uc0ac\uc774\uc758 \uc5b4\ub5a4 \uac12\ub3c4 \ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
+          "start": 430.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "\ub530\ub77c\uc11c \uc0c1\ub2f9\ud788 \ub9ce\uc740 \ub370\uc774\ud130\ub97c \uc9d1\uacc4\ud574\uc57c\ub9cc\n\ud3c9\uade0 \uc608\uce21\uac12\uacfc \ud3c9\uade0 \uad00\ucc30\uac12\uc744 \ube44\uad50\ud558\ub294 \uac83\uc774 \uc758\ubbf8\uac00 \uc788\uc8e0.", 
+          "start": 437.0
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "Ya hemos hablado bastante sobre la regresi\u00f3n.", 
+          "start": 0.64
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "A veces, queremos usar el modelo\nde aprendizaje autom\u00e1tico para una clasificaci\u00f3n:", 
+          "start": 3.2
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "\u00bfEs A o no? \u00bfEs spam o no?\n\u00bfEl cachorro es lindo o no?", 
+          "start": 7.3
+        }, 
+        {
+          "dur": 8.4, 
+          "text": "Para usar la regresi\u00f3n log\u00edstica como una base de la clasificaci\u00f3n,\naplicamos un umbral fijo a los resultados.", 
+          "start": 12.92
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "Por ejemplo, quiero que algo se marque\ncomo spam si excede una probabilidad de 0.8.", 
+          "start": 21.32
+        }, 
+        {
+          "dur": 3.68, 
+          "text": "Ese valor es el umbral de clasificaci\u00f3n.", 
+          "start": 27.22
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Luego de elegir el umbral de clasificaci\u00f3n,\n\u00bfc\u00f3mo evaluaremos la calidad del modelo?", 
+          "start": 30.9
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "Necesitamos m\u00e9tricas nuevas,\nya que las de regresi\u00f3n no bastan.", 
+          "start": 37.56
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "La exactitud es una forma cl\u00e1sica\nde evaluar el rendimiento de la clasificaci\u00f3n.", 
+          "start": 40.94
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Es decir, contar todos los aciertos\ny dividirlos por el total de intentos.", 
+          "start": 47.4
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "B\u00e1sicamente, es el porcentaje de aciertos.", 
+          "start": 53.34
+        }, 
+        {
+          "dur": 7.48, 
+          "text": "Si bien la exactitud es intuitiva y popular,\ntiene algunas falencias clave.", 
+          "start": 57.98
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "No funciona cuando hay un desequilibrio\nde clase en nuestros problemas,", 
+          "start": 65.46
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "como para evaluar un modelo que predice\nla tasa de clics de anuncios gr\u00e1ficos.", 
+          "start": 71.12
+        }, 
+        {
+          "dur": 5.9, 
+          "text": "Las tasas de clics suelen ser 1 en 1,000,\n1 en 10,000 o incluso menos.", 
+          "start": 79.4
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "Si tengo un modelo que no tiene atributos, sino que tiene un solo\nmargen que realiza predicciones falsas,", 
+          "start": 85.3
+        }, 
+        {
+          "dur": 9.1, 
+          "text": "la exactitud del modelo en estos casos\nser\u00e1 del 99.999%, pero no tendr\u00eda valor.", 
+          "start": 95.16
+        }, 
+        {
+          "dur": 3.96, 
+          "text": "Hay alg\u00fan aspecto que no funciona.", 
+          "start": 104.26
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "Para resolver problemas de desequilibrio, analizaremos la predicci\u00f3n\nde modelos de positivos, negativos o diferentes clases.", 
+          "start": 108.22
+        }, 
+        {
+          "dur": 12.8, 
+          "text": "Usaremos varios tipo de datos correctos y caracter\u00edsticas, junto con una cuadr\u00edcula\ncon verdaderos y falsos, tanto positivos como negativos.", 
+          "start": 117.78
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "Para poder comprender esto, usemos como referencia\nel cuento del ni\u00f1o y el lobo.", 
+          "start": 130.58
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "Si el lobo llega al pueblo y el ni\u00f1o\nlo anuncia, es un verdadero positivo.", 
+          "start": 135.28
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "El ni\u00f1o ve al lobo, lo anuncia\ny el verdadero positivo salva al pueblo.", 
+          "start": 141.8
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "Un falso positivo es si el ni\u00f1o dice &quot;Lobo&quot;,\npero el animal no aparece.", 
+          "start": 146.62
+        }, 
+        {
+          "dur": 3.6, 
+          "text": "Es un falso positivo\nque enoja a todo el mundo.", 
+          "start": 152.36
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "Un falso negativo es a\u00fan peor.", 
+          "start": 155.96
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "El lobo llega, pero el ni\u00f1o no lo ve o duerme,\nentonces el animal se come todos los pollos.", 
+          "start": 158.56
+        }, 
+        {
+          "dur": 1.84, 
+          "text": "Eso no es para nada bueno.", 
+          "start": 165.28
+        }, 
+        {
+          "dur": 8.28, 
+          "text": "Si el ni\u00f1o no dice &quot;Lobo&quot; y el animal\nno aparece, tenemos un falso negativo.", 
+          "start": 167.12
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "Combinemos estas ideas\nen diferentes m\u00e9tricas.", 
+          "start": 175.4
+        }, 
+        {
+          "dur": 6.88, 
+          "text": "Una de ellas es la precisi\u00f3n. Cuando el ni\u00f1o\ndijo &quot;Lobo&quot;, \u00bfcu\u00e1ntas veces acert\u00f3?", 
+          "start": 179.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "\u00bfCu\u00e1l fue su grado de precisi\u00f3n?", 
+          "start": 186.06
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "La recuperaci\u00f3n es la cantidad\nde lobos reales que el ni\u00f1o logr\u00f3 detectar.", 
+          "start": 190.82
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "Lo interesante es que estas m\u00e9tricas\nsiempre est\u00e1n en conflicto.", 
+          "start": 198.9
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "Si se quiere hacer algo para mejorar la recuperaci\u00f3n, hay que decir &quot;Lobo&quot;\nm\u00e1s veces, aunque solo sea una sospecha.", 
+          "start": 202.38
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "As\u00ed se reduce el umbral de clasificaci\u00f3n.", 
+          "start": 212.62
+        }, 
+        {
+          "dur": 8.74, 
+          "text": "Pero si queremos ser muy precisos, tenemos que decir &quot;Lobo&quot; solo cuando estemos seguros y as\u00ed elevar el umbral de clasificaci\u00f3n.", 
+          "start": 216.5
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Tambi\u00e9n es importante\nque ambas m\u00e9tricas sean correctas.", 
+          "start": 225.24
+        }, 
+        {
+          "dur": 9.88, 
+          "text": "Siginifica que cuando alguien pregunte cu\u00e1l es el valor de precisi\u00f3n, tambi\u00e9n se tenga\nen cuenta el de recuperaci\u00f3n para saber si un modelo sirve o no.", 
+          "start": 229.86
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "Cuando elegimos un umbral espec\u00edfico,\nla pecisi\u00f3n y la rcuperaci\u00f3n se definen bien.", 
+          "start": 239.74
+        }, 
+        {
+          "dur": 7.96, 
+          "text": "Es posible que no conozcamos cu\u00e1l ser\u00e1 el mejor umbral de clasificaci\u00f3n,\npero vamos a querer saber si nuestro modelo sirve,", 
+          "start": 246.12
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Lo que podemos hacer es tratar de evaluar nuestro modelos\ncon diferentes umbrales de clasificaci\u00f3n.", 
+          "start": 254.08
+        }, 
+        {
+          "dur": 8.32, 
+          "text": "Hay una m\u00e9trica que analiza el rendimiento\ndel modelo con los umbrales de clasificaci\u00f3n posibles.", 
+          "start": 260.64
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Se llama &quot;curva ROC&quot;\no curva de caracter\u00edsticas de operaci\u00f3n del receptor.", 
+          "start": 268.96
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "La idea es evaluar cada umbral de clasificaci\u00f3n posible y observar\nlas tasas de falsos y verdaderos positivos en cada umbral.", 
+          "start": 272.96
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "Luego dibujamos una peque\u00f1a curva que conecta los puntos y el \u00e1rea debajo de la curva que muestra posibilidades atractivas.", 
+          "start": 282.54
+        }, 
+        {
+          "dur": 1.38, 
+          "text": "Es as\u00ed:", 
+          "start": 289.44
+        }, 
+        {
+          "dur": 15.5, 
+          "text": "Si tuviera que elegir un ejemplo positivo al azar, elegir\u00eda uno de la distribuci\u00f3n y un ejemplo negatio al azar; \u00bfqu\u00e9 tan probable es que un ejemplo positivo\ntenga un puntaje m\u00e1s alto que uno negativo?", 
+          "start": 290.82
+        }, 
+        {
+          "dur": 3.84, 
+          "text": "\u00bfCu\u00e1l es la probabilidad\nde que ese par se ordene de forma correcta?", 
+          "start": 306.32
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "La probabilidad es exactamete igual al valor de probabilidad\ndel \u00e1rea bajo la curva ROC.", 
+          "start": 310.16
+        }, 
+        {
+          "dur": 8.64, 
+          "text": "Si el \u00e1rea es 0.9 bajo la curva ROC, esa es la probabilidad\nde que la comparaci\u00f3n del par sea correcta.", 
+          "start": 316.02
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Otra medida para considerar\nes el margen de predicci\u00f3n.", 
+          "start": 324.66
+        }, 
+        {
+          "dur": 10.48, 
+          "text": "Para definirlo, comparamos las observaciones\ncon la suma total de todas las predicciones.", 
+          "start": 329.26
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Queremos que los valores que predecimos\nsean iguales a los que observamos.", 
+          "start": 339.74
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Si no es as\u00ed, el modelo tiene cierto margen.", 
+          "start": 344.06
+        }, 
+        {
+          "dur": 5.7, 
+          "text": "En un margen de 0, la suma de predicciones\nes igual a la de las observaciones.", 
+          "start": 347.14
+        }, 
+        {
+          "dur": 5.46, 
+          "text": "El margen es una m\u00e9trica muy simplista,\npor lo que no es muy confiable.", 
+          "start": 352.84
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "Si un modelo no tiene casi valor, predice la media de todas\nlas posibilidades de clase para crear uno sin margen.", 
+          "start": 358.3
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "Sin embargo, es un indicador \u00fatil.", 
+          "start": 367.9
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Si un modelo m\u00e1s complicado no tiene\nmargen cero, entonces hay un problema.", 
+          "start": 369.86
+        }, 
+        {
+          "dur": 4.24, 
+          "text": "Nos indica d\u00f3nde debemos depurar los modelos.", 
+          "start": 375.72
+        }, 
+        {
+          "dur": 12.44, 
+          "text": "Si el margen no es cero, nos permite dividir los datos y analizar\nlas \u00e1reas donde el modelo no tiene margen cero.", 
+          "start": 379.96
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "Como este margen no implica que el modelo\nsea perfecto, debemos analizar otras m\u00e9tricas.", 
+          "start": 392.4
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "Podemos usar el margen m\u00e1s detalladamente\ncon la representaci\u00f3n de calibraci\u00f3n.", 
+          "start": 400.28
+        }, 
+        {
+          "dur": 9.86, 
+          "text": "Con esa calibraci\u00f3n, tomamos gupos de datos, los agrupamos y comparamos\nla observaci\u00f3n media con la predicci\u00f3n media.", 
+          "start": 405.18
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "Necesitamos agrupamientos de datos\npara que la calibraci\u00f3n tenga sentido.", 
+          "start": 415.04
+        }, 
+        {
+          "dur": 10.76, 
+          "text": "Por ejemplo, si arrojo una moneda al aire,\npuede salir cara o cruz, o sea, 1 o 0.", 
+          "start": 419.5
+        }, 
+        {
+          "dur": 6.74, 
+          "text": "Las predicciones probabil\u00edsticas ser\u00e1n 0.5,\n0.3, o alg\u00fan valor entre 0 y 1.", 
+          "start": 430.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Solo sirve comparar estas predicciones\ny observaciones medias en grandes cantidades.", 
+          "start": 437.0
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

@@ -1,0 +1,1324 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 3.41, 
+          "text": "正如我们之前介绍的，\n我们通过研究数据得到了模型。", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 1.77, 
+          "text": "复杂的模型类型有很多，", 
+          "start": 4.42
+        }, 
+        {
+          "dur": 2.32, 
+          "text": "我们用来研究数据的有趣方法也有很多。", 
+          "start": 6.37
+        }, 
+        {
+          "dur": 2.28, 
+          "text": "但我们先从最简单、最熟悉的方法入手，", 
+          "start": 8.9
+        }, 
+        {
+          "dur": 2.73, 
+          "text": "这能帮助我们了解更复杂的方法。", 
+          "start": 11.18
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "让我们以数据为基础，\n用第一个小模型练习一下。", 
+          "start": 15.06
+        }, 
+        {
+          "dur": 1.77, 
+          "text": "这里有一个小型数据集，", 
+          "start": 18.21
+        }, 
+        {
+          "dur": 2.652, 
+          "text": "X轴是输入特征，", 
+          "start": 20.39
+        }, 
+        {
+          "dur": 2.498, 
+          "text": "显示的是房子面积；", 
+          "start": 23.252
+        }, 
+        {
+          "dur": 1.972, 
+          "text": "Y轴是我们尝试预测的", 
+          "start": 26.4
+        }, 
+        {
+          "dur": 2.248, 
+          "text": "房价的目标价值。", 
+          "start": 28.372
+        }, 
+        {
+          "dur": 1.728, 
+          "text": "我们来试着制作一个模型，", 
+          "start": 30.93
+        }, 
+        {
+          "dur": 2.932, 
+          "text": "将房子面积作为输入特征，", 
+          "start": 32.658
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "预测房价作为输出特征。", 
+          "start": 35.59
+        }, 
+        {
+          "dur": 2.93, 
+          "text": "在我们的数据集中，\n有很多用标签标出的小样本。", 
+          "start": 38.99
+        }, 
+        {
+          "dur": 4.66, 
+          "text": "我准备引导具有初三学生\n智力水平的机器画一条线。", 
+          "start": 42.17
+        }, 
+        {
+          "dur": 3.13, 
+          "text": "它查看我们的数据集后，", 
+          "start": 47.45
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "大概会在这个位置画一条线，\n差不多是这个样子。", 
+          "start": 50.58
+        }, 
+        {
+          "dur": 6.4, 
+          "text": "这条线现在就是一个模型，\n根据给定的输入值预测房价。", 
+          "start": 56.81
+        }, 
+        {
+          "dur": 5.19, 
+          "text": "我们回想一下初中的代数，\n可以将其定义为：", 
+          "start": 64.78
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "Y=WX+B", 
+          "start": 70.16
+        }, 
+        {
+          "dur": 2.404, 
+          "text": "而在高中代数中，\n我们应该说MX。", 
+          "start": 75.97
+        }, 
+        {
+          "dur": 2.006, 
+          "text": "但在这里我们说W，\n因为讨论的是机器学习。", 
+          "start": 78.374
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "这指的是我们的权矢量。", 
+          "start": 80.68
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "您会发现这里有小下标，", 
+          "start": 83.61
+        }, 
+        {
+          "dur": 2.65, 
+          "text": "因为我们可能有多个维度。", 
+          "start": 86.73
+        }, 
+        {
+          "dur": 1.66, 
+          "text": "B表示偏差。", 
+          "start": 90.19
+        }, 
+        {
+          "dur": 1.73, 
+          "text": "W表示斜率。", 
+          "start": 92.67
+        }, 
+        {
+          "dur": 1.6, 
+          "text": "我们如何知道这条线是正确的呢？", 
+          "start": 95.61
+        }, 
+        {
+          "dur": 3.56, 
+          "text": "这时我们可能需要考虑误差这一概念。", 
+          "start": 97.72
+        }, 
+        {
+          "dur": 3.464, 
+          "text": "误差从本质上反映了", 
+          "start": 102.46
+        }, 
+        {
+          "dur": 3.186, 
+          "text": "这条线在预测任何给定样本时的效果如何。", 
+          "start": 105.924
+        }, 
+        {
+          "dur": 1.46, 
+          "text": "因此，我们可以通过观察", 
+          "start": 109.81
+        }, 
+        {
+          "dur": 2.94, 
+          "text": "给定X值的预测结果\n与相应样本真实值之间的差异，", 
+          "start": 111.27
+        }, 
+        {
+          "dur": 1.81, 
+          "text": "来确定具体误差。", 
+          "start": 114.21
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "这个误差适中。", 
+          "start": 116.28
+        }, 
+        {
+          "dur": 1.58, 
+          "text": "这个误差几乎为零。", 
+          "start": 118.71
+        }, 
+        {
+          "dur": 1.65, 
+          "text": "这里的误差刚好为零。", 
+          "start": 120.74
+        }, 
+        {
+          "dur": 2.75, 
+          "text": "这里的误差可能为正。", 
+          "start": 122.8
+        }, 
+        {
+          "dur": 2.91, 
+          "text": "误差始终处于零到正数的范围之内。", 
+          "start": 126.43
+        }, 
+        {
+          "dur": 1.57, 
+          "text": "我们如何定义误差呢？", 
+          "start": 130.46
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "在这方面，我们要考虑采取\n稍微正式一些的方式。", 
+          "start": 132.41
+        }, 
+        {
+          "dur": 3.97, 
+          "text": "让我们来想一个方便的方式\n来定义回归问题中的误差。", 
+          "start": 136.93
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "不是只定义误差函数，\n而是找出一个便于着手的实用方式。", 
+          "start": 141.86
+        }, 
+        {
+          "dur": 3.03, 
+          "text": "我们将其称为L2误差，\n也称为方差。", 
+          "start": 145.4
+        }, 
+        {
+          "dur": 3.01, 
+          "text": "这是针对单个样本确定的误差，", 
+          "start": 149.07
+        }, 
+        {
+          "dur": 4.09, 
+          "text": "采用我们模型的预测结果\n与真实值之间的方差。", 
+          "start": 152.31
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "很明显，离真实值越远，", 
+          "start": 157.29
+        }, 
+        {
+          "dur": 3.13, 
+          "text": "误差就会以平方数增加。", 
+          "start": 161.23
+        }, 
+        {
+          "dur": 3.95, 
+          "text": "如今，我们在训练模型时，\n并非专注于尽量减少某一个样本的误差，", 
+          "start": 165.05
+        }, 
+        {
+          "dur": 2.848, 
+          "text": "而是着眼于最大限度地\n减少整个数据集的误差。", 
+          "start": 169.32
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.92, 
+          "text": "So as we said before, our model\nis something that we learned from data.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "And there are lots \nof complicated model types", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 2.44, 
+          "text": "and lots of interesting ways \nwe can learn from data.", 
+          "start": 6.48
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "But we&#39;re gonna start with \nsomething very simple and familiar.", 
+          "start": 8.92
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "This will open the gateway \nto more sophisticated methods.", 
+          "start": 11.44
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "Let&#39;s train a first \nlittle model from data.", 
+          "start": 15.1
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "So here we&#39;ve got a small data set.", 
+          "start": 18.28
+        }, 
+        {
+          "dur": 2.972, 
+          "text": "On the X axis, \nwe&#39;ve got our input feature,", 
+          "start": 20.42
+        }, 
+        {
+          "dur": 3.068, 
+          "text": "which is showing housing square footage.", 
+          "start": 23.392
+        }, 
+        {
+          "dur": 2.052, 
+          "text": "On our Y axis, we&#39;ve got the target value", 
+          "start": 26.46
+        }, 
+        {
+          "dur": 2.528, 
+          "text": "that we&#39;re trying to predict \nof housing price.", 
+          "start": 28.512
+        }, 
+        {
+          "dur": 2.688, 
+          "text": "So we&#39;re gonna try \nand create a model that takes in", 
+          "start": 31.04
+        }, 
+        {
+          "dur": 2.152, 
+          "text": "housing square footage \nas an input feature", 
+          "start": 33.728
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "and predicts housing price \nas an output feature.", 
+          "start": 35.88
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "Here we&#39;ve got lots of little\nlabeled examples in our data set.", 
+          "start": 39.02
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "And I&#39;m go ahead and channel\nour inner ninth grader to fit a line.", 
+          "start": 42.32
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "It can maybe take a look at our data set and", 
+          "start": 47.54
+        }, 
+        {
+          "dur": 6.06, 
+          "text": "fit a line that looks about right here.\nMaybe something like this.", 
+          "start": 50.8
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "And this line is now a model that\npredicts housing price given an input.", 
+          "start": 56.86
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "We can recall from algebra one\nthat we can define this thing", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "as Y = WX + B.", 
+          "start": 70.18
+        }, 
+        {
+          "dur": 2.624, 
+          "text": "Now in high school algebra \nwe would have said MX,", 
+          "start": 76.0
+        }, 
+        {
+          "dur": 2.116, 
+          "text": "here we say W \nbecause it&#39;s machine learning.", 
+          "start": 78.624
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "And this is referring \nto our weight vectors.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "Now you&#39;ll notice that\nwe&#39;ve got a little subscript here", 
+          "start": 83.6
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "because we might be \nin more than one dimension.", 
+          "start": 86.94
+        }, 
+        {
+          "dur": 2.48, 
+          "text": "This B is a bias.", 
+          "start": 90.24
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "and the W gives us our slope.", 
+          "start": 92.72
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "How do we know if we have a good line?", 
+          "start": 95.68
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Well, we might wanna think\nof some notion of loss here.", 
+          "start": 97.84
+        }, 
+        {
+          "dur": 3.704, 
+          "text": "Loss is showing basically \nhow well our line", 
+          "start": 102.44
+        }, 
+        {
+          "dur": 3.736, 
+          "text": "is doing at predicting \nany given example.", 
+          "start": 106.144
+        }, 
+        {
+          "dur": 1.56, 
+          "text": "So we can define this loss", 
+          "start": 109.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "by looking at the difference between\nthe prediction for a given X value", 
+          "start": 111.44
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "and the true value for that example.", 
+          "start": 114.46
+        }, 
+        {
+          "dur": 2.34, 
+          "text": "So this guy has some moderate size loss.", 
+          "start": 116.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "This guy has near-zero loss.", 
+          "start": 118.8
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "Here we&#39;ve got exactly zero loss.", 
+          "start": 120.8
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "Here we probably have some positive loss.", 
+          "start": 122.94
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Loss is always on a zero \nthrough positive scale.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "How might we define loss?", 
+          "start": 130.56
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "Well, that&#39;s something that we&#39;ll need\nto think about in a slightly more formal way.", 
+          "start": 132.56
+        }, 
+        {
+          "dur": 4.84, 
+          "text": "So let&#39;s think about one convenient way\nto define loss for regression problems.", 
+          "start": 137.02
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "Not the only loss function, but\none useful one to start out with.", 
+          "start": 141.86
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "We call this L2 loss, which\nis also known as squared error.", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "And it&#39;s a loss that&#39;s\ndefined for an individual example", 
+          "start": 149.18
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "by taking the square of the difference between\nour model&#39;s prediction and the true value.", 
+          "start": 152.44
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "Now obviously as we get further\nand further away from the true value,", 
+          "start": 157.32
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "the loss that we suffer \nincreases with a square.", 
+          "start": 161.54
+        }, 
+        {
+          "dur": 4.38, 
+          "text": "Now, when we&#39;re training a model we don&#39;t\ncare about minimizing loss on just one example,", 
+          "start": 165.04
+        }, 
+        {
+          "dur": 3.108, 
+          "text": "we care about minimizing\nloss across our entire data set.", 
+          "start": 169.42
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.63, 
+          "text": "Comme nous l&#39;avons vu,\nnotre modèle est basé sur les données.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 2.25, 
+          "text": "Il existe de nombreux types\nde modèles complexes", 
+          "start": 4.23
+        }, 
+        {
+          "dur": 2.35, 
+          "text": "et de nombreuses leçons\nà tirer des données.", 
+          "start": 6.48
+        }, 
+        {
+          "dur": 2.69, 
+          "text": "Nous allons commencer\npar un concept simple et familier,", 
+          "start": 8.83
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "qui nous amènera ensuite\nà d&#39;autres méthodes plus complexes.", 
+          "start": 11.52
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "Dessinons un premier petit modèle\nà partir de données.", 
+          "start": 15.1
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "Nous avons ici\nun petit ensemble de données.", 
+          "start": 18.28
+        }, 
+        {
+          "dur": 2.972, 
+          "text": "Sur l&#39;axe X, se trouve\nla caractéristique d&#39;entrée,", 
+          "start": 20.42
+        }, 
+        {
+          "dur": 2.388, 
+          "text": "qui indique la surface du logement.", 
+          "start": 23.392
+        }, 
+        {
+          "dur": 2.052, 
+          "text": "Sur l&#39;axe Y, se trouve la valeur cible", 
+          "start": 26.46
+        }, 
+        {
+          "dur": 2.528, 
+          "text": "que nous essayons de prédire :\nle prix du logement.", 
+          "start": 28.512
+        }, 
+        {
+          "dur": 2.268, 
+          "text": "Nous allons donc créer\nun modèle qui se base", 
+          "start": 31.04
+        }, 
+        {
+          "dur": 2.692, 
+          "text": "sur la surface du logement\ncomme élément d&#39;entrée", 
+          "start": 33.308
+        }, 
+        {
+          "dur": 2.91, 
+          "text": "et prédit le prix du logement\ncomme élément de sortie.", 
+          "start": 36.0
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "L&#39;ensemble de données\ncomprend des exemples étiquetés.", 
+          "start": 39.02
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "Rappelons-nous ce qu&#39;on a vu\nau collège pour tracer une ligne.", 
+          "start": 42.32
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "Nous pourrions observer\nl&#39;ensemble de données", 
+          "start": 47.54
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "et tracer une ligne ici.\nÀ peu près comme ça.", 
+          "start": 50.8
+        }, 
+        {
+          "dur": 4.33, 
+          "text": "Cette ligne constitue un modèle\nde prédiction du prix du logement", 
+          "start": 56.86
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "en fonction d&#39;une entrée.", 
+          "start": 61.19
+        }, 
+        {
+          "dur": 2.95, 
+          "text": "En cours de maths, au collège,", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 6.52, 
+          "text": "nous avions vu\nque cela correspondait à Y = WX + B.", 
+          "start": 68.84
+        }, 
+        {
+          "dur": 2.514, 
+          "text": "Au lycée, nous aurions utilisé MX.", 
+          "start": 76.0
+        }, 
+        {
+          "dur": 2.526, 
+          "text": "Ici, c&#39;est W,\ncar c&#39;est du machine learning.", 
+          "start": 78.514
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "Et voici notre facteur de pondération.", 
+          "start": 81.05
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "On remarque\nqu&#39;il y a un indice ici,", 
+          "start": 83.6
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "car on peut travailler\ndans plus d&#39;une dimension.", 
+          "start": 86.94
+        }, 
+        {
+          "dur": 2.11, 
+          "text": "Le B est un biais.", 
+          "start": 90.24
+        }, 
+        {
+          "dur": 1.87, 
+          "text": "Le W crée la courbe.", 
+          "start": 92.72
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "Comment savoir\nsi cette ligne est correcte ?", 
+          "start": 95.68
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "C&#39;est là qu&#39;intervient la notion de perte.", 
+          "start": 97.84
+        }, 
+        {
+          "dur": 3.704, 
+          "text": "La perte indique si notre ligne", 
+          "start": 102.44
+        }, 
+        {
+          "dur": 3.336, 
+          "text": "prédit de façon correcte un exemple donné.", 
+          "start": 106.144
+        }, 
+        {
+          "dur": 1.56, 
+          "text": "Pour définir la perte,", 
+          "start": 109.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "examinons la différence\nentre la prédiction pour une valeur X,", 
+          "start": 111.44
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "et la valeur réelle de cet exemple.", 
+          "start": 114.46
+        }, 
+        {
+          "dur": 2.34, 
+          "text": "Nous avons ici une perte modérée.", 
+          "start": 116.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Ici, elle est quasi-nulle.", 
+          "start": 118.8
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "Ici, elle est réellement nulle.", 
+          "start": 120.8
+        }, 
+        {
+          "dur": 2.88, 
+          "text": "Ici, nous avons probablement\nune perte positive.", 
+          "start": 122.94
+        }, 
+        {
+          "dur": 3.41, 
+          "text": "L&#39;échelle de la perte part toujours\nde zéro vers des valeurs positives.", 
+          "start": 126.35
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Comme définit-on la perte ?", 
+          "start": 130.56
+        }, 
+        {
+          "dur": 3.21, 
+          "text": "Nous devons y réfléchir\nde façon plus formelle.", 
+          "start": 132.56
+        }, 
+        {
+          "dur": 3.94, 
+          "text": "Voici une façon pratique de définir\nla perte pour les problèmes de régression.", 
+          "start": 137.01
+        }, 
+        {
+          "dur": 3.57, 
+          "text": "Ce n&#39;est pas la seule fonction de perte,\nmais elle est utile pour commencer.", 
+          "start": 141.86
+        }, 
+        {
+          "dur": 2.95, 
+          "text": "C&#39;est la perte L₂, ou erreur quadratique.", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "C&#39;est un type de perte\ndéfini pour un exemple individuel,", 
+          "start": 149.18
+        }, 
+        {
+          "dur": 1.88, 
+          "text": "en prenant le carré de la différence", 
+          "start": 152.44
+        }, 
+        {
+          "dur": 2.48, 
+          "text": "entre la prédiction du modèle\net la valeur réelle.", 
+          "start": 154.32
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "Évidemment,\nplus on s&#39;éloigne de la valeur réelle,", 
+          "start": 157.32
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "plus la perte augmente\nde manière exponentielle.", 
+          "start": 161.54
+        }, 
+        {
+          "dur": 1.53, 
+          "text": "Lorsqu&#39;on crée un modèle,", 
+          "start": 165.04
+        }, 
+        {
+          "dur": 2.85, 
+          "text": "on ne cherche pas à minimiser la perte\npour un seul exemple,", 
+          "start": 166.57
+        }, 
+        {
+          "dur": 2.918, 
+          "text": "mais pour tout l&#39;ensemble de données.", 
+          "start": 169.42
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.92, 
+          "text": "말씀드렸듯이, Google 모델은\n데이터를 통해 학습시킵니다.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "여기에는 복잡한 모델 유형도 많고", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 2.44, 
+          "text": "데이터를 학습할 수 있는\n흥미로운 방식도 많죠.", 
+          "start": 6.48
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "하지만 일단 아주 쉽고\n친숙한 방식으로 시작해서", 
+          "start": 8.92
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "좀 더 복잡한 방식으로\n넘어가도록 하겠습니다.", 
+          "start": 11.44
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "첫 번째 데이터 모델을 학습시켜 볼까요?", 
+          "start": 15.1
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "간단한 데이터 세트예요.", 
+          "start": 18.28
+        }, 
+        {
+          "dur": 2.972, 
+          "text": "X축은 입력값인", 
+          "start": 20.42
+        }, 
+        {
+          "dur": 3.068, 
+          "text": "주택 면적이고", 
+          "start": 23.392
+        }, 
+        {
+          "dur": 2.052, 
+          "text": "Y축은 목푯값인", 
+          "start": 26.46
+        }, 
+        {
+          "dur": 2.528, 
+          "text": "주택 가격 예상가죠.", 
+          "start": 28.512
+        }, 
+        {
+          "dur": 2.688, 
+          "text": "이제 주택 면적을 입력하면", 
+          "start": 31.04
+        }, 
+        {
+          "dur": 2.152, 
+          "text": "주택 가격을 예측하여 출력하는", 
+          "start": 33.728
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "모델을 만들어볼게요.", 
+          "start": 35.88
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "데이터 세트에 라벨이 있는\n예시가 여러 개 있네요.", 
+          "start": 39.02
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "학생의 마음으로 돌아가서\n여기에 맞는 선을 그어볼게요.", 
+          "start": 42.32
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "데이터 세트를 잘 보고", 
+          "start": 47.54
+        }, 
+        {
+          "dur": 3.97, 
+          "text": "이쯤에 선을 그으면\n이런 모습이 됩니다.", 
+          "start": 50.8
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "이제 이 선이 입력값에 따라\n주택 가격을 예측한 모델이 되죠.", 
+          "start": 56.86
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "수학 시간에 배운 내용을 떠올려\n이 선을 방정식으로 정의하면", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "Y = WX + B가 돼요.", 
+          "start": 70.18
+        }, 
+        {
+          "dur": 2.624, 
+          "text": "고등학교에서 배울 땐\nMX라고 썼지만", 
+          "start": 76.0
+        }, 
+        {
+          "dur": 2.116, 
+          "text": "머신 러닝에서는 W를 쓰죠.", 
+          "start": 78.624
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "가중치(weight) 벡터의\nW를 나타내요.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "여기 작은 첨자가 들어가죠.", 
+          "start": 83.6
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "차원이 늘어날 수도 있으니까요.", 
+          "start": 86.94
+        }, 
+        {
+          "dur": 2.48, 
+          "text": "이 B는 편향을 나타내요.", 
+          "start": 90.24
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "그리고 W가 기울기죠.", 
+          "start": 92.72
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "선을 제대로 그었는지\n어떻게 알 수 있을까요?", 
+          "start": 95.68
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "손실이라는 개념을 생각해보세요.", 
+          "start": 97.84
+        }, 
+        {
+          "dur": 3.704, 
+          "text": "손실을 보면 \n아까 그린 이 선이", 
+          "start": 102.44
+        }, 
+        {
+          "dur": 3.736, 
+          "text": "각각의 예시를 얼마나 잘 \n예측하는지 알 수 있습니다.", 
+          "start": 106.144
+        }, 
+        {
+          "dur": 1.56, 
+          "text": "예시에서 주어진 예측값 X에서", 
+          "start": 109.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "실제값을 빼면", 
+          "start": 111.44
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "손실값을 정의할 수 있죠.", 
+          "start": 114.46
+        }, 
+        {
+          "dur": 2.34, 
+          "text": "이 예시는 손실이 어느 정도 있네요.", 
+          "start": 116.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "여기에는 손실이 거의 없고", 
+          "start": 118.8
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "여기는 손실이 딱 0이네요.", 
+          "start": 120.8
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "이 경우 손실이 양수죠.", 
+          "start": 122.94
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "손실은 항상 0 이상의\n양수 범위에 있어요.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "손실은 어떻게 정의될까요?", 
+          "start": 130.56
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "이 부분은 조금 더 명확하게 \n생각해 볼 필요가 있습니다.", 
+          "start": 132.56
+        }, 
+        {
+          "dur": 4.84, 
+          "text": "회귀 문제에서 손실을\n간단히 정의하는 방법이 있어요.", 
+          "start": 137.02
+        }, 
+        {
+          "dur": 1.0, 
+          "text": "손실에 관한 함수가\n이것밖에 없는 건 아니지만", 
+          "start": 141.86
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "이 방법으로 시작하면 좋죠.", 
+          "start": 142.86
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "이걸 L2 손실이라고 합니다.\n제곱 오차라고도 하죠.", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "이 손실은 각 예시별로 정의되는데", 
+          "start": 149.18
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "예측값과 실제값의\n차를 제곱한 값이에요.", 
+          "start": 152.44
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "물론 실제값에서 점점 멀어지면서", 
+          "start": 157.32
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "손실도 제곱이 되면서 커지죠.", 
+          "start": 161.54
+        }, 
+        {
+          "dur": 4.38, 
+          "text": "모델을 훈련시킬 때는\n하나의 예시가 아니라", 
+          "start": 165.04
+        }, 
+        {
+          "dur": 3.108, 
+          "text": "전체 데이터 세트에서\n손실을 최소화해야 해요.", 
+          "start": 169.42
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.92, 
+          "text": "Como dije antes, nuestro modelo\nes algo que aprendimos a partir de los datos.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "Existen muchos\ntipos de modelos complicados", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 2.44, 
+          "text": "y diferentes formas interesantes\nde aprender de los datos.", 
+          "start": 6.48
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "Sin embargo, empezaremos\ncon algo sencillo y familiar.", 
+          "start": 8.92
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "Este será el primer paso\npara conocer métodos más sofisticados.", 
+          "start": 11.44
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "Entrenemos un pequeño modelo\na partir de los datos.", 
+          "start": 15.1
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "Aquí tenemos un conjunto de datos pequeño.", 
+          "start": 18.28
+        }, 
+        {
+          "dur": 2.972, 
+          "text": "En el eje X,\ntenemos la entrada,", 
+          "start": 20.42
+        }, 
+        {
+          "dur": 3.068, 
+          "text": "que muestra\nla superficie cuadrada de una casa.", 
+          "start": 23.392
+        }, 
+        {
+          "dur": 2.052, 
+          "text": "En el eje Y, tenemos el valor de segmentación", 
+          "start": 26.46
+        }, 
+        {
+          "dur": 2.528, 
+          "text": "que intentamos predecir\ndel precio de la casa.", 
+          "start": 28.512
+        }, 
+        {
+          "dur": 2.688, 
+          "text": "Intentaremos crear\nun modelo que tome", 
+          "start": 31.04
+        }, 
+        {
+          "dur": 2.152, 
+          "text": "la superficie cuadrada de la casa\ncomo valor de entrada", 
+          "start": 33.728
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "y prediga el precio de la casa\ncomo valor de salida.", 
+          "start": 35.88
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "Aquí hay varios ejemplos pequeños\netiquetados en nuestro conjunto de datos.", 
+          "start": 39.02
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "Evocaré a nuestro niño interior\npara que dibuje una línea.", 
+          "start": 42.32
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "Observa nuestro conjunto de datos", 
+          "start": 47.54
+        }, 
+        {
+          "dur": 6.06, 
+          "text": "y dibuja una línea por aquí.\nTal vez algo así.", 
+          "start": 50.8
+        }, 
+        {
+          "dur": 7.9, 
+          "text": "Esta línea ahora es un modelo que predice\nel precio de una casa, según una entrada.", 
+          "start": 56.86
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "Podemos aplicar conocimientos\nde álgebra y definir esto", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 5.82, 
+          "text": "como Y = WX + B.", 
+          "start": 70.18
+        }, 
+        {
+          "dur": 2.624, 
+          "text": "En la escuela, diríamos MX,", 
+          "start": 76.0
+        }, 
+        {
+          "dur": 2.116, 
+          "text": "Aquí decimos W,\nporque es aprendizaje automático.", 
+          "start": 78.624
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "Se refiere a nuestros\nvectores ponderados.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "Ahora, notarán\nque hay unos subíndices", 
+          "start": 83.6
+        }, 
+        {
+          "dur": 3.3, 
+          "text": "porque es posible que exista\nmás de una dimensión.", 
+          "start": 86.94
+        }, 
+        {
+          "dur": 2.48, 
+          "text": "Esta B es un margen.", 
+          "start": 90.24
+        }, 
+        {
+          "dur": 2.96, 
+          "text": "La W indica la inclinación.", 
+          "start": 92.72
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "¿Cómo sabemos si tenemos una línea buena?", 
+          "start": 95.68
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Podemos evaluar\nla pérdida aquí.", 
+          "start": 97.84
+        }, 
+        {
+          "dur": 3.704, 
+          "text": "La pérdida muestra\nel rendimiento de la línea", 
+          "start": 102.44
+        }, 
+        {
+          "dur": 3.736, 
+          "text": "para predecir cualquier ejemplo.", 
+          "start": 106.144
+        }, 
+        {
+          "dur": 1.56, 
+          "text": "Podemos definir esta pérdida", 
+          "start": 109.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "al observar la diferencia entre la predicción\npara un valor X determinado", 
+          "start": 111.44
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "y el valor verdadero para ese ejemplo.", 
+          "start": 114.46
+        }, 
+        {
+          "dur": 2.34, 
+          "text": "Aquí tenemos una pérdida de tamaño moderado.", 
+          "start": 116.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Aquí tenemos una pérdida de casi cero.", 
+          "start": 118.8
+        }, 
+        {
+          "dur": 2.14, 
+          "text": "Aquí no tenemos pérdida.", 
+          "start": 120.8
+        }, 
+        {
+          "dur": 3.52, 
+          "text": "Aquí probablemente\nhaya un poco de pérdida positiva.", 
+          "start": 122.94
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "La pérdida siempre va en una escala\nde cero a valores positivos.", 
+          "start": 126.46
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "¿Cómo definimos la pérdida?", 
+          "start": 130.56
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "Para ello, debemos pensar\nde una manera un poco más formal.", 
+          "start": 132.56
+        }, 
+        {
+          "dur": 4.84, 
+          "text": "Pensemos una forma práctica\nde definir la pérdida para los problemas de regresión.", 
+          "start": 137.02
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "No la única función de pérdida,\nsino una útil para comenzar.", 
+          "start": 141.86
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "La llamamos pérdida L2,\nque también se conoce como error al cuadrado.", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 3.26, 
+          "text": "Es una pérdida que se define\npor un ejemplo específico", 
+          "start": 149.18
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "al tomar el cuadrado de la diferencia\nentre la predicción del modelo y el valor verdadero.", 
+          "start": 152.44
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "A medida que nos alejamos\ndel valor verdadero,", 
+          "start": 157.32
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "la pérdida aumenta\nal cuadrado.", 
+          "start": 161.54
+        }, 
+        {
+          "dur": 4.38, 
+          "text": "Cuando capacitamos un modelo, no nos interesa\nreducir la pérdida en un solo ejemplo,", 
+          "start": 165.04
+        }, 
+        {
+          "dur": 3.108, 
+          "text": "nos interesa reducir la pérdida\nen todo nuestro conjunto de datos.", 
+          "start": 169.42
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

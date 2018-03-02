@@ -1,0 +1,504 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 3.78, 
+          "text": "现在我们有了这种强大的测试集和训练集方法。", 
+          "start": 0.56
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "接着我们来想象下运用该方法的实际情况。", 
+          "start": 4.34
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "我们有了测试集和训练集，并对它们进行了妥善区分。", 
+          "start": 7.58
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "现在我们要进行一些迭代。", 
+          "start": 12.76
+        }, 
+        {
+          "dur": 5.5, 
+          "text": "我将用训练数据训练一种模型，\n然后使用测试数据对模型进行测试并观察其指标。", 
+          "start": 15.38
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "我将调整一些设置，\n比如调整学习速率或类似设置。", 
+          "start": 20.88
+        }, 
+        {
+          "dur": 5.252, 
+          "text": "然后重新尝试前面的操作，\n看看能否提高测试集准确率。", 
+          "start": 25.1
+        }, 
+        {
+          "dur": 10.348, 
+          "text": "我可能会添加一些特征，也可能会去除一些特征，\n并继续迭代，直到根据测试集指标找出最佳模型为止。", 
+          "start": 30.352
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "这样有问题吗？", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "我能想到的一点是：\n我可能针对测试数据的特性进行了过拟合。", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "这样就太糟糕了…", 
+          "start": 51.2
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "我们可以使用另一种方法来解决这个问题。", 
+          "start": 52.56
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "我可以在分组数据之外创建第三个数据集，\n并将该数据集称为“验证数据”。", 
+          "start": 55.56
+        }, 
+        {
+          "dur": 12.84, 
+          "text": "我会使用一种增幅小的新迭代方法，\n对训练数据进行迭代训练，然后仅基于验证数据进行评估。", 
+          "start": 61.04
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "将测试数据搁置一旁，完全不使用这些数据。", 
+          "start": 73.88
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "我将不断迭代、调整各种参数或对模型进行任何更改，\n直到根据验证数据得出比较理想的结果。", 
+          "start": 78.2
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "只有这样，我才会根据最终测试数据测试我的模型。", 
+          "start": 87.78
+        }, 
+        {
+          "dur": 6.4, 
+          "text": "我要确保根据测试数据得出的结果\n基本上符合根据验证数据得出的结果。", 
+          "start": 93.8
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "如果不符合，则充分说明我可能对验证集进行了过拟合。", 
+          "start": 100.2
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.78, 
+          "text": "So now we have this powerful test and training set methodology.", 
+          "start": 0.56
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "So let&#39;s imagine we&#39;re using it in practice.", 
+          "start": 4.34
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "We&#39;ve got our test set, we&#39;ve got our training set, we did a good job of separating them out.", 
+          "start": 7.58
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "And we&#39;re gonna now do some iterations.", 
+          "start": 12.76
+        }, 
+        {
+          "dur": 5.5, 
+          "text": "I&#39;m going to train a model on my training data, I&#39;m gonna test it on my test data and I&#39;m gonna observe its&#39; metrics", 
+          "start": 15.38
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "And I&#39;m gonna tweak some setting, maybe I&#39;m gonna tweak the learning rate or something like that.", 
+          "start": 20.88
+        }, 
+        {
+          "dur": 5.252, 
+          "text": "I&#39;m gonna try again and see if I can improve my test set accuracy.", 
+          "start": 25.1
+        }, 
+        {
+          "dur": 10.348, 
+          "text": "Maybe I&#39;m gonna add some features in, maybe I&#39;m gonna take those features out, and keep iterating and iterating until I find the best possible model that I can, based on my test set metrics.", 
+          "start": 30.352
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "Are there any problems here?", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "Well, one thing I could imagine is that maybe I&#39;m starting now to over-fit to the peculiarities of my test data.", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "That&#39;s too bad.", 
+          "start": 51.2
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "So, here&#39;s another way to handle that.", 
+          "start": 52.56
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "I can create a third data set out of my partitions, I&#39;m gonna call this my &quot;validation data&quot;.", 
+          "start": 55.56
+        }, 
+        {
+          "dur": 12.84, 
+          "text": "And I&#39;m gonna use a new, slightly augmented, iterative approach, where I&#39;m going to do my iterations by training on my training data, and then evaluating only on my validation data.", 
+          "start": 61.04
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Keeping my test data way off to the side and completely unused.", 
+          "start": 73.88
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "I&#39;m gonna iterate and iterate, tweaking whatever parameters or making whatever changes I want to my model until I get very good results on my validation data.", 
+          "start": 78.2
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "I&#39;m then, and only then, going to test my model on the final test data.", 
+          "start": 87.78
+        }, 
+        {
+          "dur": 6.4, 
+          "text": "And I&#39;m gonna make sure that the results that I&#39;m getting on the test data basically match what I&#39;m getting on my validation data.", 
+          "start": 93.8
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "If they don&#39;t, that&#39;s a pretty good signal that maybe I was over-fitting to the validation set.", 
+          "start": 100.2
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.78, 
+          "text": "Nous avons expliqué la puissante méthodologie\ndes ensembles d&#39;évaluation et d&#39;apprentissage.", 
+          "start": 0.56
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "Essayons de la mettre en pratique.", 
+          "start": 4.34
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "Nous avons notre ensemble d&#39;évaluation\net notre ensemble d&#39;apprentissage, qui sont bien séparés.", 
+          "start": 7.58
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "Nous allons maintenant effectuer des itérations.", 
+          "start": 12.76
+        }, 
+        {
+          "dur": 5.5, 
+          "text": "Je vais former un modèle à partir de mes données d&#39;apprentissage.\nJe vais le tester avec mes données d&#39;évaluation, puis je vais observer ses statistiques.", 
+          "start": 15.38
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "Je vais régler certains paramètres.\nJe vais peut-être modifier le taux d&#39;apprentissage ou autre chose.", 
+          "start": 20.88
+        }, 
+        {
+          "dur": 5.252, 
+          "text": "Je vais réessayer et voir si je peux améliorer\nl&#39;exactitude de mon ensemble d&#39;évaluation.", 
+          "start": 25.1
+        }, 
+        {
+          "dur": 10.348, 
+          "text": "Je vais y ajouter des caractéristiques ou en supprimer et réitérer les tests jusqu&#39;à trouver\nle meilleur modèle possible en fonction des statistiques de mon ensemble d&#39;évaluation.", 
+          "start": 30.352
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "Ce modèle présente-t-il des problèmes ?", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "Peut-être que je commence à suradapter mon modèle\naux particularités de mes données d&#39;évaluation.", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "C&#39;est dommage…", 
+          "start": 51.2
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "Il existe une autre solution.", 
+          "start": 52.56
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "Je peux créer un ensemble de données tiers hors de mes partitions.\nJe vais parler de mes &quot;données de validation&quot;.", 
+          "start": 55.56
+        }, 
+        {
+          "dur": 12.84, 
+          "text": "Je vais utiliser une nouvelle approche itérative légèrement améliorée. Je vais effectuer mes itérations\nen formant mon modèle à partir de mes données d&#39;apprentissage, puis en n&#39;évaluant que mes données de validation.", 
+          "start": 61.04
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Je vais laisser de côté\nmes données d&#39;évaluation sans m&#39;en servir.", 
+          "start": 73.88
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Je vais réitérer, modifier des paramètres ou effectuer d&#39;autres changements sur mon modèle\njusqu&#39;à obtenir de très bons résultats avec mes données de validation.", 
+          "start": 78.2
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "Ensuite seulement, je vais tester mon modèle\nsur les données d&#39;évaluation finales.", 
+          "start": 87.78
+        }, 
+        {
+          "dur": 6.4, 
+          "text": "Je vais m&#39;assurer que les résultats produits avec les données d&#39;évaluation\ncorrespondent à ceux que j&#39;obtiens avec mes données de validation.", 
+          "start": 93.8
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "Si ce n&#39;est pas le cas, cela indique que je suradaptais\nsans doute mon modèle à l&#39;ensemble de validation.", 
+          "start": 100.2
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.78, 
+          "text": "이제 강력한 테스트 세트와\n학습 세트를 구축했으니", 
+          "start": 0.56
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "실제로 사용한다고 생각해 보겠습니다.", 
+          "start": 4.34
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "테스트 세트와 학습 세트를 추출했고\n이 둘을 제대로 분리했습니다.", 
+          "start": 7.58
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "이제 이 과정을 몇 차례 반복할 겁니다.", 
+          "start": 12.76
+        }, 
+        {
+          "dur": 5.5, 
+          "text": "학습 데이터로 모델을 학습시키고 테스트 데이터로\n테스트한 다음 측정항목을 관찰합니다.", 
+          "start": 15.38
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "그러고 나서 학습률 등의 설정을 약간 조정하고", 
+          "start": 20.88
+        }, 
+        {
+          "dur": 5.252, 
+          "text": "테스트 세트의 정확성이\n개선되었는지 확인할 겁니다.", 
+          "start": 25.1
+        }, 
+        {
+          "dur": 10.348, 
+          "text": "몇몇 변수를 추가하거나 빼는 작업을 반복해\n테스트 세트 측정항목을 기반으로 최적 모델을 찾습니다.", 
+          "start": 30.352
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "여기서 어떤 문제가 생길 수 있을까요?", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "이 테스트 데이터만의 특성에\n과적합한 모델이 나올 수도 있는데", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "그러면 문제가 되겠죠.", 
+          "start": 51.2
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "이 문제를 피할 방법이 있습니다.", 
+          "start": 52.56
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "모집단에서 &#39;검증 데이터&#39;라는\n3번째 데이터 세트를 만드는 거죠.", 
+          "start": 55.56
+        }, 
+        {
+          "dur": 12.84, 
+          "text": "학습 데이터로 학습시키고 데이터 평가에는\n검증 데이터만 사용하는 약간 개선된 반복 방식을 사용합니다.", 
+          "start": 61.04
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "즉, 테스트 데이터는 사용하지 않는 거죠.", 
+          "start": 73.88
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "검증 데이터에서 좋은 결과가 나올 때까지 반복하고\n매개변수와 모델을 수정하는 작업을 계속합니다.", 
+          "start": 78.2
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "그런 다음 최종 테스트 데이터를\n대상으로 모델을 테스트합니다.", 
+          "start": 87.78
+        }, 
+        {
+          "dur": 6.4, 
+          "text": "이때 테스트 데이터에서 얻은 결과가\n검증 데이터 결과와 일치하는지 확인합니다.", 
+          "start": 93.8
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "일치하지 않는다면 검증세트에 과적합한\n모델일 가능성이 높습니다.", 
+          "start": 100.2
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.78, 
+          "text": "Tenemos una potente metodología de prueba\ny un conjunto de entrenamiento.", 
+          "start": 0.56
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "Vamos a imaginar que la ponemos en práctica.", 
+          "start": 4.34
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "Tenemos el conjunto de prueba y\nel conjunto de entrenamiento bien separados.", 
+          "start": 7.58
+        }, 
+        {
+          "dur": 2.62, 
+          "text": "Realizaremos algunas iteraciones.", 
+          "start": 12.76
+        }, 
+        {
+          "dur": 5.5, 
+          "text": "Entreno un modelo con datos de entrenamiento,\nlo pruebo y observo las métricas.", 
+          "start": 15.38
+        }, 
+        {
+          "dur": 4.22, 
+          "text": "Corrijo una opción de configuración,\npor ejemplo, la tasa de aprendizaje.", 
+          "start": 20.88
+        }, 
+        {
+          "dur": 5.252, 
+          "text": "Veamos si mejoró\nla exactitud del conjunto de datos.", 
+          "start": 25.1
+        }, 
+        {
+          "dur": 10.348, 
+          "text": "Agrego y quito atributos al iterar para\nobtener el mejor modelo con mis métricas.", 
+          "start": 30.352
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "¿Hay algún problema?", 
+          "start": 40.7
+        }, 
+        {
+          "dur": 7.76, 
+          "text": "Tal vez, estoy sobreajustando el modelo\nsegún los datos de prueba.", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "Eso no es bueno.", 
+          "start": 51.2
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "Existe otra solución.", 
+          "start": 52.56
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "Puedo crear un tercer conjunto de datos\ncon particiones, o &quot;datos de validación&quot;.", 
+          "start": 55.56
+        }, 
+        {
+          "dur": 12.84, 
+          "text": "Aumento las iteraciones, uso datos\nde entrenamiento y datos de validación.", 
+          "start": 61.04
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "No uso los datos de prueba.", 
+          "start": 73.88
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Sigo iterando y corrijo parámetros para\nmejorar resultados de datos de validación.", 
+          "start": 78.2
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "Entonces, pruebo el modelo\ncon los datos de prueba finales.", 
+          "start": 87.78
+        }, 
+        {
+          "dur": 6.4, 
+          "text": "Los resultados de los datos de prueba\ndeben coincidir con los de validación.", 
+          "start": 93.8
+        }, 
+        {
+          "dur": 6.44, 
+          "text": "Si no es así, significa que sobreajusté\nel conjunto de validación.", 
+          "start": 100.2
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

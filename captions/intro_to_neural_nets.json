@@ -1,0 +1,879 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 4.58, 
+          "text": "这时，我们应该意识到，\n这是一个简单的非线性问题。", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "我们可以通过特征交叉乘积轻松解决这个问题。", 
+          "start": 4.58
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "但如果遇到稍微复杂点的问题，\n我们该怎么办呢？", 
+          "start": 7.86
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "比如像这样的问题。", 
+          "start": 11.36
+        }, 
+        {
+          "dur": 4.86, 
+          "text": "从某种程度上讲，我们得到的\n可能是一种互相交错的螺旋组合。", 
+          "start": 15.72
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "现在，我们可能要先停下来，进行一些计算，\n然后思考一下如何添加正确的特征交叉乘积。", 
+          "start": 20.58
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "但很显然，我们的数据集可能会越来越复杂。", 
+          "start": 25.18
+        }, 
+        {
+          "dur": 8.0, 
+          "text": "最终我们还是希望通过某种方式，\n让模型自行学习非线性规律，\n而不用我们手动为它们指定参数。", 
+          "start": 28.8
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "这一愿景可以通过深度神经网络来实现，\n深度神经网络可以非常出色地处理复杂数据，\n例如图片数据、音频数据以及视频数据等等。", 
+          "start": 36.8
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "我们将在这一部分详细了解神经网络。", 
+          "start": 44.98
+        }, 
+        {
+          "dur": 6.32, 
+          "text": "我们希望模型能够自行学习非线性规律，\n而不用我们手动为它们指定参数。", 
+          "start": 47.74
+        }, 
+        {
+          "dur": 0.88, 
+          "text": "那么我们该怎么做呢？", 
+          "start": 54.06
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "我们可能需要给模型添加一些额外结构。", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "现在来看看我们的线性模型。", 
+          "start": 58.52
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "该模型中有一些输入，\n每个输入都具有一个权重，\n这些权重以线性方式结合到一起产生输出。", 
+          "start": 60.52
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "如果我们想获得非线性规律，\n则可能需要向该模型再添加一个层。", 
+          "start": 65.64
+        }, 
+        {
+          "dur": 5.84, 
+          "text": "这样，我们可以通过良好的线性组合，\n将这些输入添加到第二层。", 
+          "start": 70.56
+        }, 
+        {
+          "dur": 5.44, 
+          "text": "第二层再以线性方式相结合，\n但我们尚未实现任何非线性规律。", 
+          "start": 76.4
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "因为线性函数的线性组合依然是线性。", 
+          "start": 81.84
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "这还不够。很明显，\n我们还需要再添加一层，对吧？", 
+          "start": 85.84
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "我们在模型中再添加一层后，\n该模型依旧是线性模型。", 
+          "start": 89.04
+        }, 
+        {
+          "dur": 6.7, 
+          "text": "因为即便我们添加任意多的分层，\n所有线性函数的组合依然是线性函数。", 
+          "start": 92.68
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "那么，我们就要从其他方面着手。", 
+          "start": 99.38
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "所谓的从其他方面着手，也就是说，\n我们需要添加非线性函数。", 
+          "start": 101.14
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "这种非线性函数可位于任何小的隐藏式节点的输出中。", 
+          "start": 104.78
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "其中一种常用的非线性激活函数叫做ReLU。", 
+          "start": 109.1
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "它会接受线性函数，并在零值处将其截断。", 
+          "start": 114.0
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "如果返回值在零值以上，则为线性函数。\n如果函数返回值小于零，则输出为零。", 
+          "start": 118.36
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "这是一种最简单的非线性函数，\n我们可以使用该函数来创建非线性模型。", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "现在我们可以使用任何非线性函数，很多人[听不清楚]，\n但事实上ReLU可以提供关于很多问题的先进研究成果，\n而且操作起来非常简单。", 
+          "start": 130.38
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "然后，我们可以将这些层级堆叠起来，\n并创建任意复杂程度的神经网络。", 
+          "start": 141.24
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "现在，当我们训练这些神经网络时，\n很显然，我们面临的是非凸优化问题，因此可能需要初始化。", 
+          "start": 148.04
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "我们训练这些神经网络时使用的方法叫做反向传播，\n它是梯度下降法的变形。", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "而通过反向传播，我们能够以合理高效的方式，\n对非凸优化问题执行梯度下降。", 
+          "start": 161.52
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.58, 
+          "text": "At this point, we should recognize this problem as a simple, non-linear problem.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Something that we can solve easily with feature cross products.", 
+          "start": 4.58
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "But what happens if we get a slightly more complicated problem?", 
+          "start": 7.86
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Maybe something that looks like this.", 
+          "start": 11.36
+        }, 
+        {
+          "dur": 4.86, 
+          "text": "At some level we&#39;ve got maybe a set of spirals interacting with each other.", 
+          "start": 15.72
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Now we can probably sit around and do some math and think of the right feature cross products to add.", 
+          "start": 20.58
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "But it&#39;s easy to think that our data sets might be more and more complicated.", 
+          "start": 25.18
+        }, 
+        {
+          "dur": 8.0, 
+          "text": "And eventually we would like some way for our models to learn the non-linearities themselves without us having to specify them manually.", 
+          "start": 28.8
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "This is the promise of deep neural nets, that do an especially good job at complex data, including image data, audio data, and video data.", 
+          "start": 36.8
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "We&#39;ll learn more about neural nets in this section.", 
+          "start": 44.98
+        }, 
+        {
+          "dur": 6.32, 
+          "text": "So we&#39;d like to have models that learn the non-linearities themselves, without us having to specify them manually.", 
+          "start": 47.74
+        }, 
+        {
+          "dur": 0.88, 
+          "text": "How are we gonna to do that?", 
+          "start": 54.06
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "Well we probably need a model with some additional structure to it.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Let&#39;s take a look at our linear model.", 
+          "start": 58.52
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "Where we have a number of inputs, each with a weight that&#39;s combined linearly, to produce an output.", 
+          "start": 60.52
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Well, if we wanna get a non-linearity in there, maybe we need to have an additional layer in there.", 
+          "start": 65.64
+        }, 
+        {
+          "dur": 5.84, 
+          "text": "So now we can add those guys up in a nice linear combination, into a second layer.", 
+          "start": 70.56
+        }, 
+        {
+          "dur": 5.44, 
+          "text": "That second layer gets linear combined and we haven&#39;t yet achieved any non-linearity.", 
+          "start": 76.4
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Because a linear combination of linear functions is still linear.", 
+          "start": 81.84
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "Well, that&#39;s not good enough, so clearly what we need is a second layer right?", 
+          "start": 85.84
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "So we put a second layer in there and.. we&#39;re still linear.", 
+          "start": 89.04
+        }, 
+        {
+          "dur": 6.7, 
+          "text": "Because even if we add as many layers as we want, any linear combinations of linear functions is still gonna be linear.", 
+          "start": 92.68
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "Okay, we need to do something else.", 
+          "start": 99.38
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "And that something else is we need to stick in a non-linearity.", 
+          "start": 101.14
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "That non-linearity can go at the output of any of our little hidden notes in there.", 
+          "start": 104.78
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "One common non-linearity that we use is called ray lou.", 
+          "start": 109.1
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "And this takes a linear function, and chops it off at zero.", 
+          "start": 114.0
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "So if you&#39;re above zero, you&#39;re a linear function; if your function returns a value below zero, we cap that at zero.", 
+          "start": 118.36
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "Simplest possible non-linear function, and this allows us to create non-linear models.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "Now we could use any non-linearity in here, a lot of folks also use [unintelligible], but it turns out that ray lou gives state of the art results for a wide number of problems, and it&#39;s very simple.", 
+          "start": 130.38
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "Once we had this, we can stack these layers up and we can create arbitrarily complicated neural networks.", 
+          "start": 141.24
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "Now when we train these neural nets, obviously we are in a non convex optimization, so initialization may matter.", 
+          "start": 148.04
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "The method that we use for training these, is a variant of gradient descent, called back propagation.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "And back propagation essentially allows us to do gradient descent in this non convex optimization in a reasonably efficient manner.", 
+          "start": 161.52
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.58, 
+          "text": "À ce stade, nous devrions pouvoir reconnaître\nqu&#39;il s&#39;agit d&#39;un problème non linéaire simple,", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "qui peut être résolu facilement\navec des produits de croisement de caractéristiques.", 
+          "start": 4.58
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "Mais que se passe-t-il\nlorsque le problème est un peu plus complexe ?", 
+          "start": 7.86
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Par exemple, si nous avons quelque chose comme ça.", 
+          "start": 11.36
+        }, 
+        {
+          "dur": 4.86, 
+          "text": "Dans une certaine mesure, nous voyons\ndes spirales en interaction les unes avec les autres.", 
+          "start": 15.72
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Nous pourrions certainement réfléchir aux produits\nde croisement de caractéristiques que nous pourrions ajouter.", 
+          "start": 20.58
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "Mais on peut facilement imaginer que nos ensembles\nde données risquent de devenir de plus en plus complexes.", 
+          "start": 25.18
+        }, 
+        {
+          "dur": 8.0, 
+          "text": "Au final, nous voudrions que nos modèles apprennent les non-linéarités\npar eux-mêmes, sans que nous ayons à les indiquer manuellement.", 
+          "start": 28.8
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "C&#39;est ce que promettent les réseaux de neurones profonds, qui fonctionnent très bien\navec les données complexes, notamment les données image, audio et vidéo.", 
+          "start": 36.8
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "Nous en apprendrons davantage\nsur les réseaux de neurones dans cette vidéo.", 
+          "start": 44.98
+        }, 
+        {
+          "dur": 6.32, 
+          "text": "Nous aimerions donc avoir des modèles qui apprennent les non-linéarités\npar eux-mêmes, sans que nous ayons besoin de leur indiquer manuellement.", 
+          "start": 47.74
+        }, 
+        {
+          "dur": 0.88, 
+          "text": "Comment allons-nous faire ?", 
+          "start": 54.06
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "Nous avons probablement besoin\nd&#39;un modèle doté d&#39;une structure supplémentaire.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Observons notre modèle linéaire.", 
+          "start": 58.52
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "Il comporte plusieurs entrées, chacune avec une pondération\ncombinée de façon linéaire, pour produire un résultat.", 
+          "start": 60.52
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Si nous voulons y ajouter une non-linéarité,\nnous devons peut-être lui ajouter une couche supplémentaire.", 
+          "start": 65.64
+        }, 
+        {
+          "dur": 5.84, 
+          "text": "Nous pouvons les ajouter dans une\ncombinaison linéaire, dans une deuxième couche.", 
+          "start": 70.56
+        }, 
+        {
+          "dur": 5.44, 
+          "text": "Cette seconde couche est combinée de façon linéaire,\net nous n&#39;avons pas obtenu de non-linéarité.", 
+          "start": 76.4
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Parce qu&#39;une combinaison linéaire\nde fonctions linéaires est toujours linéaire.", 
+          "start": 81.84
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "Ce n&#39;est pas suffisant.\nIl nous faut une 2e couche. D&#39;accord ?", 
+          "start": 85.84
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "Ajoutons donc une deuxième couche et…\nCela reste linéaire.", 
+          "start": 89.04
+        }, 
+        {
+          "dur": 6.7, 
+          "text": "Quel que soit le nombre de couches que nous ajoutons,\nune combinaison linéaire de fonctions linéaires sera toujours linéaire.", 
+          "start": 92.68
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "Nous devons procéder autrement.", 
+          "start": 99.38
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "Nous devons ajouter une non-linéarité.", 
+          "start": 101.14
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Celle-ci peut être placée au niveau du résultat\nde n&#39;importe laquelle de nos petites notes.", 
+          "start": 104.78
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "Une non-linéarité couramment utilisée est la fonction ReLU.", 
+          "start": 109.1
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Elle consiste à prendre une fonction linéaire\net à l&#39;interrompre à zéro.", 
+          "start": 114.0
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "Au-dessus de zéro, c&#39;est une fonction linéaire,\nmais si la fonction renvoie une valeur négative, celle-ci est limitée à zéro.", 
+          "start": 118.36
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "C&#39;est la fonction non linéaire la plus simple qui soit,\net elle nous permet de créer des modèles non linéaires.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "Nous pourrions utiliser n&#39;importe quelle non-linéarité. Beaucoup utilisent\nla fonction sigmoïde, mais la fonction ReLU offre des résultats excellents\npour un grand nombre de problèmes, et elle est très simple.", 
+          "start": 130.38
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "Une fois que nous l&#39;avons appliquée, nous pouvons empiler\nces couches et créer des réseaux de neurones arbitrairement complexes.", 
+          "start": 141.24
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "Lorsque nous formons ces réseaux de neurones, nous sommes évidemment\ndans une optimisation non convexe. L&#39;initialisation peut donc avoir son importance.", 
+          "start": 148.04
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Pour les former, nous utilisons une variante\nde la descente de gradient, appelée rétropropagation.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "La rétropropagation nous permet principalement de réaliser une descente de gradient\nau sein de cette optimisation non convexe de façon raisonnablement efficace.", 
+          "start": 161.52
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.58, 
+          "text": "이제 이 문제를 간단한\n비선형 문제로 볼 수 있겠죠.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "특성 교차곱을 사용해\n간단히 풀 수 있습니다.", 
+          "start": 4.58
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "하지만 문제가 복잡해지면 어떻게 될까요?", 
+          "start": 7.86
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "예를 들면 이런 경우 말이죠.", 
+          "start": 11.36
+        }, 
+        {
+          "dur": 4.86, 
+          "text": "서로 상호작용하는 나선이\n나타날지도 모릅니다.", 
+          "start": 15.72
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "이런저런 계산을 해가며 어떤 특성 교차곱을 추가해야 좋을지\n열심히 궁리해볼 수도 있겠죠.", 
+          "start": 20.58
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "하지만 데이터 세트가 점점 더 복잡해지고 있다고\n생각이 들 수도 있습니다.", 
+          "start": 25.18
+        }, 
+        {
+          "dur": 8.0, 
+          "text": "그리고 우리가 일일이 지정해주지 않아도\n모델이 스스로 비선형성을 학습하길 원하게 되겠죠.", 
+          "start": 28.8
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "심층 신경망이 바로 이러한 기능을 합니다. 심층 신경망은 이미지 데이터, 오디오 데이터,\n동영상 데이터 등 복잡한 데이터에서 특히 뛰어난 성능을 보여줍니다.", 
+          "start": 36.8
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "이번 섹션에서는 신경망에 관해\n자세히 살펴보겠습니다.", 
+          "start": 44.98
+        }, 
+        {
+          "dur": 6.32, 
+          "text": "우리에게는 우리가 일일이 지정해주지 않아도\n스스로 비선형성을 학습하는 모델이 필요합니다.", 
+          "start": 47.74
+        }, 
+        {
+          "dur": 0.88, 
+          "text": "어떻게 하면 이게 가능할까요?", 
+          "start": 54.06
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "구조를 추가한 모델이 필요하겠죠.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "이 선형 모델을 살펴보죠.", 
+          "start": 58.52
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "이 선형 모델은 선형으로 결합된 가중치를 갖는\n입력값을 가지며, 출력값을 내놓습니다.", 
+          "start": 60.52
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "여기에 비선형성을 더하려면\n레이어를 추가해야 합니다.", 
+          "start": 65.64
+        }, 
+        {
+          "dur": 5.84, 
+          "text": "그래서 선형으로 조합된 값을\n두 번째 레이어에 추가했습니다.", 
+          "start": 70.56
+        }, 
+        {
+          "dur": 5.44, 
+          "text": "두 번째 레이어는 선형으로 결합되며\n아직 비선형성이 없습니다.", 
+          "start": 76.4
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "선형 함수를 선형으로 조합하면\n계속 선형이 되기 때문이죠.", 
+          "start": 81.84
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "이걸로는 충분하지 않습니다. 지금 필요한 것은\n두 번째 레이어입니다, 맞죠?", 
+          "start": 85.84
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "그래서 두 번째 레이어를 더했지만,\n여전히 선형입니다.", 
+          "start": 89.04
+        }, 
+        {
+          "dur": 6.7, 
+          "text": "아무리 많은 레이어를 추가하더라도 선형 함수를 선형으로 결합하면\n계속 선형이 되기 때문입니다.", 
+          "start": 92.68
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "다른 방법을 시도해봐야겠네요.", 
+          "start": 99.38
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "이를 위해서는 비선형성을 적용해야 합니다.", 
+          "start": 101.14
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "이러한 비선형성은 숨겨져 있는 부분의 출력에 적용할 수 있습니다.", 
+          "start": 104.78
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "일반적으로 흔히 사용하는 비선형성 중 하나는 ReLU입니다.", 
+          "start": 109.1
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "ReLU는 선형 함수를 0에서 자릅니다.", 
+          "start": 114.0
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "0 이상일 때는 선형 함수지만, 함수가 0보다 작은 값을 내놓으면\n이 값을 0으로 돌립니다.", 
+          "start": 118.36
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "이는 가장 간단한 비선형 함수이며 이를 사용하여\n비선형 모델을 만들 수 있습니다.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "이제 여기에 어떤 비선형성이든 사용할 수 있고, 시그모이드도 많이 사용하지만, ReLU를 사용하면\n더 다양한 문제에 최상의 결과를 내놓을 수 있으며, 심지어 사용하기에 간단합니다.", 
+          "start": 130.38
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "이러한 방법으로 여러 레이어를 쌓아 임의로 복잡한 신경망을 만들 수 있죠.", 
+          "start": 141.24
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "이러한 신경망을 학습시킬 때는 볼록 최적화를 사용할 수 없으므로\n초기화가 중요합니다.", 
+          "start": 148.04
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "신경망을 학습할 때 사용하는 방법은 경사하강법의 일종으로,\n역전파라고 부릅니다.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "역전파를 사용하면 볼록 최적화를 사용할 수 없는 경우에도 상당히 효율적으로\n경사하강법을 적용할 수 있습니다.", 
+          "start": 161.52
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.58, 
+          "text": "En este punto, debemos identificarlo\ncomo un problema simple y no lineal.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.28, 
+          "text": "Podemos resolverlo fácilmente\ncon productos de combinación de atributos.", 
+          "start": 4.58
+        }, 
+        {
+          "dur": 3.5, 
+          "text": "¿Pero qué sucede si se hace más complejo?", 
+          "start": 7.86
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Observemos el siguiente caso.", 
+          "start": 11.36
+        }, 
+        {
+          "dur": 4.86, 
+          "text": "Quizás tengamos un conjunto de espirales\nque interactúan entre ellas.", 
+          "start": 15.72
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "Podemos calcular los productos\nde la combinación de atributos para agregar.", 
+          "start": 20.58
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "Sin duda, los conjuntos de datos\nserán más complejos.", 
+          "start": 25.18
+        }, 
+        {
+          "dur": 8.0, 
+          "text": "También queremos que los modelos aprendan\nlas no linealidades sin nuestra intervención.", 
+          "start": 28.8
+        }, 
+        {
+          "dur": 8.18, 
+          "text": "Las redes neurales profundas desentrañarán\ndatos complejos: imágenes, audio y video.", 
+          "start": 36.8
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "Aprenderemos más\nsobre las redes neurales en esta sección.", 
+          "start": 44.98
+        }, 
+        {
+          "dur": 6.32, 
+          "text": "Queremos lograr modelos que aprendan\nlas no linealidad sin nuestra intervención.", 
+          "start": 47.74
+        }, 
+        {
+          "dur": 0.88, 
+          "text": "¿Cómo lo haremos?", 
+          "start": 54.06
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "Necesitemos un modelo\ncon una estructura adicional.", 
+          "start": 54.94
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Observemos nuestro modelo lineal:", 
+          "start": 58.52
+        }, 
+        {
+          "dur": 5.12, 
+          "text": "una serie de entradas con una ponderación\ncombinada lineal para producir un resultado.", 
+          "start": 60.52
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Si queremos una no linealidad,\nnecesitaremos una capa adicional.", 
+          "start": 65.64
+        }, 
+        {
+          "dur": 5.84, 
+          "text": "Podemos agregar una combinación lineal\nen una segunda capa.", 
+          "start": 70.56
+        }, 
+        {
+          "dur": 5.44, 
+          "text": "Obtenemos una combinación lineal,\npero aún no llegamos a una no linealidad", 
+          "start": 76.4
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "porque una combinación\nde funciones lineales sigue siendo lineal.", 
+          "start": 81.84
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "Por lo que necesitamos una segunda capa.", 
+          "start": 85.84
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "La ponemos allí,\npero seguimos teniendo un resultado lineal.", 
+          "start": 89.04
+        }, 
+        {
+          "dur": 6.7, 
+          "text": "Por más que sigamos agregando capas,\nel resultado será el mismo.", 
+          "start": 92.68
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "Debemos recurrir a otro método.", 
+          "start": 99.38
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "Tenemos que trabajar en una no linealidad.", 
+          "start": 101.14
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Puede estar en el resultado\nde cualquiera de nuestras pequeñas notas.", 
+          "start": 104.78
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "Una no linealidad común es ReLU.", 
+          "start": 109.1
+        }, 
+        {
+          "dur": 4.36, 
+          "text": "Toma una función lineal y la deja en cero.", 
+          "start": 114.0
+        }, 
+        {
+          "dur": 6.46, 
+          "text": "Si es mayor que cero, es una función lineal.\nSi es menor, se limita a cero.", 
+          "start": 118.36
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "Es la función no lineal más simple\nque nos permite crear modelos no lineales.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "Si bien cualquier no linealidad es válida,\nReLU es simple y soluciona varios problemas.", 
+          "start": 130.38
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "Ahora, podemos apilar estas capas\ny crear redes complejas de forma arbitraria.", 
+          "start": 141.24
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "Al entrenarlas, la optimización no es convexa\ny, por ello, la inicialización es importante.", 
+          "start": 148.04
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Para ello, usamos una variante de descenso\nde gradientes llamada propagación inversa.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "Logramos un descenso de gradientes eficiente\nen esta optimización no convexa.", 
+          "start": 161.52
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

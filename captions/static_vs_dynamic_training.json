@@ -1,0 +1,429 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 11.24, 
+          "text": "设计机器学习系统时需要考虑的一个重要因素是，\n我们是以离线的方式静态进行训练，\n还是以不断更新的在线方式动态进行训练。", 
+          "start": 0.46
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "静态离线训练是指，我们确实拥有很大的数据库，\n而在模型投入长期使用之前，只接受一次训练。", 
+          "start": 11.7
+        }, 
+        {
+          "dur": 11.18, 
+          "text": "动态在线训练是指，数据会不断进入我们的系统，\n而我们会通过较小的更新将这些数据整合到模型中。", 
+          "start": 21.72
+        }, 
+        {
+          "dur": 2.94, 
+          "text": "这两种方式各有利弊。", 
+          "start": 32.9
+        }, 
+        {
+          "dur": 4.8, 
+          "text": "离线训练的静态模型有一些明显的优势。", 
+          "start": 35.84
+        }, 
+        {
+          "dur": 13.5, 
+          "text": "它易于构建和测试；我们可以仅使用批量方法；\n它廉价又实用，我们可以对其进行迭代，直到其符合要求；\n我们可以轻松验证模型，因此可在确保一切正常后，\n再推出模型以提供相关服务。", 
+          "start": 40.64
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "这种模型的缺点是，\n在推理时仍需要从输入级别对其进行监控。", 
+          "start": 54.14
+        }, 
+        {
+          "dur": 8.2, 
+          "text": "如果输入的分布发生了变化，\n而我们的模型尚未适应这种变化，\n最终可能会出现异常的预测结果。", 
+          "start": 60.76
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "同样，这种模型也很容易过时。", 
+          "start": 68.96
+        }, 
+        {
+          "dur": 11.76, 
+          "text": "试想一下，如果我们根据 iPhone 推出之前的数据\n训练模型，而 iPhone 突然推出，那么我们就\n不得不考虑重新训练模型，否则便无法有效地\n将相应信息纳入模型。", 
+          "start": 72.66
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "以持续更新的方式训练的动态模型\n当然也需要我们在监控方面投入更多精力。", 
+          "start": 84.42
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "我们需要更复杂的系统和更强的监控功能\n来确保它不会偏离正轨。", 
+          "start": 93.24
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "尽管需要做这些额外工作，但是有好处的，\n这种模型可以随时间推移适应新加入的数据，\n因此不存在过时问题。", 
+          "start": 101.06
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "如果我们认为数据不会随时间推移发生很大变化，\n这种情况就适合使用离线训练。", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 7.42, 
+          "text": "例如，大型图像识别模型，对于这种情况，\n世界上并不会出现很多新的对象类型。", 
+          "start": 118.3
+        }, 
+        {
+          "dur": 11.732, 
+          "text": "在线训练的模型可能更适合\n随时间推移常有趋势和季节性变化的情况，\n我们会希望确保模型尽可能反映出最新变化。", 
+          "start": 125.82
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.24, 
+          "text": "One key consideration when designing a machine learning system is whether we do training in a static way, offline, or in a dynamic way in a continuously updating online fashion.", 
+          "start": 0.46
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Now when we say static offline training, what we mean is that we essentially have a big store of data and we train our model exactly once, before it&#39;s used for a long period of time.", 
+          "start": 11.7
+        }, 
+        {
+          "dur": 11.18, 
+          "text": "When we talk about dynamic online training, we mean that data is continually coming into our system and we&#39;re incorporating that data into the model through small updates.", 
+          "start": 21.72
+        }, 
+        {
+          "dur": 2.94, 
+          "text": "These both have different strengths and weaknesses.", 
+          "start": 32.9
+        }, 
+        {
+          "dur": 4.8, 
+          "text": "Now for a static model that&#39;s trained offline, there are some definite pluses.", 
+          "start": 35.84
+        }, 
+        {
+          "dur": 13.5, 
+          "text": "It&#39;s easy to build and test, we can just use batch quota, it&#39;s nice and cheap, and we can iterate on that model until we know it&#39;s good, it&#39;s nicely verified, and we can make sure that everything is working well before we ship it off to serving.", 
+          "start": 40.64
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "The downside here is that it still requires monitoring at the input level at inference time.", 
+          "start": 54.14
+        }, 
+        {
+          "dur": 8.2, 
+          "text": "If our distribution of inputs changes and our model hasn&#39;t adapted, well, we may end up with screwy predictions.", 
+          "start": 60.76
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "In a similar vein, it&#39;s easier for this model to grow stale.", 
+          "start": 68.96
+        }, 
+        {
+          "dur": 11.76, 
+          "text": "You might imagine if a model is trained on pre-iPhone data and suddenly the iPhone comes out, there&#39;s no good way for us to get that information into the model without accounting for some kind of retraining.", 
+          "start": 72.66
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "A dynamic model that&#39;s trained into a continuously updating fashion, of course has much more heavy weight in terms of monitoring.", 
+          "start": 84.42
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "We need to have more system complexity and larger monitoring capabilities in order to make sure that this thing isn&#39;t going off the rails.", 
+          "start": 93.24
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "The plus side for all of this extra work is that we have a model that&#39;s able to adapt over time as new data comes in, and so we don&#39;t have this staleness issue.", 
+          "start": 101.06
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "So a good place to use offline training is when we don&#39;t think that our data&#39;s going to change very much over time.", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 7.42, 
+          "text": "An example for this might be a large image recognition model, where there just aren&#39;t that many new kinds of objects that come into the world.", 
+          "start": 118.3
+        }, 
+        {
+          "dur": 11.732, 
+          "text": "A model that&#39;s trained online might be more appropriate for situations where in fact there are trends and seasonalities that change quite often over time and we want to make sure that we&#39;re as up to date as possible.", 
+          "start": 125.82
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.24, 
+          "text": "Un élément clé à prendre en compte lors de la conception d&#39;un système de machine learning\nest de savoir si l&#39;apprentissage doit être statique, hors ligne ou dynamique, continu et en ligne.", 
+          "start": 0.46
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Dans le cadre d&#39;un apprentissage hors ligne statique, nous avons un important stock de données\net nous entraînons le modèle une seule fois pour ensuite l&#39;utiliser pendant longtemps.", 
+          "start": 11.7
+        }, 
+        {
+          "dur": 11.18, 
+          "text": "Avec un apprentissage en ligne dynamique, les données arrivent continuellement dans notre système,\net nous les intégrons dans le modèle par le biais de petites mises à jour.", 
+          "start": 21.72
+        }, 
+        {
+          "dur": 2.94, 
+          "text": "Ces deux méthodes\nont des avantages et des inconvénients.", 
+          "start": 32.9
+        }, 
+        {
+          "dur": 4.8, 
+          "text": "Un modèle statique entraîné hors connexion\ncomporte des avantages certains.", 
+          "start": 35.84
+        }, 
+        {
+          "dur": 13.5, 
+          "text": "Il est facile à mettre en place et à tester, intuitif et bon marché, et facile à vérifier. Nous pouvons simplement utiliser le quota de lots,\nle tester jusqu&#39;à obtenir le résultat escompté et nous assurer que tout fonctionne bien avant de le mettre en service.", 
+          "start": 40.64
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "L&#39;inconvénient est que cela nécessite toujours\nune surveillance des entrées lors de l&#39;inférence.", 
+          "start": 54.14
+        }, 
+        {
+          "dur": 8.2, 
+          "text": "Si la distribution des entrées change et que le modèle\nne s&#39;est pas adapté, les prédictions risquent d&#39;être mauvaises.", 
+          "start": 60.76
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "De même, ce modèle risque\nde devenir rapidement obsolète.", 
+          "start": 68.96
+        }, 
+        {
+          "dur": 11.76, 
+          "text": "Vous imaginez bien que si un modèle est entraîné à partir de données pré-iPhone\net que soudain l&#39;iPhone sort, le seul moyen d&#39;ajouter ces informations au modèle est d&#39;effectuer un nouvel apprentissage.", 
+          "start": 72.66
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "Un modèle dynamique entraîné pour être mis à jour en continu\nimplique bien sûr de pratiquer une surveillance accrue.", 
+          "start": 84.42
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "La complexité du système et les capacités de surveillance\ndoivent être plus importantes pour s&#39;assurer que tout se passe comme prévu.", 
+          "start": 93.24
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "Le point positif de ce travail supplémentaire est que le modèle\nest capable de s&#39;adapter aux nouvelles données. Nous n&#39;avons donc pas ce problème d&#39;obsolescence.", 
+          "start": 101.06
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "Ainsi, l&#39;apprentissage hors ligne peut être un bon choix\nsi nos données ne sont pas censées varier beaucoup au fil du temps.", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 7.42, 
+          "text": "Nous pouvons prendre l&#39;exemple d&#39;un vaste modèle de reconnaissance d&#39;images.\nA priori, il ne devrait pas y avoir trop de nouveaux objets à voir le jour.", 
+          "start": 118.3
+        }, 
+        {
+          "dur": 11.732, 
+          "text": "Un modèle entraîné en ligne est plus adapté à des situations avec des tendances et des saisonnalités\nqui changent régulièrement au fil du temps, et que vous voulez vous assurer d&#39;être aussi à jour que possible.", 
+          "start": 125.82
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.24, 
+          "text": "머신러닝 시스템을 설계할 때는 오프라인에서 정적으로 교육할지\n아니면 온라인으로 계속 업데이트되는 동적인 방식을 취할 것인지 정해야 합니다", 
+          "start": 0.46
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "여기서 정적 오프라인 교육이란 큰 데이터 저장소를 보유하고\n모델을 장기적으로 사용하기 전에 딱 한 번만 교육한다는 의미입니다", 
+          "start": 11.7
+        }, 
+        {
+          "dur": 11.18, 
+          "text": "반면 동적 온라인 교육에서는 데이터가 지속적으로 시스템에 입력되며\n소규모 업데이트를 통해 데이터를 모델에 통합합니다", 
+          "start": 21.72
+        }, 
+        {
+          "dur": 2.94, 
+          "text": "마찬가지로 여기에는 장단점이 있습니다", 
+          "start": 32.9
+        }, 
+        {
+          "dur": 4.8, 
+          "text": "오프라인으로 교육하는 정적 모델에는 확실한 장점이 있습니다", 
+          "start": 35.84
+        }, 
+        {
+          "dur": 13.5, 
+          "text": "빌드 및 테스트가 쉽고, 배치 할당량만 사용하면 되므로 비용이 적게 듭니다.\n또한 모델이 우수하며 제대로 검증되었음을 확인할 때까지 모델을 반복할 수 있고,\n서비스 제공을 위해 배송하기 전에 제대로 작동하는지 전체적으로 확인 가능합니다", 
+          "start": 40.64
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "단점은 추론 시 입력 레벨에서\n계속 모니터링해야 한다는 겁니다", 
+          "start": 54.14
+        }, 
+        {
+          "dur": 8.2, 
+          "text": "입력 분포가 변경되었는데 모델이 조정되지 않으면\n예측 결과가 잘못될 수 있습니다", 
+          "start": 60.76
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "마찬가지로 이 모델은 생산성이 저하되기 쉽습니다", 
+          "start": 68.96
+        }, 
+        {
+          "dur": 11.76, 
+          "text": "iPhone 출시 전의 데이터로 모델을 학습했는데 iPhone이 갑자기 출시된다면\n모델을 재학습하지 않는 한 해당 정보를 모델에 입력할 마땅한 방법이 없습니다", 
+          "start": 72.66
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "지속적인 업데이트 방식으로 학습하는 동적 모델은\n물론 모니터링 면에서 훨씬 큰 부담이 됩니다", 
+          "start": 84.42
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "이 방식이 정상적으로 운용되려면\n더 복잡한 시스템과 더 많은 모니터링 기능이 필요합니다.", 
+          "start": 93.24
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "나중에 새로운 데이터가 입력될 때 모델이 조정되므로\n생산성 저하 문제가 없어진다는 것은 장점입니다", 
+          "start": 101.06
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "따라서 오프라인 교육은 시간이 지나도\n데이터에 큰 변화가 없는 경우에 유용합니다", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 7.42, 
+          "text": "예를 들어 새로운 유형의 객체가 그다지 많이 생기지 않는\n대형 이미지 인식 모델의 경우를 들 수 있습니다", 
+          "start": 118.3
+        }, 
+        {
+          "dur": 11.732, 
+          "text": "온라인 학습형 모델은 시간이 지나며 자주 변경되는 트렌드나 계절성이 있어\n최대한 최신 상태를 유지하려는 경우에 더 적합합니다", 
+          "start": 125.82
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.24, 
+          "text": "Al diseñar un sistema, es clave determinar si el entrenamiento es estático\n(sin conexión) o dinámico (en línea, con actualización constante).", 
+          "start": 0.46
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Con el entrenamiento estático sin conexión, tenemos una gran cantidad de datos\npara entrenar el modelo una vez, antes de usarlo durante un largo tiempo.", 
+          "start": 11.7
+        }, 
+        {
+          "dur": 11.18, 
+          "text": "Con el entrenamiento dinámico en línea, los datos ingresan de forma continua\nal sistema. Esos datos se reincorporan al modelo con pequeñas actualizaciones.", 
+          "start": 21.72
+        }, 
+        {
+          "dur": 2.94, 
+          "text": "Cada opción tiene sus ventajas y desventajas.", 
+          "start": 32.9
+        }, 
+        {
+          "dur": 4.8, 
+          "text": "El modelo estático que se entrena en línea tiene varios puntos a favor.", 
+          "start": 35.84
+        }, 
+        {
+          "dur": 13.5, 
+          "text": "Es fácil de construir y de probar, es rentable y podemos usar\nuna cuota de lote, iterarlo y verificarlo para saber que todo funciona.", 
+          "start": 40.64
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "La desventaja es que requiere un poco de supervisión\nen la entrada durante la inferencia.", 
+          "start": 54.14
+        }, 
+        {
+          "dur": 8.2, 
+          "text": "Si la distribución de entradas cambia y el modelo no se adapta,\nlas predicciones serán incorrectas.", 
+          "start": 60.76
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "De forma similar, es fácil que el modelo quede inactivo.", 
+          "start": 68.96
+        }, 
+        {
+          "dur": 11.76, 
+          "text": "Si el modelo se entrenó con datos anteriores al iPhone y se lanza este teléfono,\nno hay forma de ingresar esa información sin volver a entrenar el modelo.", 
+          "start": 72.66
+        }, 
+        {
+          "dur": 8.82, 
+          "text": "Un modelo dinámico entrenado de forma continua\nes más difícil de supervisar.", 
+          "start": 84.42
+        }, 
+        {
+          "dur": 7.82, 
+          "text": "Necesitamos más capacidades de supervisión y más complejidad en el sistema\npara que todo salga bien.", 
+          "start": 93.24
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "La ventaja en todo ese trabajo adicional es que el modelo se adapta a los nuevos datos, por lo que el sistema nunca está inactivo.", 
+          "start": 101.06
+        }, 
+        {
+          "dur": 8.1, 
+          "text": "Podemos usar el entrenamiento sin conexión\nsi los datos no cambian mucho con el tiempo.", 
+          "start": 110.2
+        }, 
+        {
+          "dur": 7.42, 
+          "text": "Por ejemplo, un gran modelo de reconocimiento de imágenes,\ndonde no aparecen muchos tipos de objetos nuevos.", 
+          "start": 118.3
+        }, 
+        {
+          "dur": 11.732, 
+          "text": "Un modelo con entrenamiento en línea es mejor para situaciones donde hay tendencias y cambios por temporada. Debemos asegurarnos de estar actualizados.", 
+          "start": 125.82
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

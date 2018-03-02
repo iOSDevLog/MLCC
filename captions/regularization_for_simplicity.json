@@ -1,0 +1,1279 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 3.74, 
+          "text": "大家好！我叫Maya Gupta，\n是Google的一名机器学习研究人员。", 
+          "start": 0.42
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "今天，我很高兴地跟大家探讨\n确保优质机器学习效果的第二个关键因素。", 
+          "start": 4.16
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "大家已经探讨过如何让训练损失降至最低。", 
+          "start": 8.84
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "也就是获取正确的样本。", 
+          "start": 11.42
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "今天，我们要讨论的是正则化，\n概括而言，就是不要过于信赖样本。", 
+          "start": 13.2
+        }, 
+        {
+          "dur": 10.04, 
+          "text": "从过拟合曲线我们可以看出：\n随着我们进行越来越多次迭代，\n训练损失会减少，越来越少并一直减少。", 
+          "start": 19.68
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "因为我们要做的就是这个，\n我们在让训练损失降至最低。", 
+          "start": 29.72
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "不出所料，蓝色曲线会不断下降，\n最终它会在某种程度上收敛于底端。", 
+          "start": 32.1
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "但实际上红线开始上升。", 
+          "start": 37.02
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "红线是我们真正要关注的。", 
+          "start": 39.74
+        }, 
+        {
+          "dur": 8.02, 
+          "text": "尽管我们在对训练样本进行训练，\n但我们想要泛化到新的样本，也就是测试样本；\n而且我们希望将样本的损失控制在较低的范围。", 
+          "start": 41.9
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "那么如何抑制红线上升呢？\n这表示什么情况呢？", 
+          "start": 49.92
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "首先说明出现了过拟合。", 
+          "start": 53.74
+        }, 
+        {
+          "dur": 7.34, 
+          "text": "我们在处理蓝色样本方面做得很好，\n开始在某种程度上拟合蓝色样本的独特扰动和特殊性。", 
+          "start": 55.94
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "举例说明，假如您想要尝试学习英语，\n而唯一能教您的是一名青少年。", 
+          "start": 63.28
+        }, 
+        {
+          "dur": 3.9, 
+          "text": "最初，他真的对您学习英语很有帮助，\n您会学得很好。", 
+          "start": 69.9
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "但如果只是与他一个人进行英语听说练习，\n您很快就会学到他常用的俚语，\n以及他说英语的独有方式和独特的口音。", 
+          "start": 73.8
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "在某种程度上讲，这会导致您\n更加难以与一般人用英语交谈。", 
+          "start": 81.12
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "那么我们该如何处理过拟合呢？", 
+          "start": 86.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "我们可以通过正则化来避免过拟合，\n而正则化有很多不同的策略。", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "其中一种策略是早停法，\n也就是在训练数据的效果实际收敛前停止训练。", 
+          "start": 94.66
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "尽量抵达红色曲线的底端，\n这是一种常用策略，但实际操作起来可能有些困难。", 
+          "start": 100.68
+        }, 
+        {
+          "dur": 6.98, 
+          "text": "其他正则化策略包括尝试添加模型复杂度惩罚项，\n我们会在本课程的剩余部分详细说明。", 
+          "start": 107.24
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "我们可以在模型训练期间添加模型复杂度惩罚项。", 
+          "start": 114.22
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "目前，训练仅专注于一个重要方面，\n也就是获取正确的训练样本，\n最大程度地减少经验风险，即经验风险最小化。", 
+          "start": 118.56
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "现在我们要引入第二项以对模型复杂度进行惩罚。", 
+          "start": 128.46
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "有时称之为结构风险最小化。", 
+          "start": 132.96
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "我们要平衡这两个关键因素，\n确保获取正确的训练数据，\n但又不过度信赖训练数据以免使模型过于复杂。", 
+          "start": 135.54
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "那么我们如何定义模型复杂度呢？", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "我们可以采用多种方法。", 
+          "start": 148.42
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "一种常见的策略是尽量选择较小的权重，\n也就是使参数小到几乎可以让我们忽略，\n同时我们仍能获取正确的训练样本。", 
+          "start": 150.52
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "我们可以通过几种不同的方法以数学方式进行编码。", 
+          "start": 159.2
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "今天我们将重点探讨L2正则化，\n也称为岭正则化。", 
+          "start": 162.54
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "在这种正则化策略中，\n我们会对权重的平方和进行惩罚。", 
+          "start": 167.04
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "如果熟悉贝叶斯先验概率，就知道这是一种先验概率。\n在我们查看训练样本之前便猜出：\n权重应该以0为中心呈正态分布，而且数值不会太大。", 
+          "start": 173.22
+        }, 
+        {
+          "dur": 10.28, 
+          "text": "在使用L2正则化时，模型的确会关注训练数据，\n但会尽量确保最后的权重不会超过所需的大小。", 
+          "start": 185.26
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "我们再以数学方式总结一下。", 
+          "start": 195.54
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "目前，我们在训练优化方面添加了两项：", 
+          "start": 198.44
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "第一项是训练损失。", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "我们希望获取正确的样本。", 
+          "start": 203.36
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "可以看出，L项（即损失项）取决于训练数据。", 
+          "start": 205.16
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "现在，我们在模型复杂度方面引入了第二项。", 
+          "start": 208.7
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "您会注意到，第二项与数据无关，\n它只是要简化模型。", 
+          "start": 216.56
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "您会发现这两项通过lambda实现了平衡。", 
+          "start": 223.06
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "这是一个系数，代表我们\n对获取正确样本与对简化模型的关注程度之比。", 
+          "start": 225.98
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "lambda的选择其实取决于您以及您的具体情况。", 
+          "start": 232.26
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "如果您有大量的训练数据，\n训练数据和测试数据看起来一致，\n并且统计情况呈现独立同分布，", 
+          "start": 236.4
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "那么您可能不需要进行多少正则化，\n可能一个系数需要设为负6，也可能不需要正则化。", 
+          "start": 243.26
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "如果您的训练数据不多，\n或者训练数据与测试数据有所不同，\n那么您可能需要进行大量正则化。", 
+          "start": 248.24
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "您可能需要利用交叉验证，\n或使用单独的测试集进行调整。", 
+          "start": 255.02
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.74, 
+          "text": "Hello, I&#39;m Maya Gupta, I&#39;m a machine learning researcher here at Google.", 
+          "start": 0.42
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "And I&#39;m excited today to talk about the second key ingredient to making machine learning work great.", 
+          "start": 4.16
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "You guys have already talked about minimizing training loss.", 
+          "start": 8.84
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "That is getting the examples right.", 
+          "start": 11.42
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "And what we&#39;re going to talk about today is regularization which, to sum it up, is not trusting your examples too much.", 
+          "start": 13.2
+        }, 
+        {
+          "dur": 10.04, 
+          "text": "As we can see in this curve called overfitting, as we go through more and more training iterations, our training loss is getting down, it&#39;s getting further and further down and it keeps decreasing.", 
+          "start": 19.68
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "Because that&#39;s what we&#39;re doing, we are minimizing the training loss.", 
+          "start": 29.72
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "So no surprise that the blue curve keeps going down, eventually it will sort of converge there.", 
+          "start": 32.1
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "Well the red line actually starts to go up.", 
+          "start": 37.02
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "And the red line is what we really care about.", 
+          "start": 39.74
+        }, 
+        {
+          "dur": 8.02, 
+          "text": "We want to generalize, even though we are training on the training examples, we want to generalize to new examples, the test examples and we want to have low loss on them.", 
+          "start": 41.9
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "So how do keep the red line from going up and what&#39;s going on here?", 
+          "start": 49.92
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "Well first of all what&#39;s going on is overfitting.", 
+          "start": 53.74
+        }, 
+        {
+          "dur": 7.34, 
+          "text": "We&#39;re doing such a good job on the blue examples, that we&#39;re starting to sort of fit to the unique perturbations and specializations of the blue examples.", 
+          "start": 55.94
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "As an analogy, say you were trying to learn English and the only person that there was to teach you English was a teenager.", 
+          "start": 63.28
+        }, 
+        {
+          "dur": 3.9, 
+          "text": "At first that would really help you learn English and you&#39;d do a great job learning English.", 
+          "start": 69.9
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "But if all you did was listen and talk to that one teenager, pretty soon you&#39;d start to learn that teenager&#39;s slang and the particularities of their language and accent.", 
+          "start": 73.8
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "And at some point it&#39;d make it even harder for you to speak English with the general population.", 
+          "start": 81.12
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "So what can we do about overfitting?", 
+          "start": 86.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Well regularization is what we do to avoid overfitting and there are a lot of different regularization strategies.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "One is just to do early stopping, which says just stop the training before you really converge on the training data.", 
+          "start": 94.66
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Trying to get to where the bottom of the red curve is, but this can be a little difficult to do on practice, but often used.", 
+          "start": 100.68
+        }, 
+        {
+          "dur": 6.98, 
+          "text": "Other regularization strategies include trying to penalize the model complexity, and that&#39;s what we&#39;ll be talking about the rest of this session.", 
+          "start": 107.24
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "And what we can do is we can penalize the model complexity while we&#39;re training.", 
+          "start": 114.22
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "So, so far the training has just focused on the important thing of getting the training examples right, minimizing the empirical risk, empirical risk minimization.", 
+          "start": 118.56
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Now what we&#39;re gonna do is we&#39;re gonna add a second term to penalize the model complexity.", 
+          "start": 128.46
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "This is sometimes referred to as structural risk minimization.", 
+          "start": 132.96
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "And so we&#39;re gonna balance these two key ingredients, getting the training data right but not trusting the training data too much that it makes our model too complicated.", 
+          "start": 135.54
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "So how do we define model complexity?", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "Well there a lot of things we could do.", 
+          "start": 148.42
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "One popular strategy is to try to prefer smaller weights, that is make the parameters as small we can get away with while still getting the training examples right.", 
+          "start": 150.52
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "And we can encode that mathematically in a few different ways.", 
+          "start": 159.2
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Today we are gonna focus on L2 regularization, also known as ridge regularization.", 
+          "start": 162.54
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "In this regularization strategy we penalize the sum of the squared values of the weights.", 
+          "start": 167.04
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "And if you&#39;re familiar with bayesian priors, this sort of says that a priori, before we have seen our training examples, we would&#39;ve guessed that our weights should be sort of centered around 0 and not too big, normally distributed.", 
+          "start": 173.22
+        }, 
+        {
+          "dur": 10.28, 
+          "text": "So when we use L2 regularization, it does pay attention to the training data, but it tries to make sure that we don&#39;t end up with any weights that are sort of bigger than they need to be.", 
+          "start": 185.26
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "So let&#39;s put that together mathematically again.", 
+          "start": 195.54
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "So now our training optimization has two terms.", 
+          "start": 198.44
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "The first term, our training loss.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "We want to get the examples right.", 
+          "start": 203.36
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "And you&#39;ll see that L term, the loss term depends on the training data.", 
+          "start": 205.16
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "But now we have added the second term from model complexity and here we&#39;re using the L2 regularization, which is the sum of the squared weights.", 
+          "start": 208.7
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "And you&#39;ll notice that that second term doesn&#39;t depend on the data, it just says hey I want a simpler model.", 
+          "start": 216.56
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "And you&#39;ll see these two terms are balanced by a lambda.", 
+          "start": 223.06
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "That&#39;s a coefficient that says how much do we care about getting the examples right versus making the model simple?", 
+          "start": 225.98
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "And the choice of lambda is really up to you and depends on your problem.", 
+          "start": 232.26
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "If you have lots and lots of training data and your training data and your test data look the same, IID to be statistical.", 
+          "start": 236.4
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "Then you probably don&#39;t need much regularization, maybe 1e to the negative 6, maybe none at all.", 
+          "start": 243.26
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "But if you don&#39;t have much training data or if your training data and test data are kind of different, then you may want a lot of regularization.", 
+          "start": 248.24
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "And you may want to tune that with cross validation or with a separate test set.", 
+          "start": 255.02
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.74, 
+          "text": "Bonjour, je m&#39;appelle Maya Gupta,\nje suis chercheuse en machine learning chez Google.", 
+          "start": 0.42
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "Je vais vous parler aujourd&#39;hui du deuxième ingrédient\nessentiel à la réussite du machine learning.", 
+          "start": 4.16
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "Vous avez déjà abordé la question\nde la réduction de la perte d&#39;apprentissage.", 
+          "start": 8.84
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "Cela revient à trouver les bons exemples.", 
+          "start": 11.42
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "Aujourd&#39;hui, nous allons parler de régularisation,\nc&#39;est-à-dire, pour faire court, le fait de ne pas se fier trop aux exemples.", 
+          "start": 13.2
+        }, 
+        {
+          "dur": 10.04, 
+          "text": "Comme nous pouvons le voir sur cette courbe appelée &quot;surapprentissage&quot;,\nplus le nombre d&#39;itérations d&#39;apprentissage augmente, plus la perte d&#39;apprentissage diminue, de façon continue.", 
+          "start": 19.68
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "Parce que c&#39;est ce que nous faisons,\nnous réduisons la perte d&#39;apprentissage.", 
+          "start": 29.72
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Il n&#39;est donc pas surprenant que la courbe bleue descende continuellement,\njusqu&#39;à ce qu&#39;elle finisse par converger un peu.", 
+          "start": 32.1
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "Mais la ligne rouge commence à monter.", 
+          "start": 37.02
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "Et c&#39;est celle-ci qui nous intéresse vraiment.", 
+          "start": 39.74
+        }, 
+        {
+          "dur": 8.02, 
+          "text": "Même si nous nous formons à partir des exemples d&#39;apprentissage, nous voulons généraliser les fonctions\npour qu&#39;elles s&#39;appliquent à de nouveaux exemples, les exemples de test, et réduire les pertes.", 
+          "start": 41.9
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "Alors, comment faire pour empêcher\nla ligne rouge de monter, et que se passe-t-il ?", 
+          "start": 49.92
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "Tout d&#39;abord, il s&#39;agit de surapprentissage.", 
+          "start": 53.74
+        }, 
+        {
+          "dur": 7.34, 
+          "text": "Nous travaillons tellement bien avec les exemples bleus\nque nous commençons à nous adapter aux perturbations et aux spécialisations uniques de ceux-ci.", 
+          "start": 55.94
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "Par analogie, supposons que vous essayiez d&#39;apprendre l&#39;anglais,\net que la seule personne qui puisse vous l&#39;enseigner soit un adolescent.", 
+          "start": 63.28
+        }, 
+        {
+          "dur": 3.9, 
+          "text": "Au début, cela vous aiderait beaucoup\nà apprendre l&#39;anglais, et vous seriez très efficace.", 
+          "start": 69.9
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "Mais si vous n&#39;interagissez qu&#39;avec cet adolescent,\nvous commencerez très vite à n&#39;apprendre que l&#39;argot, la façon de s&#39;exprimer et l&#39;accent qui lui sont propres.", 
+          "start": 73.8
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "Et au bout d&#39;un moment, il serait même plus difficile\npour vous de parler un anglais plus courant avec d&#39;autres personnes.", 
+          "start": 81.12
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "Alors, que pouvons-nous faire\npour lutter contre le surapprentissage ?", 
+          "start": 86.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "La régularisation permet d&#39;éviter le surapprentissage,\net il existe de nombreuses stratégies de régularisation différentes.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "L&#39;une d&#39;entre elles consiste simplement à procéder à un arrêt prématuré,\nc&#39;est-à-dire avant que les données d&#39;apprentissage ne commencent vraiment à converger,", 
+          "start": 94.66
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "tout en essayant d&#39;atteindre le bas de la courbe rouge.\nCela peut s&#39;avérer difficile en pratique, mais cette méthode est fréquemment utilisée.", 
+          "start": 100.68
+        }, 
+        {
+          "dur": 6.98, 
+          "text": "Parmi les autres stratégies de régularisation, l&#39;une d&#39;entre elles consiste à essayer\nde pénaliser la complexité du modèle, et c&#39;est ce dont nous allons parler maintenant.", 
+          "start": 107.24
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "Nous pouvons pénaliser la complexité\ndu modèle pendant l&#39;apprentissage.", 
+          "start": 114.22
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "Jusqu&#39;ici, l&#39;apprentissage a été axé uniquement sur une tâche importante :\nchoisir les bons exemples d&#39;apprentissage, réduire le risque empirique. C&#39;est la minimisation du risque empirique.", 
+          "start": 118.56
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Maintenant, nous allons ajouter un second facteur\npour pénaliser la complexité du modèle.", 
+          "start": 128.46
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "C&#39;est ce qu&#39;on appelle parfois\nla minimisation du risque structurel.", 
+          "start": 132.96
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "Nous allons donc équilibrer ces deux éléments essentiels, avec des données d&#39;apprentissage correctes,\nmais sans trop se fier aux données d&#39;apprentissage au point de rendre notre modèle trop complexe.", 
+          "start": 135.54
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "Comment définissons-nous la complexité du modèle ?", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "Nous pouvons procéder de plusieurs manières.", 
+          "start": 148.42
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Une stratégie populaire consiste à préférer des pondérations plus petites,\nafin de rendre les paramètres les plus petits possibles tout en conservant des exemples d&#39;apprentissage corrects.", 
+          "start": 150.52
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "Plusieurs méthodes permettent\nd&#39;encoder cela de façon mathématique.", 
+          "start": 159.2
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Aujourd&#39;hui, nous allons nous intéresser à la régularisation L2,\négalement appelée régularisation de crête.", 
+          "start": 162.54
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "Cette stratégie de régularisation consiste à pénaliser\nla somme des valeurs au carré des pondérations.", 
+          "start": 167.04
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "Et si vous connaissez les probabilités bayésiennes, nous aurions deviné,\navant d&#39;avoir vu nos exemples d&#39;apprentissage, que nos pondérations devaient être\nplus ou moins centrées autour de 0, pas trop importantes, et réparties de façon normale.", 
+          "start": 173.22
+        }, 
+        {
+          "dur": 10.28, 
+          "text": "Ainsi, la régularisation L2 permet de s&#39;intéresser aux données d&#39;apprentissage,\ntout en s&#39;assurant que nous ne nous retrouvons pas avec des pondérations plus importantes que nécessaire.", 
+          "start": 185.26
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "Reprenons cela en termes mathématiques.", 
+          "start": 195.54
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "Notre optimisation de l&#39;apprentissage\ncomporte désormais deux facteurs.", 
+          "start": 198.44
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "Le premier est la perte d&#39;apprentissage.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Nous voulons choisir les bons exemples.", 
+          "start": 203.36
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "Et vous allez voir que le facteur L,\nle facteur de perte, dépend des données d&#39;apprentissage.", 
+          "start": 205.16
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "Mais nous avons aussi ajouté le second facteur de la complexité du modèle,\net nous utilisons ici la régularisation L2, qui est la somme des pondérations au carré.", 
+          "start": 208.7
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "Vous remarquerez que le second facteur ne dépend pas des données.\nSon but est simplement de simplifier le modèle.", 
+          "start": 216.56
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "Et vous verrez que ces deux facteurs\nsont équilibrés par un lambda.", 
+          "start": 223.06
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "C&#39;est un coefficient qui permet de déterminer s&#39;il est plus important\nd&#39;avoir des exemples corrects ou un modèle simple.", 
+          "start": 225.98
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "Et le choix du lambda\ndépend de vous et de votre problème.", 
+          "start": 232.26
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "Si vous avez une grande quantité de données d&#39;apprentissage, et qu&#39;elles semblent identiques à vos données de test,\nce qu&#39;on appelle &quot;variables indépendantes et identiquement distribuées&quot; en termes statistiques,", 
+          "start": 236.4
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "alors vous n&#39;avez probablement pas besoin d&#39;une régularisation importante,\npeut-être une exponentielle moins six, peut-être rien.", 
+          "start": 243.26
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "Mais si vous n&#39;avez pas beaucoup de données d&#39;apprentissage, ou si vos données d&#39;apprentissage\net vos données de test sont un peu différentes, alors vous aurez besoin d&#39;une régularisation importante.", 
+          "start": 248.24
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Et vous devrez peut-être l&#39;ajuster à l&#39;aide\nd&#39;une validation croisée ou d&#39;un ensemble d&#39;évaluation distinct.", 
+          "start": 255.02
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.74, 
+          "text": "Google에서 머신러닝을 연구하는\n마야 굽타라고 합니다.", 
+          "start": 0.42
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "오늘은 머신러닝 효율을 높이기 위한\n두 번째 요소를 소개하려 합니다.", 
+          "start": 4.16
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "앞에서는 학습 손실을 최소화하는 방법, 즉", 
+          "start": 8.84
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "사례를 제대로 설정하는 방법을 배웠습니다.", 
+          "start": 11.42
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "오늘은 정규화에 관해 살펴보려 합니다.\n내가 사용하는 사례를 너무 믿지 않는 것이죠.", 
+          "start": 13.2
+        }, 
+        {
+          "dur": 10.04, 
+          "text": "과적합이라고 부르는 이 곡선에서 볼 수 있듯이, 학습을 매회 반복할수록\n학습 손실이 줄어듭니다. 손실이 계속 감소하죠.", 
+          "start": 19.68
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "우리 목표가 학습 손실을 줄이는 것이니까요.", 
+          "start": 29.72
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "그러므로 당연히 파란 곡선은 계속 내려가고,\n결국에는 아래에서 수렴하게 됩니다.", 
+          "start": 32.1
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "반면 빨간 선은 올라가게 됩니다.", 
+          "start": 37.02
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "이 빨간 선에 주목해야 합니다.", 
+          "start": 39.74
+        }, 
+        {
+          "dur": 8.02, 
+          "text": "지금은 학습용 사례를 사용해 학습하고 있지만 새 사례, 즉\n시험용 사례를 사용할 때도 손실이 적게 발생하길 바라는 것이죠.", 
+          "start": 41.9
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "빨간 선이 오르지 못하게 하려면 어떻게 해야 할까요?\n여기서 발생하는 현상은 무엇일까요?", 
+          "start": 49.92
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "먼저 여기서 발생하는 현상은 과적합이라고 합니다.", 
+          "start": 53.74
+        }, 
+        {
+          "dur": 7.34, 
+          "text": "파란 선의 사례에서 좋은 값을 보여주고 있기 때문에 여기에서 사용된 사례의\n고유한 굴곡이나 특성에 익숙해지기 시작한 것입니다.", 
+          "start": 55.94
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "비유하자면 마치 영어를 배우려고 하는데 영어를 가르쳐 줄 수 있는 사람이\n중학생 한 명만 있는 것과 같습니다.", 
+          "start": 63.28
+        }, 
+        {
+          "dur": 3.9, 
+          "text": "처음에는 영어를 배우는 데 많은 도움이 되고\n영어 실력도 많이 늘겠죠.", 
+          "start": 69.9
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "하지만 계속 그 중학생부터만 배우니 곧 중학생들만\n쓰는 속어나 특이한 표현, 억양을 배우게 됩니다.", 
+          "start": 73.8
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "그러다 보면 일반적인 사람들과\n영어로 대화하기 어렵게 됩니다.", 
+          "start": 81.12
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "그렇다면 과적합은 어떻게\n해결할 수 있을까요?", 
+          "start": 86.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "과적합을 피하기 위해 정규화라는 방법을 사용하며,\n정규화에는 여러 가지 전략이 있습니다.", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "그중 하나는 조기 중단입니다. 즉, 학습 데이터에\n수렴하기 전에 학습을 멈추는 거죠.", 
+          "start": 94.66
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "빨간 곡선의 진짜 원인을 찾아내려는 방법인데,\n실제로 하긴 조금 어렵지만 많이 쓰이는 방법입니다.", 
+          "start": 100.68
+        }, 
+        {
+          "dur": 6.98, 
+          "text": "또 모델 복잡성에 페널티를 주는 정규화 전략도 있습니다.\n지금부터는 이 전략에 관해 설명하겠습니다.", 
+          "start": 107.24
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "이 전략에서는 학습하는 동안 모델 복잡성에 페널티를 줍니다.", 
+          "start": 114.22
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "지금까지는 학습 사례를 제대로 추출하고 경험적 위험을\n최소화하는 데에만 초점을 맞췄습니다.", 
+          "start": 118.56
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "지금부터는 모델 복잡성에 페널티를 준다는\n두 번째 항을 추가할 겁니다.", 
+          "start": 128.46
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "이를 구조적 위험 최소화라고도 합니다.", 
+          "start": 132.96
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "학습 데이터를 제대로 설정함과 동시에 이를 지나치게 신뢰하지 않는다는 두 가지 핵심 요소 사이에서\n균형을 잡아야 합니다. 이로 인해 모델이 복잡해지거든요.", 
+          "start": 135.54
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "모델 복잡성은 어떻게 정의할까요?", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "이를 위한 방법으로는 여러 가지가 있습니다.", 
+          "start": 148.42
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "작은 가중치를 사용하는 방법이 많이 쓰입니다. 학습 사례를 제대로 추출하면서\n매개변수를 최대한 작게 만드는 것이죠.", 
+          "start": 150.52
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "이것은 몇 가지 수학적인 방법으로\n인코딩할 수 있습니다.", 
+          "start": 159.2
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "오늘 우리는 능형 정규화라고도 하는\nL2 정규화를 주로 살펴보려고 합니다.", 
+          "start": 162.54
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "이 정규화 전략에서는 가중치 제곱값의 합계에\n페널티를 줍니다.", 
+          "start": 167.04
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "또 베이지안 사전확률에 따라 우리는 학습용 사례를 보기 전에 이미 우리가 사용하는 가중치가 작고\n0을 중심으로 정규분포를 이룰 것으로 예상하고 있습니다.", 
+          "start": 173.22
+        }, 
+        {
+          "dur": 10.28, 
+          "text": "따라서 우리가 L2 정규화를 사용할 때는 학습 데이터에 주의를 기울이면서도\n필요 이상으로 큰 가중치를 사용하게 되지 않도록 노력합니다.", 
+          "start": 185.26
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "그럼 지금까지의 내용을 수학적으로 정리해 봅시다.", 
+          "start": 195.54
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "학습을 최적화할 때 두 개의 항이 있습니다.", 
+          "start": 198.44
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "첫 번째 항은 학습 손실입니다.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "사례를 올바로 추출해야 합니다.", 
+          "start": 203.36
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "L항, 즉 손실항은 학습 데이터에 따라 달라집니다.", 
+          "start": 205.16
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "하지만 이제 모델 복잡성에서 두 번째 항을 추가했습니다.\n여기서 우리는 제곱된 가중치의 합인 L2 정규화를 사용합니다.", 
+          "start": 208.7
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "두 번째 항은 데이터에 의존하지 않으며,\n더 단순한 모델을 만드는 것을 목표로 합니다.", 
+          "start": 216.56
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "이 두 항은 람다에 의해 균형을 이룹니다.", 
+          "start": 223.06
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "람다는 사례 올바로 설정하기와 모델 단순하게 만들기 사이에서\n무엇에 더 비중을 두는지 보여주는 계수입니다.", 
+          "start": 225.98
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "람다로 무엇을 선택할지는 나에게 달려 있으며\n문제에 따라서도 달라집니다.", 
+          "start": 232.26
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "학습 데이터의 양이 많고 학습 데이터와 시험 데이터가 동일한 경우\n통계에서는 IID라고 하는데", 
+          "start": 236.4
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "이 경우 많은 정규화가 필요하지 않습니다. 1부터 -6 정도이면 됩니다.\n아예 정규화가 필요 없을 수도 있습니다.", 
+          "start": 243.26
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "하지만 학습 데이터의 양이 적거나 학습 데이터와 시험 데이터가 다르면\n정규화가 많이 필요합니다.", 
+          "start": 248.24
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "그리고 교차검증이나 별도의 테스트 세트를 사용한\n조정 과정이 필요할 수도 있습니다.", 
+          "start": 255.02
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.74, 
+          "text": "Soy Maya Gupta, investigadora\nde aprendizaje automático en Google.", 
+          "start": 0.42
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "Hablaré sobre el segundo factor clave\ndel aprendizaje automático.", 
+          "start": 4.16
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "Ya hablamos sobre la reducción\nde la pérdida de entrenamiento.", 
+          "start": 8.84
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "Se trata de obtener los ejemplos correctos.", 
+          "start": 11.42
+        }, 
+        {
+          "dur": 6.48, 
+          "text": "Hablaremos sobre la regularización, es decir,\nno confiar demasiado en los ejemplos.", 
+          "start": 13.2
+        }, 
+        {
+          "dur": 10.04, 
+          "text": "En sobreajuste, cuantas más iteraciones hay,\nmás se reduce la pérdida de entrenamiento.", 
+          "start": 19.68
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "Reducimos la pérdida de entrenamiento.", 
+          "start": 29.72
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "No sorprende que la curva azul siga bajando.\nEn algún momento, convergerán.", 
+          "start": 32.1
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "Pero la línea roja comienza a subir.", 
+          "start": 37.02
+        }, 
+        {
+          "dur": 2.16, 
+          "text": "Esta es la línea que nos interesa.", 
+          "start": 39.74
+        }, 
+        {
+          "dur": 8.02, 
+          "text": "Estos son ejemplos de entrenamiento.\nGeneralizaremos otros con poca pérdida.", 
+          "start": 41.9
+        }, 
+        {
+          "dur": 3.82, 
+          "text": "¿Cómo evitamos que la línea roja crezca\ny qué sucede aquí?", 
+          "start": 49.92
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "En primer lugar, hay un sobreajuste.", 
+          "start": 53.74
+        }, 
+        {
+          "dur": 7.34, 
+          "text": "Como los resultados azules son tan buenos,\najustamos alteraciones y especializaciones.", 
+          "start": 55.94
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "Supongamos que quieren aprender inglés\ny el único profesor disponible es joven.", 
+          "start": 63.28
+        }, 
+        {
+          "dur": 3.9, 
+          "text": "Al principio,\nno tendrán problema para aprender el idioma.", 
+          "start": 69.9
+        }, 
+        {
+          "dur": 7.32, 
+          "text": "Pero si solo interactúan con ese adolescente,\naprenderán los modismos de esa persona.", 
+          "start": 73.8
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "Les resultará cada vez más difícil\nhablar inglés con otras personas.", 
+          "start": 81.12
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "¿Qué podemos hacer\ncon respecto al sobreajuste?", 
+          "start": 86.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Para evitarlo, usamos la regularización\ny sus diferentes estrategias,", 
+          "start": 88.7
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "como la interrupción anticipada, que detiene\nel entrenamiento en la convergencia de datos.", 
+          "start": 94.66
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Intentamos llegar abajo de la curva roja,\naunque sea difícil de lograr en la práctica.", 
+          "start": 100.68
+        }, 
+        {
+          "dur": 6.98, 
+          "text": "También se puede penalizar la complejidad\ndel modelo, el tema de esta sesión.", 
+          "start": 107.24
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "Podemos penalizarla durante el entrenamiento.", 
+          "start": 114.22
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "Nos hemos enfocado en obtener ejemplos\ncorrectos y minimizar el riesgo empírico.", 
+          "start": 118.56
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Agreguemos un segundo término\npara penalizar la complejidad del modelo.", 
+          "start": 128.46
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "Por lo general, se denomina\nminimización del riesgo estructural.", 
+          "start": 132.96
+        }, 
+        {
+          "dur": 9.9, 
+          "text": "Para equilibrar estos dos factores, usamos\nlos datos correctos sin confiar demasiado.", 
+          "start": 135.54
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "¿Cómo definimos la complejidad del modelo?", 
+          "start": 145.44
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "Podemos hacerlo de diferentes formas.", 
+          "start": 148.42
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Una es usar ponderaciones pequeñas\nsin afectar los ejemplos correctos.", 
+          "start": 150.52
+        }, 
+        {
+          "dur": 3.32, 
+          "text": "Podemos codificar eso matemáticamente\nde diferentes maneras.", 
+          "start": 159.2
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Hablaremos de la regularización de N2,\nconocida como regularización de cresta.", 
+          "start": 162.54
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "En esta estrategia, penalizamos la suma\nde los valores cuadrados de ponderaciones.", 
+          "start": 167.04
+        }, 
+        {
+          "dur": 12.04, 
+          "text": "Con las distribuciones previas bayesianas,\ncalculamos que están centradas cerca del 0.", 
+          "start": 173.22
+        }, 
+        {
+          "dur": 10.28, 
+          "text": "La regularización de N2 ignora los datos\ny mantiene el tamaño correcto.", 
+          "start": 185.26
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "Digámoslo en términos matemáticos.", 
+          "start": 195.54
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "Nuestra optimización de entrenamiento\ntiene dos términos.", 
+          "start": 198.44
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "El primero es la pérdida de entrenamiento.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Queremos tener los ejemplos correctos.", 
+          "start": 203.36
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "El término de pérdida\ndepende de los datos de entrenamiento.", 
+          "start": 205.16
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "Agregamos el segundo término\ny usamos la regularización de N2.", 
+          "start": 208.7
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "El segundo término no depende de los datos;\nindica que se necesita un modelo más simple.", 
+          "start": 216.56
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "Una lambda equilibra estos dos términos.", 
+          "start": 223.06
+        }, 
+        {
+          "dur": 6.28, 
+          "text": "Es el coeficiente entre la corrección\nde los ejemplos y la simpleza del modelo.", 
+          "start": 225.98
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "La elección de lambda depende\nde la situación y el problema.", 
+          "start": 232.26
+        }, 
+        {
+          "dur": 6.86, 
+          "text": "Supongamos que tienen varios datos\nde entrenamiento iguales a los de prueba.", 
+          "start": 236.4
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "En ese caso, no necesitarán\nregularización, sino -6 o nada.", 
+          "start": 243.26
+        }, 
+        {
+          "dur": 6.76, 
+          "text": "Pero si no tienen datos o los que tienen\nno coinciden, quizá necesiten regularización.", 
+          "start": 248.24
+        }, 
+        {
+          "dur": 4.0, 
+          "text": "Querrán ajustarla con la validación combinada\no con un conjunto de prueba independiente.", 
+          "start": 255.02
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

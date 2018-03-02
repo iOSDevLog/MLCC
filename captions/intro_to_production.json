@@ -1,0 +1,304 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 6.1, 
+          "text": "到目前为止，我们已经花了很多时间讨论\n如何构建模型以便很好地预测之前未见过的新数据。", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "当然，这是任何机器学习系统的核心部分。", 
+          "start": 6.64
+        }, 
+        {
+          "dur": 11.0, 
+          "text": "然而机器学习系统需要能做出影响现实世界的预测，\n为此，它们需要融入更大的生态系统，\n而不只是一个执行机器学习任务的小黑盒子。", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "我们研究的是完整的机器学习系统，\n它包含很多与训练无关的组件。", 
+          "start": 20.7
+        }, 
+        {
+          "dur": 9.08, 
+          "text": "例如，我们需要进行数据收集、特征提取、\n数据验证、各种形式的监控以及数据分析。", 
+          "start": 26.88
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "此外，我们还需要将这些信息整合出来予以提供，\n以便做出对现实世界有用的预测。", 
+          "start": 35.96
+        }, 
+        {
+          "dur": 1.92, 
+          "text": "这就涉及很多不同的组件了。", 
+          "start": 41.52
+        }, 
+        {
+          "dur": 8.26, 
+          "text": "幸运的是，您不必自行构建所有这些组件，\n有大量现成的组件，供您在所设定的应用场景中使用。", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "但是如何知道其中哪些组件适合您的特定任务呢？", 
+          "start": 51.7
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "实际上我们可以参考一些关键的设计选项，\n它们会引导我们做出选择。", 
+          "start": 56.58
+        }, 
+        {
+          "dur": 1.66, 
+          "text": "现在我们来了解一下这些选项。", 
+          "start": 61.06
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.1, 
+          "text": "So far we&#39;ve spent a lot of time talking about how to build models that do a good job of predicting on new, previously unseen data.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "And this is of course the heart of any machine learning system.", 
+          "start": 6.64
+        }, 
+        {
+          "dur": 11.0, 
+          "text": "But a machine learning system needs to be able to make predictions that influence the real world and to do so they need to be part of a much larger ecosystem, than just a little black box that does machine learning.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "We look at a full machine learning system, it includes many components that are not about training.", 
+          "start": 20.7
+        }, 
+        {
+          "dur": 9.08, 
+          "text": "For example we need to have data collection, we need to have feature extraction, data verification, various forms of monitoring and data analysis.", 
+          "start": 26.88
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "We also need to get these things out to serving so that they can make predictions that are used in the real world.", 
+          "start": 35.96
+        }, 
+        {
+          "dur": 1.92, 
+          "text": "Now these are a lot of different pieces.", 
+          "start": 41.52
+        }, 
+        {
+          "dur": 8.26, 
+          "text": "Fortunately you don&#39;t have to build all these pieces yourself, there&#39;s a large number of components that can be pulled off the shelf and used in your application setting.", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "But how do you know which of these components are the right ones for your particular task?", 
+          "start": 51.7
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "Turns out that there are a couple of key design choices we can look at that will help guide these choices.", 
+          "start": 56.58
+        }, 
+        {
+          "dur": 1.66, 
+          "text": "We&#39;ll take a look at these now.", 
+          "start": 61.06
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.1, 
+          "text": "Nous avons passé beaucoup de temps à expliquer\ncomment créer des modèles permettant de prédire de nouvelles données inédites.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "C&#39;est bien sûr l&#39;aspect essentiel\nde tout système de machine learning.", 
+          "start": 6.64
+        }, 
+        {
+          "dur": 11.0, 
+          "text": "Mais un système de machine learning doit pouvoir influencer le monde réel.\nIl doit ainsi faire partie d&#39;un écosystème beaucoup plus vaste qu&#39;une simple petite boîte noire capable d&#39;apprendre automatiquement.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "De nombreux éléments d&#39;un système\nde machine learning ne concernent pas l&#39;apprentissage.", 
+          "start": 20.7
+        }, 
+        {
+          "dur": 9.08, 
+          "text": "Il faut effectuer une collecte de données, une extraction des caractéristiques,\nune vérification des données, et diverses formes de surveillance et d&#39;analyse des données.", 
+          "start": 26.88
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "Nous devons également permettre un accès à ces éléments\nafin que leurs prédictions servent dans le monde réel.", 
+          "start": 35.96
+        }, 
+        {
+          "dur": 1.92, 
+          "text": "Il s&#39;agit d&#39;aspects très différents les uns des autres.", 
+          "start": 41.52
+        }, 
+        {
+          "dur": 8.26, 
+          "text": "Heureusement, vous n&#39;avez pas à maîtriser tous ces aspects.\nll existe un grand nombre de composants préconçus que vous n&#39;avez qu&#39;à utiliser pour configurer votre application.", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "Mais comment savoir lesquels de ces composants\nsont adaptés à votre tâche particulière ?", 
+          "start": 51.7
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "Il s&#39;avère qu&#39;un certain nombre de choix cruciaux\nde conception sont possibles pour prendre la bonne décision.", 
+          "start": 56.58
+        }, 
+        {
+          "dur": 1.66, 
+          "text": "Nous allons y jeter un œil immédiatement.", 
+          "start": 61.06
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.1, 
+          "text": "지금까지 이전에는 보이지 않았던 새로운 데이터를\n효과적으로 예측하는 모델을 빌드하는 방법을 설명했습니다", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "물론 이것이 머신러닝 시스템의 핵심입니다", 
+          "start": 6.64
+        }, 
+        {
+          "dur": 11.0, 
+          "text": "하지만 머신러닝 시스템은 실제 세계에 적용되는 예측을 해야 하기 때문에\n머신러닝을 위한 작은 블랙박스 속이 아니라 훨씬 거대한 생태계의 일부가 되어야 합니다", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "전체 머신러닝 시스템에는 학습과 관련이 없는\n여러 구성요소가 포함되어 있습니다", 
+          "start": 20.7
+        }, 
+        {
+          "dur": 9.08, 
+          "text": "예를 들어 데이터 수집, 기능 추출, 데이터 인증,\n다양한 형태의 모니터링 및 데이터 분석이 필요합니다", 
+          "start": 26.88
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "또한 실제 세계에서 활용될 예측을 하도록 하려면\n이러한 서비스가 수반되어야 합니다", 
+          "start": 35.96
+        }, 
+        {
+          "dur": 1.92, 
+          "text": "이렇게 여러 다른 구성요소가 있습니다", 
+          "start": 41.52
+        }, 
+        {
+          "dur": 8.26, 
+          "text": "다행히 모든 요소를 직접 빌드할 필요는 없습니다.\n많은 구성요소를 바로 가져와 애플리케이션 설정에서 사용할 수 있습니다", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "하지만 특정 작업에 어떤 구성요소가 적합한지 어떻게 알 수 있을까요?", 
+          "start": 51.7
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "이와 같은 선택에 도움이 되는\n몇 가지 디자인 선택사항이 있습니다", 
+          "start": 56.58
+        }, 
+        {
+          "dur": 1.66, 
+          "text": "이제 그 선택사항에 관해 살펴보겠습니다", 
+          "start": 61.06
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 6.1, 
+          "text": "Hablamos sobre cómo construir modelos para predecir con éxito\nnuevos datos nunca vistos.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "Es la base de los sistemas de aprendizaje automático.", 
+          "start": 6.64
+        }, 
+        {
+          "dur": 11.0, 
+          "text": "Un sistema así necesita poder hacer predicciones que afecten el mundo real.\nPara ello, el sistema debe formar parte de un ecosistema más grande.", 
+          "start": 9.7
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "Un sistema de aprendizaje automático incluye\ncomponentes no relacionados con el entrenamiento.", 
+          "start": 20.7
+        }, 
+        {
+          "dur": 9.08, 
+          "text": "Por ejemplo, una colección de datos, extracción de atributos, verificaciones de datos,\nvarias formas de supervisión y análisis de datos.", 
+          "start": 26.88
+        }, 
+        {
+          "dur": 5.56, 
+          "text": "También necesitamos procesarlos\npara que puedan hacer predicciones que se usen en el mundo real.", 
+          "start": 35.96
+        }, 
+        {
+          "dur": 1.92, 
+          "text": "Estas son muchas piezas diferentes.", 
+          "start": 41.52
+        }, 
+        {
+          "dur": 8.26, 
+          "text": "Por suerte, muchos de estos componentes están listos para usarse\nen la configuración de su aplicación.", 
+          "start": 43.44
+        }, 
+        {
+          "dur": 4.88, 
+          "text": "¿Cómo reconocemos el componente indicado\npara una tarea específica?", 
+          "start": 51.7
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "Existen diseños clave que podemos observar para guiarnos.", 
+          "start": 56.58
+        }, 
+        {
+          "dur": 1.66, 
+          "text": "Los analizaremos ahora.", 
+          "start": 61.06
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

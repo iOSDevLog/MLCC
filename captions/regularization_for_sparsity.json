@@ -1,0 +1,479 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "我们来深入了解一下特征组合。", 
+          "start": 0.28
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "特征组合可能很棒，但也可能会带来一些问题。", 
+          "start": 2.84
+        }, 
+        {
+          "dur": 2.42, 
+          "text": "尤其是将稀疏特征组合起来的时候。", 
+          "start": 5.74
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "例如，假设我们的某个特征是搜索查询中的字词，\n另一个特征是我们需要查询的独特视频。", 
+          "start": 8.16
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "那么我们现在可能会遇到数百万个可能存在的字词和数百万个可能存在的视频。\n这些内容一旦组合起来，便会产生大量的系数。", 
+          "start": 17.46
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "这就意味着，模型大小会骤然增大，侵占内存，还可能会减缓运行时间。", 
+          "start": 25.34
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "即便我们拥有大量的训练数据，但其中仍有许多组合会非常罕见，\n因此我们最终可能会得到一些噪声系数，并可能遇到过拟合问题。", 
+          "start": 30.32
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "可想而知，如果遇到过拟合问题，我们就要进行正则化。", 
+          "start": 39.66
+        }, 
+        {
+          "dur": 6.24, 
+          "text": "现在我们要说的是，能不能以特定方式进行正则化，\n既能缩减模型大小，又能降低内存使用量？", 
+          "start": 42.42
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "我们要做的就是将部分权重设为0，\n这样就不必处理其中的一些特定组合了。", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "这样既节省了内存，还有可能帮助我们解决过拟合问题。", 
+          "start": 55.28
+        }, 
+        {
+          "dur": 7.74, 
+          "text": "不过必须小心一点，因为我们只想去掉那些额外的噪音系数，\n而不想失去正确的系数。", 
+          "start": 59.76
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "所以我们要做的就是明确地将权重设为0，\n也就是所谓的L0正则化。", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 3.36, 
+          "text": "这种方式只会因存在不为0的权重而处罚您。", 
+          "start": 73.64
+        }, 
+        {
+          "dur": 4.44, 
+          "text": "但是，它没有凸性、难以优化，\n并存在某种逗号尾随问题。", 
+          "start": 77.0
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "要是我们改为将条件放宽至L1正则化，\n只对权重的绝对值总和进行处罚。", 
+          "start": 81.44
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "那么我们仍可以促使模型变得非常稀疏，\nL1正则化会让其中的许多系数归零。", 
+          "start": 89.28
+        }, 
+        {
+          "dur": 6.708, 
+          "text": "这种正则化与L2正则化略有不同，后者也会尝试设置较小的权重，\n但实际上并不会帮助您让权重归零。", 
+          "start": 95.02
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "So let&#39;s dig a little deeper into feature crosses.", 
+          "start": 0.28
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "They can be great but they can also cause some problems.", 
+          "start": 2.84
+        }, 
+        {
+          "dur": 2.42, 
+          "text": "In particular if we&#39;re crossing sparse features.", 
+          "start": 5.74
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "For example maybe one of our features is the words in a search query and the other feature might be unique videos that we have to look up.", 
+          "start": 8.16
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "So now we have maybe millions of possible words, maybe millions of possible videos and we&#39;re crossing those, we&#39;re going to get a lot of coefficients.", 
+          "start": 17.46
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "All of that means that our model size is going to explode, taking memory, possibly slowing down runtime.", 
+          "start": 25.34
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "And a lot of those combinations are going to be super rare even if we have a lot of training data and so we may just end up with some noisy coefficients and possibly overfitting.", 
+          "start": 30.32
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "So you know the answer, if we&#39;re overfitting we want to regularize.", 
+          "start": 39.66
+        }, 
+        {
+          "dur": 6.24, 
+          "text": "And now we&#39;re going to say can we regularize in a way that also will reduce our model size and our memory usage?", 
+          "start": 42.42
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "So what we&#39;d like to do is just try to zero out some of the weights, in which case we won&#39;t have to deal with some of those particular crosses.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "This could save us RAM and this can also potentially help us with overfitting.", 
+          "start": 55.28
+        }, 
+        {
+          "dur": 7.74, 
+          "text": "But we have to be a little careful we don&#39;t want to lose the right coefficients, we just want to lose the ones that are sort of extra noisy.", 
+          "start": 59.76
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "So what we&#39;d like to do is explicitly zero out weights, and that&#39;s what we call L zero regularization.", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 3.36, 
+          "text": "It would just penalize you for having a weight that was not zero.", 
+          "start": 73.64
+        }, 
+        {
+          "dur": 4.44, 
+          "text": "But that&#39;s not convex, it&#39;s hard to optimize, sort of a comma trail problem.", 
+          "start": 77.0
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "Instead what we do is we relax that to an L1 regularization, which just penalizes the sum of the absolute values of the weights.", 
+          "start": 81.44
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "And by doing that we still encourage the model to be very sparse, it will drive a lot of those coefficients to zero.", 
+          "start": 89.28
+        }, 
+        {
+          "dur": 6.708, 
+          "text": "And that&#39;s a little different than L2 regularization, which also tries to make the weight small but won&#39;t actually drive them to zero for you.", 
+          "start": 95.02
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "Intéressons-nous aux croisements de caractéristiques.", 
+          "start": 0.28
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "Ils sont très utiles, mais peuvent causer des problèmes,", 
+          "start": 2.84
+        }, 
+        {
+          "dur": 2.42, 
+          "text": "surtout en cas de caractéristiques creuses.", 
+          "start": 5.74
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "Imaginons qu&#39;une caractéristique représente les mots d&#39;une requête de recherche\net qu&#39;une autre représente des vidéos uniques à rechercher.", 
+          "start": 8.16
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "Si nous croisons plusieurs millions de mots possibles avec plusieurs millions\nde vidéos possibles, nous obtenons un grand nombre de coefficients.", 
+          "start": 17.46
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "Le modèle sera très grand, il consommera beaucoup de mémoire\net il ralentira peut-être même l&#39;exécution.", 
+          "start": 25.34
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "Un grand nombre de ces combinaisons seront très rares, même avec beaucoup de données\nd&#39;apprentissage, et nous risquons d&#39;obtenir des coefficients bruités et un surapprentissage.", 
+          "start": 30.32
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "Et vous savez que le surapprentissage nécessite une régularisation.", 
+          "start": 39.66
+        }, 
+        {
+          "dur": 6.24, 
+          "text": "Nous souhaitons savoir si la régularisation peut réduire\nla taille de notre modèle et la consommation de mémoire.", 
+          "start": 42.42
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "Nous allons donc essayer de mettre à zéro certaines des pondérations\npour ne pas avoir à traiter certains de ces croisements particuliers.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "Nous devrions économiser de la RAM et résoudre les problèmes de surapprentissage.", 
+          "start": 55.28
+        }, 
+        {
+          "dur": 7.74, 
+          "text": "Mais nous devons veiller à ne pas perdre les coefficients pertinents,\ncar nous voulons seulement éliminer ceux qui sont beaucoup trop bruités.", 
+          "start": 59.76
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "Nous voulons donc mettre explicitement ces pondérations à zéro,\nce qui s&#39;appelle la régularisation L0.", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 3.36, 
+          "text": "Celle-ci consiste à pénaliser les pondérations différentes de zéro,", 
+          "start": 73.64
+        }, 
+        {
+          "dur": 4.44, 
+          "text": "mais elle est non convexe et difficile à optimiser,\ncomme un problème de virgule finale.", 
+          "start": 77.0
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "C&#39;est pourquoi nous effectuons plutôt une régularisation L1,\nqui pénalise seulement la somme des valeurs absolues des pondérations.", 
+          "start": 81.44
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "Cette fonction produit tout de même un modèle très creux\nen mettant à zéro un grand nombre de coefficients.", 
+          "start": 89.28
+        }, 
+        {
+          "dur": 6.708, 
+          "text": "Elle est un peu différente de la régularisation L2, qui a également pour but\nde réduire les pondérations, mais qui ne les met pas à zéro.", 
+          "start": 95.02
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "이제 특성 교차에 대해 좀 더 알아봅시다.", 
+          "start": 0.28
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "특성 교차는 좋은 방법이지만 문제가 있기도 합니다.", 
+          "start": 2.84
+        }, 
+        {
+          "dur": 2.42, 
+          "text": "특히 희소 특성을 교차시킬 때 그렇죠.", 
+          "start": 5.74
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "예를 들어 특성 중 하나는 검색어에 포함된 단어고\n다른 특성은 검색할 동영상이라고 해 봅시다.", 
+          "start": 8.16
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "수백만 개의 단어, 수백만 개의 동영상이 있을 수 있죠.\n그렇기 때문에 이 둘을 곱하면 셀 수 없이 많은 계수가 나옵니다.", 
+          "start": 17.46
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "결국 모델 크기가 어마어마하게 커지고,\n메모리를 잡아먹고, 런타임이 느려지게 됩니다.", 
+          "start": 25.34
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "아무리 학습 데이터가 많더라도 이러한 조합은 매우 드물게 나타나기 때문에\n소음이 많은 계수와 과적합이 발생할 가능성이 높습니다.", 
+          "start": 30.32
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "그럼 어떻게 해야 하는지 아시겠죠?\n과적합이 발생하면 정규화를 해야 합니다.", 
+          "start": 39.66
+        }, 
+        {
+          "dur": 6.24, 
+          "text": "그렇다면 모델 크기와 메모리 사용량도\n줄이는 쪽으로 정규화할 수 있을까요?", 
+          "start": 42.42
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "그러려면 몇몇 가중치를 0으로 만들어 없애야 합니다.\n그러면 일부 교차점을 다루지 않아도 되거든요.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "이 방법을 사용하면 RAM도 아끼고 과적합도 해결할 수 있습니다.", 
+          "start": 55.28
+        }, 
+        {
+          "dur": 7.74, 
+          "text": "하지만 이 과정에서 올바른 계수를 없애서는 안 됩니다.\n소음이 심한 몇몇 계수만 없애야 하죠.", 
+          "start": 59.76
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "이렇게 가중치를 0으로 설정하여 아예 없애버리는 것을\nL0 정규화라고 부릅니다.", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 3.36, 
+          "text": "이 경우 0이 아닌 가중치가 있으면 페널티를 줍니다.", 
+          "start": 73.64
+        }, 
+        {
+          "dur": 4.44, 
+          "text": "하지만 볼록한 모양이 아니기 때문에 최적화하기 어렵습니다.\n말하자면 &#39;후행 쉼표(comma trail)&#39; 문제라고 할 수 있죠.", 
+          "start": 77.0
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "그래서 그 대신 가중치 절대값의 합계에\n페널티를 주는 L1 정규화를 사용합니다.", 
+          "start": 81.44
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "이러한 방식을 사용하면 모델의 희소성을 유지하면서\n많은 수의 계수를 0으로 만들 수 있습니다.", 
+          "start": 89.28
+        }, 
+        {
+          "dur": 6.708, 
+          "text": "이는 L2 정규화와는 약간 다릅니다. L2 정규화는\n가중치를 줄이지만 0으로 만들지는 않습니다.", 
+          "start": 95.02
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.56, 
+          "text": "Hablemos sobre los atributos combinados.", 
+          "start": 0.28
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "Pueden ser excelentes,\npero también pueden causar problemas.", 
+          "start": 2.84
+        }, 
+        {
+          "dur": 2.42, 
+          "text": "En particular, si combinamos\natributos dispersos.", 
+          "start": 5.74
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "Tal vez uno de los atributos sean palabras en una búsqueda\ny la otra, videos específicos que debemos buscar.", 
+          "start": 8.16
+        }, 
+        {
+          "dur": 7.88, 
+          "text": "Tenemos millones de palabras y videos posibles.\nSi los combinamos, obtendremos muchos coeficientes.", 
+          "start": 17.46
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "Esto significa que el modelo va a colapsar,\nconsumir memoria y prolongar los tiempos de ejecución.", 
+          "start": 25.34
+        }, 
+        {
+          "dur": 9.34, 
+          "text": "A pesar de tener muchos datos de entrenamiento,\nvarias combinaciones serán extrañas, con coeficientes inestables y sobreajuste.", 
+          "start": 30.32
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "Si los sobreajustamos, tendremos que regularizar.", 
+          "start": 39.66
+        }, 
+        {
+          "dur": 6.24, 
+          "text": "¿Podemos hacerlo de modo que también se reduzca\nel tamaño del modelo y el uso de memoria?", 
+          "start": 42.42
+        }, 
+        {
+          "dur": 6.62, 
+          "text": "Llevamos algunas ponderaciones a cero\npara evitar ciertas combinaciones.", 
+          "start": 48.66
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "Ahorraremos RAM\ny posiblemente sea útil para el sobreajuste.", 
+          "start": 55.28
+        }, 
+        {
+          "dur": 7.74, 
+          "text": "Debemos asegurarnos de eliminar\nsolo los coeficientes que sean muy inconsistentes.", 
+          "start": 59.76
+        }, 
+        {
+          "dur": 6.14, 
+          "text": "Entonces, llevamos ponderaciones a cero.\nEs lo que llamamos regularización L mediante ceros.", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 3.36, 
+          "text": "Te penalizará por tener\nuna ponderación que no fuera cero.", 
+          "start": 73.64
+        }, 
+        {
+          "dur": 4.44, 
+          "text": "Pero no es convexo y es difícil de optimizar.\nEs como un problema de comas al final.", 
+          "start": 77.0
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "Lo relajamos con una regularización L1,\nque solo penaliza la suma de los valores absolutos de las ponderaciones.", 
+          "start": 81.44
+        }, 
+        {
+          "dur": 5.74, 
+          "text": "De esta forma, hacemos que el modelo sea muy disperso\ny muchos de esos coeficientes queden en cero.", 
+          "start": 89.28
+        }, 
+        {
+          "dur": 6.708, 
+          "text": "Se diferencia de la regularización L2,\nque también intenta reducir la ponderación, pero no la lleva a cero.", 
+          "start": 95.02
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

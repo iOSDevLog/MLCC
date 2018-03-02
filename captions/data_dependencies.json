@@ -1,0 +1,954 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 2.68, 
+          "text": "我们来讨论一下数据依赖关系。", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "数据依赖关系非常类似于代码依赖关系。", 
+          "start": 2.68
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "编写软件代码时，\n我们希望包含尽可能少的外部依赖关系。", 
+          "start": 7.4
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "创建机器学习模型时也是如此：\n我们希望包含尽可能少的数据依赖关系。", 
+          "start": 13.16
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "这里所说的数据依赖关系当然是指\n用于训练和预测的输入特征。", 
+          "start": 18.54
+        }, 
+        {
+          "dur": 4.56, 
+          "text": "输入特征之所以很重要，\n是因为它们决定着系统行为。", 
+          "start": 24.16
+        }, 
+        {
+          "dur": 5.02, 
+          "text": "如果输入特征发生变化，系统行为也会随之变化。", 
+          "start": 28.72
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "现在，在软件工程领域，我们都知道如何测试代码。", 
+          "start": 33.74
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "而从根本上说，机器学习系统中的特征\n就相当于软件工程领域中的代码。", 
+          "start": 38.96
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "而特征并没有可与软件工程领域媲美的数据单元测试。", 
+          "start": 44.06
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "因此，我们要非常小心，并对照检查清单提出问题，\n确保我们纳入的特征是有用的，\n而且不会在长期损害我们的系统。", 
+          "start": 48.98
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "第一个问题是：这些数据可靠吗？", 
+          "start": 58.58
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "也就是说，我要纳入的信号会始终在我需要时\n以同样的方式生成吗？", 
+          "start": 62.44
+        }, 
+        {
+          "dur": 8.7, 
+          "text": "在某些情况下，上游信号可能不可靠，\n产生这些信号的服务器可能只有95%的时间可用。", 
+          "start": 69.56
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "我们需要有备用计划，以备不时之需。", 
+          "start": 78.26
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "可能它看起来像一个指示器特征，\n以布尔值的形式表示该信号是否可用。", 
+          "start": 81.4
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "我们需要考虑，此特征是否会随时间推移发生变化，\n我们是否需要考虑它的各种版本？", 
+          "start": 88.06
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "不难想象，我们可能会有一个信号，\n来自某个上游模型或上游进程，\n并且会随着时间发生改变。", 
+          "start": 95.72
+        }, 
+        {
+          "dur": 17.34, 
+          "text": "只要可能，我们可以导入一个版本号，\n以便在上游信号发生变化时得知这一变化；\n也可以将该信号的一个副本掌握在我们自己手中，\n只根据我们自己的时间安排更新该信号。", 
+          "start": 104.58
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "我们需要考虑这些特征的必要性。", 
+          "start": 121.92
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "在机器学习领域，\n我们真的常常因提升模型准确率或质量而激动不已。", 
+          "start": 125.0
+        }, 
+        {
+          "dur": 11.84, 
+          "text": "最终我们发现某些方面的回报逐渐降低，\n牺牲目前依赖的一个、两个或十个不同的外部特征，\n优势只会增加少许。", 
+          "start": 130.86
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "我们真的需要仔细权衡这些代价。", 
+          "start": 142.7
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "添加新特征便会增加系统的长期维护成本，\n因添加新特征所获得的效果与所需付出的代价相比，\n是否划算？", 
+          "start": 145.62
+        }, 
+        {
+          "dur": 1.68, 
+          "text": "此外，我们还需要考虑相关性。", 
+          "start": 155.16
+        }, 
+        {
+          "dur": 8.54, 
+          "text": "此特征确实是我们认为存在因果关系的特征，\n还是只是碰巧具有相关性？\n如果此类相关性发生变化，我们会知道吗？", 
+          "start": 156.84
+        }, 
+        {
+          "dur": 11.5, 
+          "text": "现在，要梳理此类相关性，\n我们可以通过向系统注入随机性的方式，\n不时进行梳理；这种随机化是一种很重要的策略。", 
+          "start": 165.38
+        }, 
+        {
+          "dur": 2.56, 
+          "text": "我们需要考虑反馈环。", 
+          "start": 176.88
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "如之前所讲，我们希望确保系统中没有非平稳性。", 
+          "start": 179.44
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "要获得非平稳性，最简单的方法是，\n让输入数据依赖模型的输出。", 
+          "start": 184.98
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "现在，这可以通过有趣的方式实现。", 
+          "start": 191.48
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "我最喜欢的一个例子是股票市场预测。", 
+          "start": 195.14
+        }, 
+        {
+          "dur": 5.28, 
+          "text": "假如您有两个股票市场预测模型，\n分别来自两家完全不同的公司。", 
+          "start": 200.56
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "如果其中一个预测模型存在错误，\n则可能会导致某只股票的股价上涨。", 
+          "start": 205.84
+        }, 
+        {
+          "dur": 8.6, 
+          "text": "另一家公司B的模型可能正在关注这一方面，\n并会学习这些数据，其行为也可能会发生变化。", 
+          "start": 214.5
+        }, 
+        {
+          "dur": 12.18, 
+          "text": "因此，系统A中的错误事实上可能会\n改变系统B中错误的行为，即使这些系统确实来自\n完全不同的公司，完全没有共同元素。", 
+          "start": 223.1
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "因此，反馈环确实存在，\n我们需要想方设法跟踪并考虑它们。", 
+          "start": 235.28
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.68, 
+          "text": "So let&#39;s talk about data dependencies.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "And by data dependencies I mean something very akin to code-dependencies.", 
+          "start": 2.68
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "When we write software code, we want to include as few external dependencies as possible.", 
+          "start": 7.4
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Same things happens with machine learning models: we want to include as few data dependencies as we can.", 
+          "start": 13.16
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "Now, by data dependencies, I of course mean our input features, that we use for training and for prediction.", 
+          "start": 18.54
+        }, 
+        {
+          "dur": 4.56, 
+          "text": "Our input features are important, because they determine our system behavior.", 
+          "start": 24.16
+        }, 
+        {
+          "dur": 5.02, 
+          "text": "If our features change, our system behavior will change as well.", 
+          "start": 28.72
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "Now, in software engineering land, we know how to test code.", 
+          "start": 33.74
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "But features basically take the place of code in our machine learning systems.", 
+          "start": 38.96
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "And we don&#39;t necessarily have a great analog for unit-tests of data.", 
+          "start": 44.06
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "So we need to be very careful and basically go through a checklist to make sure that we&#39;re including features that are useful and will not hurt our system in the long term.", 
+          "start": 48.98
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "The first question is, is this piece of data reliable?", 
+          "start": 58.58
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "Which is that, is the signal that I&#39;m incorporating going to always be produced in the same way, whenever I need it?", 
+          "start": 62.44
+        }, 
+        {
+          "dur": 8.7, 
+          "text": "Now, some cases, an upstream signal might be flaky, maybe it comes from some server that is only available 95% of the time.", 
+          "start": 69.56
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "If it&#39;s not available, we need to have a fallback plan.", 
+          "start": 78.26
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Maybe it looks like an indicator feature, that shows that that signal was not available as a boolean.", 
+          "start": 81.4
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "We need to think about, is that feature going to change on us over time and do we need to think about the versions of it?", 
+          "start": 88.06
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "It&#39;s easy to imagine that we might have a signal that comes from some upstream model or some upstream process, that changes over time.", 
+          "start": 95.72
+        }, 
+        {
+          "dur": 17.34, 
+          "text": "Whenever possible it&#39;s good for us to either have a version number imported to us, so we can know when that upstream signal changes, or to actually take ownership of a copy of that signal and only update that signal on our own schedule.", 
+          "start": 104.58
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "We wanna think about the necessity of these features.", 
+          "start": 121.92
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Often times as machine learning people, we get really excited about improving the accuracy or the quality of our model.", 
+          "start": 125.0
+        }, 
+        {
+          "dur": 11.84, 
+          "text": "And we end up finding sort of areas of diminishing returns, where we add a tiny little epsilon of benefit at the cost of one or two or ten different external features that we&#39;re now depending on.", 
+          "start": 130.86
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "We wanna really weigh these costs carefully.", 
+          "start": 142.7
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "Are we getting enough bang for the buck when we add in the new feature to really pay for the long term maintenance cost that we&#39;re adding to our system?", 
+          "start": 145.62
+        }, 
+        {
+          "dur": 1.68, 
+          "text": "We also wanna think about correlations.", 
+          "start": 155.16
+        }, 
+        {
+          "dur": 8.54, 
+          "text": "Is this feature in fact something that we think is causal, or is it just something that happens to be correlated, and would we know if those correlations changed?", 
+          "start": 156.84
+        }, 
+        {
+          "dur": 11.5, 
+          "text": "Now, one way that we might tease apart these correlations is by injecting randomness into our system, to sometimes tease apart these things; this sort of randomization is an important strategy.", 
+          "start": 165.38
+        }, 
+        {
+          "dur": 2.56, 
+          "text": "We need to think about feedback loops.", 
+          "start": 176.88
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "As we said before, we&#39;d like to make sure that we don&#39;t have non-stationarity in our system.", 
+          "start": 179.44
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "The easiest way to get non-stationarity is to have our input data depend on the outputs of our model.", 
+          "start": 184.98
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "Now this can happen in interesting ways.", 
+          "start": 191.48
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "One of my favorite examples is in the world of stock market prediction.", 
+          "start": 195.14
+        }, 
+        {
+          "dur": 5.28, 
+          "text": "You might have two stock market prediction models from two entirely different firms.", 
+          "start": 200.56
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "If one of these prediction models has bugs, it might cause stock market prices to go up, on a certain stock.", 
+          "start": 205.84
+        }, 
+        {
+          "dur": 8.6, 
+          "text": "The model from the other firm, from firm B, might be looking at this and will learn from that data, and may also exhibit changed behavior.", 
+          "start": 214.5
+        }, 
+        {
+          "dur": 12.18, 
+          "text": "So the bugs from system A may in fact change the behavior of bugs from system B, even though those systems are completely disjoint and are in fact from completely different companies.", 
+          "start": 223.1
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "So feedback loops are a real thing; we need to find ways to track them down and account for them.", 
+          "start": 235.28
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.68, 
+          "text": "Intéressons-nous maintenant\naux dépendances de données.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Les dépendances de données\nsont très semblables aux dépendances de code.", 
+          "start": 2.68
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "Lors de l&#39;écriture d&#39;un code logiciel,\nl&#39;idée est d&#39;inclure le moins possible de dépendances externes.", 
+          "start": 7.4
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Même objectif pour les modèles de machine learning :\ninclure le moins possible de dépendances de données.", 
+          "start": 13.16
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "Par dépendances de données, je veux parler\nde nos caractéristiques d&#39;entrée pour l&#39;apprentissage et la prédiction.", 
+          "start": 18.54
+        }, 
+        {
+          "dur": 4.56, 
+          "text": "Elles sont importantes, car elles déterminent\nle comportement de notre système.", 
+          "start": 24.16
+        }, 
+        {
+          "dur": 5.02, 
+          "text": "Si nos caractéristiques changent,\nle comportement du système change également.", 
+          "start": 28.72
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "Dans le domaine du génie logiciel,\nnous savons comment tester du code.", 
+          "start": 33.74
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Les caractéristiques le remplacent\ndans nos systèmes de machine learning.", 
+          "start": 38.96
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "Et nous n&#39;avons pas forcément\nde bon modèle analogique pour les tests unitaires de données.", 
+          "start": 44.06
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "Nous devons donc être très prudents et passer en revue une checklist\nafin de nous assurer d&#39;inclure des caractéristiques utiles, qui ne nuiront pas à notre système à long terme.", 
+          "start": 48.98
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "La première question est la suivante :\nces données sont-elles fiables ?", 
+          "start": 58.58
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "Le signal que j&#39;incorpore va-t-il toujours être produit\nde la même façon, à chaque fois que j&#39;en ai besoin ?", 
+          "start": 62.44
+        }, 
+        {
+          "dur": 8.7, 
+          "text": "Dans certains cas, un signal en amont peut être défaillant.\nIl peut provenir d&#39;un serveur qui n&#39;est disponible que 95 % du temps.", 
+          "start": 69.56
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "S&#39;il n&#39;est pas disponible,\nnous devons avoir un plan de repli.", 
+          "start": 78.26
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Il peut s&#39;agir d&#39;un indicateur expliquant\nque ce signal n&#39;était pas disponible sous forme booléenne.", 
+          "start": 81.4
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Nous devons nous demander si cette caractéristique\nva changer au fil du temps et si nous devons concevoir différentes versions de cette dernière.", 
+          "start": 88.06
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "Il est facile d&#39;imaginer que nous pourrions avoir un signal\nprovenant d&#39;un modèle en amont ou d&#39;un processus en amont, qui change au fil du temps.", 
+          "start": 95.72
+        }, 
+        {
+          "dur": 17.34, 
+          "text": "Si possible, il est recommandé soit d&#39;importer un numéro de version à notre intention\npour savoir quand ce signal en amont change, soit de prendre possession d&#39;une copie de ce signal, et le mettre à jour à notre convenance seulement.", 
+          "start": 104.58
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Il faut réfléchir\nà la nécessité de ces caractéristiques.", 
+          "start": 121.92
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "Souvent, nous sommes enthousiastes à l&#39;idée d&#39;améliorer\nla précision ou la qualité de notre modèle de machine learning.", 
+          "start": 125.0
+        }, 
+        {
+          "dur": 11.84, 
+          "text": "Et nous finissons par nous retrouver avec des rendements décroissants.\nÀ cet infime avantage s&#39;ajoute le coût d&#39;une, deux ou dix caractéristiques externes dont nous dépendons désormais.", 
+          "start": 130.86
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "Il faut examiner ces coûts minutieusement.", 
+          "start": 142.7
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "S&#39;agit-il d&#39;un bon investissement ? La nouvelle caractéristique\npermettra-t-elle de rembourser les coûts de maintenance à long terme que nous ajoutons à notre système ?", 
+          "start": 145.62
+        }, 
+        {
+          "dur": 1.68, 
+          "text": "Il faut également penser aux corrélations.", 
+          "start": 155.16
+        }, 
+        {
+          "dur": 8.54, 
+          "text": "Cette caractéristique possède-t-elle un aspect causal\nou s&#39;agit-il d&#39;une simple corrélation, et serions-nous au courant d&#39;un éventuel changement de corrélation ?", 
+          "start": 156.84
+        }, 
+        {
+          "dur": 11.5, 
+          "text": "Une façon de clarifier ces corrélations est d&#39;injecter une part de hasard dans notre système,\npour isoler parfois ces éléments. L&#39;ajout de cet aspect aléatoire est important dans notre stratégie.", 
+          "start": 165.38
+        }, 
+        {
+          "dur": 2.56, 
+          "text": "Nous devons réfléchir\naux boucles de rétroaction.", 
+          "start": 176.88
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "Comme indiqué précédemment,\nnous voulons une absence de stationnarité dans notre système.", 
+          "start": 179.44
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "Pour ce faire, le plus simple est de faire dépendre\nnos données d&#39;entrée des sorties du modèle.", 
+          "start": 184.98
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "Cela peut se faire de différentes manières.", 
+          "start": 191.48
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "L&#39;un de mes exemples préférés\nconcerne le monde des prédictions boursières.", 
+          "start": 195.14
+        }, 
+        {
+          "dur": 5.28, 
+          "text": "Vous pouvez avoir deux modèles\nde prédictions boursières de deux entreprises différentes.", 
+          "start": 200.56
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "Si l&#39;un de ces modèles de prédictions comporte des bugs,\ncela peut entraîner la hausse d&#39;une action donnée.", 
+          "start": 205.84
+        }, 
+        {
+          "dur": 8.6, 
+          "text": "Le modèle de l&#39;autre entreprise (l&#39;entreprise B)\npeut tout à fait utiliser ces données et modifier son comportement en fonction.", 
+          "start": 214.5
+        }, 
+        {
+          "dur": 12.18, 
+          "text": "Ainsi, les bugs du système A peuvent en fait changer le comportement des bugs du système B,\nmême si ces systèmes sont complètement dissociés et proviennent d&#39;entreprises différentes.", 
+          "start": 223.1
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "Ainsi, les boucles de rétroactions\nsont essentielles. Nous devons les prendre en compte.", 
+          "start": 235.28
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.68, 
+          "text": "데이터 종속성에 관해\n설명해 보겠습니다", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "데이터 종속성이란\n코드 종속성과 매우 비슷합니다", 
+          "start": 2.68
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "소프트웨어 코드를 작성할 때는\n외부 종속성을 최대한 줄이려고 합니다", 
+          "start": 7.4
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "머신러닝 모델에서도 마찬가지로\n데이터 종속성을 최대한 줄여야 합니다", 
+          "start": 13.16
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "여기서 데이터 종속성이란\n학습 및 예측에 사용하는 입력 기능입니다", 
+          "start": 18.54
+        }, 
+        {
+          "dur": 4.56, 
+          "text": "입력 기능은 시스템 동작을\n결정하는 요인이므로 중요합니다", 
+          "start": 24.16
+        }, 
+        {
+          "dur": 5.02, 
+          "text": "기능이 변경되면 시스템 동작도 달라집니다", 
+          "start": 28.72
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "소프트웨어 엔지니어링 환경에서의\n코드 테스트 방법은 이미 알고 있습니다", 
+          "start": 33.74
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "그러나 머신러닝 시스템에서는\n기본적으로 기능이 코드를 대신합니다", 
+          "start": 38.96
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "또한 데이터 단위 테스트에 매우 유용한\n아날로그가 없을 수도 있습니다", 
+          "start": 44.06
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "따라서 유용하면서도 향후 시스템 안전을 저해하지 않을 기능을 포함시키려면\n기본적으로 체크리스트를 매우 꼼꼼히 확인해야 합니다", 
+          "start": 48.98
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "첫 번째 질문은\n이 데이터를 신뢰할 수 있느냐입니다", 
+          "start": 58.58
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "즉, 지금 통합하려고 하는 신호가\n필요할 때마다 동일하게 생성될 지를 따져봐야 합니다", 
+          "start": 62.44
+        }, 
+        {
+          "dur": 8.7, 
+          "text": "경우에 따라 업스트림 신호가 이상하게 작동하여\n가용성이 겨우 95%인 서버에서 전송될 수 있습니다", 
+          "start": 69.56
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "신호를 사용할 수 없다면 대안이 있어야 합니다", 
+          "start": 78.26
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "즉, 신호가 부울로 지원되지 않음을 알리는\n표시기 기능 같은 것을 생각해 볼 수 있습니다", 
+          "start": 81.4
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "이 기능이 나중에 변경 가능성이 있는지,\n버전을 생각해 봐야 할지를 따져봐야 합니다", 
+          "start": 88.06
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "업스트림 모델 또는 업스트림 프로세스에서 전달되며\n시간이 지나면서 변경되는 신호를 생각해 보시면 됩니다", 
+          "start": 95.72
+        }, 
+        {
+          "dur": 17.34, 
+          "text": "가능할 때마다 버전 번호를 가져와 업스트림 신호가 변경되는 시기를 확인하거나,\n실제로 신호의 사본을 소유하고 자체 일정에 따라 신호만 업데이트하는 것이 좋습니다", 
+          "start": 104.58
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "이러한 기능의 필요성에 관해\n생각해 보겠습니다", 
+          "start": 121.92
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "대개 머신러닝 개발자들은 모델의\n정확도와 품질을 개선하는 데 열심입니다", 
+          "start": 125.0
+        }, 
+        {
+          "dur": 11.84, 
+          "text": "그러나 결국 결과가 저조한 부분이 생기고 미미한 개선을 위해\n현재 사용하는 여러 외부 기능 중 일부 또는 다수를 희생하게 됩니다", 
+          "start": 130.86
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "이와 같은 손실에서 얻는 대가를\n신중하게 따져야 합니다", 
+          "start": 142.7
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "새로운 기능을 추가할 때는 투자 대비 효과가 충분하여\n장기적인 시스템 유지보수 비용에 무리가 없는지 살펴봐야 합니다", 
+          "start": 145.62
+        }, 
+        {
+          "dur": 1.68, 
+          "text": "상관 관계도 따져봐야 합니다", 
+          "start": 155.16
+        }, 
+        {
+          "dur": 8.54, 
+          "text": "이 기능이 우연히 생겼는지 아니면 상관 관계에 따라 발생하는지 알아보고\n이 상관 관계가 달라지면 그 사실을 알 수 있는지도 따져봐야 합니다", 
+          "start": 156.84
+        }, 
+        {
+          "dur": 11.5, 
+          "text": "이 상관 관계를 분석하는 방법은 시스템에 임의성을 도입하는 것입니다\n이러한 임의성이 상관 관계 분석에 중요한 경우가 있습니다", 
+          "start": 165.38
+        }, 
+        {
+          "dur": 2.56, 
+          "text": "피드백 루프에 관해 고려해야 합니다", 
+          "start": 176.88
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "앞서 말씀드린 것처럼\n시스템에 비정상성이 없어야 합니다", 
+          "start": 179.44
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "비정상성을 가장 쉽게 확보하는 방법은\n모델의 출력에 따라 입력 데이터가 결정되게 하는 것입니다", 
+          "start": 184.98
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "사실 이러한 관계는 흥미로운 양상을 보이기도 합니다", 
+          "start": 191.48
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "제가 즐겨 드는 예시로 주식 시장 예측 모델이 있습니다", 
+          "start": 195.14
+        }, 
+        {
+          "dur": 5.28, 
+          "text": "완전히 다른 두 회사에서 서로 다른 두 가지\n주식 시장 예측 모델을 제공한다고 해 보겠습니다", 
+          "start": 200.56
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "이 예측 모델 중 하나에 버그가 있으면\n특정 주식의 주가가 상승할 수 있습니다", 
+          "start": 205.84
+        }, 
+        {
+          "dur": 8.6, 
+          "text": "다른 회사, 즉 B사의 모델에서 이 동작을 보고\n해당 데이터를 바탕으로 학습하여 동작 방식을 변경할 수도 있습니다", 
+          "start": 214.5
+        }, 
+        {
+          "dur": 12.18, 
+          "text": "따라서 두 시스템이 완전히 분리되어 있으며 실제로 전혀 다른 회사의 것이지만\nA 시스템의 버그로 B 시스템의 버그 동작이 사실상 달라질 수 있습니다", 
+          "start": 223.1
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "따라서 피드백 루프는 실재하는 것이며\n이를 추적하여 처리하는 방법을 찾아야 합니다", 
+          "start": 235.28
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 2.68, 
+          "text": "Hablemos sobre dependencias de datos.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Es algo muy parecido a las dependencias de códigos.", 
+          "start": 2.68
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "En la codificación de software, debemos incluir\nla menor cantidad de dependencias externas posibles.", 
+          "start": 7.4
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Lo mismo sucede con los modelos de aprendizaje automático;\ndebemos incluir la menor cantidad de dependencias de datos posibles.", 
+          "start": 13.16
+        }, 
+        {
+          "dur": 5.62, 
+          "text": "Por dependencias de datos, me refiero a las funciones de entrada\nque usamos para el entrenamiento y la predicción.", 
+          "start": 18.54
+        }, 
+        {
+          "dur": 4.56, 
+          "text": "Estas funciones son importantes\nporque determinan el comportamiento del sistema.", 
+          "start": 24.16
+        }, 
+        {
+          "dur": 5.02, 
+          "text": "Si una función cambia, también lo hará el comportamiento.", 
+          "start": 28.72
+        }, 
+        {
+          "dur": 5.22, 
+          "text": "En la ingeniería de software, sabemos cómo probar el código.", 
+          "start": 33.74
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "En los sistemas de aprendizaje automático, las funciones\nocupan el lugar del código.", 
+          "start": 38.96
+        }, 
+        {
+          "dur": 4.92, 
+          "text": "No tenemos una analogía para las pruebas de unidades en los datos.", 
+          "start": 44.06
+        }, 
+        {
+          "dur": 9.6, 
+          "text": "Hay que asegurarse de incluir funciones útiles\nque no perjudiquen el sistema en el futuro.", 
+          "start": 48.98
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "La primera pregunta es ¿estos datos son confiables?", 
+          "start": 58.58
+        }, 
+        {
+          "dur": 7.12, 
+          "text": "Es decir, ¿la señal que incorporo\ntendrá siempre el mismo resultado?", 
+          "start": 62.44
+        }, 
+        {
+          "dur": 8.7, 
+          "text": "A veces, una señal ascendente no es confiable;\ntal vez su servidor solo está disponible el 95% del tiempo.", 
+          "start": 69.56
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "Cuando esto sucede, necesitamos un plan B.", 
+          "start": 78.26
+        }, 
+        {
+          "dur": 6.66, 
+          "text": "Puede ser una función de indicador\nque muestre que la señal no está disponible como booleana.", 
+          "start": 81.4
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Hay que pensar, ¿la función cambiará con el tiempo\ny debemos considerar sus versiones?", 
+          "start": 88.06
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "Una señal que proviene de un modelo o proceso ascendente\npuede cambiar con el tiempo.", 
+          "start": 95.72
+        }, 
+        {
+          "dur": 17.34, 
+          "text": "Podemos importar el número de la versión para saber cuándo cambia la señal\nu obtener una copia de la señal y actualizarla según nuestra agenda.", 
+          "start": 104.58
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Hay que pensar en las necesidades de estas funciones.", 
+          "start": 121.92
+        }, 
+        {
+          "dur": 5.86, 
+          "text": "A menudo, nos entusiasmamos por mejorar la precisión\no la calidad del modelo.", 
+          "start": 125.0
+        }, 
+        {
+          "dur": 11.84, 
+          "text": "Al encontrar resultados inesperados, agregamos una pequeña épsilon de beneficio al costo de unas funciones externas en las cuales ahora dependemos.", 
+          "start": 130.86
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "Hay que considerar los costos con cuidado.", 
+          "start": 142.7
+        }, 
+        {
+          "dur": 9.54, 
+          "text": "¿Es rentable agregar una función nueva cuando pensamos\nen el costo de mantenimiento que se agrega al sistema?", 
+          "start": 145.62
+        }, 
+        {
+          "dur": 1.68, 
+          "text": "También están las correlaciones.", 
+          "start": 155.16
+        }, 
+        {
+          "dur": 8.54, 
+          "text": "¿Esta función es algo casual o está correlacionada?\n¿Sabemos si cambian esas correlaciones?", 
+          "start": 156.84
+        }, 
+        {
+          "dur": 11.5, 
+          "text": "Una forma de analizar las correlaciones es agregar aleatoriedad al sistema. Esta es una estrategia importante.", 
+          "start": 165.38
+        }, 
+        {
+          "dur": 2.56, 
+          "text": "Debemos pensar en los ciclos de reacción.", 
+          "start": 176.88
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "Queremos asegurarnos de que no haya estacionariedad\nen el sistema.", 
+          "start": 179.44
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "Para lograrlo, debemos hacer que los datos de entrada\ndependan de los resultados del modelo.", 
+          "start": 184.98
+        }, 
+        {
+          "dur": 3.66, 
+          "text": "Existen varias formas para hacerlo.", 
+          "start": 191.48
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "Un ejemplo es la predicción en el mercado de valores.", 
+          "start": 195.14
+        }, 
+        {
+          "dur": 5.28, 
+          "text": "Si tenemos dos modelos de predicción del mercado de valores\nde dos empresas diferentes,", 
+          "start": 200.56
+        }, 
+        {
+          "dur": 8.66, 
+          "text": "y uno tiene errores, es posible que el precio de una acción suba.", 
+          "start": 205.84
+        }, 
+        {
+          "dur": 8.6, 
+          "text": "El modelo de la firma B observa esto, aprende de esos datos\ny cambia su comportamiento.", 
+          "start": 214.5
+        }, 
+        {
+          "dur": 12.18, 
+          "text": "Los errores en el sistema A cambian el comportamiento de los errores\nen el sistema B, a pesar de que no están relacionados.", 
+          "start": 223.1
+        }, 
+        {
+          "dur": 5.76, 
+          "text": "Los ciclos de reacción son un problema que debemos resolver.", 
+          "start": 235.28
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

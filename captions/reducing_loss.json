@@ -1,0 +1,1909 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 4.02, 
+          "text": "您好！我叫Cassandra Xia，\n是Google的一名编程人员。", 
+          "start": 0.4
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "负责帮助Google的其他团队\n使用传感器流。", 
+          "start": 4.49
+        }, 
+        {
+          "dur": 2.7, 
+          "text": "本视频将介绍如何减小误差。", 
+          "start": 7.57
+        }, 
+        {
+          "dur": 6.18, 
+          "text": "之前，我们学习了如何计算误差。\n那么我们如何选择一组合适的模型参数", 
+          "start": 10.72
+        }, 
+        {
+          "dur": 1.31, 
+          "text": "来尽可能减小误差呢？", 
+          "start": 16.97
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "如果我们能够确定\n要往参数空间的哪个方向前进就再好不过了。", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 5.05, 
+          "text": "沿着这个方向，我们可以知道\n所选择的每组新的超参数", 
+          "start": 26.34
+        }, 
+        {
+          "dur": 2.52, 
+          "text": "都比之前一组参数的误差小一些。", 
+          "start": 31.63
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "要获得具体方向，\n一种方法是计算梯度，", 
+          "start": 34.8
+        }, 
+        {
+          "dur": 3.99, 
+          "text": "即与模型参数相关的误差函数的导数。", 
+          "start": 37.9
+        }, 
+        {
+          "dur": 4.7, 
+          "text": "对于方差等简单的误差函数，\n可以轻松计算出导数。", 
+          "start": 42.25
+        }, 
+        {
+          "dur": 3.43, 
+          "text": "这样我们就能高效地更新模型参数。", 
+          "start": 47.14
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "您可以将其视为一种迭代法。", 
+          "start": 51.0
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "获得数据后，\n我们计算这些数据的误差函数的梯度。", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "我们通过负梯度得知\n在哪个方向更新模型参数", 
+          "start": 57.52
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "才能减小误差，\n我们就朝着相应方向前进。", 
+          "start": 61.64
+        }, 
+        {
+          "dur": 4.18, 
+          "text": "获取新版模型，\n然后重新计算梯度并重复这个过程。", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 3.1, 
+          "text": "假设我们处于一个维度中，\n这是我们的误差函数。", 
+          "start": 69.7
+        }, 
+        {
+          "dur": 3.61, 
+          "text": "画面中这个画出了我们的\n一个模型参数θ与误差之间的关系。", 
+          "start": 72.8
+        }, 
+        {
+          "dur": 3.61, 
+          "text": "我们随机选择一个值或θ的初始值，", 
+          "start": 76.86
+        }, 
+        {
+          "dur": 3.27, 
+          "text": "就可以看到对应的误差。", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 2.1, 
+          "text": "接着，我们可以计算负梯度，", 
+          "start": 85.32
+        }, 
+        {
+          "dur": 3.09, 
+          "text": "从而得知往哪个方向前进，\n才能尽可能减小误差。", 
+          "start": 87.72
+        }, 
+        {
+          "dur": 3.95, 
+          "text": "如果我们朝着这个方向沿着梯度前进，\n就会看到新的误差。", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.56, 
+          "text": "我们可以继续\n朝着这个方向沿着梯度前进，", 
+          "start": 96.02
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "直到超过局部最小值。", 
+          "start": 99.72
+        }, 
+        {
+          "dur": 3.47, 
+          "text": "而负梯度会指示我们\n沿着来时的方向返回。", 
+          "start": 102.58
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "在负梯度的方向上，\n我们应该迈着多大的步伐前进？", 
+          "start": 107.06
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "这是由学习速率确定的。", 
+          "start": 111.18
+        }, 
+        {
+          "dur": 1.82, 
+          "text": "即您可以自行决定的超参数。", 
+          "start": 113.73
+        }, 
+        {
+          "dur": 4.44, 
+          "text": "如果学习速率非常小，\n那么我们的梯度步伐就小而密。", 
+          "start": 116.22
+        }, 
+        {
+          "dur": 2.93, 
+          "text": "那么这需要进行大量的计算，\n才能到达最小值。", 
+          "start": 121.05
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "如果学习速率非常大，\n那么我们会在负梯度方向迈出一大步，", 
+          "start": 124.76
+        }, 
+        {
+          "dur": 1.75, 
+          "text": "有可能超过局部最小值，", 
+          "start": 132.11
+        }, 
+        {
+          "dur": 4.9, 
+          "text": "误差甚至会比之前还大。", 
+          "start": 134.68
+        }, 
+        {
+          "dur": 2.85, 
+          "text": "在维度更多的情况下，\n这会导致您的模型发生偏离。", 
+          "start": 140.26
+        }, 
+        {
+          "dur": 1.77, 
+          "text": "在这种情况下，您应该", 
+          "start": 143.27
+        }, 
+        {
+          "dur": 2.99, 
+          "text": "尝试将学习速率减慢，\n差不多减慢一个数量级。", 
+          "start": 145.04
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "我们刚刚介绍了一种\n称为梯度下降法的算法。", 
+          "start": 148.82
+        }, 
+        {
+          "dur": 3.64, 
+          "text": "我们从某个点出发并不断前进，", 
+          "start": 151.52
+        }, 
+        {
+          "dur": 4.01, 
+          "text": "希望能越来越靠近某个最小值。\n不过，我们的出发点重要吗？", 
+          "start": 155.38
+        }, 
+        {
+          "dur": 1.33, 
+          "text": "我们先思考一会儿。", 
+          "start": 160.32
+        }, 
+        {
+          "dur": 1.93, 
+          "text": "如果我们现在正在上微积分课，", 
+          "start": 162.13
+        }, 
+        {
+          "dur": 5.46, 
+          "text": "我们知道某些问题是凸形的，\n也就是说，这种问题的形状像个巨大的碗。", 
+          "start": 164.28
+        }, 
+        {
+          "dur": 5.09, 
+          "text": "只要我们在这个碗的某个点出发，\n迈出大小适当的步伐，", 
+          "start": 169.97
+        }, 
+        {
+          "dur": 3.93, 
+          "text": "沿着梯度前进，最终都会到达碗底。", 
+          "start": 175.06
+        }, 
+        {
+          "dur": 3.19, 
+          "text": "不过，很多机器学习问题并不是凸性的。", 
+          "start": 180.02
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "众所周知，神经网络就不是凸形的。", 
+          "start": 183.5
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "也就是说，神经网络的形状不像碗，", 
+          "start": 186.9
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "而更像是蛋架。", 
+          "start": 189.88
+        }, 
+        {
+          "dur": 3.21, 
+          "text": "有很多可能的最小值，", 
+          "start": 192.88
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "其中一些最小值要优于其他最小值。", 
+          "start": 196.09
+        }, 
+        {
+          "dur": 2.67, 
+          "text": "这样看来，初始值确实很重要。", 
+          "start": 198.26
+        }, 
+        {
+          "dur": 1.29, 
+          "text": "我们之后会进一步说明。", 
+          "start": 201.3
+        }, 
+        {
+          "dur": 1.93, 
+          "text": "我们先花点时间思考一下效率。", 
+          "start": 203.06
+        }, 
+        {
+          "dur": 2.11, 
+          "text": "在计算误差函数的梯度时，", 
+          "start": 205.5
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "我们通过学过的数学知道，", 
+          "start": 208.0
+        }, 
+        {
+          "dur": 2.32, 
+          "text": "应该计算数据集中所有样本的梯度。", 
+          "start": 210.17
+        }, 
+        {
+          "dur": 2.79, 
+          "text": "只有这样才能确保我们的梯度步伐", 
+          "start": 212.72
+        }, 
+        {
+          "dur": 2.02, 
+          "text": "正好朝着正确的方向。", 
+          "start": 215.51
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "对于样本数量，\n达到百万或十亿的大型数据集。", 
+          "start": 217.98
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "要迈出每一步，", 
+          "start": 221.14
+        }, 
+        {
+          "dur": 1.43, 
+          "text": "都需要进行大量的计算。", 
+          "start": 223.12
+        }, 
+        {
+          "dur": 3.83, 
+          "text": "根据经验，人们发现，\n无需使用整个数据集，", 
+          "start": 225.38
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "只要计算单个样本的误差函数，", 
+          "start": 229.21
+        }, 
+        {
+          "dur": 4.46, 
+          "text": "那么大部分也都是适用的。\n尽管这样需要迈出更多整体步伐，", 
+          "start": 234.2
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "但为获得最佳解决方案\n而需要进行的总计算量", 
+          "start": 238.66
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "往往也少得多。", 
+          "start": 241.88
+        }, 
+        {
+          "dur": 2.22, 
+          "text": "这称为随机梯度下降法。", 
+          "start": 243.64
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "在实际运用中，\n我们采用折中的解决方案。", 
+          "start": 246.66
+        }, 
+        {
+          "dur": 3.13, 
+          "text": "我们并非使用\n一个样本或整个数据集，", 
+          "start": 249.59
+        }, 
+        {
+          "dur": 5.35, 
+          "text": "而是使用一小部分样本，\n差不多10-1000个样本。", 
+          "start": 253.04
+        }, 
+        {
+          "dur": 2.4, 
+          "text": "这称为小批量梯度下降法。", 
+          "start": 258.78
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.02, 
+          "text": "Hi, my name is Cassandra Xia\nand I&#39;m a programmer at Google", 
+          "start": 0.4
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "that helps other groups\nwithin Google use tensor flow.", 
+          "start": 4.42
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "In this section we&#39;re gonna\ntalk about reducing loss.", 
+          "start": 7.5
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "Previously we learned how to compute \nthe loss, but how do we choose the set of", 
+          "start": 10.72
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "model parameters that minimizes it?", 
+          "start": 15.7
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "Well what would be nice is if we had a \ndirection to go in within parameter space.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "Some sort of guide such that each set \nof new hyper-parameters that we took on", 
+          "start": 26.34
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "had a lower loss than the one before it.", 
+          "start": 31.58
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "One way to get a direction\nis to compute the gradient.", 
+          "start": 34.8
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "The derivative of the loss function\nwith respect to the model parameters.", 
+          "start": 37.86
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "For simple loss functions like the square\nloss the derivative is easy to compute.", 
+          "start": 42.2
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "And it gives us an efficient\nway to update model parameters.", 
+          "start": 47.14
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "Think of it as an iterated approach.", 
+          "start": 51.0
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "Data comes in, we compute the gradient \nof the loss function on that data.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "The negative gradient tells us in which\ndirection to update model parameters", 
+          "start": 57.52
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "in order to reduce loss.\nWe take a step in that direction,", 
+          "start": 61.64
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "get a new version of the model, and now \nwe can recompute the gradient and repeat.", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 3.1, 
+          "text": "Pretend in one dimension,\nthis is our loss function.", 
+          "start": 69.7
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "It maps our single model\nparameter theta to the loss.", 
+          "start": 72.8
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "If we start off at a random value \nor initialization for theta", 
+          "start": 76.86
+        }, 
+        {
+          "dur": 4.58, 
+          "text": "then we achieve a corresponding loss.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 2.4, 
+          "text": "We can then compute the negative gradient\nwhich tells us", 
+          "start": 85.32
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "in which direction we should go \nin order to minimize the loss.", 
+          "start": 87.72
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "If we take a gradient step in \nthat direction we get a new loss.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "We can keep taking gradient steps in that \ndirection until we&#39;ve reached a point", 
+          "start": 96.02
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "in which we have passed the\nlocal minimum, in which the", 
+          "start": 99.72
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "negative gradient will tell us to go\nback in the direction that we came from.", 
+          "start": 102.58
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "How large of a step should we take\nin the direction of negative gradient?", 
+          "start": 107.06
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "Well, that is dictated \nby the learning rate.", 
+          "start": 111.18
+        }, 
+        {
+          "dur": 2.49, 
+          "text": "A hyper-parameter that you can twiddle.", 
+          "start": 113.73
+        }, 
+        {
+          "dur": 4.74, 
+          "text": "If learning rate is really small then we&#39;ll\ntake a bunch of teeny tiny gradient steps,", 
+          "start": 116.22
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "Requiring a lot of computation\nin order to reach the minimum.", 
+          "start": 120.96
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "However, if the learning rate is very\nlarge then we&#39;ll take a large step", 
+          "start": 124.76
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "in the direction of negative gradient.\nPotentially overshooting the local minimum", 
+          "start": 130.0
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "and even reaching a point in which\nthe loss is even bigger than before.", 
+          "start": 134.68
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "In more dimensions, \nthis would cause your model to diverge.", 
+          "start": 140.26
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "In which case, you should try", 
+          "start": 143.26
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "decreasing the learning rate\nby an order of magnitude or so.", 
+          "start": 145.04
+        }, 
+        {
+          "dur": 2.7, 
+          "text": "We just described an algorithm\ncalled gradient descent.", 
+          "start": 148.82
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "We start somewhere and we continuously\ntake steps that hopefully get us", 
+          "start": 151.52
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "closer and closer to some minimum.\nHowever, does it matter where we start?", 
+          "start": 155.38
+        }, 
+        {
+          "dur": 1.81, 
+          "text": "Well let&#39;s think for a minute.", 
+          "start": 160.32
+        }, 
+        {
+          "dur": 3.75, 
+          "text": "If we put ourselves back \nin calculus class, we learned that", 
+          "start": 162.13
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "some problems are convex, meaning\nthat they&#39;re shaped like a giant bowl.", 
+          "start": 165.88
+        }, 
+        {
+          "dur": 5.16, 
+          "text": "So as long as we start somewhere on\nthe bowl and we take reasonable step sizes", 
+          "start": 169.9
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "and follow the gradients, eventually we&#39;ll\nfind our way to the bottom of the bowl.", 
+          "start": 175.06
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "However, many machine learning\nproblems are not convex.", 
+          "start": 180.02
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "Neural networks are notoriously \nnot convex,", 
+          "start": 183.5
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "meaning that rather than being shaped \nlike a bowl,", 
+          "start": 186.9
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "they are shaped more like an egg crate.", 
+          "start": 189.88
+        }, 
+        {
+          "dur": 3.21, 
+          "text": "Where there are many possible \nminimum values,", 
+          "start": 192.88
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "some of which are better than others.", 
+          "start": 196.09
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "So there initialization does matter.", 
+          "start": 198.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "More on that later.", 
+          "start": 201.06
+        }, 
+        {
+          "dur": 2.44, 
+          "text": "Let&#39;s think for a moment about efficiency.", 
+          "start": 203.06
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "When we&#39;re computing the\ngradient of the loss function,", 
+          "start": 205.5
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "math suggests that we should \ncompute the gradient", 
+          "start": 208.0
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "over all examples in our data set.", 
+          "start": 210.17
+        }, 
+        {
+          "dur": 2.79, 
+          "text": "This is the only way to guarantee \nthat our gradient steps", 
+          "start": 212.72
+        }, 
+        {
+          "dur": 2.47, 
+          "text": "are in exactly the right direction.", 
+          "start": 215.51
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "For large data sets with \na million or billion examples,", 
+          "start": 217.98
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "that would a lot of computation", 
+          "start": 221.14
+        }, 
+        {
+          "dur": 2.26, 
+          "text": "in order to perform each step.", 
+          "start": 223.12
+        }, 
+        {
+          "dur": 3.83, 
+          "text": "Empirically, people have found \nthat rather than using the entire", 
+          "start": 225.38
+        }, 
+        {
+          "dur": 4.85, 
+          "text": "data set, if they compute the gradient\nof the loss function over a single example", 
+          "start": 229.21
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "that mostly works too. Even though\nthey&#39;d have to take more overall steps,", 
+          "start": 234.06
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "the amount of total computation \nin order to reach a good solution", 
+          "start": 238.66
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "is often much smaller.", 
+          "start": 241.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "This is called stochastic gradient \ndescent.", 
+          "start": 243.64
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "In practice, \nwe adopt an intermediate solution.", 
+          "start": 246.66
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "Rather than use one example \nor the entire data set,", 
+          "start": 249.58
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "we use a small batch, somewhere\nbetween ten and a thousand examples", 
+          "start": 253.04
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "to perform our steps. This is called\nmini-batch gradient descent.", 
+          "start": 257.16
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.95, 
+          "text": "Je suis Cassandra Xia,\nprogrammeuse chez Google.", 
+          "start": 0.4
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "J&#39;aide d&#39;autres employés\nà utiliser TensorFlow.", 
+          "start": 4.35
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "Nous allons voir\ncomment minimiser la perte.", 
+          "start": 7.5
+        }, 
+        {
+          "dur": 2.34, 
+          "text": "Nous avons vu comment calculer la perte,", 
+          "start": 10.72
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "mais comment choisir\nun ensemble de paramètres de modèle", 
+          "start": 13.06
+        }, 
+        {
+          "dur": 2.07, 
+          "text": "pour la minimiser ?", 
+          "start": 16.44
+        }, 
+        {
+          "dur": 7.08, 
+          "text": "Il nous faudrait une direction à suivre\ndans l&#39;espace des paramètres.", 
+          "start": 19.25
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "Une sorte de guide grâce auquel", 
+          "start": 26.34
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "chaque nouvel ensemble\nd&#39;hyperparamètres que nous ajoutons", 
+          "start": 28.58
+        }, 
+        {
+          "dur": 2.77, 
+          "text": "connaîtrait moins de pertes\nque les précédents.", 
+          "start": 31.58
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "Il nous faut une direction à suivre\npour calculer le gradient.", 
+          "start": 34.8
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "La dérivée de la fonction de perte\npar rapport aux paramètres du modèle.", 
+          "start": 37.86
+        }, 
+        {
+          "dur": 3.17, 
+          "text": "La dérivée des fonctions simples,\ncomme la perte quadratique,", 
+          "start": 42.2
+        }, 
+        {
+          "dur": 1.6, 
+          "text": "est facile à calculer.", 
+          "start": 45.37
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "Elle nous permet de facilement\nmettre à jour les paramètres de modèle.", 
+          "start": 47.14
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "C&#39;est une approche itérative.", 
+          "start": 51.0
+        }, 
+        {
+          "dur": 3.93, 
+          "text": "On utilise des données pour calculer\nle gradient de la fonction de perte.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 2.38, 
+          "text": "Le gradient négatif indique\nquelle direction suivre", 
+          "start": 57.43
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "pour modifier les paramètres de modèle\nafin de réduire la perte.", 
+          "start": 59.81
+        }, 
+        {
+          "dur": 3.71, 
+          "text": "On fait un pas dans cette direction,\non obtient une nouvelle version du modèle,", 
+          "start": 62.81
+        }, 
+        {
+          "dur": 2.76, 
+          "text": "et on peut alors recalculer\nle gradient, et ainsi de suite.", 
+          "start": 66.52
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "C&#39;est notre fonction de perte\nramenée à une dimension.", 
+          "start": 69.7
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Elle représente le thêta du paramètre\nde modèle par rapport à la perte.", 
+          "start": 72.78
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "Si on part d&#39;une valeur ou initialisation\naléatoire dans l&#39;axe thêta,", 
+          "start": 76.86
+        }, 
+        {
+          "dur": 3.25, 
+          "text": "alors on obtient une perte correspondante.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 2.4, 
+          "text": "On calcule ensuite le gradient négatif", 
+          "start": 85.32
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "qui nous indique la direction à suivre\npour minimiser la perte.", 
+          "start": 87.72
+        }, 
+        {
+          "dur": 4.32, 
+          "text": "Si on va dans ce sens-là,\non obtient une perte différente.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "On peut continuer\nà progresser dans ce sens,", 
+          "start": 96.02
+        }, 
+        {
+          "dur": 3.53, 
+          "text": "jusqu&#39;à atteindre un point\noù on dépasse le minimum local,", 
+          "start": 98.26
+        }, 
+        {
+          "dur": 4.79, 
+          "text": "et alors le gradient négatif nous indique\nde prendre la direction inverse.", 
+          "start": 101.79
+        }, 
+        {
+          "dur": 2.05, 
+          "text": "Quelle doit être l&#39;amplitude\nde chaque étape", 
+          "start": 107.06
+        }, 
+        {
+          "dur": 2.07, 
+          "text": "de notre progression\ndans le sens négatif ?", 
+          "start": 109.11
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "C&#39;est ce que nous indique\nle taux d&#39;apprentissage,", 
+          "start": 111.18
+        }, 
+        {
+          "dur": 2.21, 
+          "text": "un hyperparamètre modifiable.", 
+          "start": 113.73
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Si le taux d&#39;apprentissage est faible,", 
+          "start": 116.22
+        }, 
+        {
+          "dur": 2.74, 
+          "text": "nous allons progresser petit à petit,", 
+          "start": 118.22
+        }, 
+        {
+          "dur": 3.47, 
+          "text": "tout en faisant de nombreux calculs,\npour atteindre le minimum.", 
+          "start": 120.96
+        }, 
+        {
+          "dur": 2.05, 
+          "text": "Mais si le taux d&#39;apprentissage est élevé,", 
+          "start": 124.76
+        }, 
+        {
+          "dur": 4.75, 
+          "text": "l&#39;étape de notre progression\nvers un gradient négatif sera importante,", 
+          "start": 126.81
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "au risque de dépasser le minimum local,", 
+          "start": 131.56
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "voire d&#39;atteindre un point\noù la perte est plus élevée qu&#39;avant.", 
+          "start": 134.68
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "Un modèle\nà plusieurs dimensions divergerait.", 
+          "start": 140.26
+        }, 
+        {
+          "dur": 2.68, 
+          "text": "Dans ce cas,\nil faut réduire le taux d&#39;apprentissage", 
+          "start": 143.26
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "d&#39;environ un ordre de grandeur.", 
+          "start": 145.94
+        }, 
+        {
+          "dur": 2.95, 
+          "text": "Nous venons de voir l&#39;algorithme\nappelé &quot;descente de gradient&quot;.", 
+          "start": 148.82
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "On démarre d&#39;un point\net on progresse petit à petit", 
+          "start": 151.77
+        }, 
+        {
+          "dur": 2.66, 
+          "text": "pour se rapprocher\ntoujours plus du minimum.", 
+          "start": 154.63
+        }, 
+        {
+          "dur": 2.58, 
+          "text": "Cependant,\nle point de départ a-t-il une importance ?", 
+          "start": 157.74
+        }, 
+        {
+          "dur": 1.81, 
+          "text": "Réfléchissons une minute.", 
+          "start": 160.32
+        }, 
+        {
+          "dur": 1.96, 
+          "text": "Repensons à nos cours de calcul", 
+          "start": 162.13
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "où nous avons appris\nque certains problèmes sont convexes,", 
+          "start": 164.09
+        }, 
+        {
+          "dur": 2.23, 
+          "text": "c&#39;est-à-dire qu&#39;ils ont la forme d&#39;un bol.", 
+          "start": 167.43
+        }, 
+        {
+          "dur": 2.24, 
+          "text": "Tant que nous partons\nde n&#39;importe où sur le bol", 
+          "start": 169.9
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "et que nous progressons petit à petit\nen suivant les gradients,", 
+          "start": 172.14
+        }, 
+        {
+          "dur": 3.05, 
+          "text": "nous allons finir par atteindre\nle fond du bol.", 
+          "start": 175.97
+        }, 
+        {
+          "dur": 3.47, 
+          "text": "Or, les problèmes de machine\nlearning sont rarement convexes.", 
+          "start": 180.02
+        }, 
+        {
+          "dur": 3.41, 
+          "text": "Les réseaux neuronaux\nne sont pas convexes.", 
+          "start": 183.49
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "Au lieu d&#39;avoir une forme de bol,", 
+          "start": 186.9
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "ils ont plutôt une forme de boîte à œufs.", 
+          "start": 189.88
+        }, 
+        {
+          "dur": 3.21, 
+          "text": "Il y a plusieurs\nvaleurs minimales possibles,", 
+          "start": 192.88
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "certaines étant mieux que d&#39;autres.", 
+          "start": 196.09
+        }, 
+        {
+          "dur": 2.49, 
+          "text": "Dans ce cas,\nl&#39;initialisation devient importante,", 
+          "start": 198.26
+        }, 
+        {
+          "dur": 2.07, 
+          "text": "comme nous le verrons plus tard.", 
+          "start": 200.75
+        }, 
+        {
+          "dur": 2.2, 
+          "text": "Réfléchissons à l&#39;efficacité.", 
+          "start": 203.06
+        }, 
+        {
+          "dur": 2.6, 
+          "text": "Lorsqu&#39;on calcule le gradient\nde la fonction de perte,", 
+          "start": 205.26
+        }, 
+        {
+          "dur": 2.31, 
+          "text": "les maths nous suggèrent\nde calculer le gradient", 
+          "start": 207.86
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "de tous les exemples\nde l&#39;ensemble de données.", 
+          "start": 210.17
+        }, 
+        {
+          "dur": 1.64, 
+          "text": "C&#39;est la seule façon de garantir", 
+          "start": 212.72
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "que nous progressons\ndans la bonne direction.", 
+          "start": 214.36
+        }, 
+        {
+          "dur": 3.15, 
+          "text": "Les grands ensembles de données\ncontenant des milliards d&#39;exemples", 
+          "start": 217.98
+        }, 
+        {
+          "dur": 3.65, 
+          "text": "impliqueraient des milliers de calculs\nà chaque étape dans notre progression.", 
+          "start": 221.13
+        }, 
+        {
+          "dur": 1.9, 
+          "text": "Avec l&#39;expérience, on a découvert", 
+          "start": 225.38
+        }, 
+        {
+          "dur": 2.63, 
+          "text": "qu&#39;au lieu d&#39;utiliser\nl&#39;ensemble de données complet,", 
+          "start": 227.28
+        }, 
+        {
+          "dur": 5.29, 
+          "text": "il valait mieux calculer le gradient\nde la fonction de perte d&#39;un seul exemple.", 
+          "start": 229.91
+        }, 
+        {
+          "dur": 2.91, 
+          "text": "Même si cela ajoute des étapes\ndans notre progression globale,", 
+          "start": 236.31
+        }, 
+        {
+          "dur": 4.42, 
+          "text": "le nombre total de calculs pour atteindre\nune solution satisfaisante est moindre.", 
+          "start": 239.22
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "C&#39;est la descente\nde gradient stochastique.", 
+          "start": 243.64
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "Dans les faits,\non adopte une solution intermédiaire.", 
+          "start": 246.66
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "Au lieu de choisir entre un exemple\net l&#39;ensemble de données complet,", 
+          "start": 249.58
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "on utilise un petit lot,\nentre 10 et 1 000 exemples,", 
+          "start": 253.04
+        }, 
+        {
+          "dur": 1.715, 
+          "text": "à chaque étape de notre progression.", 
+          "start": 257.16
+        }, 
+        {
+          "dur": 2.7, 
+          "text": "C&#39;est la descente de gradient\nstochastique par mini-lots.", 
+          "start": 258.875
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.42, 
+          "text": "안녕하세요. Google 프로그래머인\nCassandra Xia입니다.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Google 내 다른 그룹의\nTensorFlow 사용을 돕고 있죠.", 
+          "start": 4.42
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "이 섹션에서는 손실 줄이기를 다룰 건데요,", 
+          "start": 7.5
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "지난 시간에는 손실을\n계산하는 법을 알아봤죠.", 
+          "start": 10.72
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "그럼 손실을 최소화하는\n매개변수는 어떻게 찾아낼까요?", 
+          "start": 15.7
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "매개변수 공간 안에\n나아갈 방향이 있으면 좋겠죠.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "초매개변수 세트를\n새로 적용할 때마다", 
+          "start": 26.34
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "손실이 줄어드는 방향으로요.", 
+          "start": 31.58
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "이때 방향을 잡기 위해서\n경사를 계산해 볼 수 있어요.", 
+          "start": 34.8
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "모델 매개변수를 감안한\n손실 함수의 도함수인 거죠.", 
+          "start": 37.86
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "제곱 손실처럼 간단한\n손실 함수의 도함수는 계산하기 쉬워요.", 
+          "start": 42.2
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "모델 매개변수를 효율적으로\n업데이트할 수도 있고요.", 
+          "start": 47.14
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "이때 반복적인 접근방식을 사용하는데요,", 
+          "start": 51.0
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "입력된 데이터를 기반으로\n손실 함수의 경사를 계산해요.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "경사가 음수면 그쪽 방향으로\n모델 매개변수를 업데이트하죠.", 
+          "start": 57.52
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "그 방향으로 나아가면서\n손실을 줄이는 거예요.", 
+          "start": 61.64
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "그런 다음 모델을 업데이트하고\n경사를 다시 계산하기를 반복하죠.", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 3.1, 
+          "text": "1차원이라고 가정하면\n손실 함수는 이런 모양이에요.", 
+          "start": 69.7
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "단일 모델 매개변수의 θ를\n손실에 매핑하게 되죠", 
+          "start": 72.8
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "임의의 값을 초기 θ 값으로 잡으면", 
+          "start": 76.86
+        }, 
+        {
+          "dur": 4.58, 
+          "text": "해당하는 손실을 구할 수 있어요.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 2.4, 
+          "text": "그런 다음 음의 경사를 계산하면", 
+          "start": 85.32
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "어떤 방향으로 가야\n손실이 줄어들지 알게 되죠.", 
+          "start": 87.72
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "경사 방향으로 이동하면\n새로운 손실을 얻을 수 있어요.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "이렇게 경사 방향으로 가다 보면", 
+          "start": 96.02
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "극솟값을 지나게 돼요.", 
+          "start": 99.72
+        }, 
+        {
+          "dur": 3.87, 
+          "text": "이 값에서 음의 경사를 구하면\n왔던 방향으로 돌아가게 되죠.", 
+          "start": 102.7
+        }, 
+        {
+          "dur": 3.65, 
+          "text": "그러면 음의 경사 방향으로\n한 번에 얼마씩 이동해야 할까요?", 
+          "start": 107.13
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "그건 학습률에 따라 달라요.", 
+          "start": 111.18
+        }, 
+        {
+          "dur": 2.49, 
+          "text": "설정할 수 있는 초매개변수죠.", 
+          "start": 113.73
+        }, 
+        {
+          "dur": 4.74, 
+          "text": "학습률이 아주 작으면\n작은 보폭으로 여러 번 이동해서", 
+          "start": 116.22
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "계산을 여러 번 해야\n극솟값에 도달할 수 있어요.", 
+          "start": 120.96
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "반면에 학습률이 크면\n더 큰 보폭으로 이동하게 되고", 
+          "start": 124.76
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "극솟값보다 더 멀리 갈 수도 있죠.", 
+          "start": 130.0
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "손실이 더 커지는 지점에\n다다를 수도 있고요.", 
+          "start": 134.68
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "높은 차원의 모델에서는\n발산이 발생할 수도 있습니다.", 
+          "start": 140.26
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "이런 경우가 발생하면", 
+          "start": 143.26
+        }, 
+        {
+          "dur": 3.54, 
+          "text": "학습률의 자릿수를 줄여야 해요.", 
+          "start": 145.04
+        }, 
+        {
+          "dur": 2.7, 
+          "text": "지금까지 경사하강법이라는\n알고리즘을 살펴보았는데요.", 
+          "start": 148.82
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "한 지점에서 출발해\n극솟값에 닿길 바라며", 
+          "start": 151.52
+        }, 
+        {
+          "dur": 4.55, 
+          "text": "점점 이동해 가는 거죠.\n그런데 이때 출발점이 중요할까요?", 
+          "start": 155.38
+        }, 
+        {
+          "dur": 1.67, 
+          "text": "잠깐 생각해보죠.", 
+          "start": 160.3
+        }, 
+        {
+          "dur": 3.68, 
+          "text": "미적분 시간에 우리는", 
+          "start": 162.2
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "커다란 그릇처럼 생긴\n볼록함수를 배웠어요.", 
+          "start": 165.88
+        }, 
+        {
+          "dur": 5.16, 
+          "text": "이 그릇의 어딘가에서 출발해서\n적당한 보폭으로 경사를 따라가면", 
+          "start": 169.9
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "결국 그릇 바닥에 이르게 되겠죠.", 
+          "start": 175.06
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "하지만 머신 러닝 문제는\n볼록함수가 아닐 때가 많아요.", 
+          "start": 180.02
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "특히 신경망은 모양이\n볼록하지 않기로 유명하죠.", 
+          "start": 183.5
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "사실 신경망은 그릇 모양이 아니라", 
+          "start": 186.9
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "계란판처럼 생겼어요.", 
+          "start": 189.88
+        }, 
+        {
+          "dur": 4.17, 
+          "text": "극솟값이 여러 개 있는데\n그중에 유용한 값도 있고", 
+          "start": 192.88
+        }, 
+        {
+          "dur": 1.21, 
+          "text": "아닌 것도 있어요.", 
+          "start": 197.05
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "그래서 초깃값이 중요하다는 거예요.", 
+          "start": 198.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "이 문제는 나중에 다루죠.", 
+          "start": 201.06
+        }, 
+        {
+          "dur": 2.44, 
+          "text": "잠깐 효율성에 관해 생각해 볼게요.", 
+          "start": 203.06
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "손실 함수에서 경사를 계산할 때", 
+          "start": 205.5
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "수학적인 방식을 사용하면\n데이터 세트 안에 있는", 
+          "start": 208.0
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "모든 예시의 경사를 구해야 하죠.", 
+          "start": 210.17
+        }, 
+        {
+          "dur": 2.79, 
+          "text": "그래야만 제대로 된 경사 방향을", 
+          "start": 212.72
+        }, 
+        {
+          "dur": 2.47, 
+          "text": "따라갈 수 있으니까요.", 
+          "start": 215.51
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "하지만 예시가 백만 개나\n십억 개가 넘어가는", 
+          "start": 217.98
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "대규모 데이터 세트에서는", 
+          "start": 221.14
+        }, 
+        {
+          "dur": 2.26, 
+          "text": "이동할 때마다 계산을\n아주 많이 해야 하죠.", 
+          "start": 223.12
+        }, 
+        {
+          "dur": 2.3, 
+          "text": "하지만 전체 데이터 세트가 아니라", 
+          "start": 225.38
+        }, 
+        {
+          "dur": 3.73, 
+          "text": "하나의 예시에서만 손실의 경사를 계산해도", 
+          "start": 227.68
+        }, 
+        {
+          "dur": 3.74, 
+          "text": "대체로 괜찮다는 것이\n경험적으로 입증되었어요.", 
+          "start": 231.41
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "이 방법을 쓰면\n더 큰 보폭으로 이동해야 하지만", 
+          "start": 235.52
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "해결책에 도달하는 데 드는", 
+          "start": 238.66
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "전체 계산량은 훨씬 적어지죠.", 
+          "start": 241.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "이러한 방법을\n확률적 경사하강법이라고 해요.", 
+          "start": 243.64
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "실무에서는 이 둘의\n중간쯤에 있는 방법을 사용해요.", 
+          "start": 246.66
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "하나의 예시 또는\n전체 데이터 세트가 아닌", 
+          "start": 249.58
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "10개에서 1,000개 정도의\n예시가 포함된 배치를 사용하는 거죠.", 
+          "start": 253.04
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "이를 미니 배치 경사하강법이라고 하고요.", 
+          "start": 257.16
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.02, 
+          "text": "Hola, soy Cassandra Xia,\nprogramadora en Google,", 
+          "start": 0.4
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "y ayudo a otros grupos\nde Google a usar el flujo del sensor.", 
+          "start": 4.42
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "En esta sección, hablaremos\nsobre cómo reducir la pérdida.", 
+          "start": 7.5
+        }, 
+        {
+          "dur": 4.98, 
+          "text": "Antes, aprendimos a calcular\nla pérdida, pero ¿cómo elegimos el conjunto", 
+          "start": 10.72
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "de parámetros de modelo que la minimicen?", 
+          "start": 15.7
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "Lo ideal sería contar con una dirección\nen el espacio de parámetros.", 
+          "start": 19.16
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "Algún tipo de guía, para que cada conjunto\nde nuevos hiperparámetros en los que trabajemos", 
+          "start": 26.34
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "tengan una pérdida menor al anterior.", 
+          "start": 31.58
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "Una forma de obtener una dirección\nes calcular la gradiente.", 
+          "start": 34.8
+        }, 
+        {
+          "dur": 4.34, 
+          "text": "La derivada de la función de pérdida\ncon respecto a los parámetros del modelo.", 
+          "start": 37.86
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "Para funciones de pérdida simples, como la pérdida\nal cuadrado, la derivada es fácil de calcular.", 
+          "start": 42.2
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "Además, nos brinda una forma eficaz\nde actualizar los parámetros de modelos.", 
+          "start": 47.14
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "Podría ser un enfoque de iteración.", 
+          "start": 51.0
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "Ingresan los datos, calculamos el gradiente\nde la función de pérdida en esos datos.", 
+          "start": 53.5
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "El gradiente negativo indica la dirección\npara actualizar los parámetros de modelos,", 
+          "start": 57.52
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "a fin de reducir la pérdida.\nRealizamos un paso en esa dirección,", 
+          "start": 61.64
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "obtenemos una nueva versión del modelo\ny volvemos a calcular el gradiente y repetimos.", 
+          "start": 64.76
+        }, 
+        {
+          "dur": 3.1, 
+          "text": "En una dimensión, hacemos de cuenta\nque esta es nuestra función de pérdida.", 
+          "start": 69.7
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "Asigna el valor theta de parámetros\nde nuestro único modelo a la pérdida.", 
+          "start": 72.8
+        }, 
+        {
+          "dur": 3.88, 
+          "text": "Si comenzamos con un valor aleatorio\no inicialización para theta,", 
+          "start": 76.86
+        }, 
+        {
+          "dur": 4.58, 
+          "text": "entonces logramos la pérdida correspondiente.", 
+          "start": 80.74
+        }, 
+        {
+          "dur": 2.4, 
+          "text": "Luego, podemos calcular el gradiente\nnegativo, que nos indica la dirección", 
+          "start": 85.32
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "que debemos avanzar\npara minimizar la pérdida.", 
+          "start": 87.72
+        }, 
+        {
+          "dur": 4.82, 
+          "text": "Si damos un paso de gradiente\nen esa dirección, obtenemos una nueva pérdida.", 
+          "start": 91.2
+        }, 
+        {
+          "dur": 3.7, 
+          "text": "Podemos seguir dando pasos de gradiente\nen esa dirección, hasta que alcancemos un punto", 
+          "start": 96.02
+        }, 
+        {
+          "dur": 2.86, 
+          "text": "en donde pasamos el valor mínimo local,\nen el cual el gradiente negativo", 
+          "start": 99.72
+        }, 
+        {
+          "dur": 4.48, 
+          "text": "nos indica que volvamos\npor la dirección en que vinimos.", 
+          "start": 102.58
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "¿Qué tan grande debe ser el paso\nque damos en la dirección del gradiente negativo?", 
+          "start": 107.06
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "Bien, esto se determina\npor la tasa de aprendizaje.", 
+          "start": 111.18
+        }, 
+        {
+          "dur": 2.49, 
+          "text": "Es un hiperparámetro que podemos modificar a gusto.", 
+          "start": 113.73
+        }, 
+        {
+          "dur": 4.74, 
+          "text": "Si la tasa de aprendizaje es muy pequeña,\ndaremos muchos pasos de gradiente diminutos.", 
+          "start": 116.22
+        }, 
+        {
+          "dur": 3.8, 
+          "text": "Esto requiere mucho cálculo\npara alcanzar el valor mínimo.", 
+          "start": 120.96
+        }, 
+        {
+          "dur": 5.24, 
+          "text": "Sin embargo, si la tasa de aprendizaje\nes muy alta, daremos un paso grande", 
+          "start": 124.76
+        }, 
+        {
+          "dur": 4.68, 
+          "text": "en la dirección del gradiente negativo.\nTal vez, superemos el valor mínimo local", 
+          "start": 130.0
+        }, 
+        {
+          "dur": 5.58, 
+          "text": "y alcancemos un punto en donde\nla pérdida sea incluso más grande que antes.", 
+          "start": 134.68
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "En más dimensiones,\nesto puede provocar la divergencia del modelo.", 
+          "start": 140.26
+        }, 
+        {
+          "dur": 1.78, 
+          "text": "En este caso, debemos intentar", 
+          "start": 143.26
+        }, 
+        {
+          "dur": 3.78, 
+          "text": "reducir la tasa de aprendizaje,\nen un orden de magnitud, aproximadamente.", 
+          "start": 145.04
+        }, 
+        {
+          "dur": 2.7, 
+          "text": "Acabamos de describir un algoritmo\nllamado descenso de gradientes.", 
+          "start": 148.82
+        }, 
+        {
+          "dur": 3.86, 
+          "text": "Comenzamos en un punto y dimos pasos\nde forma continua que nos acercaron", 
+          "start": 151.52
+        }, 
+        {
+          "dur": 4.94, 
+          "text": "de a poco a un mínimo.\nPero, ¿importa el punto de partida?", 
+          "start": 155.38
+        }, 
+        {
+          "dur": 1.81, 
+          "text": "Pensemos por un minuto.", 
+          "start": 160.32
+        }, 
+        {
+          "dur": 3.75, 
+          "text": "Volvamos a la clase de cálculo,\ndonde aprendimos que algunos problemas", 
+          "start": 162.13
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "son convexos, es decir,\ntienen la forma de un tazón gigante.", 
+          "start": 165.88
+        }, 
+        {
+          "dur": 5.16, 
+          "text": "Si comenzamos en un punto del tazón,\nrealizamos pasos de tamaño razonable", 
+          "start": 169.9
+        }, 
+        {
+          "dur": 4.96, 
+          "text": "y seguimos los gradientes,\nllegaremos a la parte inferior del tazón.", 
+          "start": 175.06
+        }, 
+        {
+          "dur": 3.48, 
+          "text": "Sin embargo, muchos problemas\nde aprendizaje automático no son convexos.", 
+          "start": 180.02
+        }, 
+        {
+          "dur": 3.4, 
+          "text": "Las redes neuronales\nson notoriamente no convexas,", 
+          "start": 183.5
+        }, 
+        {
+          "dur": 2.98, 
+          "text": "lo que significa que, en lugar de tener\nla forma de un tazón,", 
+          "start": 186.9
+        }, 
+        {
+          "dur": 3.0, 
+          "text": "tienen una forma similar\na la de una caja de huevos.", 
+          "start": 189.88
+        }, 
+        {
+          "dur": 3.21, 
+          "text": "Existen muchos valores mínimos posibles,", 
+          "start": 192.88
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "algunos mejores que otros.", 
+          "start": 196.09
+        }, 
+        {
+          "dur": 2.8, 
+          "text": "Allí, el punto de inicio sí importa.", 
+          "start": 198.26
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Luego hablaremos de eso.", 
+          "start": 201.06
+        }, 
+        {
+          "dur": 2.44, 
+          "text": "Analicemos la eficacia.", 
+          "start": 203.06
+        }, 
+        {
+          "dur": 2.5, 
+          "text": "Cuando procesamos el gradiente\nde la función de pérdida,", 
+          "start": 205.5
+        }, 
+        {
+          "dur": 2.17, 
+          "text": "las matemáticas sugieren que debemos\nprocesar el gradiente", 
+          "start": 208.0
+        }, 
+        {
+          "dur": 2.55, 
+          "text": "en todos los ejemplos\nde nuestro conjunto de datos.", 
+          "start": 210.17
+        }, 
+        {
+          "dur": 2.79, 
+          "text": "Esta es la única forma de garantizar\nque nuestros pasos de gradiente", 
+          "start": 212.72
+        }, 
+        {
+          "dur": 2.47, 
+          "text": "están en la dirección correcta.", 
+          "start": 215.51
+        }, 
+        {
+          "dur": 3.16, 
+          "text": "Para conjuntos de datos grandes\ncon millones o miles de millones de ejemplos,", 
+          "start": 217.98
+        }, 
+        {
+          "dur": 1.98, 
+          "text": "esto requiere mucho cálculo", 
+          "start": 221.14
+        }, 
+        {
+          "dur": 2.26, 
+          "text": "para realizar cada paso.", 
+          "start": 223.12
+        }, 
+        {
+          "dur": 3.83, 
+          "text": "En la práctica, las personas\ndescubrieron que, en lugar de usar todo", 
+          "start": 225.38
+        }, 
+        {
+          "dur": 4.85, 
+          "text": "el conjunto de datos, si calculan el gradiente\nde la función de pérdida en un solo ejemplo,", 
+          "start": 229.21
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "funcionará para casi todo el resto. Aunque\ndeban dar más pasos generales,", 
+          "start": 234.06
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "la cantidad total de cálculo\npara alcanzar una buena solución,", 
+          "start": 238.66
+        }, 
+        {
+          "dur": 1.76, 
+          "text": "a menudo, es mucho menor.", 
+          "start": 241.88
+        }, 
+        {
+          "dur": 3.02, 
+          "text": "Esto se llama descenso de gradiente estocástico.", 
+          "start": 243.64
+        }, 
+        {
+          "dur": 2.92, 
+          "text": "En la práctica,\nadoptamos una solución intermedia.", 
+          "start": 246.66
+        }, 
+        {
+          "dur": 3.46, 
+          "text": "En lugar de usar un solo ejemplo\no todo el conjunto de datos,", 
+          "start": 249.58
+        }, 
+        {
+          "dur": 4.12, 
+          "text": "usamos un lote pequeño,\nentre diez y mil ejemplos", 
+          "start": 253.04
+        }, 
+        {
+          "dur": 4.6, 
+          "text": "para dar los pasos. Esto se llama\ndescenso de gradientes de minilote.", 
+          "start": 257.16
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

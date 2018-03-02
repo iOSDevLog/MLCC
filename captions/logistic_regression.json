@@ -1,0 +1,904 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 11.06, 
+          "text": "我们来快速思考这么一个问题：\n如何预测用可能略微弯曲的硬币来抛硬币时，\n抛出后硬币正面朝上的概率？", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "您可能会用到弯曲角度、硬币质量等所有这类特征。", 
+          "start": 11.6
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "您能想到可以使用的最简单模型是哪种？", 
+          "start": 17.26
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "我们可能会使用之前使用过的线性回归。", 
+          "start": 20.32
+        }, 
+        {
+          "dur": 2.12, 
+          "text": "不过这可能会出现一些奇怪的情况。", 
+          "start": 25.96
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "例如，如果我们要预测的是一枚新硬币，\n而这枚硬币的质量前所未有的重，会怎么样呢？", 
+          "start": 28.08
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "又或者，硬币的弯曲角度非常大，那又会怎样呢？", 
+          "start": 34.42
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "我们得到的预测结果可能不在0-1的范围内。", 
+          "start": 37.24
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "这样的概率值非常奇怪，因为概率比较特别。", 
+          "start": 42.9
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "概率必须介于0到1之间。\n如果我们的预测模型得出的值不在这个范围内，\n那就说明出问题了。", 
+          "start": 47.52
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "特别是，如果我们试着将预测的概率相乘，\n或者当我们使用这些概率来创建预期值时。", 
+          "start": 56.66
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "在首次尝试时，您可以试着为预测值设置上限，\n以忽略任何离群值。", 
+          "start": 63.7
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "不过现在，我们在模型中引入了偏差，\n情况就不容乐观了。", 
+          "start": 70.74
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "因此，正确的做法应该是：\n想出一种略微不同的损失函数和预测方法。", 
+          "start": 75.38
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "这样，我们的概率便能自然地解析为0到1之间的值，\n而且绝不会超出这个范围。", 
+          "start": 80.76
+        }, 
+        {
+          "dur": 3.92, 
+          "text": "我们将这种想法称为逻辑回归。", 
+          "start": 89.18
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "这是一种非常实用的预测方法，\n我们可以通过这种方法获得校准良好的概率。", 
+          "start": 93.1
+        }, 
+        {
+          "dur": 14.3, 
+          "text": "我们可以将这些概率用作实际概率，\n并将其与相应项相乘以获得预期值；\n还可以将它们用于各种事项，例如分类任务，\n比如当我们想确定某封电子邮件是否是垃圾邮件的实际概率时。", 
+          "start": 98.52
+        }, 
+        {
+          "dur": 2.54, 
+          "text": "我们来了解一下这种方法可能的工作原理。", 
+          "start": 112.82
+        }, 
+        {
+          "dur": 4.26, 
+          "text": "我们准备好熟悉的线性模型，然后对其应用S型函数。", 
+          "start": 115.36
+        }, 
+        {
+          "dur": 5.2, 
+          "text": "一般来说，S函数可以提供0-1之间的有界值。", 
+          "start": 119.62
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "由于存在渐近线，因此得到的值绝不会是0或1。", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "在训练时，我们使用的是不同的损失函数，\n正如我们所说的，平方损失在这种情况下就不太合适了。", 
+          "start": 129.44
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "我们要使用对数损失函数，\n如果您仔细看看这个公式就会发现，\n它看起来很像Shannon信息论中的熵测量。", 
+          "start": 135.38
+        }, 
+        {
+          "dur": 5.68, 
+          "text": "现在您不需要了解这方面的数学知识就能看懂图解了。", 
+          "start": 144.74
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "在这种情况下，您会发现，越接近其中一个条形，\n损失就会变得越大，而且变化速度也非常惊人。", 
+          "start": 150.42
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "我们再次看到了渐近线的作用。", 
+          "start": 157.46
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "其实这些渐近线非常重要。\n从学习方面来说，考虑这一点是很有必要的。", 
+          "start": 162.56
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "由于这些渐近线的存在，\n我们需要明确无疑地将正则化纳入学习中。", 
+          "start": 166.7
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "否则，在指定的数据集上，\n模型可能会尽量更紧密地拟合数据，\n努力让这些损失接近0。", 
+          "start": 175.68
+        }, 
+        {
+          "dur": 8.06, 
+          "text": "L2正则化在这里会非常实用，\n它可以确保我们的权重不会严重失衡。", 
+          "start": 186.52
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "我们为什么喜欢线性逻辑回归？", 
+          "start": 194.58
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "一方面是因为，它的速度非常快，\n能够非常高效地进行训练和预测。", 
+          "start": 197.22
+        }, 
+        {
+          "dur": 11.06, 
+          "text": "因此，如果我们需要一种方法来很好地扩展到庞大的数据，\n或者需要将某种方法用于延迟时间极短的预测，\n那么线性逻辑回归可谓理想之选。", 
+          "start": 204.28
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "如果我们需要使用非线性逻辑回归，\n则可以通过添加特征交叉乘积来实现。", 
+          "start": 215.34
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.06, 
+          "text": "Let&#39;s imagine for a second that we&#39;ve got the problem of predicting the probability of heads for some coin flips where maybe the coin is slightly bent.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "You might use features like angle of bend, coin mass, all kinds of stuff in there.", 
+          "start": 11.6
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "What&#39;s the simplest model you could think of using?", 
+          "start": 17.26
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "Well we could maybe use linear regression like we&#39;ve used before.", 
+          "start": 20.32
+        }, 
+        {
+          "dur": 2.12, 
+          "text": "But there might be some weird things there.", 
+          "start": 25.96
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "For example, what if we have a new coin that we&#39;re predicting on that has a very heavy mass, we&#39;ve never seen before?", 
+          "start": 28.08
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "Or what if we have an extremely large bend of the angle?", 
+          "start": 34.42
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "We might end up with predictions that are outside the range 0 to 1.", 
+          "start": 37.24
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "That will be really weird for probabilities because probabilities are a special thing.", 
+          "start": 42.9
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "Probabilities are bounded between 0 and 1 and if we have a prediction model that gives us a value outside that range we&#39;re gonna be in trouble.", 
+          "start": 47.52
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Especially if we say try and multiply predicted probabilities or use them to create expected values, stuff like that.", 
+          "start": 56.66
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Well as a first hack, you could try and cap that prediction to ignore any outlier values.", 
+          "start": 63.7
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "But now we&#39;ve introduced bias into our model and we&#39;re not going to be very good there.", 
+          "start": 70.74
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "So really the right thing to do is to come up with a slightly different loss function and prediction method.", 
+          "start": 75.38
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "That allows our values to be interpreted naturally as 0 to 1 probabilities and never exceeds that range 0 to 1.", 
+          "start": 80.76
+        }, 
+        {
+          "dur": 3.92, 
+          "text": "So we call this idea logistic regression.", 
+          "start": 89.18
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "It&#39;s a prediction method that gives us well calibrated probabilities and these are fantastically useful.", 
+          "start": 93.1
+        }, 
+        {
+          "dur": 14.3, 
+          "text": "We can use these as real probabilities and multiply them with things to get expected values and use them also for things like classification tasks where we really want to know the real probability that an email is spam or not spam.", 
+          "start": 98.52
+        }, 
+        {
+          "dur": 2.54, 
+          "text": "So let&#39;s take a look at how this might work.", 
+          "start": 112.82
+        }, 
+        {
+          "dur": 4.26, 
+          "text": "We take our familiar linear model and we stick it into a sigmoid.", 
+          "start": 115.36
+        }, 
+        {
+          "dur": 5.2, 
+          "text": "And a sigmoid is basically something that gives us a bounded value between 0 and 1.", 
+          "start": 119.62
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "There&#39;s asymptotes so it never quite hits 0 and it never quite hits 1.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "At training time we&#39;re training using a different loss function, as we&#39;ve said square loss is not going to cut it here.", 
+          "start": 129.44
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "We use something called log loss, that if you squint closely at the formula there, it looks very similar to Shannon&#39;s entropy measure from information theory.", 
+          "start": 135.38
+        }, 
+        {
+          "dur": 5.68, 
+          "text": "Now you don&#39;t need to understand the math to be able to take a look at the graphical interpretation.", 
+          "start": 144.74
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Where you&#39;ll notice that as you get closer and closer to one of the bars, the loss gets very very high quite quickly.", 
+          "start": 150.42
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Again we see those asymptotes coming into play.", 
+          "start": 157.46
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "So those asymptotes are actually quite important to think about in terms of learning.", 
+          "start": 162.56
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "Because of those asymptotes we will need to really incorporate regularization quite explicitly into our learning.", 
+          "start": 166.7
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "If we don&#39;t, then on a given dataset, the model may try and fit our data ever more closely trying to drive those losses near 0.", 
+          "start": 175.68
+        }, 
+        {
+          "dur": 8.06, 
+          "text": "So L2 regularization can be extremely helpful here to make sure that our weights don&#39;t go crazy out of balance.", 
+          "start": 186.52
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "Why do we like linear logistic regression?", 
+          "start": 194.58
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "Well one thing is that it&#39;s really fast, it&#39;s extremely efficient to train and it&#39;s efficient to make predictions.", 
+          "start": 197.22
+        }, 
+        {
+          "dur": 11.06, 
+          "text": "So when we need a method that scales well to massive data or that we need to use for extremely low latency predictions, linear logistic regression can be a great choice.", 
+          "start": 204.28
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "If we need non-linearities we can get them by adding in feature cross products.", 
+          "start": 215.34
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.06, 
+          "text": "Imaginons un instant que nous devions prédire la probabilité de tomber sur face\nlorsqu&#39;on tire à pile ou face, avec une pièce légèrement tordue.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "Nous pourrions utiliser des caractéristiques telles que\nl&#39;angle de courbure, la masse de la pièce, ou bien d&#39;autres encore.", 
+          "start": 11.6
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "Quel est selon vous le modèle\nle plus simple que nous pourrions utiliser ?", 
+          "start": 17.26
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "Nous pourrions utiliser la régression linéaire,\ncomme nous l&#39;avons déjà fait.", 
+          "start": 20.32
+        }, 
+        {
+          "dur": 2.12, 
+          "text": "Mais il pourrait alors\nse produire des choses étranges.", 
+          "start": 25.96
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Par exemple, que se passerait-il si la pièce que nous utilisons pour la prédiction\na une masse très élevée, que nous n&#39;avons jamais vue auparavant ?", 
+          "start": 28.08
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "Ou si l&#39;angle de courbure est très grand ?", 
+          "start": 34.42
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "Nous pourrions obtenir des prédictions\nen dehors de l&#39;ensemble compris entre 0 et 1.", 
+          "start": 37.24
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Ce serait très étrange pour des probabilités,\ncar les probabilités sont spéciales.", 
+          "start": 42.9
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "Elles doivent être comprises entre 0 et 1, et si nous utilisons un modèle de prédiction\nqui nous donne une valeur en dehors de cet ensemble, nous aurons des problèmes.", 
+          "start": 47.52
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "En particulier si nous devons essayer de multiplier les probabilités prédites\nou de les utiliser pour créer des valeurs attendues, entre autres.", 
+          "start": 56.66
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Nous pourrions commencer par essayer\nde limiter cette prédiction, afin d&#39;ignorer toute anomalie.", 
+          "start": 63.7
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "Mais cela introduirait un biais dans notre modèle,\net nos résultats ne seraient alors pas très bons.", 
+          "start": 70.74
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Il faut donc trouver une fonction de perte\net une méthode de prédiction légèrement différentes,", 
+          "start": 75.38
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "qui permettent d&#39;interpréter nos valeurs naturellement\ncomme comprises entre 0 et 1 et jamais hors de cet ensemble.", 
+          "start": 80.76
+        }, 
+        {
+          "dur": 3.92, 
+          "text": "C&#39;est ce que nous appelons la régression logistique.", 
+          "start": 89.18
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "C&#39;est une méthode de prédiction qui donne\ndes probabilités bien calibrées, qui sont extrêmement utiles.", 
+          "start": 93.1
+        }, 
+        {
+          "dur": 14.3, 
+          "text": "Nous pouvons les utiliser comme des probabilités réelles et les multiplier par d&#39;autres choses\npour obtenir des valeurs attendues, ou encore pour les tâches de classification,\nlorsque nous voulons par exemple connaître la probabilité réelle qu&#39;un e-mail soit indésirable ou non.", 
+          "start": 98.52
+        }, 
+        {
+          "dur": 2.54, 
+          "text": "Voyons comment cela peut fonctionner.", 
+          "start": 112.82
+        }, 
+        {
+          "dur": 4.26, 
+          "text": "Nous prenons notre modèle linéaire familier,\net nous le plaçons dans une courbe sigmoïde.", 
+          "start": 115.36
+        }, 
+        {
+          "dur": 5.2, 
+          "text": "Une courbe sigmoïde nous donne\nune valeur bornée entre 0 et 1.", 
+          "start": 119.62
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Des asymptotes l&#39;empêchent d&#39;atteindre le 0 et le 1.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Au moment de l&#39;apprentissage, nous utilisons une fonction de perte différente.\nComme nous l&#39;avons dit, la perte quadratique ne convient pas ici.", 
+          "start": 129.44
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "Nous utilisons la perte logistique. Si vous regardez de près cette formule, vous verrez qu&#39;elle ressemble\nbeaucoup à la mesure d&#39;entropie de Shannon de la théorie de l&#39;information.", 
+          "start": 135.38
+        }, 
+        {
+          "dur": 5.68, 
+          "text": "Il n&#39;est pas nécessaire de comprendre le calcul\npour regarder l&#39;interprétation graphique.", 
+          "start": 144.74
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Vous remarquerez que plus on s&#39;approche de l&#39;une des barres,\nplus la perte augmente, beaucoup et très vite.", 
+          "start": 150.42
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Ce sont à nouveau les asymptotes qui jouent leur rôle.", 
+          "start": 157.46
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "Ces asymptotes sont donc\nassez importantes en termes d&#39;apprentissage.", 
+          "start": 162.56
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "À cause d&#39;elles, nous devrons intégrer une régularisation\nde façon très explicite dans notre apprentissage.", 
+          "start": 166.7
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "Si nous ne le faisons pas, alors pour un ensemble de données spécifique,\nle modèle essaiera de s&#39;adapter toujours plus à nos données,\npour réduire ses pertes au maximum.", 
+          "start": 175.68
+        }, 
+        {
+          "dur": 8.06, 
+          "text": "La régularisation L2 peut donc s&#39;avérer particulièrement utile dans notre cas,\npour garantir que nos pondérations ne sont pas complètement déséquilibrées.", 
+          "start": 186.52
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "Alors quels sont les avantages\nde la régression logistique linéaire ?", 
+          "start": 194.58
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "Tout d&#39;abord, elle est très rapide, efficace pour l&#39;apprentissage\net pour faire des prédictions.", 
+          "start": 197.22
+        }, 
+        {
+          "dur": 11.06, 
+          "text": "Ainsi, lorsque nous cherchons une méthode qui s&#39;adapte bien aux données volumineuses\nou que nous voulons obtenir des prédictions avec une latence extrêmement faible,\nla régression logistique linéaire peut être un excellent choix.", 
+          "start": 204.28
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Si nous avons besoin de non-linéarités, nous pouvons les obtenir\nen ajoutant des produits de croisement de caractéristiques.", 
+          "start": 215.34
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.06, 
+          "text": "동전을 던졌을 때 앞면이 나올 확률을 예측하는 문제가 있다고 합시다.\n다만 동전이 약간 구부러져 있습니다.", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "구부러진 각도, 동전의 질량 등\n온갖 변수를 사용할 수 있습니다.", 
+          "start": 11.6
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "가장 단순한 모델은 어떤 모델일까요?", 
+          "start": 17.26
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "이전에 사용한 선형 회귀를\n사용할 수도 있겠죠.", 
+          "start": 20.32
+        }, 
+        {
+          "dur": 2.12, 
+          "text": "하지만 동전에 특이한 특성이\n있을 수도 있습니다.", 
+          "start": 25.96
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "예를 들어 지금까지 본 적이 없을 정도로\n무거운 동전이라면 어떨까요?", 
+          "start": 28.08
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "또는 동전이 상당히 구부러져\n있다면 어떨까요?", 
+          "start": 34.42
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "0~1 사이를 벗어나는 예측이\n나올 수도 있습니다.", 
+          "start": 37.24
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "이건 정말 이상한 일입니다.\n확률은 특별한 존재거든요.", 
+          "start": 42.9
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "확률은 0에서 1 사이로 제한되어 있습니다. 예측 모델에서 이 범위에서\n벗어나는 값이 나온다면 문제가 있는 것입니다.", 
+          "start": 47.52
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "특히 예측 확률을 곱하거나 예측 확률을 사용하여\n예측값을 생성한다면 더 문제입니다.", 
+          "start": 56.66
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "우선 예측치가 이상점 값을 무시하도록\n설정할 수 있습니다", 
+          "start": 63.7
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "하지만 현재는 모델에 편향을 적용한 상태이므로\n다시 문제가 생깁니다.", 
+          "start": 70.74
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "그러니 올바른 방법은 지금 사용하고 있는 것과는 다른\n손실 함수와 예측 방법을 생각해 내는 것입니다.", 
+          "start": 75.38
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "우리가 얻은 값이 자연스럽게 0과 1 사이의 확률로 해석되고\n0과 1 사이의 범위를 절대 초과하지 않는 함수 말이죠.", 
+          "start": 80.76
+        }, 
+        {
+          "dur": 3.92, 
+          "text": "이를 로지스틱 회귀라고 합니다.", 
+          "start": 89.18
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "로지스틱 회귀를 사용하면 잘 보정된 확률을 얻을 수 있으며,\n매우 유용하게 활용할 수 있죠.", 
+          "start": 93.1
+        }, 
+        {
+          "dur": 14.3, 
+          "text": "이러한 수치를 실제 확률로 사용하거나 서로 곱해 예측값을 얻을 수도 있습니다. 또한 어떤 이메일이\n스팸이거나 스팸이 아닌 확률을 구하는 분류 작업에도 사용할 수 있죠.", 
+          "start": 98.52
+        }, 
+        {
+          "dur": 2.54, 
+          "text": "로지스틱 회귀가 어떻게 작동하는지\n살펴보겠습니다.", 
+          "start": 112.82
+        }, 
+        {
+          "dur": 4.26, 
+          "text": "우리가 잘 아는 선형 모델을\n시그모이드 함수에 적용하겠습니다.", 
+          "start": 115.36
+        }, 
+        {
+          "dur": 5.2, 
+          "text": "시그모이드는 0과 1 사이의\n한정된 값을 제공합니다.", 
+          "start": 119.62
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "점근선이 있어서 0에도 1에도\n절대 도달하지 않습니다.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "학습할 때에는 다른 손실 함수를 사용합니다.\n제곱 손실은 여기에 나타나지 않으니까요.", 
+          "start": 129.44
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "여기에서는 로그 손실이라는 것을 사용하는데, 정보 이론에서 말하는\n섀넌의 엔트로피 측정과 매우 비슷하다는 것을 알 수 있습니다.", 
+          "start": 135.38
+        }, 
+        {
+          "dur": 5.68, 
+          "text": "도해를 이해하기 위해 공식을\n전부 이해할 필요는 없습니다.", 
+          "start": 144.74
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "막대 중의 하나에 가까워질수록\n손실이 빠르게 증가함을 알 수 있죠.", 
+          "start": 150.42
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "이때 점근선이 다시 등장합니다.", 
+          "start": 157.46
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "학습 측면에서 보았을 때\n이러한 점근선은 매우 중요합니다.", 
+          "start": 162.56
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "이러한 점근선 때문에 정규화를 학습 과정에\n확실히 포함시켜야 합니다.", 
+          "start": 166.7
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "정규화를 사용하지 않으면 모델이 주어진 데이터 세트에서\n손실을 0에 가깝게 만들기 위해 데이터를 더욱 가깝게 맞출 것입니다", 
+          "start": 175.68
+        }, 
+        {
+          "dur": 8.06, 
+          "text": "L2 정규화는 가중치가 균형을 잃지 않게 하는 데\n매우 유용합니다.", 
+          "start": 186.52
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "선형 로지스틱 회귀가\n좋은 이유는 무엇일까요?", 
+          "start": 194.58
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "매우 빠르고, 학습 및 예측을\n효율적으로 할 수 있습니다.", 
+          "start": 197.22
+        }, 
+        {
+          "dur": 11.06, 
+          "text": "대량의 데이터에 맞게 확장되는 방법이 필요하거나 지연 시간이 짧은 예측 방법이 필요한 경우\n선형 로지스틱 회귀를 사용하는 것이 좋습니다.", 
+          "start": 204.28
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "비선형성이 필요한 경우\n특성 교차곱을 추가하면 됩니다.", 
+          "start": 215.34
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 11.06, 
+          "text": "Para predecir las probabilidades de cara\no cruz de una moneda levemente curvada,", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "podemos usar atributos como el ángulo\nde curva o la masa de la moneda.", 
+          "start": 11.6
+        }, 
+        {
+          "dur": 3.06, 
+          "text": "¿Cuál es el modelo más simple?", 
+          "start": 17.26
+        }, 
+        {
+          "dur": 5.64, 
+          "text": "Podría ser la regresión lineal,\ncomo usamos anteriormente.", 
+          "start": 20.32
+        }, 
+        {
+          "dur": 2.12, 
+          "text": "Pero puede arrojar resultados extraños.", 
+          "start": 25.96
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Por ejemplo, ¿qué pasa\nsi la moneda es muy pesada?", 
+          "start": 28.08
+        }, 
+        {
+          "dur": 2.82, 
+          "text": "¿O si la curva tiene\nun ángulo muy pronunciado?", 
+          "start": 34.42
+        }, 
+        {
+          "dur": 5.66, 
+          "text": "Es posible que las predicciones\nestén fuera del rango de 0 a 1.", 
+          "start": 37.24
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Sería muy extraño para las probabilidades,\nque varían de 0 a 1.", 
+          "start": 42.9
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "Si un modelo de predicciones arroja un valor\nfuera de ese rango, hay un problema.", 
+          "start": 47.52
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "En especial si multiplicamos probabilidades\no las usamos para generar valores previstos.", 
+          "start": 56.66
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Para empezar, limitemos esa predicción\npara que ignore cualquier valor atípico.", 
+          "start": 63.7
+        }, 
+        {
+          "dur": 4.64, 
+          "text": "Agregamos al modelo una ordenada al origen,\npero los resultados no son positivos.", 
+          "start": 70.74
+        }, 
+        {
+          "dur": 5.38, 
+          "text": "Debemos proponer otro método\nde predicciones y funciones de pérdida", 
+          "start": 75.38
+        }, 
+        {
+          "dur": 8.42, 
+          "text": "que interprete valores como probabilidades\nde 0 a 1, y no supere nunca ese rango.", 
+          "start": 80.76
+        }, 
+        {
+          "dur": 3.92, 
+          "text": "Esta idea se llama regresión logística.", 
+          "start": 89.18
+        }, 
+        {
+          "dur": 5.42, 
+          "text": "Es un método de predicción que arroja\nprobabilidades calibradas muy útiles.", 
+          "start": 93.1
+        }, 
+        {
+          "dur": 14.3, 
+          "text": "Si las usamos como probabilidades reales\ny multiplicamos, arrojará valores previstos.", 
+          "start": 98.52
+        }, 
+        {
+          "dur": 2.54, 
+          "text": "Observemos cómo podría funcionar.", 
+          "start": 112.82
+        }, 
+        {
+          "dur": 4.26, 
+          "text": "Agregamos nuestro modelo lineal\na una función sigmoide.", 
+          "start": 115.36
+        }, 
+        {
+          "dur": 5.2, 
+          "text": "Esta función nos arroja un valor entre 0 y 1.", 
+          "start": 119.62
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Hay asíntotas,\npor lo que casi nunca coincide en 0 o 1.", 
+          "start": 124.82
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Entrenamos con otra función de pérdida,\nya que la pérdida al cuadrado no sirve.", 
+          "start": 129.44
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "Usamos la pérdida logística, cuya fórmula\nes similar a la entropía de Shannon.", 
+          "start": 135.38
+        }, 
+        {
+          "dur": 5.68, 
+          "text": "No hay que entender el cálculo\npara analizar la interpretación del gráfico.", 
+          "start": 144.74
+        }, 
+        {
+          "dur": 7.04, 
+          "text": "Si analizamos una de las barras,\nnotaremos que la pérdida crece rápidamente.", 
+          "start": 150.42
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Aparecen de nuevo las asíntotas.", 
+          "start": 157.46
+        }, 
+        {
+          "dur": 4.14, 
+          "text": "Esas líneas son muy importantes\nen términos de aprendizaje.", 
+          "start": 162.56
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "Debido a ellas, debemos incorporar\nla regularización a nuestro aprendizaje.", 
+          "start": 166.7
+        }, 
+        {
+          "dur": 10.84, 
+          "text": "De lo contrario, el modelo puede adaptar\nlos datos para llevar esas pérdidas casi a 0.", 
+          "start": 175.68
+        }, 
+        {
+          "dur": 8.06, 
+          "text": "Gracias a la regularización de N2,\nlas ponderaciones no se desvían demasiado.", 
+          "start": 186.52
+        }, 
+        {
+          "dur": 2.64, 
+          "text": "¿Por qué optamos\npor la regresión logística lineal?", 
+          "start": 194.58
+        }, 
+        {
+          "dur": 7.06, 
+          "text": "Porque es muy rápida y eficiente\npara el entrenamiento y las predicciones.", 
+          "start": 197.22
+        }, 
+        {
+          "dur": 11.06, 
+          "text": "Es ideal para ajustar datos masivos\no predecir latencias muy bajas.", 
+          "start": 204.28
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Para obtener no linealidades, agregamos\nproductos de la combinación de atributos.", 
+          "start": 215.34
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

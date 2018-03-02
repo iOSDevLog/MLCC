@@ -1,0 +1,454 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 4.66, 
+          "text": "我们来看一个现实世界中的机器学习系统示例，\n这个系统存在一个有趣的问题。", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "在癌症预测方面，几年前我们训练了一个模型，\n旨在根据病历来预测病人患有癌症的概率。", 
+          "start": 5.26
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "我们从这些病历中提取特征，例如病人年龄、性别、\n医疗状况、医院名称、生命体征、检验结果等信息。", 
+          "start": 14.24
+        }, 
+        {
+          "dur": 11.16, 
+          "text": "对该模型进行训练的人员感觉自己就像是天才，\n因为模型在经过训练后，能根据他们提供的测试数据\n给出准确的结果，而且他们会都极其小心地\n避免弄混任何测试和训练数据。", 
+          "start": 24.48
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "不过，当该模型应用于新患者时，表现却相当糟糕。", 
+          "start": 35.64
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "不知道出了什么问题，这是怎么回事？", 
+          "start": 40.82
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "其实是这样的：像我们所说的，\n模型中包含的一个特征是医院名称。", 
+          "start": 44.44
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "其中有些医院名称类似于“贝斯以色列癌症中心”。", 
+          "start": 51.6
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "其实这类名称能清楚地表明\n相应患者是否真的患有癌症。", 
+          "start": 56.1
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "即使医院名称不包含“癌症”一词，\n很多医院的各种不同专业也能表明患者的患癌情况。", 
+          "start": 63.0
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "有些医院专门治疗癌症，有些则不是。", 
+          "start": 70.66
+        }, 
+        {
+          "dur": 14.62, 
+          "text": "即使不使用“贝斯以色列癌症中心”，\n把它改为隐藏医院名称的整数，\n依然会有很多患者的患癌情况与该医院密切相关，\n因为它是一家专门治疗癌症的医院。", 
+          "start": 74.94
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "但是对于尚未分配到医院的新患者，\n我们无从得知该信息。", 
+          "start": 89.56
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "其实向模型提供医院名称会带来一种微妙的欺骗性。", 
+          "start": 95.9
+        }, 
+        {
+          "dur": 9.0, 
+          "text": "在这个示例中，所收集的数据以微妙的方式\n向模型显示了医生的诊断结论，而在模型尝试\n取代医生去做判断时却无法获得此类信息。", 
+          "start": 101.88
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "我们将这种情况称为“标签泄露”，\n即一些训练标签泄露到特征中，使模型带有欺骗性。", 
+          "start": 110.88
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "这是一种典型的失败案例，请务必避免。", 
+          "start": 118.72
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.66, 
+          "text": "So let&#39;s look at a real world example of a machine learning system that had an interesting issue.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "So this was in the case of cancer prediction, there was a model a couple of years ago that was trained up to predict the probability that a patient had cancer from medical records.", 
+          "start": 5.26
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "So in those records we extracted features, things like patient age, gender, medical conditions, hospital name, vital signs, test results, you know, all that kind of stuff.", 
+          "start": 14.24
+        }, 
+        {
+          "dur": 11.16, 
+          "text": "And the folks who were trained in this model felt like geniuses, because once they trained that model it gave outstanding results on their held out test data, and they were extremely careful not to mix any test and training data.", 
+          "start": 24.48
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "However when they applied the model to new patients, the model did terribly.", 
+          "start": 35.64
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "Couldn&#39;t figure out what was going wrong, what could have happened there?", 
+          "start": 40.82
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Well, here&#39;s what happened: one of the features that was included, as we said, was the name of the hospital.", 
+          "start": 44.44
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Some of those names were things like &quot;Beth Israel Cancer Center&quot;.", 
+          "start": 51.6
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "Turns out that that&#39;s an extremely useful indicator to know if the patient in consideration in fact is suffering from cancer.", 
+          "start": 56.1
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Now, even if that string didn&#39;t contain the word &quot;cancer&quot;, it&#39;s the case that many hospitals have different specialties.", 
+          "start": 63.0
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "So some hospitals specialize in cancer treatment, some do not.", 
+          "start": 70.66
+        }, 
+        {
+          "dur": 14.62, 
+          "text": "Even if you were to take that &quot;Beth Israel Cancer Center&quot; and turn that into an anonymized integer, there would still be many patients that were strongly correlated with that particular hospital, because that was a hospital that specialized in cancer treatment.", 
+          "start": 74.94
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "But for new patients that haven&#39;t been assigned to a hospital yet, we don&#39;t know that information.", 
+          "start": 89.56
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "Turns out that showing the model the name of the hospital, is a subtle form of cheating.", 
+          "start": 95.9
+        }, 
+        {
+          "dur": 9.0, 
+          "text": "It&#39;s a subtle way of exposing a doctors diagnosis to the model in a way that they wouldn&#39;t have available if they were trying to be acting in place of the doctor.", 
+          "start": 101.88
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "So we call this &quot;label leakage&quot;, where a little bit of the training labels leak through into the features and allow the model to cheat.", 
+          "start": 110.88
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "This is a classic failure mode that&#39;s important to avoid.", 
+          "start": 118.72
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.66, 
+          "text": "Intéressons-nous à un système de machine\nlearning présentant un problème intéressant.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "Dans le domaine de la prédiction du cancer, il y a quelques années,\nun modèle devait permettre de déterminer la probabilité qu&#39;un patient soit atteint d&#39;un cancer d&#39;après son dossier médical.", 
+          "start": 5.26
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "Ces dossiers ont fourni des caractéristiques telles que l&#39;âge du patient,\nson sexe, ses antécédents médicaux, le nom de l&#39;hôpital, ses signes vitaux, ses résultats de tests, etc.", 
+          "start": 14.24
+        }, 
+        {
+          "dur": 11.16, 
+          "text": "Les créateurs de ce modèle ont eu l&#39;impression d&#39;être des génies, car une fois ce modèle entraîné,\nil donnait des résultats remarquables sur les données d&#39;évaluation. Ils avaient pris soin de ne pas mélanger les données d&#39;évaluation et d&#39;apprentissage.", 
+          "start": 24.48
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "Cependant, lorsqu&#39;ils ont appliqué le modèle\nà de nouveaux patients, le résultat a été catastrophique.", 
+          "start": 35.64
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "Impossible de comprendre ce qui n&#39;allait pas.\nQu&#39;est-ce qui avait bien pu se passer ?", 
+          "start": 40.82
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Voici la réponse : l&#39;une des caractéristiques incluses,\ncomme nous l&#39;avons dit, était le nom de l&#39;hôpital.", 
+          "start": 44.44
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Certains de ces noms étaient de type\n&quot;Beth Israel Cancer Center&quot;.", 
+          "start": 51.6
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "Il s&#39;avère que c&#39;est un indicateur extrêmement utile\npour savoir si le patient en question souffre d&#39;un cancer.", 
+          "start": 56.1
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Même si cette chaîne ne contenait pas le mot &quot;cancer&quot;,\nde nombreux hôpitaux ont des spécialités différentes.", 
+          "start": 63.0
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "Certains hôpitaux se spécialisent\ndonc dans le traitement du cancer, et d&#39;autres non.", 
+          "start": 70.66
+        }, 
+        {
+          "dur": 14.62, 
+          "text": "Même en prenant ce &quot;Beth Israel Cancer Center&quot; et en le transformant en donnée anonyme,\nil y aurait encore beaucoup de patients en forte corrélation avec cet hôpital, puisque ce dernier est spécialisé dans le traitement du cancer.", 
+          "start": 74.94
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Mais pour les nouveaux patients non affectés\nà un hôpital, cette information est inconnue.", 
+          "start": 89.56
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "En réalité, indiquer au modèle\nle nom de l&#39;hôpital est une forme de tricherie.", 
+          "start": 95.9
+        }, 
+        {
+          "dur": 9.0, 
+          "text": "C&#39;est une façon subtile d&#39;exposer le diagnostic d&#39;un médecin\nau modèle d&#39;une manière qui ne serait pas envisageable s&#39;il essayait d&#39;agir à la place du médecin.", 
+          "start": 101.88
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "Nous parlons de &quot;fuite d&#39;étiquette&quot; lorsqu&#39;une partie des étiquettes d&#39;apprentissage\nfuite dans les caractéristiques et permet au modèle de tricher.", 
+          "start": 110.88
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "C&#39;est un type de défaillance classique\nqu&#39;il est important d&#39;éviter.", 
+          "start": 118.72
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.66, 
+          "text": "이제 흥미로운 이슈를 갖고 있는\n머신러닝 시스템의 실례를 살펴보겠습니다", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "암 예측에 관한 예시인데요. 몇 년 전에 의료 기록을 바탕으로\n환자가 암에 걸릴 확률을 예측하도록 학습된 모델이 있었습니다", 
+          "start": 5.26
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "여러 기록에서 환자의 나이, 성별, 질병, 병원 이름, 생명 징후,\n테스트 결과 등 모든 종류의 특징을 추출했습니다", 
+          "start": 14.24
+        }, 
+        {
+          "dur": 11.16, 
+          "text": "이 모델을 교육한 사람들은 자신들이 천재인 것처럼 느꼈습니다.\n모델을 학습시킨 후에 보유하고 있던 테스트 데이터에서 탁월한 결과를 얻었으니까요.\n물론 이들은 테스트와 학습 데이터가 섞이지 않도록 매우 주의했습니다", 
+          "start": 24.48
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "하지만 모델을 새로운 환자에게 적용하자 예측 결과가 형편 없었습니다", 
+          "start": 35.64
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "무엇이 잘못되었는지, 왜 이렇게 되었는지 알 수가 없었습니다", 
+          "start": 40.82
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "문제는 바로 앞서 말씀드린 것처럼\n특징 중에 병원 이름이 있었다는 점이었습니다", 
+          "start": 44.44
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "예를 들어 &#39;베스 이스라엘 암 센터&#39;라는\n이름이 포함되었습니다", 
+          "start": 51.6
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "바로 이 이름이 고려 대상인 환자가 암에 걸렸음을 알려주는\n매우 유용한 지표였던 것입니다", 
+          "start": 56.1
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "문자열에 &#39;암&#39;이라는 단어가 없어도\n병원마다 전문 분야가 서로 다르다는 걸 생각해야 합니다", 
+          "start": 63.0
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "따라서 암 치료가 전문인 병원이 있고\n그렇지 않은 병원도 있습니다", 
+          "start": 70.66
+        }, 
+        {
+          "dur": 14.62, 
+          "text": "&#39;베스 이스라엘 암 센터&#39;를 익명의 정수로 바꾼다고 해도 이 병원은 암 치료가 전문이므로 이 병원과 상관 관계가 높은 환자가 여전히 많을 것입니다", 
+          "start": 74.94
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "그러나 병원에 아직 지정되지 않은 새로운 환자의 경우\n우리가 이 정보를 알 수 있는 방법이 없습니다", 
+          "start": 89.56
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "즉, 모델에 병원의 이름을 알려준 것이\n미묘한 부정행위가 된 것입니다", 
+          "start": 95.9
+        }, 
+        {
+          "dur": 9.0, 
+          "text": "모델이 의사 역할을 하고자 할 때는 사용할 수 없는 의사의 진단 정보를\n미묘한 방식으로 모델에 노출한 것입니다", 
+          "start": 101.88
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "이를 &#39;라벨 누출&#39;이라고 하며 약간의 학습 라벨이\n기능에 유출되어 모델의 속임수를 허용하는 것을 말합니다", 
+          "start": 110.88
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "라벨 누출은 피해야 할 기본적인 실패 모드입니다", 
+          "start": 118.72
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 4.66, 
+          "text": "Veamos un problema real en un sistema de aprendizaje automático.", 
+          "start": 0.6
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "Este antiguo modelo predice la probabilidad de tener cáncer\nde un paciente según su historia clínica.", 
+          "start": 5.26
+        }, 
+        {
+          "dur": 10.24, 
+          "text": "Extrajimos atributos de esa historia clínica, como edad, género y enfermedades del paciente, nombre del hospital, signos vitales, resultados de exámenes, etc.", 
+          "start": 14.24
+        }, 
+        {
+          "dur": 11.16, 
+          "text": "Los que entrenaron el modelo se sintieron genios porque, a partir de los datos de prueba considerados, que no se mezclaron con los de entrenamiento, el modelo entregó resultados sorprendentes.", 
+          "start": 24.48
+        }, 
+        {
+          "dur": 5.18, 
+          "text": "Pero, cuando se usó el modelo en pacientes nuevos, tuvo fallas.", 
+          "start": 35.64
+        }, 
+        {
+          "dur": 3.62, 
+          "text": "No lograban ver qué había salido mal.", 
+          "start": 40.82
+        }, 
+        {
+          "dur": 7.16, 
+          "text": "Uno de los atributos incluidos era el nombre del hospital.", 
+          "start": 44.44
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Había nombres como &quot;Beth Israel Cancer Center&quot;.", 
+          "start": 51.6
+        }, 
+        {
+          "dur": 6.9, 
+          "text": "Es un indicador muy útil para saber si el paciente tiene cáncer.", 
+          "start": 56.1
+        }, 
+        {
+          "dur": 7.66, 
+          "text": "Pero aunque esa string no contenga la palabra &quot;cáncer&quot;, se trata\nde un hospital con varias especialidades.", 
+          "start": 63.0
+        }, 
+        {
+          "dur": 4.28, 
+          "text": "Algunos se especializan en cáncer, otros no.", 
+          "start": 70.66
+        }, 
+        {
+          "dur": 14.62, 
+          "text": "Aunque &quot;Beth Israel Cancer Center&quot; sea un valor entero anónimo,\nhay muchos pacientes correlacionados con ese hospital específico porque se especializa en el tratamiento del cáncer.", 
+          "start": 74.94
+        }, 
+        {
+          "dur": 6.34, 
+          "text": "Pero desconocemos esta información, para los pacientes\nque todavía no fueron asignados a ese hospital.", 
+          "start": 89.56
+        }, 
+        {
+          "dur": 5.98, 
+          "text": "Mostrar el nombre del hospital en el modelo es una forma de engaño.", 
+          "start": 95.9
+        }, 
+        {
+          "dur": 9.0, 
+          "text": "Expone el diagnóstico que no está disponible al modelo.", 
+          "start": 101.88
+        }, 
+        {
+          "dur": 7.84, 
+          "text": "Esto se llama &quot;fuga de etiqueta&quot;. Una etiqueta se filtra en los atributos\ny engaña al modelo.", 
+          "start": 110.88
+        }, 
+        {
+          "dur": 3.34, 
+          "text": "Es importante evitar este fallo.", 
+          "start": 118.72
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

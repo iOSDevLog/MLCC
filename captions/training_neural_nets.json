@@ -1,0 +1,704 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 5.5, 
+          "text": "在思考如何训练神经网络时，\n您需要了解哪些与反向传播有关的信息？", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "您不需要了解的一点是反向传播的实施方式。", 
+          "start": 6.04
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "TensorFlow能够执行很多任务，实施反向传播\n便是其中之一；它会负责反向传播的内部运作，\n在后台为我们完成所有一切。", 
+          "start": 8.88
+        }, 
+        {
+          "dur": 2.22, 
+          "text": "不过，我们需要了解几个重要事项。", 
+          "start": 15.68
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "首先，反向传播确实依赖于梯度这一概念，\n事物必须是可微的，这样我们才能够进行学习。", 
+          "start": 17.9
+        }, 
+        {
+          "dur": 8.34, 
+          "text": "各种函数中存在一两个小的间断点没关系，\n但一般来说，我们需要可微函数，\n从而能够使用神经网络进行学习。", 
+          "start": 25.14
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "另外需要注意，梯度可能会消失。", 
+          "start": 33.48
+        }, 
+        {
+          "dur": 8.14, 
+          "text": "如果我们的网络太过深入，\n信噪比随着您越来越深入模型而变差，\n那么学习速度可能真的会变得非常慢。", 
+          "start": 35.48
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "在这种情况下，ReLU可能会有用；\n此外，还有一些其他策略，但在本课中不做讲解。", 
+          "start": 43.62
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "不过一般来讲，您确实需要考虑\n尽量将模型的深度限制为最小的有效深度。", 
+          "start": 49.1
+        }, 
+        {
+          "dur": 7.56, 
+          "text": "另外请务必了解，梯度可能会分解；\n如果学习速率太高，就会出现极不稳定的情况，\n模型中就可能出现NaN。", 
+          "start": 56.28
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "在这种情况下，就要以较低的学习速率再试一次。", 
+          "start": 63.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "最后您要知道，ReLU可能会消失。", 
+          "start": 67.94
+        }, 
+        {
+          "dur": 12.72, 
+          "text": "这可能是因为我们将硬性上限设为0，\n如果最终所有内容都低于0值，\n梯度就无法反向传播，\n我们就永远无法返回存在ReLU层的位置。", 
+          "start": 71.36
+        }, 
+        {
+          "dur": 8.12, 
+          "text": "所以要密切关注，并使用不同的初始化\n或较低的学习速率进行重试。", 
+          "start": 84.08
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "训练时，如果特征值在输入时就已经标准化，\n这通常会对我们非常有用。", 
+          "start": 92.2
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "如果范围大致相同，\n则有助于提高神经网络的转化速度。", 
+          "start": 98.8
+        }, 
+        {
+          "dur": 6.0, 
+          "text": "范围实际值并不重要；\n我们通常推荐的大致范围是负1到正1。", 
+          "start": 103.9
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "也可以是负5到正5，或者0到1，\n只要所有输入的范围大致相同就可以。", 
+          "start": 109.9
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "最后，在训练深度网络时还有一个很有用的技巧，\n即正则化的另一种形式，叫做丢弃。", 
+          "start": 118.58
+        }, 
+        {
+          "dur": 2.28, 
+          "text": "丢弃是一个非常有趣的概念。", 
+          "start": 126.66
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "应用丢弃是指，我们针对概率P取一个节点，\n然后从网络的一个梯度步长中将其移除。", 
+          "start": 128.94
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "在其他梯度步长中重复此过程，\n并随机取不同的节点进行丢弃。", 
+          "start": 139.8
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "丢弃的节点越多，正则化效果就越强。", 
+          "start": 146.18
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "您可以清楚地看到，如果丢弃所有节点，\n就会得到一个极为简单的模型，\n这个模型基本上毫无用处。", 
+          "start": 149.42
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "如果一个都不丢弃，则模型便具备完整的复杂性；\n如果在训练过程中的某个位置进行丢弃，\n那就相当于在这个位置应用了某种有效的正则化。", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 9.04, 
+          "text": "我们最近取得了多项推动深度学习走向前沿的\n关键进展，丢弃便是其中之一，\n使我们能够获得许多重大的成果。", 
+          "start": 163.74
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.5, 
+          "text": "So when we think about how to train neural networks, what do you need to know about, say, back propagation?", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "One thing you don&#39;t need to know about back prop is how to implement it.", 
+          "start": 6.04
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "That&#39;s one of the brilliant things that TensorFlow does for us, is it takes the internals of back propagation and does that all for us underneath the hood.", 
+          "start": 8.88
+        }, 
+        {
+          "dur": 2.22, 
+          "text": "But there are some important things to know.", 
+          "start": 15.68
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "The first is that back prop really does rely on this idea of gradience, things needs to be differentiable for us to be able to learn on them.", 
+          "start": 17.9
+        }, 
+        {
+          "dur": 8.34, 
+          "text": "One or two small discontinuities in our various functions are fine, but in general we need differentiable functions to be able to learn with neural nets.", 
+          "start": 25.14
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Other things that gradients can vanish.", 
+          "start": 33.48
+        }, 
+        {
+          "dur": 8.14, 
+          "text": "If our networks get too deep, so if signal to noise ratios get bad as you go further and further down the model and learning can really become quite slow.", 
+          "start": 35.48
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "Ray lou&#39;s can be useful there; there are also some other strategies that we won&#39;t talk about in this class.", 
+          "start": 43.62
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "But in general you do want to think about limiting the depth of your model to sort of the minimum effective depth if you can.", 
+          "start": 49.1
+        }, 
+        {
+          "dur": 7.56, 
+          "text": "It&#39;s also important to know that gradients can explode; if our learning rates are too high, we get these sort of crazy instabilities, we can get NaNs in our model.", 
+          "start": 56.28
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "The thing to do there is to try again with a lower learning rate.", 
+          "start": 63.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Last thing to know is that ray lous can die.", 
+          "start": 67.94
+        }, 
+        {
+          "dur": 12.72, 
+          "text": "It&#39;s possible that because we have this hard cap at zero, if we end up with everything below that value of zero there&#39;s no way for gradients to get propagated back through and we&#39;ll never be able to pull ourselves back up into the land of living ray lou layers.", 
+          "start": 71.36
+        }, 
+        {
+          "dur": 8.12, 
+          "text": "So keep an eye out for those and again try again with a different initialization or a lower learning rate.", 
+          "start": 84.08
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "At training time, it&#39;s often very useful for us to have normalized feature values when they come in.", 
+          "start": 92.2
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "If things are on roughly the same scale, this can help speed the conversions of neural nets.", 
+          "start": 98.8
+        }, 
+        {
+          "dur": 6.0, 
+          "text": "So the exact value of the scale doesn&#39;t really matter; we often recommend negative one to plus one as an approximate range.", 
+          "start": 103.9
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "It could minus five to plus five, or zero to one, it doesn&#39;t really matter so long as all of our inputs are on roughly the same scale.", 
+          "start": 109.9
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "Finally, one last trick that&#39;s useful in training deep networks is the idea of an additional form of regularization that is called dropout.", 
+          "start": 118.58
+        }, 
+        {
+          "dur": 2.28, 
+          "text": "And dropout is kind of a funny idea.", 
+          "start": 126.66
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "When we apply dropout, what we&#39;re saying is that with probability P we take a node and we essentially remove it from the network for a single gradient step.", 
+          "start": 128.94
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "On different gradient steps, we repeat and we&#39;ll take different nodes to drop out randomly.", 
+          "start": 139.8
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "So the more you dropout, the stronger regularization you have.", 
+          "start": 146.18
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "And you can kind of see this clearly where if you drop everything out you have an extremely simple model that is essentially useless.", 
+          "start": 149.42
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "If you drop out nothing, you allow the model to have its full complexity and if you have dropout somewhere in the middle, you&#39;re applying some sort of useful regularization there.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 9.04, 
+          "text": "Dropout is one of the key advances that has enabled a number of the strong results that we&#39;ve gotten recently that has pushed deep learning to the forefront.", 
+          "start": 163.74
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.5, 
+          "text": "En matière d&#39;apprentissage à l&#39;aide de réseaux de neurones,\nque faut-il savoir sur la rétropropagation ?", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "Une chose est sûre : il est inutile de savoir comment la mettre en œuvre.", 
+          "start": 6.04
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "En effet, l&#39;un des formidables avantages de TensorFlow est qu&#39;il s&#39;occupe\ndes rouages internes de la rétropropagation à notre place, en arrière-plan.", 
+          "start": 8.88
+        }, 
+        {
+          "dur": 2.22, 
+          "text": "Mais il y a des choses importantes à savoir.", 
+          "start": 15.68
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "La première est que la rétropropagation s&#39;appuie sur la notion de gradient :\nl&#39;apprentissage passe nécessairement par la différenciation.", 
+          "start": 17.9
+        }, 
+        {
+          "dur": 8.34, 
+          "text": "Bien qu&#39;une ou deux discontinuités soient acceptables, l&#39;apprentissage\nà l&#39;aide de réseaux de neurones nécessite généralement des fonctions différentiables.", 
+          "start": 25.14
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "En outre, les gradients peuvent disparaître.", 
+          "start": 33.48
+        }, 
+        {
+          "dur": 8.14, 
+          "text": "Si les réseaux sont trop profonds, le rapport signal sur bruit se dégrade\nà mesure que l&#39;on descend dans le modèle, et l&#39;apprentissage devient très lent.", 
+          "start": 35.48
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "Les fonctions ReLU sont très utiles, ainsi que d&#39;autres stratégies\nque nous n&#39;aborderons pas dans ce cours.", 
+          "start": 43.62
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "Mais, en général, il est judicieux de limiter la profondeur du modèle\nà son niveau efficace minimal lorsque c&#39;est possible.", 
+          "start": 49.1
+        }, 
+        {
+          "dur": 7.56, 
+          "text": "Il faut savoir que les gradients peuvent exploser : des taux d&#39;apprentissage trop élevés\nsont source d&#39;instabilité et des NaN risquent d&#39;apparaître dans le modèle.", 
+          "start": 56.28
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Il faut alors réessayer avec un taux d&#39;apprentissage inférieur.", 
+          "start": 63.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Enfin, les fonctions ReLU peuvent s&#39;éteindre.", 
+          "start": 67.94
+        }, 
+        {
+          "dur": 12.72, 
+          "text": "Sachant qu&#39;il existe un plafond strict fixé à zéro, si tout finit par être inférieur à cette valeur de zéro, il est possible que les gradients\nne puissent pas être rétropropagés et que l&#39;on ne puisse plus jamais remonter jusqu&#39;aux couches ReLU actives.", 
+          "start": 71.36
+        }, 
+        {
+          "dur": 8.12, 
+          "text": "Dans un tel cas, il faut réessayer\navec une initialisation différente ou un taux d&#39;apprentissage inférieur.", 
+          "start": 84.08
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "Lors de l&#39;apprentissage, il est très utile\nde normaliser les valeurs des caractéristiques obtenues.", 
+          "start": 92.2
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Si tout est à peu près à la même échelle,\nla conversion du réseau de neurones est plus rapide.", 
+          "start": 98.8
+        }, 
+        {
+          "dur": 6.0, 
+          "text": "La valeur exacte de l&#39;échelle n&#39;a pas vraiment d&#39;importance.\nNous recommandons souvent une plage approximative de -1 à +1.", 
+          "start": 103.9
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Elle pourrait aller de -5 à +5 ou de 0 à 1, cela n&#39;a pas d&#39;importance\ntant que toutes les entrées sont à peu près à la même échelle.", 
+          "start": 109.9
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "Une dernière astuce qui facilite l&#39;apprentissage à l&#39;aide de réseaux profonds\nest l&#39;ajout d&#39;une forme de régularisation appelée abandon.", 
+          "start": 118.58
+        }, 
+        {
+          "dur": 2.28, 
+          "text": "Le principe est plutôt amusant.", 
+          "start": 126.66
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "L&#39;application d&#39;une régularisation par abandon consiste essentiellement,\navec une probabilité P, à supprimer un nœud du réseau pour un seul pas du gradient.", 
+          "start": 128.94
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "À différents pas du gradient, nous abandonnons ainsi\ndifférents nœuds de manière aléatoire.", 
+          "start": 139.8
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "Plus il y a d&#39;abandons, plus la régularisation est poussée.", 
+          "start": 146.18
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "Et il apparaît alors évident que si vous abandonnez tout,\nvous obtenez un modèle extrêmement simple, mais essentiellement inutile.", 
+          "start": 149.42
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "Si vous n&#39;abandonnez rien, le modèle conserve toute sa complexité,\nmais si vous trouvez un juste milieu, vous appliquez une régularisation qui revêt une réelle utilité.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 9.04, 
+          "text": "La régularisation par abandon est l&#39;une des avancées majeures à l&#39;origine des excellents résultats obtenus récemment et de la mise en avant du deep learning.", 
+          "start": 163.74
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.5, 
+          "text": "신경망을 학습시키는 방법을 고려할 때\n역전파에 관해 무엇을 알아야 할까요?", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "역전파를 구현하는 방법만큼은 몰라도 괜찮습니다.", 
+          "start": 6.04
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "그게 바로 텐서플로우가 좋은 점이죠. 텐서플로우는 역전파의\n내부적인 사항을 모두 알아서 처리하고 구현해 줍니다.", 
+          "start": 8.88
+        }, 
+        {
+          "dur": 2.22, 
+          "text": "하지만 꼭 알아야 할 점도 있습니다.", 
+          "start": 15.68
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "첫째로, 역전파에서는 학습할 사례를 서로 변별 가능하게\n해주는 &#39;경사&#39;라는 개념이 매우 중요합니다.", 
+          "start": 17.9
+        }, 
+        {
+          "dur": 8.34, 
+          "text": "여러 함수 간에 나타나는 한두 가지의 작은 불연속성은 괜찮지만,\n일반적으로 신경망으로 학습하려면 미분가능 함수가 필요합니다.", 
+          "start": 25.14
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "경사가 사라지는 경우도 있습니다.", 
+          "start": 33.48
+        }, 
+        {
+          "dur": 8.14, 
+          "text": "신경망이 너무 깊어지는 바람에 모델 아래쪽으로 갈수록\n신호 대 소음 비율이 악화되면 학습 속도가 상당히 느려집니다.", 
+          "start": 35.48
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "이 경우 ReLU(정류된 선형 유닛, Rectified Linear Unit)를 사용하면 좋습니다.\n다른 전략들도 있지만 이 수업에서는 다루지 않을 겁니다.", 
+          "start": 43.62
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "하지만 일반적으로는 가능한 경우 모델의 깊이를\n최소 효과 깊이로 제한하는 것이 좋습니다.", 
+          "start": 49.1
+        }, 
+        {
+          "dur": 7.56, 
+          "text": "경사가 폭발적으로 증가할 수 있다는 점도 기억해야 합니다.\n학습률이 너무 높아지면 불안전성이 커지고 모델에서 NaN 값을 얻게 됩니다.", 
+          "start": 56.28
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "이 경우 낮은 학습률을 사용해 다시 시도해 봐야 합니다.", 
+          "start": 63.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "마지막으로, ReLU가 실행되지 않는 경우가 있습니다.", 
+          "start": 67.94
+        }, 
+        {
+          "dur": 12.72, 
+          "text": "우리는 0 이하의 값이 나오지 않도록 강력하게 제한을 두기 때문에\n모든 값이 0 미만으로 나오는 경우 역전파를 얻을 수 있는 경사가 나오지 않게 되서\n실행 가능한 ReLU 층으로 돌아갈 수가 없죠.", 
+          "start": 71.36
+        }, 
+        {
+          "dur": 8.12, 
+          "text": "그러니 이러한 상황이 발생하지는 않는지 주의 깊게 살피고\n다른 시작점이나 낮은 학습률을 사용해 다시 시도해 보는 것이 좋습니다.", 
+          "start": 84.08
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "모델을 학습시킬 때는 정규화된 특성 값을 가져오는 것이 유용합니다.", 
+          "start": 92.2
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "사례들의 크기가 서로 비슷한 경우 정규화된 값을 사용하면\n신경망의 전환 속도가 빨라집니다.", 
+          "start": 98.8
+        }, 
+        {
+          "dur": 6.0, 
+          "text": "정확한 크기 값은 그리 중요하지 않습니다.\n대략 -1에서 +1의 범위를 사용하는 것이 좋습니다.", 
+          "start": 103.9
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "하지만 모든 입력값의 크기가 비슷하다면\n-5~+5이든, 0~1이든 크게 상관이 없습니다.", 
+          "start": 109.9
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "끝으로, 심층 네트워크를 학습시킬 때는\n드롭아웃이라는 정규화 방식을 기억해 두면 좋습니다.", 
+          "start": 118.58
+        }, 
+        {
+          "dur": 2.28, 
+          "text": "드롭아웃은 재미있는 개념입니다.", 
+          "start": 126.66
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "드롭아웃 방식에서는 확률 P에서 하나의 노드를 택하고,\n기본적으로 네트워크의 단일 경사 스텝에서 이 노드를 삭제합니다.", 
+          "start": 128.94
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "다른 경사 스텝에서도 이 과정을 반복하면\n임의로 드롭아웃할 다른 노드를 얻게 됩니다.", 
+          "start": 139.8
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "따라서 드롭아웃을 반복할수록 정규화가 강력해집니다.", 
+          "start": 146.18
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "하지만 모든 사례를 드롭아웃하게 되면 모델이\n극단적으로 단순해지고 아무런 쓸모도 없게 됩니다.", 
+          "start": 149.42
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "반면에 아무것도 드롭아웃하지 않으면 모델의 복잡성이 그대로 유지되고\n드롭아웃을 적당히 사용하면 알맞게 정규화가 이뤄지는 것이죠.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 9.04, 
+          "text": "드롭아웃이라는 방법이 등장하면서 최근 몇 가지 강력한 결과를 얻어낼 수 있었으며\n이 덕분에 딥 러닝이 주목받는 기술로 부상하게 되었습니다.", 
+          "start": 163.74
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.5, 
+          "text": "Cuando entrenamos redes neuronales,\n¿qué debes saber sobre propagación inversa?", 
+          "start": 0.54
+        }, 
+        {
+          "dur": 2.84, 
+          "text": "Lo que no necesitas saber sobre la propagación inversa\nes cómo implementarla.", 
+          "start": 6.04
+        }, 
+        {
+          "dur": 6.8, 
+          "text": "Lo genial de TensorFlow es que toma las funciones internas\nde la propagación inversa y hace el trabajo por nosotros.", 
+          "start": 8.88
+        }, 
+        {
+          "dur": 2.22, 
+          "text": "Pero hay algunos datos importantes.", 
+          "start": 15.68
+        }, 
+        {
+          "dur": 7.24, 
+          "text": "En primer lugar, la propagación inversa confía en el gradiente.\nLos elementos deben poder diferenciarse para aprender de ellos.", 
+          "start": 17.9
+        }, 
+        {
+          "dur": 8.34, 
+          "text": "Unas funciones con interrupciones no es problema, pero necesitamos\nfunciones que se diferencien para aprender con redes neuronales.", 
+          "start": 25.14
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Por otro lado, los gradientes pueden desaparecer.", 
+          "start": 33.48
+        }, 
+        {
+          "dur": 8.14, 
+          "text": "Si las redes profundizan demasiado el modelo y la proporción señal-ruido empeora a medida que avanzas, el aprendizaje puede volverse lento.", 
+          "start": 35.48
+        }, 
+        {
+          "dur": 5.48, 
+          "text": "ReLu puede resultar útil.\nHay otras estrategias de las que no hablaremos.", 
+          "start": 43.62
+        }, 
+        {
+          "dur": 7.18, 
+          "text": "En general, queremos limitar la profundidad del modelo\nal mínimo sin que pierda eficacia.", 
+          "start": 49.1
+        }, 
+        {
+          "dur": 7.56, 
+          "text": "Los gradientes pueden colapsar. Si las tasas de aprendizaje\nson muy altas, se genera inestabilidad y obtenemos NaN en el modelo.", 
+          "start": 56.28
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Se puede volver a probar con una tasa de aprendizaje más baja.", 
+          "start": 63.84
+        }, 
+        {
+          "dur": 3.42, 
+          "text": "Por último, debemos saber que las ReLu pueden quedar en cero.", 
+          "start": 67.94
+        }, 
+        {
+          "dur": 12.72, 
+          "text": "Es posible porque el límite fijo es cero. Si el valor es inferior, los gradientes\nno podrán realizar propagación inversa ni sumarse a las capas de ReLu activas.", 
+          "start": 71.36
+        }, 
+        {
+          "dur": 8.12, 
+          "text": "Debes estar atento. Vuelve a intentarlo con una inicialización diferente\no una tasa de aprendizaje más baja.", 
+          "start": 84.08
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "Durante el entrenamiento, es útil tener\nvalores de atributos normalizados cuando se reciben.", 
+          "start": 92.2
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Si los ajustes de las operaciones son iguales,\nse pueden acelerar las conversiones de las redes neuronales.", 
+          "start": 98.8
+        }, 
+        {
+          "dur": 6.0, 
+          "text": "El valor exacto del ajuste no es importante;\nrecomendamos valores de -1 a +1 como rango aproximado.", 
+          "start": 103.9
+        }, 
+        {
+          "dur": 8.68, 
+          "text": "Puede ser -5 a +5 o 0 a 1.\nTodas nuestras entradas deben tener el mismo ajuste.", 
+          "start": 109.9
+        }, 
+        {
+          "dur": 8.08, 
+          "text": "El último truco útil en las redes profundas de entrenamiento\nes una forma de regularización adicional que se llama extracción.", 
+          "start": 118.58
+        }, 
+        {
+          "dur": 2.28, 
+          "text": "Es una idea divertida.", 
+          "start": 126.66
+        }, 
+        {
+          "dur": 10.86, 
+          "text": "Al aplicar la extracción, tomamos un nodo con la probabilidad P\ny lo quitamos de la red para obtener un paso de gradiente único.", 
+          "start": 128.94
+        }, 
+        {
+          "dur": 6.38, 
+          "text": "En diferentes pasos de gradiente,\nrepetimos el procedimiento de forma aleatoria.", 
+          "start": 139.8
+        }, 
+        {
+          "dur": 3.24, 
+          "text": "Mientras más extraigas, mejor será la regularización.", 
+          "start": 146.18
+        }, 
+        {
+          "dur": 6.72, 
+          "text": "Y puedes ver que, al extraer todo,\ntienes un modelo muy simple que es inútil.", 
+          "start": 149.42
+        }, 
+        {
+          "dur": 7.6, 
+          "text": "Si no extraes nada, permites que el modelo tenga toda su complejidad\ny, si extraes un elemento en el medio, aplicas una regularización útil.", 
+          "start": 156.14
+        }, 
+        {
+          "dur": 9.04, 
+          "text": "La extracción es uno de los avances clave que permite obtener\nresultados sólidos y logra destacar el aprendizaje profundo.", 
+          "start": 163.74
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

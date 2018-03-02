@@ -1,0 +1,229 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 5.76, 
+          "text": "在本课程的最后，\n我们来了解一些有效的机器学习准则。", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 6.96, 
+          "text": "当您准备创建机器学习系统时，\n请确保第一个模型是一个极其简单的模型。", 
+          "start": 5.76
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "简单的线性模型当然是一个很好的开始，\n方便您验证管道的正确性。", 
+          "start": 12.72
+        }, 
+        {
+          "dur": 10.58, 
+          "text": "在对模型质量进行任何迭代之前，\n您需要确保端到端的数据管道确实完全正确，\n因为如果数据管道中存在错误，以后将极难跟踪。", 
+          "start": 18.26
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "在训练和评估的最初阶段，\n您需要使用一个可观察的简单指标，\n以便验证相应模型的行为是否符合您的预期。", 
+          "start": 28.84
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "您需要拥有输入特征，并尽可能多地对其进行监控。", 
+          "start": 38.2
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "您需要将模型配置视为代码，并确保无论您何时配置模型，\n相应模型都会由队友审核并记录在案。", 
+          "start": 42.22
+        }, 
+        {
+          "dur": 7.94, 
+          "text": "请务必记下所有实验的结果，甚至是失败结果：\n记录对于后续的调试来说极其重要。", 
+          "start": 50.8
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.76, 
+          "text": "So to finish up this session, we want to think about some effective machine learning guidelines.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 6.96, 
+          "text": "When you&#39;re going off to create a machine learning system, please, keep the very first model extremely simple.", 
+          "start": 5.76
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "A simple linear model is absolutely the place to start, so you can verify the pipeline correctness.", 
+          "start": 12.72
+        }, 
+        {
+          "dur": 10.58, 
+          "text": "You want to make sure that the data pipeline is in fact fully correct, end to end, before doing any iteration on model quality, because bugs in the data pipeline are extremely hard to track down later on.", 
+          "start": 18.26
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "You wanna use a simple, observable metric as your first thing to use for training and evaluation, so that you can verify that the model is behaving as you expect.", 
+          "start": 28.84
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "You want to own and monitor your input features as much as possible.", 
+          "start": 38.2
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "You want to treat your model configuration as code and make sure that any time you configure a model, that that is reviewed by a teammate and checked in.", 
+          "start": 42.22
+        }, 
+        {
+          "dur": 7.94, 
+          "text": "Make sure to write down the results of all your experiments, even failures: documentation is incredibly important for later debugging.", 
+          "start": 50.8
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.76, 
+          "text": "Nous allons terminer cette session\navec des consignes de machine learning efficaces.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 6.96, 
+          "text": "Quand vous vous lancez dans la création\nd&#39;un système de machine learning, le premier modèle doit être très simple.", 
+          "start": 5.76
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "Un modèle linéaire simple est idéal pour démarrer.\nIl vous permet de vérifier l&#39;exactitude du pipeline.", 
+          "start": 12.72
+        }, 
+        {
+          "dur": 10.58, 
+          "text": "Vérifiez que le pipeline de données est correct d&#39;un bout à l&#39;autre avant de tester la qualité du modèle,\ncar les bugs dans le pipeline de données sont extrêmement difficiles à repérer ultérieurement.", 
+          "start": 18.26
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "Utilisez des statistiques simples et observables pour commencer\nl&#39;apprentissage et l&#39;évaluation, afin de vérifier que le modèle se comporte comme prévu.", 
+          "start": 28.84
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "Vous devez contrôler les caractéristiques\nd&#39;entrée autant que possible.", 
+          "start": 38.2
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "Vous devez traiter la configuration de votre modèle comme du code\net vous assurer qu&#39;à chaque fois que vous configurez un modèle, celui-ci est examiné par un collègue.", 
+          "start": 42.22
+        }, 
+        {
+          "dur": 7.94, 
+          "text": "Veillez à consigner les résultats de tous vos tests,\nmême en cas d&#39;échec : ce sera extrêmement utile pour tout débogage ultérieur.", 
+          "start": 50.8
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.76, 
+          "text": "이 세션을 마무리하기 전에,\n유용한 머신러닝 지침을 말씀드리겠습니다", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 6.96, 
+          "text": "머신러닝 시스템을 처음 만들 때\n첫 번째 모델은 최대한 간단해야 합니다", 
+          "start": 5.76
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "파이프라인 정확성을 확인할 수 있도록\n단순한 선형 모델에서 시작해야 합니다", 
+          "start": 12.72
+        }, 
+        {
+          "dur": 10.58, 
+          "text": "모델 품질에 관한 반복 작업을 하기 전에 데이터 파이프라인이 모두 올바른지 확인해야 합니다.\n데이터 파이프라인에 버그가 있으면 나중에 추적하기가 매우 어렵기 때문입니다", 
+          "start": 18.26
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "원하는 대로 모델이 작동하는지 확인할 수 있도록 학습 및 평가에\n단순하고 관찰 가능한 측정항목을 먼저 사용해야 합니다", 
+          "start": 28.84
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "최대한 많은 입력 기능을 갖고 모니터링하는 게 좋습니다", 
+          "start": 38.2
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "모델 설정을 코드로 취급하여 모델을 설정할 때마다\n팀원이 구성을 검토하고 체크인하도록 해야 합니다", 
+          "start": 42.22
+        }, 
+        {
+          "dur": 7.94, 
+          "text": "실패한 결과를 비롯하여 모든 실험 결과를 기록해두면\n나중에 디버깅하는 데 유용하게 사용할 수 있습니다", 
+          "start": 50.8
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.76, 
+          "text": "Para finalizar la sesión, analicemos\nestas pautas de aprendizaje automático.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 6.96, 
+          "text": "Cuando se crea un sistema de aprendizaje automático, el primer modelo debe ser muy simple.", 
+          "start": 5.76
+        }, 
+        {
+          "dur": 5.54, 
+          "text": "Comiencen con un modelo lineal simple,\npara que puedan verificar la canalización.", 
+          "start": 12.72
+        }, 
+        {
+          "dur": 10.58, 
+          "text": "La canalización de datos debe estar bien antes de la iteración\nen la calidad del modelo. Luego, es muy difícil rastrear los errores.", 
+          "start": 18.26
+        }, 
+        {
+          "dur": 9.36, 
+          "text": "Se debe usar una métrica simple con el entrenamiento y la evaluación,\npara verificar que el modelo funciona bien.", 
+          "start": 28.84
+        }, 
+        {
+          "dur": 4.02, 
+          "text": "Debes controlar y supervisar los atributos de entrada.", 
+          "start": 38.2
+        }, 
+        {
+          "dur": 8.58, 
+          "text": "Imagina que la configuración del modelo es un código que se verificará y que un colega revisará.", 
+          "start": 42.22
+        }, 
+        {
+          "dur": 7.94, 
+          "text": "Escribe los resultados de todos los experimentos, hasta las fallas.\nLa documentación es esencial para la depuración.", 
+          "start": 50.8
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

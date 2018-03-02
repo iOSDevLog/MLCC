@@ -1,0 +1,879 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 3.3, 
+          "text": "我们先来看一个线性问题。", 
+          "start": 0.44
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "您应该记得，线性问题指的是我们可以根据若干输入变量，\n用一条线将垃圾邮件与非垃圾邮件分隔开（举例而言）。", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "在这里，我们有两个输入变量X1和X2，\n这些是输入特征。", 
+          "start": 13.66
+        }, 
+        {
+          "dur": 5.72, 
+          "text": "然后我们得出一个包含W1X1、W2X2\n以及一个偏差因子的线性模型。", 
+          "start": 17.76
+        }, 
+        {
+          "dur": 2.06, 
+          "text": "很容易得出这个模型，对吧？", 
+          "start": 24.2
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "不过，如果我们的模型需要\n表示更复杂的内容，该怎么办？", 
+          "start": 26.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "尤其是，如果我们的数据看起来这样呢？", 
+          "start": 30.92
+        }, 
+        {
+          "dur": 8.56, 
+          "text": "在这种情况下，我们不可能使用一个简单的线性模型\n得出任何准确度在50%以上的结果。", 
+          "start": 37.48
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "那么我们该怎么做呢？", 
+          "start": 46.04
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "一种机智的做法是定义一个附加特征。", 
+          "start": 48.04
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "我们将它称为合成特征或特征交叉。\n我们可以这样做，将它称为X3。", 
+          "start": 53.38
+        }, 
+        {
+          "dur": 7.62, 
+          "text": "我们将X3定义为X1和X2的乘积。", 
+          "start": 59.88
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "那么，现在我可以在线性模型中使用X3了吗？", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "是的，确实可以，我将为X3添加一个系数W3。", 
+          "start": 70.72
+        }, 
+        {
+          "dur": 12.42, 
+          "text": "您会注意到，如果X1和X2均为正或均为负，\n则它们的乘积始终为正。", 
+          "start": 78.58
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "那么如果X1和X2的乘积为正，\n我就可以抽出蓝点。", 
+          "start": 91.0
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "类似地，如果其中任意一个坐标为负，\n那么乘积始终为负。", 
+          "start": 100.3
+        }, 
+        {
+          "dur": 9.78, 
+          "text": "这样我们就可以使用名为交叉乘积的简单合成特征，\n在线性模型中学习非线性规律。", 
+          "start": 106.32
+        }, 
+        {
+          "dur": 10.0, 
+          "text": "我们一般将这种利用其他特征乘积创建\n合成特征的过程称为特征交叉、特征交叉乘积。", 
+          "start": 116.1
+        }, 
+        {
+          "dur": 7.7, 
+          "text": "我们可以将这些看作A交叉B形式的模板，\n但它们也可能比较复杂（A交叉B交叉C交叉D）。", 
+          "start": 126.1
+        }, 
+        {
+          "dur": 12.5, 
+          "text": "如果A和B是可能通过独热编码（例如各种字符串或分箱）\n获取的布尔特征，则产生的交叉可能非常稀疏。", 
+          "start": 133.8
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "独热编码可能拥有大量零值。", 
+          "start": 146.3
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "我们来想一下可能会用到特征交叉的一些其他示例。", 
+          "start": 150.36
+        }, 
+        {
+          "dur": 9.22, 
+          "text": "如果我们要预测加州的房价，\n则可能会将纬度或分箱纬度与卧室数量交叉。", 
+          "start": 155.46
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "这样可以了解到旧金山3居室的房价，\n可能与萨克拉门托3居室的房价有很大差距。", 
+          "start": 164.68
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "您也可以想象一个井字游戏预测器，\n您可以通过交叉井字游戏网格中的多个坐标\n想象可在其中使用的交叉乘积。", 
+          "start": 173.66
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "因为井字游戏网格的任何特定部分中的\nX或O本身显然并没有什么有趣之处。", 
+          "start": 183.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "但是假如将左角、中间、右边和底部综合到一起，\n那就完全是另一回事了。", 
+          "start": 189.84
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "那么我们为何需要特征交叉呢？", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 7.5, 
+          "text": "主要原因在于它能够让我们\n将非线性学习整合到线性学习器中。", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "我们对线性学习器很感兴趣，\n因为它们可以十分自然地扩展到大规模数据集。", 
+          "start": 209.1
+        }, 
+        {
+          "dur": 8.78, 
+          "text": "事实上，多年来线性学习器是我们真正拥有的\n可以扩展到数十亿或数千亿规模数据集的唯一方法。", 
+          "start": 215.04
+        }, 
+        {
+          "dur": 7.46, 
+          "text": "现在我们还有扩展效果不错的深度神经网络，\n这是另一种方案，我们将在本课程的后面部分探讨。", 
+          "start": 223.82
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "最后，一些有趣的研究表明：\n将通过特征交叉乘积获得的线性学习效果与深度网络相结合，\n可以实现极其强大的建模能力。", 
+          "start": 231.28
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.3, 
+          "text": "Let&#39;s start off by looking at a linear problem.", 
+          "start": 0.44
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "You&#39;ll recall that a linear problem is something where we can fit a line to separate, say, this spam from the not spam depending on a couple of input variables.", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Here we&#39;ve got two input variables, X1 and X2, these are input features.", 
+          "start": 13.66
+        }, 
+        {
+          "dur": 5.72, 
+          "text": "Then we&#39;ve got a linear model here of W1X1, W2X2, and a bias term.", 
+          "start": 17.76
+        }, 
+        {
+          "dur": 2.06, 
+          "text": "Now this is easy to fit right?", 
+          "start": 24.2
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "However, what if our model needed to model something more complicated?", 
+          "start": 26.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "In particular, what if our data in fact looks more like this?", 
+          "start": 30.92
+        }, 
+        {
+          "dur": 8.56, 
+          "text": "In this world, there&#39;s really no way for us to fit a simple linear model that&#39;s going to get anything more than about 50% accuracy.", 
+          "start": 37.48
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Now what can we do?", 
+          "start": 46.04
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "Well one clever idea is that we could define an additional feature.", 
+          "start": 48.04
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "We&#39;re going to call this a synthetic feature, or a feature cross; we&#39;re going to do it like this, we&#39;re going to call it X3.", 
+          "start": 53.38
+        }, 
+        {
+          "dur": 7.62, 
+          "text": "We&#39;re going to define X3 as the product of X1 and X2.", 
+          "start": 59.88
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "Now can I use X3 in my linear model?", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "Yes indeed I can; I&#39;m going to go ahead and add a coefficient, W3 for X3.", 
+          "start": 70.72
+        }, 
+        {
+          "dur": 12.42, 
+          "text": "And you&#39;ll notice that the product of X1 and X2 is always positive if they&#39;re both positive or if X1 and X2 are both negative.", 
+          "start": 78.58
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "So I get this very nice ability to pull out my blue dots if the product of X1 and X2 is positive.", 
+          "start": 91.0
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "Similarly we&#39;ll always have a negative if either one of these coordinates is negative.", 
+          "start": 100.3
+        }, 
+        {
+          "dur": 9.78, 
+          "text": "So this allows us to learn a non-linearity within a linear model, using a simple synthetic feature that&#39;s called a cross product.", 
+          "start": 106.32
+        }, 
+        {
+          "dur": 10.0, 
+          "text": "So the general name of this process of creating synthetic features as products of other features we call feature crosses, feature cross products.", 
+          "start": 116.1
+        }, 
+        {
+          "dur": 7.7, 
+          "text": "We can think of these as maybe templates of the form A cross B, they can be complex, A cross B cross C cross D.", 
+          "start": 126.1
+        }, 
+        {
+          "dur": 12.5, 
+          "text": "And when A and B are boolean features, things that we might get from a one hot encoding, like various strings or bins, the resulting crosses might be quite sparse.", 
+          "start": 133.8
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "That one hot encoding may have an awful lot of zeros in it.", 
+          "start": 146.3
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Let&#39;s think of some additional examples here of where feature crosses might be useful.", 
+          "start": 150.36
+        }, 
+        {
+          "dur": 9.22, 
+          "text": "So if we&#39;re predicting housing prices in California, we might want to say cross latitude, or binned latitude, with the number of bedrooms.", 
+          "start": 155.46
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "And this would allow us to learn that maybe having 3 bedrooms in San Francisco is a very different thing from having 3 bedrooms in Sacramento.", 
+          "start": 164.68
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "You could also think about a tic-tac-toe predictor and you might think of the cross products that you&#39;d be able to use there by crossing the various coordinates in the tic-tac-toe grid.", 
+          "start": 173.66
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "Because obviously an X or an O in any particular segment of that tic-tac-toe grid by itself isn&#39;t very interesting.", 
+          "start": 183.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "But to be able to say your left corner, center, right, bottom all together is a very different thing.", 
+          "start": 189.84
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "So why would we want feature crosses?", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 7.5, 
+          "text": "Well the main thing is that this allows us to incorporate non-linear learning into a linear learner.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Now linear learners are very interesting to us, because they scale very naturally to massive scale data sets.", 
+          "start": 209.1
+        }, 
+        {
+          "dur": 8.78, 
+          "text": "In fact, for many years linear learners were the only method that we really had that would scale to billions or hundreds of billions sized data sets.", 
+          "start": 215.04
+        }, 
+        {
+          "dur": 7.46, 
+          "text": "Now we also have deep neural networks that can scale well, so that&#39;s another option that we&#39;ll look at later on in this class.", 
+          "start": 223.82
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "Finally, there&#39;s been some interesting research showing that combining the effects of linear learning through feature cross products and deep networks can be extremely powerful for modeling.", 
+          "start": 231.28
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.3, 
+          "text": "Commençons par un problème linéaire.", 
+          "start": 0.44
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "Vous vous souvenez ? Un problème linéaire est un cas où nous pouvons adapter une ligne\npour séparer ce spam des messages fiables en fonction de deux variables d&#39;entrée.", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Ici, nous avons deux variables d&#39;entrée, X1 et X2.\nIl s&#39;agit de caractéristiques d&#39;entrée.", 
+          "start": 13.66
+        }, 
+        {
+          "dur": 5.72, 
+          "text": "Ensuite, nous avons ici un modèle linéaire\navec W1X1, W2X2 et un biais.", 
+          "start": 17.76
+        }, 
+        {
+          "dur": 2.06, 
+          "text": "C&#39;est facile à adapter. D&#39;accord ?", 
+          "start": 24.2
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Que se passerait-il cependant si notre modèle\ndevait modéliser quelque chose de plus compliqué ?", 
+          "start": 26.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "Surtout si nos données\nressemblaient davantage à cela ?", 
+          "start": 30.92
+        }, 
+        {
+          "dur": 8.56, 
+          "text": "Il n&#39;existe vraiment aucun moyen nous permettant d&#39;adapter un modèle linéaire simple\nqui ne va pas dépasser la barre des 50 % d&#39;exactitude.", 
+          "start": 37.48
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "Alors, que pouvons-nous faire ?", 
+          "start": 46.04
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "Il serait judicieux\nde définir une autre caractéristique.", 
+          "start": 48.04
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "C&#39;est ce que nous allons appeler &quot;caractéristique synthétique&quot; ou &quot;croisement de caractéristiques&quot;.\nVoici comment nous allons procéder. Nous allons la nommer X3.", 
+          "start": 53.38
+        }, 
+        {
+          "dur": 7.62, 
+          "text": "Nous allons définir X3\ncomme le produit de X1 et X2.", 
+          "start": 59.88
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "Alors, est-ce que je peux utiliser X3\ndans mon modèle linéaire ?", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "Oui, c&#39;est possible. Je le fais\net j&#39;ajoute le coefficient W3 à X3.", 
+          "start": 70.72
+        }, 
+        {
+          "dur": 12.42, 
+          "text": "Vous remarquerez que le produit de X1 et X2\nest toujours positif si les deux sont positifs ou négatifs.", 
+          "start": 78.58
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "Je peux donc retirer mes points bleus\nsi le produit de X1 et X2 est positif, ce qui est très intéressant.", 
+          "start": 91.0
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "De la même manière, nous aurons toujours\nune valeur négative si l&#39;une de ces coordonnées est négative.", 
+          "start": 100.3
+        }, 
+        {
+          "dur": 9.78, 
+          "text": "Cela nous permet donc de faire apprendre une non-linéarité au sein d&#39;un modèle linéaire,\navec une simple caractéristique synthétique appelée &quot;produit croisé&quot;.", 
+          "start": 106.32
+        }, 
+        {
+          "dur": 10.0, 
+          "text": "La création de caractéristiques synthétiques grâce aux produits d&#39;autres caractéristiques\nest généralement appelée &quot;croisements de caractéristiques&quot; ou &quot;produits de croisements de caractéristiques&quot;.", 
+          "start": 116.1
+        }, 
+        {
+          "dur": 7.7, 
+          "text": "On peut les voir peut-être comme des modèles de la forme A avec croisement B.\nIls peuvent être complexes (A avec croisement B avec croisement C avec croisement D).", 
+          "start": 126.1
+        }, 
+        {
+          "dur": 12.5, 
+          "text": "Si A et B sont des caractéristiques booléennes, que nous pouvons obtenir d&#39;un encodage one-hot\ncomme différentes chaînes ou classes, les croisements générés risquent d&#39;être plutôt creux.", 
+          "start": 133.8
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "Cet encodage one-hot risque de contenir\nun nombre impressionnant de zéros.", 
+          "start": 146.3
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Nous allons nous intéresser à d&#39;autres exemples\noù les croisements de caractéristiques peuvent être utiles.", 
+          "start": 150.36
+        }, 
+        {
+          "dur": 9.22, 
+          "text": "Si nous prédisons le prix des logements en Californie,\nnous pourrions croiser la latitude avec le nombre de chambres.", 
+          "start": 155.46
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "Nous découvririons sans doute que 3 chambres à San Francisco\nne coûtent pas le même prix qu&#39;à Sacramento.", 
+          "start": 164.68
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "On pourrait également envisager un outil de prédiction de type &quot;morpion&quot;, et imaginer les produits croisés\nqu&#39;on obtiendrait en croisant les différentes coordonnées dans la grille de morpion.", 
+          "start": 173.66
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "Savoir qu&#39;un X ou un O se trouve dans la grille\nn&#39;est pas très intéressant en soi.", 
+          "start": 183.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "Cependant, savoir s&#39;il est en haut à gauche,\nau milieu, à droite ou en bas, cela change tout.", 
+          "start": 189.84
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "Alors, pourquoi effectuer\ndes croisements de caractéristiques ?", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 7.5, 
+          "text": "La principale raison, c&#39;est que cela nous permet d&#39;intégrer\nun apprentissage non linéaire dans un outil d&#39;apprentissage linéaire.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Les outils d&#39;apprentissage linéaires sont très intéressants pour nous,\ncar ils s&#39;adaptent très naturellement à des ensembles de données de grande envergure.", 
+          "start": 209.1
+        }, 
+        {
+          "dur": 8.78, 
+          "text": "Pendant de nombreuses années, ils constituaient la seule méthode capable de traiter\ndes ensembles contenant des milliards ou des centaines de milliards de données.", 
+          "start": 215.04
+        }, 
+        {
+          "dur": 7.46, 
+          "text": "Aujourd&#39;hui, les réseaux neuronaux profonds le font très bien aussi.\nIl s&#39;agit donc d&#39;une autre option que nous aborderons un peu plus tard dans ce cours.", 
+          "start": 223.82
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "Enfin, des études intéressantes ont montré que la combinaison des effets de l&#39;apprentissage linéaire via les produits\nde croisements de caractéristiques avec les réseaux profonds peut être extrêmement puissante pour la modélisation.", 
+          "start": 231.28
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.3, 
+          "text": "선형 문제부터 살펴보겠습니다.", 
+          "start": 0.44
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "선형 문제란 여러 입력 변수에 따라 스팸과\n스팸이 아닌 항목을 구분하도록 선을 긋는 것이었죠.", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "여기 X1과 X2라는 2개의 입력 변수가 있습니다.", 
+          "start": 13.66
+        }, 
+        {
+          "dur": 5.72, 
+          "text": "그리고 선형 모델인 W1X1, W2X2와\n바이어스 항이 있네요.", 
+          "start": 17.76
+        }, 
+        {
+          "dur": 2.06, 
+          "text": "여기에서는 선을 긋기 쉽죠?", 
+          "start": 24.2
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "하지만 좀 더 복잡한 걸\n모델링해야 한다면 어떨까요?", 
+          "start": 26.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "데이터가 이렇게 생겼다면 어떨까요?", 
+          "start": 30.92
+        }, 
+        {
+          "dur": 8.56, 
+          "text": "이 경우 단순한 선형 모델로는\n50% 이상의 정확성을 얻을 수 없죠.", 
+          "start": 37.48
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "이제 어떻게 해야 할까요?", 
+          "start": 46.04
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "추가 변수를 정의하는 게 한 가지 방법입니다.", 
+          "start": 48.04
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "이를 합성 특성 또는 특성 교차라고 하고\nX3라고 부르겠습니다.", 
+          "start": 53.38
+        }, 
+        {
+          "dur": 7.62, 
+          "text": "X1과 X2의 곱을 X3라고 정의해보죠.", 
+          "start": 59.88
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "X3를 선형 모델에 사용할 수 있을까요?", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "당연히 할 수 있죠.\nX3에 대한 계수 W3를 추가해보죠.", 
+          "start": 70.72
+        }, 
+        {
+          "dur": 12.42, 
+          "text": "X1과 X2가 둘 다 양수거나 음수면\n이 둘의 곱은 항상 양수입니다.", 
+          "start": 78.58
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "따라서 X1과 X2의 곱이 양수면\n파란색 점이 나오게 되죠.", 
+          "start": 91.0
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "이와 비슷하게 좌표 중 하나가\n음수면 항상 음수 값을 갖죠.", 
+          "start": 100.3
+        }, 
+        {
+          "dur": 9.78, 
+          "text": "이렇게 교차 곱이라는 간단한 합성 특성을 사용하면\n선형 모델 내에서 비선형성을 학습시킬 수 있습니다.", 
+          "start": 106.32
+        }, 
+        {
+          "dur": 10.0, 
+          "text": "이렇게 다른 변수의 곱으로 합성 특성을 만드는 과정을\n일반적으로 특성 교차 곱이라고 부릅니다.", 
+          "start": 116.1
+        }, 
+        {
+          "dur": 7.7, 
+          "text": "이러한 변수는 A 곱하기 B라는 형태의 템플릿으로 생각할 수 있고\nA 곱하기 B 곱하기 C 곱하기 D 등 복잡한 형태를 띨 수도 있습니다.", 
+          "start": 126.1
+        }, 
+        {
+          "dur": 12.5, 
+          "text": "A와 B가 다양한 문자열이나 빈과 같은 원-핫 인코딩에서 얻을 수 있는\n부울 변수인 경우, 곱의 결과 범위가 매우 넓게 나타날 수도 있죠.", 
+          "start": 133.8
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "이러한 원-핫 인코딩은 0이 굉장히\n많이 붙은 숫자로 이어질 수도 있습니다.", 
+          "start": 146.3
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "특성 교차를 유용하게 사용할 수 있는\n다른 예를 들어보겠습니다.", 
+          "start": 150.36
+        }, 
+        {
+          "dur": 9.22, 
+          "text": "캘리포니아 집값을 예측할 때 교차 위도나\n빈 위도와 함께 침실 수를 감안합니다.", 
+          "start": 155.46
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "이를 통해 같은 침실 3개짜리 집이라도 샌프란시스코와\n새크라멘토에서 집값이 매우 다르다는 점을 알 수 있죠.", 
+          "start": 164.68
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "틱택토 예측자를 생각해볼 수도 있는데요, 그리드 안의\n여러 좌표를 서로 곱하여 교차곱을 사용할 수 있겠죠.", 
+          "start": 173.66
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "틱택토 그리드의 각 칸에 X가 있든\nO가 있든 큰 의미는 없습니다.", 
+          "start": 183.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "하지만 &#39;왼쪽 모서리&#39;, &#39;가운데&#39;, &#39;오른쪽&#39;,\n&#39;아래쪽 전부&#39;라고 말할 수 있다는 것은 중요하죠.", 
+          "start": 189.84
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "그렇다면 특성 교차는 왜 필요한 걸까요?", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 7.5, 
+          "text": "특성 교차를 사용하면 선형적 학습자에\n비선형적 학습을 통합할 수 있다는 점이 가장 중요하죠.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "선형 학습자는 거대한 데이터 세트에 자연스럽게\n적용할 수 있기 때문에 매우 흥미로운 대상입니다.", 
+          "start": 209.1
+        }, 
+        {
+          "dur": 8.78, 
+          "text": "선형 학습자는 지난 수년간 크기가 수십억, 수천억에\n달하는 데이터 세트에 적용할 수 있는 유일한 방법이었죠.", 
+          "start": 215.04
+        }, 
+        {
+          "dur": 7.46, 
+          "text": "하지만 이제 확장이 쉬운 심층신경망이 생겼고\n이에 관해서는 나중에 살펴볼 겁니다.", 
+          "start": 223.82
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "특성 교차 곱 및 심층신경망을 사용한 선형 학습 효과를 결합하면\n매우 강력한 모델링 도구가 될 수 있다는 흥미로운 연구 결과가 나왔습니다.", 
+          "start": 231.28
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 3.3, 
+          "text": "Veamos un problema lineal.", 
+          "start": 0.44
+        }, 
+        {
+          "dur": 9.14, 
+          "text": "Aquí, podemos separar con una línea el spam\nde lo que no lo es según variables de entrada.", 
+          "start": 4.52
+        }, 
+        {
+          "dur": 4.1, 
+          "text": "Tenemos dos variables de entrada: X1 y X2,\nque son los atributos de entrada.", 
+          "start": 13.66
+        }, 
+        {
+          "dur": 5.72, 
+          "text": "Tenemos un modelo lineal de W1X1, W2X2\ny una ordenada al origen.", 
+          "start": 17.76
+        }, 
+        {
+          "dur": 2.06, 
+          "text": "Parece fácil de ajustar.", 
+          "start": 24.2
+        }, 
+        {
+          "dur": 4.62, 
+          "text": "Pero, ¿qué pasa si el modelo debe\nmodelar algo más complejo?", 
+          "start": 26.26
+        }, 
+        {
+          "dur": 6.56, 
+          "text": "¿Qué ocurre si trabajamos\ncon datos como estos?", 
+          "start": 30.92
+        }, 
+        {
+          "dur": 8.56, 
+          "text": "No podremos ajustar un modelo lineal simple\ncon una exactitud mayor al 50%.", 
+          "start": 37.48
+        }, 
+        {
+          "dur": 2.0, 
+          "text": "¿Qué podemos hacer?", 
+          "start": 46.04
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "Podemos definir un atributo adicional.", 
+          "start": 48.04
+        }, 
+        {
+          "dur": 6.5, 
+          "text": "Lo llamaremos atributo sintético\no combinación de funciones. Será X3.", 
+          "start": 53.38
+        }, 
+        {
+          "dur": 7.62, 
+          "text": "Lo definimos como el producto de X1 por X2.", 
+          "start": 59.88
+        }, 
+        {
+          "dur": 3.22, 
+          "text": "¿Podemos usar X3 en el modelo lineal?", 
+          "start": 67.5
+        }, 
+        {
+          "dur": 7.86, 
+          "text": "Sí. Agregaré un coeficiente W3 para X3.", 
+          "start": 70.72
+        }, 
+        {
+          "dur": 12.42, 
+          "text": "No importa si X1 y X2 son positivos\no negativos, el producto es siempre positivo.", 
+          "start": 78.58
+        }, 
+        {
+          "dur": 9.3, 
+          "text": "Así, puedo extraer todos los puntos azules.", 
+          "start": 91.0
+        }, 
+        {
+          "dur": 6.02, 
+          "text": "De igual forma, si una de las coordenadas\nes negativa, el resultado será negativo.", 
+          "start": 100.3
+        }, 
+        {
+          "dur": 9.78, 
+          "text": "Logramos la no linealidad en un modelo lineal\ncon atributo sintético: producto combinado.", 
+          "start": 106.32
+        }, 
+        {
+          "dur": 10.0, 
+          "text": "La creación de un atributo sintético a partir\nde otro es la combinación de atributos.", 
+          "start": 116.1
+        }, 
+        {
+          "dur": 7.7, 
+          "text": "Pueden ser plantillas con la forma A por B,\no complejas: A por B por C por D.", 
+          "start": 126.1
+        }, 
+        {
+          "dur": 12.5, 
+          "text": "Si A y B son booleanas, de codificación\nde un solo 1, habrá pocas combinaciones.", 
+          "start": 133.8
+        }, 
+        {
+          "dur": 4.06, 
+          "text": "Una codificación de un solo 1\npodría tener muchos ceros.", 
+          "start": 146.3
+        }, 
+        {
+          "dur": 5.1, 
+          "text": "Veamos otros ejemplos donde\nlas combinaciones de atributos sean útiles.", 
+          "start": 150.36
+        }, 
+        {
+          "dur": 9.22, 
+          "text": "Si predecimos precios de casas, usamos\nlatitud combinada con número de habitaciones.", 
+          "start": 155.46
+        }, 
+        {
+          "dur": 8.98, 
+          "text": "Una casa de 3 habitaciones en San Francisco\nserá diferente a una de 3 en Sacramento.", 
+          "start": 164.68
+        }, 
+        {
+          "dur": 9.58, 
+          "text": "Es como combinar varias coordenadas\nen un tablero para ver posibles resultados.", 
+          "start": 173.66
+        }, 
+        {
+          "dur": 6.6, 
+          "text": "La X o la O aisladas en un segmento\ndel tablero no son muy interesantes.", 
+          "start": 183.24
+        }, 
+        {
+          "dur": 8.86, 
+          "text": "Pero decir esquina izquierda, centro, derecha\no toda la parte inferior es muy diferente.", 
+          "start": 189.84
+        }, 
+        {
+          "dur": 2.9, 
+          "text": "¿Con qué fin\nusamos la combinación de funciones?", 
+          "start": 198.7
+        }, 
+        {
+          "dur": 7.5, 
+          "text": "Primero, nos permite incorporar\naprendizaje no lineal en modelos lineales.", 
+          "start": 201.6
+        }, 
+        {
+          "dur": 5.94, 
+          "text": "Los modelos lineales son interesantes\nporque escalan grandes conjuntos de datos.", 
+          "start": 209.1
+        }, 
+        {
+          "dur": 8.78, 
+          "text": "Antes, eran el único método para escalar\nconjuntos de miles de millones de datos.", 
+          "start": 215.04
+        }, 
+        {
+          "dur": 7.46, 
+          "text": "Ahora, tenemos redes neuronales profundas\nque escalan correctamente.", 
+          "start": 223.82
+        }, 
+        {
+          "dur": 11.4, 
+          "text": "Aprendizaje lineal, combinación de funciones\ny redes profundas son ideales para modelar.", 
+          "start": 231.28
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

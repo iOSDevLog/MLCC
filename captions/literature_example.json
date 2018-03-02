@@ -1,0 +1,654 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 5.2, 
+          "text": "我们来了解另一个有趣的机器学习系统，\n这个系统有点怪异。", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "我们目前正与一位研究18世纪英国文学的教授合作。", 
+          "start": 5.2
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "我们开发了一个思想隐喻数据库。", 
+          "start": 9.92
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "他基本上看过18世纪所有的文学作品。\n每当某位作者说：“心灵是一座花园”或“心灵是一块白板”时，\n他都会将这些内容写到数据库里。", 
+          "start": 13.1
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "他很想了解作者使用的隐喻思维\n能否暗示他们的政治派别。", 
+          "start": 23.6
+        }, 
+        {
+          "dur": 5.08, 
+          "text": "这样看来，我们似乎可以使用机器学习对这个东西进行测试；\n我们可以构建一个模型，看看我们是否能够预测这些内容。", 
+          "start": 31.24
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "于是，我们就这样做了。", 
+          "start": 36.32
+        }, 
+        {
+          "dur": 13.64, 
+          "text": "我们创建了一个训练和测试数据集，\n其中的各个样本就是某位作者使用过的一种隐喻思维、\n作者的政治派别标签、[听不清楚]或他们在18世纪所做的任何事情。", 
+          "start": 38.5
+        }, 
+        {
+          "dur": 11.12, 
+          "text": "我们对这些内容逐句拆分以测试训练和验证拆分内容，\n并训练出了一个模型，然后发现我们的测试验证准确率非常高。", 
+          "start": 52.14
+        }, 
+        {
+          "dur": 6.12, 
+          "text": "看来我们确实能够仅根据作者的隐喻思维\n来预测他们的政治派别。", 
+          "start": 63.26
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "完全成功。", 
+          "start": 69.38
+        }, 
+        {
+          "dur": 1.94, 
+          "text": "只是，我们在深入思考之后意识到，", 
+          "start": 71.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "其实，准确率可能高得有点离谱了。", 
+          "start": 73.12
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "是不是哪个地方出错了？", 
+          "start": 77.88
+        }, 
+        {
+          "dur": 10.26, 
+          "text": "我们注意到的其中一个问题是，当我们创建测试训练和验证拆分内容时，\n我们是通过逐句拆分样本来实现的。", 
+          "start": 80.96
+        }, 
+        {
+          "dur": 8.76, 
+          "text": "以Samuel L. Richardson的句子为例，\n他的一些句子会归入训练数据，一些句子会归入验证数据，\n还有一些会归入测试数据。", 
+          "start": 91.22
+        }, 
+        {
+          "dur": 8.48, 
+          "text": "这意味着，该模型可以了解Richardson在语言使用方面的特质，\n而不仅仅是了解他使用的隐喻手法。", 
+          "start": 99.98
+        }, 
+        {
+          "dur": 6.82, 
+          "text": "从某种意义上讲，如果在测试时运用该模型，\n则该模型可以记忆关于作者的一些额外信息。", 
+          "start": 108.46
+        }, 
+        {
+          "dur": 11.64, 
+          "text": "我们还进行了另一项实验，在这个过程中，我们在作者级别对内容进行了拆分。\n因此，我们将特定作者只归入训练数据、仅归入测试数据或仅归入验证数据。", 
+          "start": 115.28
+        }, 
+        {
+          "dur": 13.26, 
+          "text": "在进行这次实验的过程中，我们发现根据测试数据得出较高的准确率要难得多，\n而且仅根据隐喻数据来预测政治派别也难得多。", 
+          "start": 126.92
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "这其实挺有意思的。", 
+          "start": 140.18
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "一方面，我们可以就此写两篇文章，\n每篇文章各阐述一种观点。", 
+          "start": 141.54
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "另一方面，我们学到了重要的一课，\n那就是，在随机化处理训练数据和测试数据以进行这种拆分时，\n考虑采用哪种方式还是至关重要的。", 
+          "start": 144.66
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "机器学习研究人员很容易就会认为：\n“我们只是将数据随机化处理一下就行了”。", 
+          "start": 154.22
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "但实际上，我们需要先了解数据所代表的意义，\n然后我们才能进行有效的拆分。", 
+          "start": 157.42
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.2, 
+          "text": "Let&#39;s take a look at another interesting machine learning system that had a little quirk in it.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "So, we were working with a professor of 18th century English literature.", 
+          "start": 5.2
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "Who had developed a database of metaphors of the mind.", 
+          "start": 9.92
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "Basically, he had gone through all of 18th century literature and every time an author had said: &#39;The mind is a garden.&#39; or &#39;The mind is a blank slate&#39;, he&#39;d written those down in a database.", 
+          "start": 13.1
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "And he was interested to know, whether the metaphors to the mind that an author used, were indicative of their political affiliation.", 
+          "start": 23.6
+        }, 
+        {
+          "dur": 5.08, 
+          "text": "Well it seemed like this is something we can test using machine learning; we&#39;ll build a model, see if we can predict these things.", 
+          "start": 31.24
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "So, we did this.", 
+          "start": 36.32
+        }, 
+        {
+          "dur": 13.64, 
+          "text": "We created a set of training and test data, where each example was one metaphor of the mind that an author had used, and the label of the author&#39;s political affiliation; [unintelligible] or whatever they did in the 18th century.", 
+          "start": 38.5
+        }, 
+        {
+          "dur": 11.12, 
+          "text": "We divided those up sentence by sentence and to test training and validation splits, trained up a model, and found that our test validation accuracy was incredibly good.", 
+          "start": 52.14
+        }, 
+        {
+          "dur": 6.12, 
+          "text": "It looked like we could indeed predict an author&#39;s political affiliation, based only on their metaphors of the mind.", 
+          "start": 63.26
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Total success.", 
+          "start": 69.38
+        }, 
+        {
+          "dur": 1.94, 
+          "text": "Except, then we looked a little deeper.", 
+          "start": 71.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "And realized that maybe our accuracy was actually suspiciously high.", 
+          "start": 73.12
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Was there anything here that was going wrong?", 
+          "start": 77.88
+        }, 
+        {
+          "dur": 10.26, 
+          "text": "Well, one of the things that we noticed, was that when we created our test training and validation splits, we did so by dividing up our examples, sentence by sentence.", 
+          "start": 80.96
+        }, 
+        {
+          "dur": 8.76, 
+          "text": "And so, if we looked at say Samuel L. Richardson, some of his sentences would end up in the training data, some in the validation data, and some in the test data.", 
+          "start": 91.22
+        }, 
+        {
+          "dur": 8.48, 
+          "text": "This meant that the model had the ability to learn specific qualities about Richardson&#39;s use of language beyond just the metaphors that he used.", 
+          "start": 99.98
+        }, 
+        {
+          "dur": 6.82, 
+          "text": "And, in a sense, get to memorize a little extra stuff about him when it came time to be applied at test time.", 
+          "start": 108.46
+        }, 
+        {
+          "dur": 11.64, 
+          "text": "We ran another experiment, where we divided things up at the author level, so that given authors were only in the training data, or only in the test data, or only in the validation data.", 
+          "start": 115.28
+        }, 
+        {
+          "dur": 13.26, 
+          "text": "And when we ran the experiment this time, we found that it was much more difficult to get good accuracy on test data and that it&#39;s much more difficult to predict the political affiliation based only on the metaphorical data.", 
+          "start": 126.92
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "So this was kind of interesting.", 
+          "start": 140.18
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "One thing was we got to write two papers, one with each viewpoint.", 
+          "start": 141.54
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "The second was that we learned an important lesson about how critical it is to think about the ways that our training data and test data are randomized for these splits.", 
+          "start": 144.66
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "As a machine learning person, it&#39;s easy to think; &#39;Well, we&#39;ll just randomize the data!&#39;.", 
+          "start": 154.22
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "We actually have to know what the data represents in order to create these good splits.", 
+          "start": 157.42
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.2, 
+          "text": "Intéressons-nous à un autre système\nde machine learning un peu particulier.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Nous avons travaillé avec un professeur\nde littérature anglaise du 18e siècle,", 
+          "start": 5.2
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "qui a créé une base de données\nsur les métaphores décrivant l&#39;esprit.", 
+          "start": 9.92
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "Il a parcouru les ouvrages littéraires du 18e siècle, et chaque fois qu&#39;un auteur avait écrit :\n&quot;L&#39;esprit est un jardin&quot; ou &quot;L&#39;esprit est une page blanche&quot;,\nil a consigné la métaphore dans une base de données.", 
+          "start": 13.1
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "Il souhaitait savoir si les métaphores utilisées par un auteur\npour parler de l&#39;esprit étaient représentatives de son affiliation politique.", 
+          "start": 23.6
+        }, 
+        {
+          "dur": 5.08, 
+          "text": "Il nous a semblé possible de le vérifier grâce au machine learning.\nNous avons décidé de créer un modèle pour voir si cela était prédictible.", 
+          "start": 31.24
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "Voici ce que nous avons fait.", 
+          "start": 36.32
+        }, 
+        {
+          "dur": 13.64, 
+          "text": "Nous avons créé un ensemble d&#39;apprentissage et un autre d&#39;évaluation.\nChaque exemple reprenait une métaphore de l&#39;esprit utilisée par un auteur,\net l&#39;appartenance politique de l&#39;auteur (Whigs, parti victorien ou autre parti du 18e siècle).", 
+          "start": 38.5
+        }, 
+        {
+          "dur": 11.12, 
+          "text": "Nous avons traité ces données phrase par phrase et créé des ensembles\nd&#39;évaluation, d&#39;apprentissage et de validation. Nous avons formé un modèle,\net avons observé que notre test de validation était incroyablement juste.", 
+          "start": 52.14
+        }, 
+        {
+          "dur": 6.12, 
+          "text": "Il semblait que nous puissions en effet prédire l&#39;affiliation politique d&#39;un auteur\nuniquement en fonction des métaphores de l&#39;esprit qu&#39;il utilisait.", 
+          "start": 63.26
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Nous avions réussi.", 
+          "start": 69.38
+        }, 
+        {
+          "dur": 1.94, 
+          "text": "Jusqu&#39;à ce que nous y regardions de plus près,", 
+          "start": 71.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "et que nous nous apercevions\nque notre justesse était en fait suspecte.", 
+          "start": 73.12
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "Y avait-il une erreur quelque part ?", 
+          "start": 77.88
+        }, 
+        {
+          "dur": 10.26, 
+          "text": "Nous avons remarqué que pour créer nos ensembles d&#39;évaluation, d&#39;apprentissage\net de validation, nous avions séparé nos exemples phrase par phrase.", 
+          "start": 80.96
+        }, 
+        {
+          "dur": 8.76, 
+          "text": "Ainsi, certaines phrases de Samuel L. Richardson, par exemple, se retrouvaient\ndans les données d&#39;apprentissage, d&#39;autres dans les données de validation,\net d&#39;autres dans les données de test.", 
+          "start": 91.22
+        }, 
+        {
+          "dur": 8.48, 
+          "text": "Cela signifiait que le modèle avait la capacité d&#39;apprendre des qualités propres à\nl&#39;utilisation du langage de Richardson, au-delà des simples métaphores qu&#39;il avait utilisées.", 
+          "start": 99.98
+        }, 
+        {
+          "dur": 6.82, 
+          "text": "D&#39;une certaine manière, le modèle pouvait mémoriser des informations supplémentaires\nau sujet de l&#39;auteur lorsqu&#39;il était exécuté au moment du test.", 
+          "start": 108.46
+        }, 
+        {
+          "dur": 11.64, 
+          "text": "Nous avons effectué un nouveau test, en divisant les exemples par auteur.\nAinsi, on ne pouvait retrouver un auteur que dans les données d&#39;apprentissage,\nd&#39;évaluation ou de validation.", 
+          "start": 115.28
+        }, 
+        {
+          "dur": 13.26, 
+          "text": "Lorsque nous avons relancé l&#39;expérience, nous avons constaté qu&#39;il était beaucoup plus\ndifficile d&#39;obtenir un bon niveau de justesse pour les données d&#39;évaluation et de prédire\nune affiliation politique uniquement en fonction des données sur les métaphores.", 
+          "start": 126.92
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "Ce fut assez intéressant.", 
+          "start": 140.18
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "Tout d&#39;abord, cela nous a permis d&#39;écrire\ndeux articles, un avec chaque point de vue.", 
+          "start": 141.54
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "Ensuite, nous avons appris qu&#39;il est essentiel de réfléchir à la façon dont les données\nd&#39;apprentissage et d&#39;évaluation sont rendues aléatoires pour ces divisions.", 
+          "start": 144.66
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "Quand on travaille sur le machine learning, il est facile de se dire :\n&quot;Nous n&#39;avons qu&#39;à rendre les données aléatoires !&quot;", 
+          "start": 154.22
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "En réalité, il est indispensable de savoir\nce que représentent les données pour créer des ensembles pertinents.", 
+          "start": 157.42
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.2, 
+          "text": "조금 별난 구석이 있는\n머신러닝 시스템을 살펴볼까요?", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "저희는 18세기 영문학을 전공한 교수님과\n함께 일하고 있습니다.", 
+          "start": 5.2
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "마음을 은유적으로 나타낸 표현을 모은\n데이터베이스를 개발했죠.", 
+          "start": 9.92
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "이 교수님은 18세기에 나온 모든 문학작품을 살펴보면서 저자가 &#39;마음은 정원이다&#39;,\n&#39;마음은 빈 서판이다&#39; 등의 표현을 사용할 때마다 이를 기록했습니다.", 
+          "start": 13.1
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "교수님은 이러한 은유적 표현에서\n저자의 정치적 성향이 드러나는지 궁금해했죠.", 
+          "start": 23.6
+        }, 
+        {
+          "dur": 5.08, 
+          "text": "머신러닝을 사용해 시험할 수 있는 궁금증 같았으므로,\n이 질문에 답할 수 있는 모델을 만들어 보았습니다.", 
+          "start": 31.24
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "개발 과정은 이랬습니다.", 
+          "start": 36.32
+        }, 
+        {
+          "dur": 13.64, 
+          "text": "저희는 우선 학습 및 시험용 데이터를 만들었습니다. 각 사례는 저자가 사용한 마음에 관한\n은유적 표현이었으며, 라벨에는 휘그당, 토리당 등 18세기의 저자의 정치적 성향을 추가했습니다.", 
+          "start": 38.5
+        }, 
+        {
+          "dur": 11.12, 
+          "text": "이를 문장별로 나눠 학습용 세트 및 검증용 세트 시험에 사용했고, 모델을 학습시켰으며,\n시험 결과 매우 높은 검증 정확성을 얻을 수 있었습니다.", 
+          "start": 52.14
+        }, 
+        {
+          "dur": 6.12, 
+          "text": "실제로 마음에 관한 은유적 표현만으로 저자의 정치적 성향을\n예측할 수 있을 것이라 기대했습니다.", 
+          "start": 63.26
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "완벽한 성공이었죠.", 
+          "start": 69.38
+        }, 
+        {
+          "dur": 1.94, 
+          "text": "하지만 저희는 만족하는 대신\n조금 더 깊이 들여다보았습니다.", 
+          "start": 71.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "그리고 정확성이 사실 의심스러울 정도로\n높다는 사실을 깨달았습니다.", 
+          "start": 73.12
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "뭔가 잘못된 게 있었을까요?", 
+          "start": 77.88
+        }, 
+        {
+          "dur": 10.26, 
+          "text": "저희는 시험을 위한 학습용 및 검증용 세트를 나눌 때\n사례를 문장별로 나눴다는 사실에 주목했습니다.", 
+          "start": 80.96
+        }, 
+        {
+          "dur": 8.76, 
+          "text": "이에 따라, Samuel L. Richardson을 예로 들자면, 이 저자의 문장이 학습 데이터, 검증 데이터,\n시험 데이터에 뿔뿔이 흩어지게 된 것입니다.", 
+          "start": 91.22
+        }, 
+        {
+          "dur": 8.48, 
+          "text": "이는 저희가 사용한 모델이 Richardson이 사용한 은유뿐만 아니라\n그의 언어 사용에서 보이는 특성을 학습하는 능력이 있었음을 의미합니다.", 
+          "start": 99.98
+        }, 
+        {
+          "dur": 6.82, 
+          "text": "그러므로 어떤 의미에서는 시험에 적용해야 할 때, Richardson에 관한\n추가 지식을 기억하고 있었다고 말할 수 있죠.", 
+          "start": 108.46
+        }, 
+        {
+          "dur": 11.64, 
+          "text": "그래서 저희는 다시 실험을 수행했습니다. 이번에는 사례를 저자별로 나눠\n특정 저자는 학습, 시험, 검증 데이터 중 한 곳에만 속하게 되었습니다.", 
+          "start": 115.28
+        }, 
+        {
+          "dur": 13.26, 
+          "text": "이번 실험 결과 시험 데이터에서 좋은 정확성을 얻기가 훨씬 더 힘들었습니다.\n또한 은유 표현과 관련된 데이터만 기반으로 하여 정치적인 성향을 예측하기도 훨씬 어려워졌습니다.", 
+          "start": 126.92
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "흥미로운 작업이었습니다.", 
+          "start": 140.18
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "각각의 관점에서\n두 개의 논문을 작성할 수 있었고", 
+          "start": 141.54
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "또 학습용 데이터와 시험용 데이터를 어떻게 나눌지 고민하는 것이\n얼마나 중요한지도 깨달았습니다.", 
+          "start": 144.66
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "머신러닝을 다루는 사람은 &#39;음, 데이터를 정규화하면 되지.&#39;라고\n생각해버리기 쉽습니다.", 
+          "start": 154.22
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "하지만 데이터를 잘 나누기 위해서는\n이 데이터가 무엇을 뜻하는지 이해해야 합니다.", 
+          "start": 157.42
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 5.2, 
+          "text": "Observemos otro sistema interesante\nde aprendizaje automático.", 
+          "start": 0.0
+        }, 
+        {
+          "dur": 4.72, 
+          "text": "Trabajamos con un profesor\nde literatura inglesa del siglo XVIII.", 
+          "start": 5.2
+        }, 
+        {
+          "dur": 3.18, 
+          "text": "Desarrollamos una base de datos\ncon metáforas de la mente,", 
+          "start": 9.92
+        }, 
+        {
+          "dur": 10.5, 
+          "text": "por ejemplo, &quot;La mente es un jardín&quot;\no &quot;La mente es una pizarra en blanco&quot;.", 
+          "start": 13.1
+        }, 
+        {
+          "dur": 7.64, 
+          "text": "Quería saber si tenían relación\ncon la afiliación política del autor.", 
+          "start": 23.6
+        }, 
+        {
+          "dur": 5.08, 
+          "text": "Lo podemos probar con un modelo\nde aprendizaje automático.", 
+          "start": 31.24
+        }, 
+        {
+          "dur": 2.18, 
+          "text": "Hicimos lo siguiente:", 
+          "start": 36.32
+        }, 
+        {
+          "dur": 13.64, 
+          "text": "creamos un conjunto de datos de intercambio\ny prueba con las metáforas y etiquetas.", 
+          "start": 38.5
+        }, 
+        {
+          "dur": 11.12, 
+          "text": "Los dividimos, entrenamos un modelo y vimos\nque la exactitud de la prueba era muy alta.", 
+          "start": 52.14
+        }, 
+        {
+          "dur": 6.12, 
+          "text": "Podíamos predecir la afiliación política\nde un autor según sus metáforas de la mente.", 
+          "start": 63.26
+        }, 
+        {
+          "dur": 1.8, 
+          "text": "Fue un éxito.", 
+          "start": 69.38
+        }, 
+        {
+          "dur": 1.94, 
+          "text": "Pero hicimos un análisis más profundo.", 
+          "start": 71.18
+        }, 
+        {
+          "dur": 4.76, 
+          "text": "Vimos que la precisión\nera sospechosamente alta.", 
+          "start": 73.12
+        }, 
+        {
+          "dur": 3.08, 
+          "text": "¿Había algún error?", 
+          "start": 77.88
+        }, 
+        {
+          "dur": 10.26, 
+          "text": "En la prueba de validación y entrenamiento,\ndividimos los ejemplos en oraciones.", 
+          "start": 80.96
+        }, 
+        {
+          "dur": 8.76, 
+          "text": "Se dividían entre los datos\nde entrenamiento, validación y prueba.", 
+          "start": 91.22
+        }, 
+        {
+          "dur": 8.48, 
+          "text": "El modelo aprendía características del uso\ndel idioma más allá de las metáforas usadas.", 
+          "start": 99.98
+        }, 
+        {
+          "dur": 6.82, 
+          "text": "Cuando se aplicaba la prueba,\nmemorizaba datos adicionales sobre el autor.", 
+          "start": 108.46
+        }, 
+        {
+          "dur": 11.64, 
+          "text": "En otro experimento, dividimos los datos\npara que solo aparecieran en los conjuntos.", 
+          "start": 115.28
+        }, 
+        {
+          "dur": 13.26, 
+          "text": "Nos costó lograr un nivel alto de exactitud\ny predecir la afiliación según las metáforas.", 
+          "start": 126.92
+        }, 
+        {
+          "dur": 1.36, 
+          "text": "Fue interesante.", 
+          "start": 140.18
+        }, 
+        {
+          "dur": 3.12, 
+          "text": "Primero, escribimos dos ensayos\ncon puntos de vista diferentes.", 
+          "start": 141.54
+        }, 
+        {
+          "dur": 9.56, 
+          "text": "Luego, descubrimos la importancia\nde la forma en que se dividen los datos.", 
+          "start": 144.66
+        }, 
+        {
+          "dur": 3.2, 
+          "text": "Como investigadores del tema, pensamos:\n&quot;Es fácil ordenar datos de forma aleatoria&quot;.", 
+          "start": 154.22
+        }, 
+        {
+          "dur": 4.5, 
+          "text": "Pero debemos saber qué representan\npara poder dividirlos correctamente.", 
+          "start": 157.42
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}

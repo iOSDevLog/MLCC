@@ -1,0 +1,519 @@
+{
+  "captionData": [
+    {
+      "captions": [
+        {
+          "dur": 1.936, 
+          "text": "大家好，我叫D. Sculley。", 
+          "start": 0.48
+        }, 
+        {
+          "dur": 6.87, 
+          "text": "我是负责为大家讲解机器学习速成课程\n与TensorFlow API的Google员工之一。", 
+          "start": 2.41
+        }, 
+        {
+          "dur": 5.344, 
+          "text": "在深入学习本课程之前，\n我们先简单了解本课将介绍的基本框架，", 
+          "start": 9.28
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "即监督式机器学习。", 
+          "start": 14.62
+        }, 
+        {
+          "dur": 10.224, 
+          "text": "在监督式机器学习中，\n我们将学习如何创建模型来结合输入信息，\n对以前从未见过的数据做出有用的预测。", 
+          "start": 18.0
+        }, 
+        {
+          "dur": 5.17, 
+          "text": "当我们训练该模型时，会为其提供标签。", 
+          "start": 28.22
+        }, 
+        {
+          "dur": 6.178, 
+          "text": "以垃圾邮件过滤模型为例，标签可以是\n“垃圾邮件或非垃圾邮件”等内容，", 
+          "start": 33.39
+        }, 
+        {
+          "dur": 3.144, 
+          "text": "它是我们试图预测的目标。", 
+          "start": 39.56
+        }, 
+        {
+          "dur": 3.588, 
+          "text": "特征是我们表示数据的方式。", 
+          "start": 42.7
+        }, 
+        {
+          "dur": 7.288, 
+          "text": "特征可以从电子邮件中提取，例如，\n电子邮件中的字词、“收件人和发件人地址”、", 
+          "start": 46.28
+        }, 
+        {
+          "dur": 5.192, 
+          "text": "各种路由或标题信息，\n以及任何可以从电子邮件中提取", 
+          "start": 53.56
+        }, 
+        {
+          "dur": 3.858, 
+          "text": "并提供给机器学习系统的信息。", 
+          "start": 58.75
+        }, 
+        {
+          "dur": 2.408, 
+          "text": "样本是一份数据。", 
+          "start": 62.6
+        }, 
+        {
+          "dur": 2.728, 
+          "text": "例如，一封电子邮件。", 
+          "start": 65.0
+        }, 
+        {
+          "dur": 10.024, 
+          "text": "它可以是有标签的样本，\n其中包含电子邮件中呈现的特征信息，\n以及标签值“垃圾邮件或非垃圾邮件”。", 
+          "start": 67.72
+        }, 
+        {
+          "dur": 3.252, 
+          "text": "这些信息可能来自用户。", 
+          "start": 77.74
+        }, 
+        {
+          "dur": 8.386, 
+          "text": "或者，它也可以是无标签样本，\n例如，一封我们拥有关于它的特征信息、\n但不知道它是否为垃圾邮件的电子邮件。", 
+          "start": 80.99
+        }, 
+        {
+          "dur": 5.782, 
+          "text": "我们要做的很可能是对其进行分类，\n将其放入用户的收件箱或“垃圾邮件”文件夹。", 
+          "start": 89.37
+        }, 
+        {
+          "dur": 4.592, 
+          "text": "最后，我们会获得一个模型，\n该模型是执行预测的工具。", 
+          "start": 95.152
+        }, 
+        {
+          "dur": 4.196, 
+          "text": "我们将通过从数据中学习规律\n这一过程来尝试创建模型。", 
+          "start": 99.74
+        }
+      ], 
+      "lang": "zh-Hans"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 1.93, 
+          "text": "Hi, my name is D. Sculley.", 
+          "start": 0.48
+        }, 
+        {
+          "dur": 6.87, 
+          "text": "I&#39;m one of the people who is coming to you from Google in order to present this Machine Learning Crash Course with TensorFlow APIs.", 
+          "start": 2.41
+        }, 
+        {
+          "dur": 5.34, 
+          "text": "Now, before we dive in, let&#39;s take a second to remind ourselves of the basic framework that we are talking about in this class.", 
+          "start": 9.28
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "And that basic framework is supervised machine learning.", 
+          "start": 14.62
+        }, 
+        {
+          "dur": 10.22, 
+          "text": "In supervised machine learning, we are learning to create models that combine inputs, to produce useful predictions even on previously unseen data.", 
+          "start": 18.0
+        }, 
+        {
+          "dur": 5.17, 
+          "text": "Now, where we&#39;re training that model, we&#39;re providing it with labels.", 
+          "start": 28.22
+        }, 
+        {
+          "dur": 6.17, 
+          "text": "And in the case of, say, email spam filtering, that label might be something like &#39;spam or not spam&#39;.", 
+          "start": 33.39
+        }, 
+        {
+          "dur": 3.14, 
+          "text": "It&#39;s the target that we&#39;re trying to predict.", 
+          "start": 39.56
+        }, 
+        {
+          "dur": 3.58, 
+          "text": "The features are the way that we represent our data.", 
+          "start": 42.7
+        }, 
+        {
+          "dur": 16.32, 
+          "text": "So features might be drawn from an email as, say, words in the email or &quot;to and from addresses&quot;, various pieces of routing or header information, any piece of information that we might extract from that email. to represent it for our machine learning system.", 
+          "start": 46.28
+        }, 
+        {
+          "dur": 2.4, 
+          "text": "An example, is one piece of data.", 
+          "start": 62.6
+        }, 
+        {
+          "dur": 2.72, 
+          "text": "For example, one email.", 
+          "start": 65.0
+        }, 
+        {
+          "dur": 10.02, 
+          "text": "Now that could be a labeled example in which we have both feature information, represented in that email, and the label value, of &#39;spam or not spam&#39;.", 
+          "start": 67.72
+        }, 
+        {
+          "dur": 3.25, 
+          "text": "Maybe that&#39;s come from a user who has provided that to us.", 
+          "start": 77.74
+        }, 
+        {
+          "dur": 8.38, 
+          "text": "Or we could have an unlabeled example, such as a piece of email for which we have feature information, but we don&#39;t yet know whether it is spam or not spam.", 
+          "start": 80.99
+        }, 
+        {
+          "dur": 5.782, 
+          "text": "And likely what we are going to do is classify that to put it in the user&#39;s inbox or spam folder.", 
+          "start": 89.37
+        }, 
+        {
+          "dur": 4.588, 
+          "text": "Finally, we have a model and that model is the thing that is doing the predicting.", 
+          "start": 95.152
+        }, 
+        {
+          "dur": 4.196, 
+          "text": "It&#39;s something that we&#39;re going to try and create through a process of learning from data.", 
+          "start": 99.74
+        }
+      ], 
+      "lang": "en"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 1.936, 
+          "text": "Bonjour, je suis D. Sculley.", 
+          "start": 0.48
+        }, 
+        {
+          "dur": 6.87, 
+          "text": "Je travaille au sein de Google, et je viens ici vous présenter\nce cours d&#39;initiation au machine learning avec les API TensorFlow.", 
+          "start": 2.41
+        }, 
+        {
+          "dur": 5.344, 
+          "text": "Avant de nous y intéresser plus en détail, prenons une seconde\npour rappeler le cadre de base que nous allons aborder aujourd&#39;hui,", 
+          "start": 9.28
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "qui n&#39;est autre que le machine learning supervisé.", 
+          "start": 14.62
+        }, 
+        {
+          "dur": 10.224, 
+          "text": "Un système de machine learning supervisé crée des modèles combinant\ndes entrées pour formuler des prédictions même sur des données inédites.", 
+          "start": 18.0
+        }, 
+        {
+          "dur": 5.17, 
+          "text": "Lorsque nous entraînons un tel modèle,\nnous y ajoutons des étiquettes.", 
+          "start": 28.22
+        }, 
+        {
+          "dur": 6.178, 
+          "text": "Concernant le filtrage de spam, vous pouvez\nattribuer l&#39;étiquette &quot;spam ou fiable&quot;, par exemple.", 
+          "start": 33.39
+        }, 
+        {
+          "dur": 3.144, 
+          "text": "Voilà donc ce que nous essayons de prédire.", 
+          "start": 39.56
+        }, 
+        {
+          "dur": 3.588, 
+          "text": "Les caractéristiques représentent en fait nos données.", 
+          "start": 42.7
+        }, 
+        {
+          "dur": 7.288, 
+          "text": "Elles peuvent être tirées de mots dans un e-mail,\nd&#39;adresses d&#39;expéditeurs et de destinataires,", 
+          "start": 46.28
+        }, 
+        {
+          "dur": 5.192, 
+          "text": "d&#39;informations de routage ou d&#39;en-tête divers,\nou de toute autre donnée que nous pouvons extraire de cet e-mail", 
+          "start": 53.56
+        }, 
+        {
+          "dur": 3.858, 
+          "text": "afin de représenter ces infos pour notre système.", 
+          "start": 58.75
+        }, 
+        {
+          "dur": 2.408, 
+          "text": "Prenons un seul élément de donnée.", 
+          "start": 62.6
+        }, 
+        {
+          "dur": 2.728, 
+          "text": "Par exemple, un e-mail.", 
+          "start": 65.0
+        }, 
+        {
+          "dur": 10.024, 
+          "text": "Cela peut-être un exemple avec une étiquette contenant à la fois\ndes infos représentées dans cet e-mail et la valeur d&#39;étiquette &quot;spam ou fiable&quot;.", 
+          "start": 67.72
+        }, 
+        {
+          "dur": 3.252, 
+          "text": "Peut-être cela vient-il de quelqu&#39;un qui nous l&#39;a fourni.", 
+          "start": 77.74
+        }, 
+        {
+          "dur": 8.386, 
+          "text": "Ou alors un exemple sans étiquette, comme un élément d&#39;e-mail\npour lequel nous avons des infos, sans toutefois savoir si c&#39;est du spam ou non.", 
+          "start": 80.99
+        }, 
+        {
+          "dur": 5.782, 
+          "text": "Et sans doute allons-nous le classer et le déplacer\nvers la boîte de réception ou le dossier &quot;Spam&quot;.", 
+          "start": 89.37
+        }, 
+        {
+          "dur": 4.592, 
+          "text": "Enfin, nous avons un modèle,\nlequel va pouvoir être employé pour les prédictions.", 
+          "start": 95.152
+        }, 
+        {
+          "dur": 4.196, 
+          "text": "C&#39;est ce que nous allons essayer et créer\nvia un processus d&#39;apprentissage à base de données.", 
+          "start": 99.74
+        }
+      ], 
+      "lang": "fr"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 1.936, 
+          "text": "안녕하세요 저는 D. Sculley라고 합니다.", 
+          "start": 0.48
+        }, 
+        {
+          "dur": 6.87, 
+          "text": "TensorFlow API를 이용한 머신러닝 단기집중과정의 발표를 맡게 된 Google 직원입니다.", 
+          "start": 2.41
+        }, 
+        {
+          "dur": 5.344, 
+          "text": "본격적으로 시작하기 전에 잠시 시간을 내어 이 강의에서 이야기할 기본 프레임워크를 다시 떠올려 보겠습니다.", 
+          "start": 9.28
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "그리고 그 기본 프레임워크는 지도 머신러닝입니다.", 
+          "start": 14.62
+        }, 
+        {
+          "dur": 10.224, 
+          "text": "지도 머신러닝에서는 입력을 결합하여 모델을 만들고 이전에 보지 못한 데이터도 적절히 예측하는 방법을 배웁니다.", 
+          "start": 18.0
+        }, 
+        {
+          "dur": 5.17, 
+          "text": "이제 해당 모델을 학습시킬 때 라벨을 제공합니다.", 
+          "start": 28.22
+        }, 
+        {
+          "dur": 6.178, 
+          "text": "예를 들어 이메일 스팸 필터링의 경우 그 라벨은 &#39;스팸 또는 스팸 아님&#39; 정도가 될 수 있겠죠.", 
+          "start": 33.39
+        }, 
+        {
+          "dur": 3.144, 
+          "text": "이것이 우리가 예측하려는 타겟입니다.", 
+          "start": 39.56
+        }, 
+        {
+          "dur": 3.588, 
+          "text": "특성은 데이터를 표현하는 방식입니다.", 
+          "start": 42.7
+        }, 
+        {
+          "dur": 7.288, 
+          "text": "따라서 특성은 예를 들면 이메일에 포함된 단어, 발신 및 수신 주소,", 
+          "start": 46.28
+        }, 
+        {
+          "dur": 5.192, 
+          "text": "다양한 라우팅 또는 헤더 정보와 같이 해당 이메일에서 추출할 수 있는 어떤 정보든 가져와서", 
+          "start": 53.56
+        }, 
+        {
+          "dur": 3.858, 
+          "text": "머신러닝 시스템에 나타낼 수 있습니다.", 
+          "start": 58.75
+        }, 
+        {
+          "dur": 2.408, 
+          "text": "예를 들면 데이터 한 개나", 
+          "start": 62.6
+        }, 
+        {
+          "dur": 2.728, 
+          "text": "이메일 한 개가 될 수 있습니다.", 
+          "start": 65.0
+        }, 
+        {
+          "dur": 10.024, 
+          "text": "그 이메일은 특성 정보와 &#39;스팸 또는 스팸 아님&#39;과 같은 라벨 값을 모두 가진 라벨이 있는 예가 될 수 있습니다.", 
+          "start": 67.72
+        }, 
+        {
+          "dur": 3.252, 
+          "text": "이는 사용자가 Google에 제공한 것일 수도 있죠.", 
+          "start": 77.74
+        }, 
+        {
+          "dur": 8.386, 
+          "text": "하지만 특성 정보는 있지만 아직 스팸인지 아닌지 알 수 없는 이메일과 같이 라벨이 없는 예가 있을 수도 있습니다.", 
+          "start": 80.99
+        }, 
+        {
+          "dur": 5.782, 
+          "text": "그러면 우리는 이를 분류해서 사용자의 받은편지함이나 스팸 폴더에 넣게 될 겁니다.", 
+          "start": 89.37
+        }, 
+        {
+          "dur": 4.592, 
+          "text": "마지막으로 한 가지 모델이 있는데 바로 예측을 하는 모델입니다.", 
+          "start": 95.152
+        }, 
+        {
+          "dur": 4.196, 
+          "text": "이 모델은 데이터를 통한 학습 과정에서 만들어 볼 겁니다.", 
+          "start": 99.74
+        }
+      ], 
+      "lang": "ko"
+    }, 
+    {
+      "captions": [
+        {
+          "dur": 1.936, 
+          "text": "Hola, soy D. Sculley.", 
+          "start": 0.48
+        }, 
+        {
+          "dur": 6.87, 
+          "text": "Soy uno de los empleados de Google que te presentará\nlas API del Curso intensivo de aprendizaje automático con TensorFlow.", 
+          "start": 2.41
+        }, 
+        {
+          "dur": 5.344, 
+          "text": "Antes de comenzar, repasemos el marco de trabajo básico\ndel que hablamos en esta clase.", 
+          "start": 9.28
+        }, 
+        {
+          "dur": 3.38, 
+          "text": "Se trata del aprendizaje automático supervisado.", 
+          "start": 14.62
+        }, 
+        {
+          "dur": 10.224, 
+          "text": "Con él, aprendemos a crear modelos que combinan entradas\ny a hacer predicciones útiles, incluso de datos que no hayamos visto.", 
+          "start": 18.0
+        }, 
+        {
+          "dur": 5.17, 
+          "text": "Cuando entrenamos ese modelo, le asignamos etiquetas.", 
+          "start": 28.22
+        }, 
+        {
+          "dur": 6.178, 
+          "text": "Por ejemplo, con filtros de spam,\nesa etiqueta puede ser &quot;es spam&quot; o &quot;no es spam&quot;.", 
+          "start": 33.39
+        }, 
+        {
+          "dur": 3.144, 
+          "text": "Es lo que tratamos de predecir.", 
+          "start": 39.56
+        }, 
+        {
+          "dur": 3.588, 
+          "text": "Los atributos son la manera\nen la que representamos los datos.", 
+          "start": 42.7
+        }, 
+        {
+          "dur": 7.288, 
+          "text": "Estos se pueden extraer de un correo electrónico,\ncomo palabras en el correo, direcciones de envío y recepción,", 
+          "start": 46.28
+        }, 
+        {
+          "dur": 5.192, 
+          "text": "o información de enrutamiento y del encabezado;\ncualquier dato que podamos extraer", 
+          "start": 53.56
+        }, 
+        {
+          "dur": 3.858, 
+          "text": "para representarlo en nuestro sistema de aprendizaje automático.", 
+          "start": 58.75
+        }, 
+        {
+          "dur": 2.408, 
+          "text": "Por ejemplo, un dato", 
+          "start": 62.6
+        }, 
+        {
+          "dur": 2.728, 
+          "text": "o un correo electrónico.", 
+          "start": 65.0
+        }, 
+        {
+          "dur": 10.024, 
+          "text": "Puede ser un ejemplo etiquetado en el que tengamos\ninformación del atributo y el valor de la etiqueta.", 
+          "start": 67.72
+        }, 
+        {
+          "dur": 3.252, 
+          "text": "Tal vez, un usuario nos haya proporcionado esta información.", 
+          "start": 77.74
+        }, 
+        {
+          "dur": 8.386, 
+          "text": "O podemos tener un ejemplo sin etiqueta, como un correo\ncon información del atributo, pero que no sepamos si es spam o no.", 
+          "start": 80.99
+        }, 
+        {
+          "dur": 5.782, 
+          "text": "Luego, clasificamos el correo y lo derivamos\na la carpeta Recibidos o a la de spam.", 
+          "start": 89.37
+        }, 
+        {
+          "dur": 4.592, 
+          "text": "Finalmente, tenemos un modelo que hace la predicción.", 
+          "start": 95.152
+        }, 
+        {
+          "dur": 4.196, 
+          "text": "Lo probamos y creamos\na través de un proceso de aprendizaje a partir de los datos.", 
+          "start": 99.74
+        }
+      ], 
+      "lang": "es-419"
+    }
+  ]
+}
